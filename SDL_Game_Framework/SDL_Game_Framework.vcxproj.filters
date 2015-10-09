@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\framework">
+      <UniqueIdentifier>{511f85d4-1204-4dbe-8660-d85dee3280eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\framework">
+      <UniqueIdentifier>{78eefac5-c651-4fd2-aa6c-94aa9e98ba69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnitText++">
+      <UniqueIdentifier>{049fe604-87dd-47b3-8473-7621ac78f60c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="audiomanager.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBase.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="AWFont.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="AWSprite.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="console.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_image.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="smanip.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_events.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_keysym.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_mouse.h">
+      <Filter>Header Files\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\AssertException.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\CheckMacros.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\Checks.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\Config.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\CurrentTest.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\DeferredTestReporter.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\DeferredTestResult.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\ExecuteTest.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\MemoryOutStream.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\ReportAssert.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\Test.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TestDetails.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TestList.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TestMacros.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TestReporter.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TestReporterStdout.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TestResults.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TestRunner.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TestSuite.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TimeConstraint.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\TimeHelpers.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\UnitTest++.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitTest++\src\XmlTestReporter.h">
+      <Filter>UnitText++</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameBase.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="AWSprite.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="audiomanager.cpp">
+      <Filter>Source Files\framework</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\AssertException.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\Checks.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\CurrentTest.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\DeferredTestReporter.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\DeferredTestResult.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\MemoryOutStream.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\ReportAssert.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\Test.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\TestDetails.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\TestList.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\TestReporter.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\TestReporterStdout.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\TestResults.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\TestRunner.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\TimeConstraint.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\TimeHelpers.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest++\src\XmlTestReporter.cpp">
+      <Filter>UnitText++</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
