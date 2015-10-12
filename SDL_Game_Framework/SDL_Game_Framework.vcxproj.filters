@@ -132,6 +132,9 @@
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h">
       <Filter>UnitText++</Filter>
     </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -193,6 +196,9 @@
     </ClCompile>
     <ClCompile Include="UnitTest++\src\XmlTestReporter.cpp">
       <Filter>UnitText++</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
