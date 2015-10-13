@@ -6,19 +6,18 @@
 
 
 Player::Player()
+:Character("images/player.png", 0, 0, "Player"), m_health(100), m_damage(10), m_defence(5)
 {
-	character = new Character("images/player.png", 0, 0, "Player"); // Create the player
-	m_health = 100; // Set the starting health
-	m_damage = 10; // Set the starting damage
-	m_defence = 5; // Set the starting defence
 }
 
+Player::Player(char* img, int x, int y, std::string name, unsigned int health, unsigned int defence, unsigned int damage)
+:Character(img, x, y, name), m_health(health), m_defence(defence), m_damage(damage)
+{
+}
 
 Player::~Player()
 {
 	//Make sure we delete the pointers
-	delete character;
-	character = NULL;
 }
 
 int Player::get_health()

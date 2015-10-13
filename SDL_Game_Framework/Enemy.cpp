@@ -1,42 +1,44 @@
 #include "Enemy.h"
 
-
 Enemy::Enemy()
 {
-	character = new Character("images/enemy.png", 0, 0, "Enemy"); // Might change this so that we can set specific enemies
+
 }
 
+Enemy::Enemy(char* img, std::string name, unsigned int health, unsigned int damage, unsigned int defence)
+:Character(img, 0, 0, name), m_health(health), m_damage(damage), m_defence(defence)
+{
+		
+}
 
 Enemy::~Enemy()
 {
-	//Make sure we delete the pointers
-	delete character;
-	character = NULL;
+
 }
 
-bool Enemy::enemy_movement()
+bool Enemy::Enemy_Movement()
 {
 	// Simple AI stuff for our game
-	switch (enemyState)
+	switch (enemy_state)
 	{
 	case IDLE:
-		enemy_idle();
+		Enemy_Idle();
 		break;
 	case ROAMING:
-		enemy_roam();
+		Enemy_Roam();
 		break;
 	case ATTACK:
-		enemy_attack();
+		Enemy_Attack();
 		break;
 	case DEAD:
-		enemy_dead();
+		Enemy_Dead();
 		break;
 	}
 }
 
-bool Enemy::enemy_idle()
+bool Enemy::Enemy_Idle()
 {
-	if (enemyState == IDLE)
+	if (enemy_state == IDLE)
 	{
 		return true;
 	}
@@ -44,9 +46,9 @@ bool Enemy::enemy_idle()
 	return false;
 }
 
-bool Enemy::enemy_roam()
+bool Enemy::Enemy_Roam()
 {
-	if (enemyState == ROAMING)
+	if (enemy_state == ROAMING)
 	{
 		return true;
 	}
@@ -54,9 +56,9 @@ bool Enemy::enemy_roam()
 	return false;
 }
 
-bool Enemy::enemy_attack()
+bool Enemy::Enemy_Attack()
 {
-	if (enemyState == ATTACK)
+	if (enemy_state == ATTACK)
 	{
 		return true;
 	}
@@ -64,19 +66,14 @@ bool Enemy::enemy_attack()
 	return false;
 }
 
-bool Enemy::enemy_dead()
+bool Enemy::Enemy_Dead()
 {
-	if (enemyState == DEAD)
+	if (enemy_state == DEAD)
 	{
 		return true;
 	}
 
 	return false;
-}
-
-int Enemy::get_enemy_name()
-{
-	return m_name;
 }
 
 int Enemy::get_health()

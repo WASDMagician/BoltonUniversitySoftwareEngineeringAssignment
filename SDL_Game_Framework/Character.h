@@ -12,13 +12,9 @@ public:
 	Character(char *img, int x, int y, std::string name);
 	~Character();
 
-	int get_x();
-	int get_y();
-	std::string get_name();
+	std::string get_character_name();
 
 private:
-	int m_get_x;
-	int m_get_y;
 	std::string m_name;
 };
 

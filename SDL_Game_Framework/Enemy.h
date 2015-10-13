@@ -3,7 +3,7 @@
 
 #include "Character.h"
 
-enum EnemyState
+enum ENEMY_STATE
 {
 	IDLE,
 	ROAMING,
@@ -15,23 +15,21 @@ class Enemy : public Character
 {
 public:
 	Enemy();
+	Enemy(char* img, std::string name, unsigned int health, unsigned int damage, unsigned int defence);
 	~Enemy();
 
-	int get_enemy_name();
 	int get_health();
 	int get_defence();
 	int get_damage();
 
-	bool enemy_movement();
-	bool enemy_idle();
-	bool enemy_roam();
-	bool enemy_attack();
-	bool enemy_dead();
+	bool Enemy_Movement();
+	bool Enemy_Idle();
+	bool Enemy_Roam();
+	bool Enemy_Attack();
+	bool Enemy_Dead();
 private:
-	Character *character;
-	EnemyState enemyState;
+	ENEMY_STATE enemy_state;
 
-	int m_name;
 	int m_health;
 	int m_defence;
 	int m_damage;
