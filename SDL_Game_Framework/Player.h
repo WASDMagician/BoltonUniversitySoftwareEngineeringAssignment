@@ -7,7 +7,7 @@ class Player : public Character
 {
 public:
 	Player();
-	Player(char* img, int x, int y, std::string name, unsigned int health, unsigned int defence, unsigned int damage);
+	Player(char* img, int rows, int cols, Transform trans, std::string name, unsigned int health, unsigned int defence, unsigned int damage);
 	~Player();
 
 	int get_health(); // Get the players current health

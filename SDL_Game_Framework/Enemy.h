@@ -15,7 +15,7 @@ class Enemy : public Character
 {
 public:
 	Enemy();
-	Enemy(char* img, std::string name, unsigned int health, unsigned int damage, unsigned int defence);
+	Enemy(char* img, int x, int y, Transform trans, std::string name, unsigned int health, unsigned int damage, unsigned int defence);
 	~Enemy();
 
 	int get_health();

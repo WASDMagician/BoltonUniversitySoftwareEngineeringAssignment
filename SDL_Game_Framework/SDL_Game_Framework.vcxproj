@@ -133,6 +133,7 @@
     <ClInclude Include="SDL_mouse.h" />
     <ClInclude Include="smanip.h" />
     <ClInclude Include="timer.h" />
+    <ClInclude Include="Transform.h" />
     <ClInclude Include="UnitTest++\src\AssertException.h" />
     <ClInclude Include="UnitTest++\src\CheckMacros.h" />
     <ClInclude Include="UnitTest++\src\Checks.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="UnitTest++\src\TimeHelpers.h" />
     <ClInclude Include="UnitTest++\src\UnitTest++.h" />
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="audiomanager.cpp" />
@@ -164,6 +166,7 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UnitTest++\src\AssertException.cpp" />
     <ClCompile Include="UnitTest++\src\Checks.cpp" />
     <ClCompile Include="UnitTest++\src\CurrentTest.cpp" />
@@ -181,6 +184,7 @@
     <ClCompile Include="UnitTest++\src\TimeConstraint.cpp" />
     <ClCompile Include="UnitTest++\src\TimeHelpers.cpp" />
     <ClCompile Include="UnitTest++\src\XmlTestReporter.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

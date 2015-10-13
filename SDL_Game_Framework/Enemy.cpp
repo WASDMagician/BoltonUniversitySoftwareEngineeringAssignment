@@ -5,8 +5,8 @@ Enemy::Enemy()
 
 }
 
-Enemy::Enemy(char* img, std::string name, unsigned int health, unsigned int damage, unsigned int defence)
-:Character(img, 0, 0, name), m_health(health), m_damage(damage), m_defence(defence)
+Enemy::Enemy(char* img, int rows, int cols, Transform trans, std::string name, unsigned int health, unsigned int damage, unsigned int defence)
+:Character(img, 0, 0, trans, name), m_health(health), m_damage(damage), m_defence(defence)
 {
 		
 }

@@ -6,12 +6,12 @@
 
 
 Player::Player()
-:Character("images/player.png", 0, 0, "Player"), m_health(100), m_damage(10), m_defence(5)
+:Character("images/player.png", 0, 0, Transform(0, 0, 0), "Player"), m_health(100), m_damage(10), m_defence(5)
 {
 }
 
-Player::Player(char* img, int x, int y, std::string name, unsigned int health, unsigned int defence, unsigned int damage)
-:Character(img, x, y, name), m_health(health), m_defence(defence), m_damage(damage)
+Player::Player(char* img, int rows, int cols,Transform trans, std::string name, unsigned int health, unsigned int defence, unsigned int damage)
+:Character(img, rows, cols, trans, name), m_health(health), m_defence(defence), m_damage(damage)
 {
 }
 

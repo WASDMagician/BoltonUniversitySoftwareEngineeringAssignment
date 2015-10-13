@@ -1,12 +1,16 @@
-﻿Build started 13/10/2015 20:53:15.
+﻿Build started 14/10/2015 00:55:15.
      1>Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment1\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Transform.cpp
+         Transform.cpp
+       Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment1\Release\SDL_Game_Framework.exe" /INCREMENTAL:NO /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment1\Release\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment1\Release\SDL_Game_Framework.lib" /MACHINE:X86 /SAFESEH Release\audiomanager.obj
          Release\AWSprite.obj
          Release\Character.obj
          Release\Enemy.obj
          Release\GameBase.obj
          Release\Player.obj
+         Release\Transform.obj
          Release\AssertException.obj
          Release\Checks.obj
          Release\CurrentTest.obj
@@ -24,10 +28,11 @@
          Release\TimeConstraint.obj
          Release\TimeHelpers.obj
          Release\XmlTestReporter.obj
+         Release\Weapon.obj
      1>sdlmain.lib(SDL_win32_main.obj) : error LNK2001: unresolved external symbol _SDL_main
      1>F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment1\Release\SDL_Game_Framework.exe : fatal error LNK1120: 1 unresolved externals
      1>Done Building Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment1\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:02.78
+Time Elapsed 00:00:01.20

@@ -9,9 +9,10 @@ Character::Character()
 
 }
 
-Character::Character(char *img, int x, int y, std::string name)
-:AWSprite(img, x, y), m_name(name)
+Character::Character(char *img, int rows, int cols, Transform trans, std::string name)
+:AWSprite(img, rows, cols), m_name(name), character_transform(trans)
 {
+	set_transparent_colour(255, 0, 255);
 }
 
 Character::~Character()
@@ -20,5 +21,5 @@ Character::~Character()
 
 std::string Character::get_character_name()
 {
-	return m_name;
+	return m_name;	
 }
