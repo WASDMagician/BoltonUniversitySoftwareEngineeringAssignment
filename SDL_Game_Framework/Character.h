@@ -9,21 +9,21 @@ class Character : public AW_Sprite_Interface
 {
 public:
 	Character();
-	Character(char *img, int rows, int cols, SDL_Colour colour, Transform initial_transform, std::string name,
-		unsigned int health, unsigned int damage, unsigned int defence);
-	~Character();
+	Character(char *img, const unsigned int rows, const unsigned int cols, Transform &initial_transform, const std::string name,
+		const unsigned int health, const unsigned int damage, const unsigned int defence);
+	virtual ~Character();
 
-	void set_character_name(std::string name);
-	std::string get_character_name();
+	void set_character_name(const std::string &name);
+	const std::string get_character_name() const;
 
-	void set_character_health(unsigned int health);
-	unsigned int get_character_health();
+	void set_character_health(const unsigned int health);
+	const unsigned int get_character_health() const;
 
-	void set_character_damage(unsigned int damage);
-	unsigned int get_character_damage();
+	void set_character_damage(const unsigned int damage);
+	const unsigned int get_character_damage() const;
 
-	void set_character_defence(unsigned int defence);
-	unsigned int get_character_defence();
+	void set_character_defence(const unsigned int defence);
+	const unsigned int get_character_defence() const;
 
 private:
 	std::string m_name;

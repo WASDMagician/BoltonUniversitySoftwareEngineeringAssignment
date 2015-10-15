@@ -1,11 +1,10 @@
 #include "Transform.h"
 
 
-Transform::Transform(float nX, float nY, float nAngle)
+Transform::Transform(float nX, float nY)
 {
 	x = nX;
 	y = nY;
-	angle = nAngle;
 }
 
 

@@ -1,38 +1,41 @@
 #include "AW_Sprite_Interface.h"
 
 AW_Sprite_Interface::AW_Sprite_Interface()
-:AWSprite(), transform(0, 0, 0)
+:AWSprite(), m_transform(0, 0)
 {
 
 }
 
-AW_Sprite_Interface::AW_Sprite_Interface(char *img, int rows, int cols, SDL_Colour colour, Transform initial_transform)
-:AWSprite(img, rows, cols), transform(initial_transform)
+AW_Sprite_Interface::AW_Sprite_Interface(char *img, int rows, int cols, Transform initial_transform)
+:AWSprite(img, rows, cols), m_transform(initial_transform)
 {
-	set_transparent_colour(colour.r, colour.g, colour.b);
+	set_transparent_colour(255, 0, 255);
 }
 
 AW_Sprite_Interface::~AW_Sprite_Interface()
 {
 }
 
-void AW_Sprite_Interface::Update()
+Transform* AW_Sprite_Interface::get_parent()
+{
+	return m_transform.m_p_parent;
+}
+
+bool AW_Sprite_Interface::Update()
 {
 	Update_Position();
-	Draw();
+	Render();
+	return false;
 }
 
-void AW_Sprite_Interface::Update_Position()
+bool AW_Sprite_Interface::Update_Position()
 {
-	set_world_position(transform.x, transform.y); //set world position to transform position
+	set_world_position(m_transform.x, m_transform.y); //set world position to transform position
+	return false;
 }
 
-void AW_Sprite_Interface::Update_Angle()
-{
-	setAngle(transform.angle);
-}
-
-void AW_Sprite_Interface::Draw()
+bool AW_Sprite_Interface::Render()
 {
 	update_everything();
+	return false;
 }

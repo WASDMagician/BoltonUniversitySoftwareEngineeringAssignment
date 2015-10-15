@@ -5,9 +5,9 @@ Enemy::Enemy()
 
 }
 
-Enemy::Enemy(char* img, int rows, int cols, SDL_Colour colour, Transform initial_transform, std::string name, 
+Enemy::Enemy(char* img, int rows, int cols, Transform initial_transform, std::string name, 
 	unsigned int health, unsigned int damage, unsigned int defence)
-:Character(img, rows, cols, colour, initial_transform, name, health, damage, defence)
+:Character(img, rows, cols, initial_transform, name, health, damage, defence)
 {
 		
 }

@@ -9,9 +9,9 @@ Character::Character()
 
 }
 
-Character::Character(char *img, int rows, int cols, SDL_Colour colour, Transform initial_transform, std::string name,
-	unsigned int health, unsigned int damage, unsigned int defence)
-	:AW_Sprite_Interface(img, rows, cols, colour, initial_transform), m_name(name), m_health(health), m_damage(damage), m_defence(defence)
+Character::Character(char *img, const unsigned int rows, const unsigned int cols, Transform &initial_transform, std::string name,
+	const unsigned int health, const unsigned int damage, const unsigned int defence)
+	:AW_Sprite_Interface(img, rows, cols, initial_transform), m_name(name), m_health(health), m_damage(damage), m_defence(defence)
 {
 }
 
@@ -19,42 +19,42 @@ Character::~Character()
 {
 }
 
-void Character::set_character_name(std::string name)
+void Character::set_character_name(const std::string &name)
 {
 	m_name = name;
 }
 
-std::string Character::get_character_name()
+const std::string Character::get_character_name() const
 {
 	return m_name;	
 }
 
-void Character::set_character_health(unsigned int health)
+void Character::set_character_health(const unsigned int health)
 {
 	m_health = health;
 }
 
-unsigned int Character::get_character_health()
+const unsigned int Character::get_character_health() const
 {
 	return m_health;
 }
 
-void Character::set_character_damage(unsigned int damage)
+void Character::set_character_damage(const unsigned int damage)
 {
 	m_damage = damage;
 }
 
-unsigned int Character::get_character_damage()
+const unsigned int Character::get_character_damage() const
 {
 	return m_damage;
 }
 
-void Character::set_character_defence(unsigned int defence)
+void Character::set_character_defence(const unsigned int defence)
 {
 	m_defence = defence;
 }
 
-unsigned int Character::get_character_defence()
+const unsigned int Character::get_character_defence() const
 {
 	return m_defence;
 }
