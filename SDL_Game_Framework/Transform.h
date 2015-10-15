@@ -8,6 +8,7 @@
 #define _TRANSFORM_H_
 
 #include <cstddef>
+#include <vector>
 
 class Transform
 {
@@ -19,6 +20,9 @@ public:
 	Transform* get_transform();
 
 	Transform *m_p_parent = NULL;
+
+	std::vector<Transform*> m_children;
+
 	float x;
 	float y;
 };
