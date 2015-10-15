@@ -15,12 +15,9 @@ class Enemy : public Character
 {
 public:
 	Enemy();
-	Enemy(char* img, int x, int y, Transform trans, std::string name, unsigned int health, unsigned int damage, unsigned int defence);
+	Enemy(char* img, int rows, int cols, SDL_Colour colour, Transform initial_transform, std::string name, 
+		unsigned int health, unsigned int damage, unsigned int defence);
 	~Enemy();
-
-	int get_health();
-	int get_defence();
-	int get_damage();
 
 	bool Enemy_Movement();
 	bool Enemy_Idle();
@@ -29,10 +26,6 @@ public:
 	bool Enemy_Dead();
 private:
 	ENEMY_STATE enemy_state;
-
-	int m_health;
-	int m_defence;
-	int m_damage;
 };
 
 #endif

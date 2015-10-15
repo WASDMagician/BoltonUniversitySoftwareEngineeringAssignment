@@ -5,8 +5,9 @@ Enemy::Enemy()
 
 }
 
-Enemy::Enemy(char* img, int rows, int cols, Transform trans, std::string name, unsigned int health, unsigned int damage, unsigned int defence)
-:Character(img, 0, 0, trans, name), m_health(health), m_damage(damage), m_defence(defence)
+Enemy::Enemy(char* img, int rows, int cols, SDL_Colour colour, Transform initial_transform, std::string name, 
+	unsigned int health, unsigned int damage, unsigned int defence)
+:Character(img, rows, cols, colour, initial_transform, name, health, damage, defence)
 {
 		
 }
@@ -74,20 +75,5 @@ bool Enemy::Enemy_Dead()
 	}
 
 	return false;
-}
-
-int Enemy::get_health()
-{
-	return m_health;
-}
-
-int Enemy::get_defence()
-{
-	return m_defence;
-}
-
-int Enemy::get_damage()
-{
-	return m_damage;
 }
 
