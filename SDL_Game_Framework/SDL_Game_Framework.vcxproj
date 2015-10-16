@@ -125,6 +125,7 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameBase.h" />
+    <ClInclude Include="Game_Object.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="random.h" />
     <ClInclude Include="SDL.h" />
@@ -166,6 +167,7 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameBase.cpp" />
+    <ClCompile Include="Game_Object.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="UnitTest++\src\AssertException.cpp" />
