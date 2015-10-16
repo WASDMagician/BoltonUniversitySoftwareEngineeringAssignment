@@ -6,13 +6,13 @@
 
 
 Player::Player()
-:Character("images/player.png", 0, 0, Transform(), "Player", 100, 10, 5)
+:Character("images/player.png", 0, 0, "Player", 100, 10, 5)
 {
 }
 
-Player::Player(char* img, int rows, int cols, Transform initial_transform, std::string name, 
+Player::Player(char* img, int rows, int cols, std::string name, 
 unsigned int health, unsigned int defence, unsigned int damage)
-:Character(img, rows, cols, initial_transform, name, health, defence, damage)
+:Character(img, rows, cols, name, health, defence, damage)
 {
 }
 

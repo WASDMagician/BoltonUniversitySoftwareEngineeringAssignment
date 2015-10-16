@@ -3,13 +3,13 @@
 
 #include <string>
 
-#include "AW_Sprite_Interface.h"
+#include "AWSprite.h"
 
-class Character : public AW_Sprite_Interface
+class Character : public AWSprite
 {
 public:
 	Character();
-	Character(char *img, const unsigned int rows, const unsigned int cols, Transform &initial_transform, const std::string name,
+	Character(char *img, const unsigned int rows, const unsigned int cols, const std::string name,
 		const unsigned int health, const unsigned int damage, const unsigned int defence);
 	virtual ~Character();
 
