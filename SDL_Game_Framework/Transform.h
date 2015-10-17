@@ -16,11 +16,12 @@ public:
 	bool Move(float x = NULL, float y = NULL);
 	bool set_start_and_end_positions(Vector2 start, Vector2 end, float increment);
 	bool Lerp_To(Vector2 target, float increment);
+	bool Update_Transform();
+	bool Update_World_Position();
 	bool Update();
 
 private:
-	bool lerp(Vector2 start, Vector2 end, float increment);
-
+	
 	Vector2 m_position;
 	Vector2 m_start_position;
 	Vector2 m_end_position;

@@ -1,11 +1,11 @@
 #pragma once
-#include "AWSprite.h"
+#include "Game_Object.h"
 class Weapon :
-	public AWSprite
+	public Game_Object
 {
 public:
 	Weapon();
-	Weapon(char* img, int x, int y);
+	Weapon(char* img, int rows, int cols);
 	~Weapon();
 };
 

@@ -3,13 +3,13 @@
 
 #include "Weapon.h"
 
-class CrossBow :
+class Crossbow :
 	public Weapon
 {
 public:
-	CrossBow();
-	CrossBow(char* img, int x, int y);
-	~CrossBow();
+	Crossbow();
+	Crossbow(char* img, int x, int y);
+	~Crossbow();
 
 	void set_crossbow_damage(const double damage);
 	const double get_crossbow_damage() const;

@@ -6,10 +6,9 @@ Weapon::Weapon()
 }
 
 
-Weapon::Weapon(char* img, int x, int y)
-:AWSprite(img, 0, 0)
+Weapon::Weapon(char* img, int rows, int cols)
+:Game_Object(img, rows, cols)
 {
-	set_world_position((float)x, (float)y);
 }
 
 Weapon::~Weapon()

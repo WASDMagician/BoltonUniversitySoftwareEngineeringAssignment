@@ -10,10 +10,9 @@ Sniper::Sniper()
 	m_sniper_attackspeed = 0.25;
 }
 
-Sniper::Sniper(char*img, int x, int y)
-:Weapon(img, 0, 0)
+Sniper::Sniper(char*img, int rows, int cols)
+:Weapon(img, rows, cols)
 {
-	set_world_position((float)x, (float)y);
 }
 
 Sniper::~Sniper()

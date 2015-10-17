@@ -28,6 +28,12 @@
     <Filter Include="UnitTest++">
       <UniqueIdentifier>{049fe604-87dd-47b3-8473-7621ac78f60c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\weapons">
+      <UniqueIdentifier>{86d6b09b-3d1b-4b0c-8012-69ecc37aae7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\weapons">
+      <UniqueIdentifier>{ee9d8400-b57c-4860-89b5-1d0ef001707a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audiomanager.h">
@@ -138,16 +144,10 @@
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h">
       <Filter>UnitTest++</Filter>
     </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Weapon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
@@ -162,29 +162,35 @@
     <ClInclude Include="Custom_Types.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
-    <ClInclude Include="AW_Sprite_Interface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Object.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sword.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GreatAxe.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Crossbow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EmpowereKnuckles.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Great_Axe.h">
+      <Filter>Header Files\weapons</Filter>
     </ClInclude>
     <ClInclude Include="Sniper.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Sword.h">
+      <Filter>Header Files\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Header Files\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Empowere_Knuckles.h">
+      <Filter>Header Files\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="AW_Sprite_Interface.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -272,9 +278,6 @@
     <ClCompile Include="Transform.cpp">
       <Filter>Source Files\utility</Filter>
     </ClCompile>
-    <ClCompile Include="AW_Sprite_Interface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Object.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -282,19 +285,22 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sword.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GreatAxe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Crossbow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EmpowereKnuckles.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\weapons</Filter>
     </ClCompile>
     <ClCompile Include="Sniper.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Empowere_Knuckles.cpp">
+      <Filter>Source Files\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Great_Axe.cpp">
+      <Filter>Source Files\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Crossbow.cpp">
+      <Filter>Source Files\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="AW_Sprite_Interface.cpp">
+      <Filter>Source Files\utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

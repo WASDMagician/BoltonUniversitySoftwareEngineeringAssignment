@@ -45,6 +45,17 @@ bool Transform::Lerp_To(Vector2 target, float increment)
 	return true;
 }
 
+bool Transform::Update_Transform()
+{
+	m_position.x = m_p_gameobject->sprite->get_x();
+	m_position.y = m_p_gameobject->sprite->get_y();
+}
+
+bool Transform::Update_World_Position()
+{
+	m_p_gameobject->sprite->set_world_position(m_position.x, m_position.y);
+}
+
 bool Transform::Update()
 {
 	if (m_start_position == m_end_position)

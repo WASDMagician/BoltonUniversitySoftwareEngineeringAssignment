@@ -9,10 +9,9 @@ Sword::Sword()
 	m_sword_attackspeed = 1.5;
 }
 
-Sword::Sword(char* img, int x, int y)
-:Weapon(img, 0, 0)
+Sword::Sword(char* img, int rows, int cols)
+:Weapon(img, rows, cols)
 {
-	set_world_position((float)x, (float)y);
 }
 
 Sword::~Sword()
