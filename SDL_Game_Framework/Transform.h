@@ -11,9 +11,11 @@ class Transform
 public:
 	Transform();
 	~Transform();
+	Game_Object *m_p_gameobject;
 	bool set_position(float x, float y);
 	bool Move(float x = NULL, float y = NULL);
 	bool set_start_and_end_positions(Vector2 start, Vector2 end, float increment);
+	bool Lerp_To(Vector2 target, float increment);
 	bool Update();
 
 private:
@@ -26,7 +28,7 @@ private:
 
 	bool m_b_is_moving;
 
-	Game_Object *m_p_gameobject;
+	
 };
 
 #endif //_TRANSFORM_H_
