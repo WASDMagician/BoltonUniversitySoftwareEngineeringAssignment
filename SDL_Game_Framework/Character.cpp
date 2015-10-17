@@ -11,7 +11,7 @@ Character::Character()
 
 Character::Character(char *img, const unsigned int rows, const unsigned int cols, std::string name,
 	const unsigned int health, const unsigned int damage, const unsigned int defence)
-	:AWSprite(img, 1, 1), m_name(name), m_health(health), m_damage(damage), m_defence(defence)
+	:AW_Sprite_Interface(img, 1, 1), m_name(name), m_health(health), m_damage(damage), m_defence(defence)
 {
 }
 

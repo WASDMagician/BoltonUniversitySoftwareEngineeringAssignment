@@ -23,4 +23,5 @@ void Game::Logic()
 
 void Game::Draw()
 {
+	new_player->update_everything();
 }

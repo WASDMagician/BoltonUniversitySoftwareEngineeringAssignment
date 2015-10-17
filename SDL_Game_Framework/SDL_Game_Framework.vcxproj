@@ -120,8 +120,10 @@
     <ClInclude Include="audiomanager.h" />
     <ClInclude Include="AWFont.h" />
     <ClInclude Include="AWSprite.h" />
+    <ClInclude Include="AW_Sprite_Interface.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="console.h" />
+    <ClInclude Include="Custom_Types.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameBase.h" />
@@ -135,6 +137,7 @@
     <ClInclude Include="SDL_mouse.h" />
     <ClInclude Include="smanip.h" />
     <ClInclude Include="timer.h" />
+    <ClInclude Include="Transform.h" />
     <ClInclude Include="UnitTest++\src\AssertException.h" />
     <ClInclude Include="UnitTest++\src\CheckMacros.h" />
     <ClInclude Include="UnitTest++\src\Checks.h" />
@@ -163,6 +166,7 @@
   <ItemGroup>
     <ClCompile Include="audiomanager.cpp" />
     <ClCompile Include="AWSprite.cpp" />
+    <ClCompile Include="AW_Sprite_Interface.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -170,6 +174,7 @@
     <ClCompile Include="Game_Object.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UnitTest++\src\AssertException.cpp" />
     <ClCompile Include="UnitTest++\src\Checks.cpp" />
     <ClCompile Include="UnitTest++\src\CurrentTest.cpp" />

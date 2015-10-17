@@ -2,10 +2,10 @@
 #define _CHARACTER_H_
 
 #include <string>
+#include "AW_Sprite_Interface.h"
+#include "Game_Object.h"
 
-#include "AWSprite.h"
-
-class Character : public AWSprite
+class Character : public AW_Sprite_Interface
 {
 public:
 	Character();
