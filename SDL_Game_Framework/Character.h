@@ -2,15 +2,14 @@
 #define _CHARACTER_H_
 
 #include <string>
-#include "AW_Sprite_Interface.h"
 #include "Game_Object.h"
 
-class Character : public AW_Sprite_Interface
+class Character: public Game_Object
 {
 public:
 	Character();
-	Character(char *img, const unsigned int rows, const unsigned int cols, const std::string name,
-		const unsigned int health, const unsigned int damage, const unsigned int defence);
+	Character(const std::string name, const unsigned int health, const unsigned int damage, const unsigned int defence);
+	Character(char* img, int cols, int rows, std::string name, unsigned int health, unsigned int damage, unsigned int defenc);
 	virtual ~Character();
 
 	void set_character_name(const std::string &name);
@@ -32,4 +31,4 @@ private:
 	unsigned int m_defence;
 };
 
-#endif
+#endif //_CHARACTER_H_

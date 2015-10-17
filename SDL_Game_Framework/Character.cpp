@@ -9,10 +9,16 @@ Character::Character()
 
 }
 
-Character::Character(char *img, const unsigned int rows, const unsigned int cols, std::string name,
+Character::Character(std::string name,
 	const unsigned int health, const unsigned int damage, const unsigned int defence)
-	:AW_Sprite_Interface(img, 1, 1), m_name(name), m_health(health), m_damage(damage), m_defence(defence)
+	:m_name(name), m_health(health), m_damage(damage), m_defence(defence)
 {
+}
+
+Character::Character(char* img, int cols, int rows, std::string name, unsigned int health, unsigned int damage, unsigned int defence)
+:Game_Object(img, cols, rows), m_name(name), m_health(health), m_damage(damage), m_defence(defence)
+{
+
 }
 
 Character::~Character()

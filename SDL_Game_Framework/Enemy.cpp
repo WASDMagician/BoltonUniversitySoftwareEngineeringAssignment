@@ -7,7 +7,7 @@ Enemy::Enemy()
 
 Enemy::Enemy(char* img, int rows, int cols, std::string name, 
 	unsigned int health, unsigned int damage, unsigned int defence)
-:Character(img, rows, cols, name, health, damage, defence)
+:Character(name, health, damage, defence)
 {
 		
 }
