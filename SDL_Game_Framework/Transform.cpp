@@ -19,6 +19,11 @@ bool Transform::set_position(float x, float y)
 	return true;
 }
 
+bool Transform::Add_Positions(Vector2 position)
+{
+
+}
+
 bool Transform::Move(float x, float y)
 {
 	if (m_p_gameobject != NULL)

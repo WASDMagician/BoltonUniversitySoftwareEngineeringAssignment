@@ -22,6 +22,6 @@ void Game::Logic()
 
 void Game::Draw()
 {
-	//new_player->transform->Move_Between();
+	new_player->transform->Move_Between();
 	new_player->sprite->update_everything();
 }
