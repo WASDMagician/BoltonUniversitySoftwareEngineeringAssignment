@@ -1,11 +1,61 @@
-﻿Build started 17/10/2015 23:10:31.
-     1>Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 19/10/2015 11:42:20.
+     1>Project "C:\Users\Ed\Desktop\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Weapon.cpp
+         E:\VisualStudio\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt audiomanager.cpp AWSprite.cpp AW_Sprite_Interface.cpp Character.cpp Crossbow.cpp Empowere_Knuckles.cpp Enemy.cpp Game.cpp GameBase.cpp Game_Object.cpp Great_Axe.cpp Main.cpp NPCBase.cpp Object.cpp Player.cpp Sniper.cpp Sword.cpp Transform.cpp UI.cpp UnitTest++\src\AssertException.cpp UnitTest++\src\Checks.cpp UnitTest++\src\CurrentTest.cpp UnitTest++\src\DeferredTestReporter.cpp UnitTest++\src\DeferredTestResult.cpp UnitTest++\src\MemoryOutStream.cpp UnitTest++\src\ReportAssert.cpp UnitTest++\src\Test.cpp UnitTest++\src\TestDetails.cpp UnitTest++\src\TestList.cpp UnitTest++\src\TestReporter.cpp UnitTest++\src\TestReporterStdout.cpp UnitTest++\src\TestResults.cpp UnitTest++\src\TestRunner.cpp UnitTest++\src\TimeConstraint.cpp UnitTest++\src\TimeHelpers.cpp UnitTest++\src\XmlTestReporter.cpp Weapon.cpp
+         audiomanager.cpp
+         AWSprite.cpp
+         AW_Sprite_Interface.cpp
+         Character.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Crossbow.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Empowere_Knuckles.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Enemy.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Game.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         GameBase.cpp
+         Game_Object.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Great_Axe.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Main.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         NPCBase.cpp
+         Object.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Player.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Sniper.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Sword.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         Transform.cpp
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+         UI.cpp
+         AssertException.cpp
+         Compiling...
+         Checks.cpp
+         CurrentTest.cpp
+         DeferredTestReporter.cpp
+         DeferredTestResult.cpp
+         MemoryOutStream.cpp
+         ReportAssert.cpp
+         Test.cpp
+         TestDetails.cpp
+         TestList.cpp
+         TestReporter.cpp
+         TestReporterStdout.cpp
+         TestResults.cpp
+         TestRunner.cpp
+         TimeConstraint.cpp
+         TimeHelpers.cpp
+         XmlTestReporter.cpp
          Weapon.cpp
-     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+     1>c:\users\ed\desktop\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(22): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.exe" /INCREMENTAL:NO /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.lib" /MACHINE:X86 /SAFESEH Release\audiomanager.obj
+         E:\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ed\Desktop\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.exe" /INCREMENTAL:NO /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ed\Desktop\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ed\Desktop\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.lib" /MACHINE:X86 /SAFESEH Release\audiomanager.obj
          Release\AWSprite.obj
          Release\AW_Sprite_Interface.obj
          Release\Character.obj
@@ -17,6 +67,7 @@
          Release\Game_Object.obj
          Release\Great_Axe.obj
          Release\Main.obj
+         Release\NPCBase.obj
          Release\Object.obj
          Release\Player.obj
          Release\Sniper.obj
@@ -43,9 +94,9 @@
          Release\Weapon.obj
          Generating code
          Finished generating code
-         SDL_Game_Framework.vcxproj -> F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.exe
-     1>Done Building Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+         SDL_Game_Framework.vcxproj -> C:\Users\Ed\Desktop\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.exe
+     1>Done Building Project "C:\Users\Ed\Desktop\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.81
+Time Elapsed 00:00:12.90
