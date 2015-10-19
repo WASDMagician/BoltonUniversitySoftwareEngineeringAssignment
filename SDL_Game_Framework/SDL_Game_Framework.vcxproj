@@ -117,12 +117,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Audio.h" />
     <ClInclude Include="audiomanager.h" />
     <ClInclude Include="AWFont.h" />
     <ClInclude Include="AWSprite.h" />
     <ClInclude Include="AW_Sprite_Interface.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="console.h" />
+    <ClInclude Include="Consts.h" />
     <ClInclude Include="Crossbow.h" />
     <ClInclude Include="Custom_Types.h" />
     <ClInclude Include="Empowere_Knuckles.h" />
@@ -133,6 +135,8 @@
     <ClInclude Include="Great_Axe.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="NPCBase.h" />
+    <ClInclude Include="NPCHinter.h" />
+    <ClInclude Include="NPCShopkeeper.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="random.h" />
@@ -173,6 +177,7 @@
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Audio.cpp" />
     <ClCompile Include="audiomanager.cpp" />
     <ClCompile Include="AWSprite.cpp" />
     <ClCompile Include="AW_Sprite_Interface.cpp" />
@@ -187,6 +192,8 @@
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NPCBase.cpp" />
+    <ClCompile Include="NPCHinter.cpp" />
+    <ClCompile Include="NPCShopkeeper.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Sniper.cpp" />
