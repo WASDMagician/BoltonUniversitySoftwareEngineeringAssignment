@@ -12,7 +12,9 @@ ehthumbs.db
 *.tlog
 *.log
 *.pdb
-*opensdf
+*.opensdf
+*.dll
+*.ilk
 
 # Folder config file
 Desktop.ini

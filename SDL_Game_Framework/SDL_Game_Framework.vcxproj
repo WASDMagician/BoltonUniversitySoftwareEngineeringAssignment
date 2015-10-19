@@ -171,7 +171,6 @@
     <ClInclude Include="UnitTest++\src\UnitTest++.h" />
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h" />
     <ClInclude Include="Weapon.h" />
-    <ClInclude Include="workgit.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="audiomanager.cpp" />
@@ -212,7 +211,6 @@
     <ClCompile Include="UnitTest++\src\TimeHelpers.cpp" />
     <ClCompile Include="UnitTest++\src\XmlTestReporter.cpp" />
     <ClCompile Include="Weapon.cpp" />
-    <ClCompile Include="workgit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
