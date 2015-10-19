@@ -123,6 +123,7 @@
     <ClInclude Include="AW_Sprite_Interface.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="console.h" />
+    <ClInclude Include="Consts.h" />
     <ClInclude Include="Crossbow.h" />
     <ClInclude Include="Custom_Types.h" />
     <ClInclude Include="Empowere_Knuckles.h" />
@@ -132,6 +133,8 @@
     <ClInclude Include="Game_Object.h" />
     <ClInclude Include="Great_Axe.h" />
     <ClInclude Include="NPCBase.h" />
+    <ClInclude Include="NPCHinter.h" />
+    <ClInclude Include="NPCShopkeeper.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="random.h" />
@@ -185,6 +188,8 @@
     <ClCompile Include="Great_Axe.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NPCBase.cpp" />
+    <ClCompile Include="NPCHinter.cpp" />
+    <ClCompile Include="NPCShopkeeper.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Sniper.cpp" />

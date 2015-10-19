@@ -168,9 +168,6 @@
     <ClInclude Include="UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Crossbow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Great_Axe.h">
       <Filter>Header Files\weapons</Filter>
     </ClInclude>
@@ -194,6 +191,18 @@
     </ClInclude>
     <ClInclude Include="Character.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCHinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCShopkeeper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Consts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Crossbow.h">
+      <Filter>Header Files\weapons</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -306,6 +315,12 @@
       <Filter>Source Files\utility</Filter>
     </ClCompile>
     <ClCompile Include="NPCBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCHinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCShopkeeper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,5 +1,6 @@
 #pragma once
 #include "AWSprite.h"
+#include "Consts.h"
 class AW_Sprite_Interface :
 	public AWSprite
 {
