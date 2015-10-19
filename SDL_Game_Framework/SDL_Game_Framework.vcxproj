@@ -131,6 +131,7 @@
     <ClInclude Include="GameBase.h" />
     <ClInclude Include="Game_Object.h" />
     <ClInclude Include="Great_Axe.h" />
+    <ClInclude Include="NPCBase.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="random.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="Game_Object.cpp" />
     <ClCompile Include="Great_Axe.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="NPCBase.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Sniper.cpp" />

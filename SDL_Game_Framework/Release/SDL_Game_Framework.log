@@ -1,7 +1,10 @@
-﻿Build started 18/10/2015 23:09:58.
-     1>Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 19/10/2015 13:19:10.
+     1>Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Character.cpp Crossbow.cpp Empowere_Knuckles.cpp Enemy.cpp Game.cpp Game_Object.cpp Great_Axe.cpp Main.cpp Object.cpp Player.cpp Sniper.cpp Sword.cpp Transform.cpp Weapon.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt audiomanager.cpp AWSprite.cpp AW_Sprite_Interface.cpp Character.cpp Crossbow.cpp Empowere_Knuckles.cpp Enemy.cpp Game.cpp GameBase.cpp Game_Object.cpp Great_Axe.cpp Main.cpp NPCBase.cpp Object.cpp Player.cpp Sniper.cpp Sword.cpp Transform.cpp UI.cpp UnitTest++\src\AssertException.cpp UnitTest++\src\Checks.cpp UnitTest++\src\CurrentTest.cpp UnitTest++\src\DeferredTestReporter.cpp UnitTest++\src\DeferredTestResult.cpp UnitTest++\src\MemoryOutStream.cpp UnitTest++\src\ReportAssert.cpp UnitTest++\src\Test.cpp UnitTest++\src\TestDetails.cpp UnitTest++\src\TestList.cpp UnitTest++\src\TestReporter.cpp UnitTest++\src\TestReporterStdout.cpp UnitTest++\src\TestResults.cpp UnitTest++\src\TestRunner.cpp UnitTest++\src\TimeConstraint.cpp UnitTest++\src\TimeHelpers.cpp UnitTest++\src\XmlTestReporter.cpp Weapon.cpp
+         audiomanager.cpp
+         AWSprite.cpp
+         AW_Sprite_Interface.cpp
          Character.cpp
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(40): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(30): warning C4172: returning address of local variable or temporary
@@ -17,6 +20,7 @@
          Game.cpp
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(40): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(30): warning C4172: returning address of local variable or temporary
+         GameBase.cpp
          Game_Object.cpp
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(40): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(30): warning C4172: returning address of local variable or temporary
@@ -24,6 +28,9 @@
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(40): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(30): warning C4172: returning address of local variable or temporary
          Main.cpp
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(40): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(30): warning C4172: returning address of local variable or temporary
+         NPCBase.cpp
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(40): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(30): warning C4172: returning address of local variable or temporary
          Object.cpp
@@ -41,6 +48,25 @@
          Transform.cpp
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(40): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(30): warning C4172: returning address of local variable or temporary
+         UI.cpp
+         AssertException.cpp
+         Compiling...
+         Checks.cpp
+         CurrentTest.cpp
+         DeferredTestReporter.cpp
+         DeferredTestResult.cpp
+         MemoryOutStream.cpp
+         ReportAssert.cpp
+         Test.cpp
+         TestDetails.cpp
+         TestList.cpp
+         TestReporter.cpp
+         TestReporterStdout.cpp
+         TestResults.cpp
+         TestRunner.cpp
+         TimeConstraint.cpp
+         TimeHelpers.cpp
+         XmlTestReporter.cpp
          Weapon.cpp
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(40): warning C4091: 'typedef ' : ignored on left of 'Vector2' when no variable is declared
      1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\Custom_Types.h(30): warning C4172: returning address of local variable or temporary
@@ -57,6 +83,7 @@
          Release\Game_Object.obj
          Release\Great_Axe.obj
          Release\Main.obj
+         Release\NPCBase.obj
          Release\Object.obj
          Release\Player.obj
          Release\Sniper.obj
@@ -84,8 +111,8 @@
          Generating code
          Finished generating code
          SDL_Game_Framework.vcxproj -> F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Release\SDL_Game_Framework.exe
-     1>Done Building Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+     1>Done Building Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.96
+Time Elapsed 00:00:11.83
