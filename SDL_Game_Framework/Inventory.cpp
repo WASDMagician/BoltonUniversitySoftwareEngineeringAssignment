@@ -33,5 +33,9 @@ bool Inventory::remove_item()
 	inv_items.erase(inv_items.begin());
 }
 
+bool Inventory::work()
+{
+
+}
 
 

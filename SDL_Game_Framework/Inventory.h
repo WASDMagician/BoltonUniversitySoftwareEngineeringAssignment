@@ -17,7 +17,7 @@ public:
 
 	bool remove_item();
 	bool add_item(int item_type);
-
+	bool work();
 private:
 	int m_row;
 	int m_column[9];

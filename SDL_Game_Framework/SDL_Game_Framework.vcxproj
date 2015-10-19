@@ -131,6 +131,7 @@
     <ClInclude Include="GameBase.h" />
     <ClInclude Include="Game_Object.h" />
     <ClInclude Include="Great_Axe.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="NPCBase.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Player.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="UnitTest++\src\UnitTest++.h" />
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="workgit.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="audiomanager.cpp" />
@@ -183,6 +185,7 @@
     <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="Game_Object.cpp" />
     <ClCompile Include="Great_Axe.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NPCBase.cpp" />
     <ClCompile Include="Object.cpp" />
@@ -209,6 +212,7 @@
     <ClCompile Include="UnitTest++\src\TimeHelpers.cpp" />
     <ClCompile Include="UnitTest++\src\XmlTestReporter.cpp" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="workgit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
