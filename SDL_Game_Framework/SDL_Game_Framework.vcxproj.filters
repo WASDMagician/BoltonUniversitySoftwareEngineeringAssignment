@@ -190,7 +190,7 @@
       <Filter>Header Files\utility</Filter>
     </ClInclude>
     <ClInclude Include="Character.h">
-      <Filter>Header Files\utility</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

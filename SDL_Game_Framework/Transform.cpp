@@ -2,6 +2,7 @@
 #include "Game_Object.h"
 
 Transform::Transform()
+:m_position({ -1, -1 }), m_increment(-1), lerping(false)
 {
 }
 
@@ -12,7 +13,10 @@ Transform::~Transform()
 
 bool Transform::set_position(float x, float y)
 {
-	
+	m_position.x = x;
+	m_position.y = y;
+	Update_World_Position();
+	return true;
 }
 
 bool Transform::Move(float x, float y)
@@ -27,22 +31,23 @@ bool Transform::Move(float x, float y)
 	return false;
 }
 
-bool Transform::set_start_and_end_positions(Vector2 start, Vector2 end, float increment)
-{
-	if (start == end)
-	{
-		m_b_is_moving;
-	}
-}
-
-bool Transform::Lerp_To(Vector2 target, float increment)
+bool Transform::Lerp_To(Vector2 target, float increment, float rangeSnap = -1)
 {
 	//the higher the increment the SLOWER the movement will be
-	float lerp_x = m_position.x + (target.x - m_position.x) / increment;
-	float lerp_y = m_position.y + (target.y - m_position.y) / increment;
-	
+	float lerp_x = m_position.x + (target.x - m_position.x) * increment;
+	float lerp_y = m_position.y + (target.y - m_position.y) * increment;
+
 	Move(lerp_x, lerp_y);
-	return true;
+	if (rangeSnap != -1)
+	{
+		if (In_Range(m_position, target, rangeSnap))
+		{
+			Move(target.x, target.y);
+		}
+	}
+
+	
+	return false;
 }
 
 bool Transform::Update_Transform()
@@ -54,12 +59,9 @@ bool Transform::Update_Transform()
 bool Transform::Update_World_Position()
 {
 	m_p_gameobject->sprite->set_world_position(m_position.x, m_position.y);
+	return true;
 }
 
 bool Transform::Update()
 {
-	if (m_start_position == m_end_position)
-	{
-		m_b_is_moving = false;
-	}
 }

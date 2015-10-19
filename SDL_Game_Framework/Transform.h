@@ -14,20 +14,16 @@ public:
 	Game_Object *m_p_gameobject;
 	bool set_position(float x, float y);
 	bool Move(float x = NULL, float y = NULL);
-	bool set_start_and_end_positions(Vector2 start, Vector2 end, float increment);
-	bool Lerp_To(Vector2 target, float increment);
+	bool Lerp_To(Vector2 target, float increment, float rangeSnap);
 	bool Update_Transform();
 	bool Update_World_Position();
 	bool Update();
 
 private:
-	
+	Vector2 m_target;
 	Vector2 m_position;
-	Vector2 m_start_position;
-	Vector2 m_end_position;
 	float m_increment;
-
-	bool m_b_is_moving;
+	bool lerping;
 
 	
 };
