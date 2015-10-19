@@ -2,6 +2,17 @@
 Thumbs.db
 ehthumbs.db
 
+
+# our shit
+*.sdf
+*.sln
+*.suo
+*.obj
+*.exe
+*.tlog
+*.log
+*.pdb
+
 # Folder config file
 Desktop.ini
 
