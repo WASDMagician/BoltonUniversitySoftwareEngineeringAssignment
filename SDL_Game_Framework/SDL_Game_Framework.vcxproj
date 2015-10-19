@@ -117,6 +117,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Audio.h" />
     <ClInclude Include="audiomanager.h" />
     <ClInclude Include="AWFont.h" />
     <ClInclude Include="AWSprite.h" />
@@ -175,6 +176,7 @@
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Audio.cpp" />
     <ClCompile Include="audiomanager.cpp" />
     <ClCompile Include="AWSprite.cpp" />
     <ClCompile Include="AW_Sprite_Interface.cpp" />
