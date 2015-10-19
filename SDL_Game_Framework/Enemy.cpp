@@ -35,6 +35,7 @@ bool Enemy::Enemy_Movement()
 		Enemy_Dead();
 		break;
 	}
+	return true;
 }
 
 bool Enemy::Enemy_Idle()

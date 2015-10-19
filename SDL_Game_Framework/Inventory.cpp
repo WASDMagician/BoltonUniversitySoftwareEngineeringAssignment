@@ -31,11 +31,12 @@ bool Inventory::remove_item()
 {
 	//possible loop to erase a specific item
 	inv_items.erase(inv_items.begin());
+	return true;
 }
 
 bool Inventory::work()
 {
-
+	return true;
 }
 
 

@@ -54,6 +54,7 @@ bool Transform::Update_Transform()
 {
 	m_position.x = m_p_gameobject->sprite->get_x();
 	m_position.y = m_p_gameobject->sprite->get_y();
+	return true;
 }
 
 bool Transform::Update_World_Position()
@@ -64,4 +65,5 @@ bool Transform::Update_World_Position()
 
 bool Transform::Update()
 {
+	return true;
 }
