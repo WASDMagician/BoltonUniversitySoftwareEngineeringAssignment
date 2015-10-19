@@ -17,17 +17,19 @@ public:
 	bool Add_Positions(Vector2 position);
 	bool Move(float x = NULL, float y = NULL);
 	bool Lerp_To(Vector2 target, float increment, float rangeSnap);
+	bool Lerp_Positions();
 	bool Update_Transform();
 	bool Update_World_Position();
 	bool Update();
 
 private:
-	Vector2 m_target;
+	Vector2* m_target;
 	Vector2 m_position;
 	float m_increment;
 	
 	bool lerping;
-	std::vector<Vecotr2>m_positions;
+	Vector2 *target;
+	std::vector<Vector2*>m_positions;
 	
 };
 

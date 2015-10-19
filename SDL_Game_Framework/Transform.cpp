@@ -21,7 +21,7 @@ bool Transform::set_position(float x, float y)
 
 bool Transform::Add_Positions(Vector2 position)
 {
-
+	m_positions.push_back(position);
 }
 
 bool Transform::Move(float x, float y)
@@ -48,11 +48,24 @@ bool Transform::Lerp_To(Vector2 target, float increment, float rangeSnap = -1)
 		if (In_Range(m_position, target, rangeSnap))
 		{
 			Move(target.x, target.y);
+			return true;
 		}
 	}
 
 	
 	return false;
+}
+
+bool Transform::Lerp_Positions()
+{
+	if (m_target == NULL)
+	{
+		m_target = m_positions[0];
+	}
+	else
+	{
+
+	}
 }
 
 bool Transform::Update_Transform()
