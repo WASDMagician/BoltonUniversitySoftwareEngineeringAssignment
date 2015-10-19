@@ -92,5 +92,7 @@ bool UI::Display()
 
 bool UI::Flicker()
 {
+	//rect->toggle_visible(true);
+	
 	return true;
 }

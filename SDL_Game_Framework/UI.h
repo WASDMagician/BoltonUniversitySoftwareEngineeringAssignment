@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include "AW_Sprite_Interface.h"
 
 class UI
 {
@@ -18,6 +19,7 @@ public:
 	bool Update_Inventory();
 	bool Update_Health();
 	bool Update_Ammo();
+	
 
 private:
 	float m_collectibles; // number of items obtained currently
@@ -32,5 +34,6 @@ private:
 	//Timer* timer // maybe add a timer in here or something to add a speedrun element to the game up to you guys
 
 	unsigned int Get_Score() const{ return m_score; }
+	//AW_Sprite_Interface rect = new AW_Sprite_Interface(width, height, red, green, blue);
 };
 #endif
