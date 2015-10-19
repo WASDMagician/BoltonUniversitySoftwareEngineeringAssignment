@@ -1,4 +1,4 @@
-#include "Empowere_Knuckles.h"
+#include "Empowered_Knuckles.h"
 // Niall -> empowered_knuckles Weak but Fastest, Normal range (melee)
 
 Empowered_Knuckles::Empowered_Knuckles()

@@ -127,7 +127,7 @@
     <ClInclude Include="Consts.h" />
     <ClInclude Include="Crossbow.h" />
     <ClInclude Include="Custom_Types.h" />
-    <ClInclude Include="Empowere_Knuckles.h" />
+    <ClInclude Include="Empowered_Knuckles.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameBase.h" />
@@ -182,7 +182,7 @@
     <ClCompile Include="AW_Sprite_Interface.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Crossbow.cpp" />
-    <ClCompile Include="Empowere_Knuckles.cpp" />
+    <ClCompile Include="Empowered_Knuckles.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameBase.cpp" />
