@@ -30,10 +30,10 @@ typedef struct Vector2{
 		return (Vector2{ vector.x + addition, vector.y + addition });
 	}
 
-	friend bool In_Range(Vector2 position, Vector2 target, float amount)
+	friend bool In_Range(Vector2 position, Vector2 *target, float amount)
 	{
-		return((position.x <= target.x + amount && position.x >= target.x - amount) && 
-			(position.y <= target.y + amount && position.y >= target.y - amount));
+		return((position.x <= target->x + amount && position.x >= target->x - amount) && 
+			(position.y <= target->y + amount && position.y >= target->y - amount));
 	}
 
 

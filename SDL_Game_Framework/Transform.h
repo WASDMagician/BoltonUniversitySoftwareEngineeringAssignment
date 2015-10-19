@@ -14,9 +14,9 @@ public:
 	~Transform();
 	Game_Object *m_p_gameobject;
 	bool set_position(float x, float y);
-	bool Add_Positions(Vector2 position);
+	bool Add_Positions(Vector2 *position);
 	bool Move(float x = NULL, float y = NULL);
-	bool Lerp_To(Vector2 target, float increment, float rangeSnap);
+	bool Lerp_To(Vector2 *target, float increment, float rangeSnap);
 	bool Lerp_Positions();
 	bool Update_Transform();
 	bool Update_World_Position();
@@ -28,7 +28,6 @@ private:
 	float m_increment;
 	
 	bool lerping;
-	Vector2 *target;
 	std::vector<Vector2*>m_positions;
 	
 };
