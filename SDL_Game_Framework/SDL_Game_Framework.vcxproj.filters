@@ -34,6 +34,18 @@
     <Filter Include="Source Files\weapons">
       <UniqueIdentifier>{ee9d8400-b57c-4860-89b5-1d0ef001707a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Characters">
+      <UniqueIdentifier>{ef079ea6-9981-481d-bd24-2aa0aff6f243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Characters\Enemies">
+      <UniqueIdentifier>{98d03c6c-5ab6-40ce-8030-261657308214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Characters\NPC">
+      <UniqueIdentifier>{ce1f55b5-eb8c-4f5c-8d56-965ca4b0b8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Characters\Player">
+      <UniqueIdentifier>{8e383215-c965-4475-9056-9d8cb7ea77d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audiomanager.h">
@@ -144,12 +156,6 @@
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h">
       <Filter>UnitTest++</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -166,9 +172,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Crossbow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Great_Axe.h">
@@ -189,12 +192,6 @@
     <ClInclude Include="AW_Sprite_Interface.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
-    <ClInclude Include="NPCBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Inventory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -204,14 +201,29 @@
     <ClInclude Include="Consts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NPCHinter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NPCShopkeeper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="UI_Play_Screen.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCBase.h">
+      <Filter>Header Files\Characters\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCHinter.h">
+      <Filter>Header Files\Characters\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCShopkeeper.h">
+      <Filter>Header Files\Characters\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Characters\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Crossbow.h">
+      <Filter>Header Files\weapons</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
