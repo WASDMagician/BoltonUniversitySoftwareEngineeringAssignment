@@ -2,9 +2,8 @@
 #define _GAME_H_
 
 #include "GameBase.h"
-
 #include "Player.h"
-#include "UI.h"
+#include "UI_Play_Screen.h"
 
 
 class Game :
@@ -20,7 +19,7 @@ public:
 	void User_Interface();
 
 	Player *new_player;
-	UI *new_ui;
+	UI_Play_Screen *m_play_screen_ui;
 	
 };
 #endif // _GAME_H_

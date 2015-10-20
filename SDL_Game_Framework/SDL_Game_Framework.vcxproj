@@ -151,6 +151,7 @@
     <ClInclude Include="timer.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="UI.h" />
+    <ClInclude Include="UI_Play_Screen.h" />
     <ClInclude Include="UnitTest++\src\AssertException.h" />
     <ClInclude Include="UnitTest++\src\CheckMacros.h" />
     <ClInclude Include="UnitTest++\src\Checks.h" />
@@ -200,6 +201,7 @@
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UI_Play_Screen.cpp" />
     <ClCompile Include="UnitTest++\src\AssertException.cpp" />
     <ClCompile Include="UnitTest++\src\Checks.cpp" />
     <ClCompile Include="UnitTest++\src\CurrentTest.cpp" />
