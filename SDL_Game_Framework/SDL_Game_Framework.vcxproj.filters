@@ -46,6 +46,18 @@
     <Filter Include="Header Files\Characters\Player">
       <UniqueIdentifier>{8e383215-c965-4475-9056-9d8cb7ea77d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Characters">
+      <UniqueIdentifier>{abba65e7-b0bb-44b3-b77e-3276f7f43e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters\Player">
+      <UniqueIdentifier>{9bd0dbb4-cc0c-4a09-9666-a7170f81cb03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters\Enemy">
+      <UniqueIdentifier>{4569df9a-022b-490c-a5e3-adceff43bc28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters\NPC">
+      <UniqueIdentifier>{eb669db7-d327-401d-af08-bad06c057e66}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audiomanager.h">
@@ -287,18 +299,6 @@
     <ClCompile Include="UnitTest++\src\XmlTestReporter.cpp">
       <Filter>UnitTest++</Filter>
     </ClCompile>
-    <ClCompile Include="Character.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Weapon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -335,23 +335,35 @@
     <ClCompile Include="AW_Sprite_Interface.cpp">
       <Filter>Source Files\utility</Filter>
     </ClCompile>
-    <ClCompile Include="NPCBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Inventory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Audio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NPCHinter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NPCShopkeeper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="UI_Play_Screen.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>Source Files\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCBase.cpp">
+      <Filter>Source Files\Characters\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCHinter.cpp">
+      <Filter>Source Files\Characters\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCShopkeeper.cpp">
+      <Filter>Source Files\Characters\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\Characters\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Characters\Player</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

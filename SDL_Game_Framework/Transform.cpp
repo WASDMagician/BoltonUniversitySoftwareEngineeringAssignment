@@ -2,9 +2,12 @@
 #include "Game_Object.h"
 
 Transform::Transform()
-:m_current_position(new Vector2{ -1, -1 }), m_increment(-1), m_positions({ { 0, 0 } }), m_target(NULL)
+:m_current_position(new Vector2{ -1, -1 }), m_increment(-1), m_target(NULL), current_target_position(0)
 {
-	m_positions.push_back(new Vector2{ 0, 0 });
+	m_position_list.push_back(new Vector2({ 0, 0 }));
+	m_position_list.push_back(new Vector2({ 0, 200 }));
+	m_position_list.push_back(new Vector2({ 200, 200 }));
+	m_position_list.push_back(new Vector2({ 400, 400 }));
 }
 
 
@@ -33,6 +36,27 @@ bool Transform::Move(float x, float y)
 	return false;
 }
 
+bool Transform::Move_Between()
+{
+	if (m_target == NULL)
+	{
+		m_target = m_position_list[current_target_position];
+	}
+	if (Lerp_To(m_target, 18, 10))
+	{
+		if (current_target_position + 1 >= m_position_list.size())
+		{
+			current_target_position = 0;
+		}
+		else
+		{
+			current_target_position++;
+		}
+		m_target = m_position_list[current_target_position];
+	}
+	return false;
+}
+
 bool Transform::Lerp_To(Vector2 *target, float increment, float rangeSnap = -1)
 {	
 	float lerp_x = m_current_position->x + (target->x - m_current_position->x) * increment;
@@ -47,9 +71,12 @@ bool Transform::Lerp_To(Vector2 *target, float increment, float rangeSnap = -1)
 			return true;
 		}
 	}
-
-	
 	return false;
+}
+
+bool Transform::Move_Towards(Vector2 *target, float increment, float rangeSnap = -1)
+{
+	
 }
 
 bool Transform::Update_Transform()

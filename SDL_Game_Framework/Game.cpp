@@ -31,8 +31,9 @@ void Game::Logic()
 void Game::Draw()
 {
 	//new_player->transform->Lerp_Positions();
-	new_player->transform->Lerp_To(new Vector2{ 200, 200 }, 0.01, 1);
+	//new_player->transform->Lerp_To(new Vector2{ 200, 200 }, 0.01, 1);
 	//new_ui->Display(); // someone needs to look into the UI Display not sure what to do
+	new_player->transform->Move_Between();
 	new_player->sprite->update_everything();
 	m_play_screen_ui->Display();
 }
