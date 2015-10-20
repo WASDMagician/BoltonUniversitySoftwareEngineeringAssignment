@@ -24,6 +24,8 @@ public:
 	void set_character_defence(const unsigned int defence);
 	const unsigned int get_character_defence() const;
 
+	virtual std::string serialize_character();
+
 private:
 	std::string m_name;
 	unsigned int m_health;

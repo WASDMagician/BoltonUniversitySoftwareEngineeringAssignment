@@ -1,9 +1,11 @@
 #ifndef _TRANSFORM_H_
 #define _TRANSFORM_H_
 
-#include "Custom_Types.h"
+#include <math.h>
 #include <vector>
 #include <cstddef>
+
+#include "Custom_Types.h"
 
 class Game_Object;
 
@@ -15,8 +17,8 @@ public:
 	Game_Object *m_p_gameobject;
 	bool set_current_position(float x, float y);
 	bool Move(float x = NULL, float y = NULL);
+	bool Increment_Move(float x = NULL, float y = NULL);
 	bool Move_Between();
-	bool Move_Towards(Vector2 *target, float increment, float rangeSnap);
 	bool Lerp_To(Vector2 *target, float increment, float rangeSnap);
 	bool Update_Transform();
 	bool Update_World_Position();

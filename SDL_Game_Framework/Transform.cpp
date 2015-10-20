@@ -5,9 +5,10 @@ Transform::Transform()
 :m_current_position(new Vector2{ -1, -1 }), m_increment(-1), m_target(NULL), current_target_position(0)
 {
 	m_position_list.push_back(new Vector2({ 0, 0 }));
-	m_position_list.push_back(new Vector2({ 0, 200 }));
-	m_position_list.push_back(new Vector2({ 200, 200 }));
-	m_position_list.push_back(new Vector2({ 400, 400 }));
+	m_position_list.push_back(new Vector2({ 0, 400 }));
+	m_position_list.push_back(new Vector2({ 400, 400}));
+	m_position_list.push_back(new Vector2({ 400, 0}));
+	//m_position_list.push_back(new Vector2({ 400, 200 }));
 }
 
 
@@ -36,13 +37,25 @@ bool Transform::Move(float x, float y)
 	return false;
 }
 
+bool Transform::Increment_Move(float x, float y)
+{
+	if (m_p_gameobject != NULL)
+	{
+		m_p_gameobject->sprite->set_world_position_x(m_p_gameobject->sprite->get_x() + x);
+		m_p_gameobject->sprite->set_world_position_y(m_p_gameobject->sprite->get_y() + y);
+		m_current_position->x = x;
+		m_current_position->y = y;
+	}
+	return false;
+}
+
 bool Transform::Move_Between()
 {
 	if (m_target == NULL)
 	{
 		m_target = m_position_list[current_target_position];
 	}
-	if (Lerp_To(m_target, 18, 10))
+	if (Lerp_To(m_target, 20, 1))
 	{
 		if (current_target_position + 1 >= m_position_list.size())
 		{
@@ -59,8 +72,8 @@ bool Transform::Move_Between()
 
 bool Transform::Lerp_To(Vector2 *target, float increment, float rangeSnap = -1)
 {	
-	float lerp_x = m_current_position->x + (target->x - m_current_position->x) * increment;
-	float lerp_y = m_current_position->y + (target->y - m_current_position->y) * increment;
+	float lerp_x = m_current_position->x + (target->x - m_current_position->x) / increment;
+	float lerp_y = m_current_position->y + (target->y - m_current_position->y) / increment;
 
 	Move(lerp_x, lerp_y);
 	if (rangeSnap != -1)
@@ -72,11 +85,6 @@ bool Transform::Lerp_To(Vector2 *target, float increment, float rangeSnap = -1)
 		}
 	}
 	return false;
-}
-
-bool Transform::Move_Towards(Vector2 *target, float increment, float rangeSnap = -1)
-{
-	
 }
 
 bool Transform::Update_Transform()

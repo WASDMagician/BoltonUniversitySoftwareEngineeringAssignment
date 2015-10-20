@@ -65,3 +65,8 @@ const unsigned int Character::get_character_defence() const
 	return m_defence;
 }
 
+std::string Character::serialize_character()
+{
+
+}
+
