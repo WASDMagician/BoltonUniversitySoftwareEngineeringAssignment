@@ -17,7 +17,7 @@ void Game::Setup()
 	new_player = new Player("images/player_placeholder.png", 1, 1, "Player", 100, 100, 100, 5);
 	new_player->transform->set_current_position(10, 10);
 
-	m_play_screen_ui = new UI_Play_Screen(0, new_player->get_character_health(), 0, new_player->get_lives(), 0, new_player->get_character_name());
+	m_play_screen_ui = new UI_Play_Screen(1, new_player->get_character_health(), 0, new_player->get_lives(), 0, new_player->get_character_name());
 
 
 }
