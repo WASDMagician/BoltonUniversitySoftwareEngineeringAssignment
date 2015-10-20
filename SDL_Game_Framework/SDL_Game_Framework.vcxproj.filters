@@ -210,6 +210,9 @@
     <ClInclude Include="NPCShopkeeper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="UI_Play_Screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -333,6 +336,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NPCShopkeeper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI_Play_Screen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
