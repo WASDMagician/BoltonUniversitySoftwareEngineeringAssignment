@@ -52,11 +52,11 @@
     <Filter Include="Source Files\Characters\Player">
       <UniqueIdentifier>{9bd0dbb4-cc0c-4a09-9666-a7170f81cb03}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Characters\Enemy">
-      <UniqueIdentifier>{4569df9a-022b-490c-a5e3-adceff43bc28}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Characters\NPC">
       <UniqueIdentifier>{eb669db7-d327-401d-af08-bad06c057e66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters\Enemies">
+      <UniqueIdentifier>{4569df9a-022b-490c-a5e3-adceff43bc28}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +240,12 @@
     <ClInclude Include="Game_Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Ogre.h">
+      <Filter>Header Files\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="PickupObjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -363,10 +369,16 @@
       <Filter>Source Files\Characters\NPC</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files\Characters\Enemy</Filter>
+      <Filter>Source Files\Characters\Enemies</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source Files\Characters\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Ogre.cpp">
+      <Filter>Source Files\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="PickupObjects.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

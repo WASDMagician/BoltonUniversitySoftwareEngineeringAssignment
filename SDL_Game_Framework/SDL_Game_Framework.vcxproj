@@ -139,6 +139,8 @@
     <ClInclude Include="NPCHinter.h" />
     <ClInclude Include="NPCShopkeeper.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="Ogre.h" />
+    <ClInclude Include="PickupObjects.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="random.h" />
     <ClInclude Include="SDL.h" />
@@ -197,6 +199,8 @@
     <ClCompile Include="NPCHinter.cpp" />
     <ClCompile Include="NPCShopkeeper.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Ogre.cpp" />
+    <ClCompile Include="PickupObjects.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Sniper.cpp" />
     <ClCompile Include="Sword.cpp" />
