@@ -4,6 +4,7 @@
 UI_Play_Screen::UI_Play_Screen()
 :m_collectibles(0), m_health(100), m_ammunition(0), m_lives(5), m_score(0), m_name("Pleb")
 {
+
 }
 
 UI_Play_Screen::UI_Play_Screen(unsigned int items, unsigned int health, unsigned int ammo, unsigned int lives, unsigned int score, std::string name)
@@ -16,10 +17,14 @@ UI_Play_Screen::~UI_Play_Screen()
 {
 }
 
-bool UI_Play_Screen::Flicker()
+bool UI_Play_Screen::Flicker(unsigned int numOfFlicks)
 {
-	//rect->toggle_visible(true);
-
+	for (unsigned int i = 0; i < numOfFlicks; i++)
+	{
+		get_flicker_sprite()->set_visibility(true);
+		get_flicker_sprite()->set_visibility(false);
+		//get_flicker_sprite()->set_visibility(!(get_flicker_sprite()->get_visibility()));
+	}
 	return true;
 }
 
@@ -87,7 +92,6 @@ bool UI_Play_Screen:: set_score(unsigned int score)
 		return true;
 	}
 }
-
 
 void UI_Play_Screen:: Display()
 {
