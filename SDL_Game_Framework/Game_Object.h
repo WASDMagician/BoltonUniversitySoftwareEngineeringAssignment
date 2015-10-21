@@ -12,9 +12,12 @@ public:
 	~Game_Object();
 	
 	Transform* transform;
-	AW_Sprite_Interface* sprite;
 	bool set_transform();
 	bool set_sprite(char* img, int cols, int rows);
+
+	AW_Sprite_Interface *sprite;
+private:
+	
 };
 #endif //_GAME_OBJECT_H_
 

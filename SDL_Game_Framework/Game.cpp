@@ -18,6 +18,8 @@ void Game::Setup()
 	new_player->transform->set_current_position(10, 10);
 
 	m_play_screen_ui = new UI_Play_Screen(1, new_player->get_character_health(), 0, new_player->get_lives(), 0, new_player->get_character_name());
+	m_play_screen_ui->m_flickering = true;
+	m_play_screen_ui->Flicker(10);
 
 
 }
@@ -25,6 +27,7 @@ void Game::Setup()
 void Game::Logic()
 {
 	//Run every function to be used.
+	m_play_screen_ui->Flicker(1);
 	
 }
 

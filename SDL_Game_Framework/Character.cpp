@@ -67,6 +67,6 @@ const unsigned int Character::get_character_defence() const
 
 std::string Character::serialize_character()
 {
-
+	return "False";
 }
 

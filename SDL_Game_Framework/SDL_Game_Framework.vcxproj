@@ -131,6 +131,7 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameBase.h" />
+    <ClInclude Include="Game_Constants.h" />
     <ClInclude Include="Game_Object.h" />
     <ClInclude Include="Great_Axe.h" />
     <ClInclude Include="Inventory.h" />

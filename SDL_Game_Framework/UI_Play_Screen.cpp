@@ -2,14 +2,17 @@
 
 
 UI_Play_Screen::UI_Play_Screen()
-:m_collectibles(0), m_health(100), m_ammunition(0), m_lives(5), m_score(0), m_name("Pleb")
+:m_collectibles(0), m_health(100), m_ammunition(0), m_lives(5), m_score(0), m_name("Pleb"), m_flicker_object(new Game_Object()), m_flickering(false)
 {
-
+	m_flicker_object->sprite->setImage(SCRN_WIDTH, SCRN_HEIGHT, 255, 0, 0);
+	m_flicker_object->sprite->set_visibility(false);
 }
 
 UI_Play_Screen::UI_Play_Screen(unsigned int items, unsigned int health, unsigned int ammo, unsigned int lives, unsigned int score, std::string name)
-: m_collectibles(items), m_health(health), m_ammunition(ammo), m_lives(lives), m_score(score), m_name(name)
+: m_collectibles(items), m_health(health), m_ammunition(ammo), m_lives(lives), m_score(score), m_name(name), m_flicker_object(new Game_Object()), m_flickering(false)
 {
+	m_flicker_object->sprite->setImage(SCRN_WIDTH, SCRN_HEIGHT, 255, 0, 0);
+	m_flicker_object->sprite->set_visibility(false);
 }
 
 
@@ -19,13 +22,12 @@ UI_Play_Screen::~UI_Play_Screen()
 
 bool UI_Play_Screen::Flicker(unsigned int numOfFlicks)
 {
-	for (unsigned int i = 0; i < numOfFlicks; i++)
+	if (m_flickering)
 	{
-		get_flicker_sprite()->set_visibility(true);
-		get_flicker_sprite()->set_visibility(false);
-		//get_flicker_sprite()->set_visibility(!(get_flicker_sprite()->get_visibility()));
+		m_flicker_object->sprite->set_visibility(!m_flicker_object->sprite->is_visible());
+		return true;
 	}
-	return true;
+	return false;
 }
 
 bool UI_Play_Screen:: set_ammunition(unsigned int ammo)
@@ -101,4 +103,6 @@ void UI_Play_Screen:: Display()
 	std::cout << "Lives: " << m_lives << std::endl;
 	std::cout << "Health: " << m_health << std::endl;
 	std::cout << "Score: " << m_score << std::endl;
+
+	m_flicker_object->sprite->update_everything();
 }
