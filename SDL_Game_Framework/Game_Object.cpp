@@ -2,13 +2,13 @@
 
 
 Game_Object::Game_Object()
-:sprite(NULL), transform(new Transform())
+:sprite(new AW_Sprite_Interface()), transform(new Transform())
 {
 	set_transform();
 }
 
 Game_Object::Game_Object(char* img, int cols, int rows)
-:sprite(NULL), transform(new Transform())
+:sprite(new AW_Sprite_Interface()), transform(new Transform())
 {
 	set_transform();
 	set_sprite(img, cols, rows);

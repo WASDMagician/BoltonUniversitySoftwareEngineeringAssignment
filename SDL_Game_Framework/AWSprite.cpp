@@ -639,7 +639,7 @@ SDL_Surface** AWSprite::create_frames_with_alpha(Uint32 cols, Uint32 rows) {
 		}
 	}
 	// Reset SDL_SRCALPHA
- 	wholeSurface->flags |= SDL_SRCALPHA;
+	wholeSurface->flags |= SDL_SRCALPHA;
  
 	return frames;
 }
@@ -1284,7 +1284,7 @@ bool AWSprite::pp_collision_32(AWSprite *spriteB) {
 		if(foundCollision) break;
 		pA = pA + (surfaceWidthA - widthObytes);
 		pB = pB + (surfaceWidthB - widthObytes);
-  		by++;	//pkl
+		by++;	//pkl
 	}
 	SDL_UnlockSurface(surface);
 	SDL_UnlockSurface(spriteB->surface);
@@ -1391,7 +1391,7 @@ bool AWSprite::pp_collision_16(AWSprite *spriteB) {
  
 			if(!pixelAtransparent && !pixelBtransparent) {
 			*/
-            if(aColour != transparentColour && bColour != bTC) {
+			if(aColour != transparentColour && bColour != bTC) {
 				hit_x = ax;
 				hit_y = ay;
 				spriteB->set_hit_xy(bx, by);
