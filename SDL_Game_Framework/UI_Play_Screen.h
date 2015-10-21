@@ -3,8 +3,6 @@
 
 #include "UI.h"
 
-class Game_Object;
-
 class UI_Play_Screen :
 	public UI
 {
@@ -22,9 +20,6 @@ public:
 	bool set_score(unsigned int score);
 
 	void Display();
-
-	bool m_flickering;
-	Game_Object *m_flicker_object;
 	
 
 private:
@@ -34,8 +29,6 @@ private:
 	int m_lives; // this or health use which everyone else prefers, i'd prefer health so we can have a slow decay of health in lava or whatever than a fixed life. Maybe...
 	unsigned int m_health; // current health // An idea for health is have 5 blocks/hearts/character images representing 5 pieces of hp
 	unsigned int m_score;
-
-	
 
 	/* Inaccessible
 	AWSprite* flickersprite;

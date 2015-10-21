@@ -9,7 +9,7 @@ class Character: public Game_Object
 public:
 	Character();
 	Character(const std::string name, const unsigned int health, const unsigned int damage, const unsigned int defence);
-	Character(char* img, int cols, int rows, std::string name, unsigned int health, unsigned int damage, unsigned int defence);
+	Character(char* img, int cols, int rows, std::string name, unsigned int health, unsigned int damage, unsigned int defenc);
 	virtual ~Character();
 
 	void set_character_name(const std::string &name);

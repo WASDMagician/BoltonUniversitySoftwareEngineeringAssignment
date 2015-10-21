@@ -1,10 +1,9 @@
 #include "Game.h"
-#include "Game_Constants.h"
 #include <iostream>
 
 int main(int argc, char *argv[])
 {
-	GameBase::InitSDL(SCRN_WIDTH, SCRN_HEIGHT);
+	GameBase::InitSDL(640, 480);
 	Game* game = new Game();
 	game->Setup();
 	game->Start();

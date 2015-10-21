@@ -237,9 +237,6 @@
     <ClInclude Include="Crossbow.h">
       <Filter>Header Files\weapons</Filter>
     </ClInclude>
-    <ClInclude Include="Game_Constants.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
