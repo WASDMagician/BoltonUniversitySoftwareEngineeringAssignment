@@ -25,3 +25,10 @@ std::string Character::serialize_character()
 	return "False";
 }
 
+bool Character::render()
+{
+	sprite->auto_animate();
+	sprite->update_everything();
+	return true;
+}
+

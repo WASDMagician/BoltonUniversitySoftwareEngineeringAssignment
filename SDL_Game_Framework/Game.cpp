@@ -23,14 +23,12 @@ void Game::Setup()
 void Game::Logic()
 {
 	//Run every function to be used.
-	new_player->sprite->auto_animate();
-	new_ogre->sprite->auto_animate();
 }
 
 void Game::Draw()
 {
 	new_player->transform->Move_Between();
-	new_player->sprite->update_everything();
-	new_enemy->sprite->update_everything();
-	new_ogre->sprite->update_everything();
+	new_player->render();
+	new_enemy->render();
+	new_ogre->render();
 }

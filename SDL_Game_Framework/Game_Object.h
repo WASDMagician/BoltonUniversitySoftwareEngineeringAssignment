@@ -2,7 +2,7 @@
 #define _GAME_OBJECT_H_
 
 #include "Transform.h"
-#include "AW_Sprite_Interface.h"
+#include "AWSprite.h"
 
 class Game_Object
 {
@@ -17,7 +17,7 @@ public:
 
 	virtual bool serialize_game_object();
 
-	AW_Sprite_Interface *sprite;
+	AWSprite *sprite;
 private:
 	
 };

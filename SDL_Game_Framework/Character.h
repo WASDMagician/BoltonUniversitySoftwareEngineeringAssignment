@@ -43,6 +43,8 @@ public:
 
 	virtual std::string serialize_character() = NULL;
 
+	bool render();
+
 protected:
 	std::string m_name;
 	unsigned int m_health;
