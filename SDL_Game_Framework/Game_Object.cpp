@@ -26,7 +26,7 @@ bool Game_Object::set_sprite(char* img, int cols, int rows)
 	return true;
 }
 
-bool Game_Object::set_transform()
+bool Game_Object::set_transform(void)
 {
 	transform->m_p_gameobject = this;
 	return true;

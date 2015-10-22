@@ -24,14 +24,17 @@ bool Transform::set_current_position(float x, float y)
 	return true;
 }
 
+Vector2& Transform::get_current_position()
+{
+	return *m_current_position;
+}
+
 
 bool Transform::Move(float x, float y)
 {
 	if (m_p_gameobject != NULL)
 	{
-		m_p_gameobject->sprite->set_world_position(x, y);
-		m_current_position->x = x;
-		m_current_position->y = y;
+		set_current_position(x, y);
 		return true;
 	}
 	return false;

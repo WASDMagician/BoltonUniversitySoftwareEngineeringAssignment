@@ -16,6 +16,7 @@ public:
 	~Transform();
 	Game_Object *m_p_gameobject;
 	bool set_current_position(float x, float y);
+	Vector2 &get_current_position();
 	bool Move(float x = NULL, float y = NULL);
 	bool Increment_Move(float x = NULL, float y = NULL);
 	bool Move_Between();
@@ -25,11 +26,11 @@ public:
 	bool Update();
 
 private:
-	Vector2* m_current_position;
+	Vector2 *m_current_position;
 	float m_increment;
 
 	std::vector<Vector2*>m_position_list;
-	Vector2* m_target;
+	Vector2 *m_target;
 	unsigned int current_target_position;
 	
 };

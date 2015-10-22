@@ -12,7 +12,7 @@ public:
 	~Game_Object();
 	
 	Transform* transform;
-	bool set_transform();
+	bool set_transform(void);
 	bool set_sprite(char* img, int cols, int rows);
 
 	virtual bool serialize_game_object();

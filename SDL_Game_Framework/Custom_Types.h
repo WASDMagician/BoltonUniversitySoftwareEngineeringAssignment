@@ -10,7 +10,7 @@ typedef struct Vector2{
 		return (first.x == second.x && first.y == second.y); 
 	}
 
-	friend bool operator !=(Vector2 first, Vector2 second)
+	friend bool operator != (Vector2 first, Vector2 second)
 	{
 		return !(first == second);
 	}
@@ -35,8 +35,6 @@ typedef struct Vector2{
 		return((position->x <= target->x + amount && position->x >= target->x - amount) && 
 			(position->y <= target->y + amount && position->y >= target->y - amount));
 	}
-
-
 };
 
 #endif //_CUSTOM_TYPES_H_

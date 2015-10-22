@@ -10,11 +10,24 @@ public:
 	NPC_Base(creation_variables *initialiser);
 	virtual ~NPC_Base();
 
-	void set_npc_name(const std::string &name);
-	const std::string get_npc_name() const;
+	bool set_name(std::string name);
+	std::string get_name();
+
+	bool set_health(unsigned int health);
+	unsigned int get_health();
+
+	bool set_lives(unsigned int lives);
+	unsigned int get_lives();
+
+	bool set_damage(unsigned int damage);
+	unsigned int get_damage();
+
+	bool set_defence(unsigned int defence);
+	unsigned int get_defence();
+
+	std::string serialize_character();
 
 private:
-	std::string m_name;
 };
 
 #endif //_NPC_BASE_H_
