@@ -246,6 +246,12 @@
     <ClInclude Include="PickupObjects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Save_Game.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Load_Game.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -379,6 +385,12 @@
     </ClCompile>
     <ClCompile Include="PickupObjects.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Save_Game.cpp">
+      <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Load_Game.cpp">
+      <Filter>Source Files\utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,17 +2,13 @@
 
 
 Object::Object()
+:m_name("InstName")
 {
-	m_xPos = 0;
-	m_yPos = 0;
-	m_name = "My Precious Shiny ";
 }
 
-Object::Object(float x, float y, std::string name)
+Object::Object(std::string name)
+: m_name(name)
 {
-	m_xPos = x;
-	m_yPos = y;
-	m_name = name;
 }
 
 Object::~Object()
@@ -20,27 +16,22 @@ Object::~Object()
 
 }
 
-bool Object::IsObtained() // you guys pass judgement on this
+bool Object::set_obtained(bool obtained)
 {
-	if (m_is_obtained = true)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	m_is_obtained = obtained;
 }
 
-bool Object::IsGlowing() // just an idea
+bool Object::get_obtained() // you guys pass judgement on this
 {
-	if (m_is_obtained == true)
-	{
-		m_is_glowing = false;
-	}
-	else
-	{
-		m_is_glowing = true;
-	}
-	return true;
+	return m_is_obtained;
+}
+
+bool Object::set_glowing(bool glowing)
+{
+	m_is_glowing = glowing;
+}
+
+bool Object::get_glowing() // just an idea
+{
+	return m_is_glowing;
 }

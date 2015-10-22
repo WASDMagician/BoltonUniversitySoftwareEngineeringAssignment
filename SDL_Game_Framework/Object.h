@@ -8,15 +8,15 @@ class Object :
 {
 public:
 	Object();
-	Object(float x, float y, std::string name);
+	Object(std::string name);
 	~Object();
 
-	bool IsObtained(); // dont know if we need this but whatever...
-	bool IsGlowing(); // to help you locate items
+	bool set_obtained(bool obtained);
+	bool get_obtained(); // dont know if we need this but whatever...
+	bool set_glowing(bool glowing);
+	bool get_glowing(); // to help you locate items
 
 private:
-	float m_xPos; // position in game (X)
-	float m_yPos; // position in game (Y)
 	std::string m_name; // in case we have multiple items that want names?
 
 	bool m_is_obtained; // something to toggle for when player collides with it

@@ -135,6 +135,7 @@
     <ClInclude Include="Game_Object.h" />
     <ClInclude Include="Great_Axe.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Load_Game.h" />
     <ClInclude Include="NPCBase.h" />
     <ClInclude Include="NPCHinter.h" />
     <ClInclude Include="NPCShopkeeper.h" />
@@ -143,6 +144,7 @@
     <ClInclude Include="PickupObjects.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="random.h" />
+    <ClInclude Include="Save_Game.h" />
     <ClInclude Include="SDL.h" />
     <ClInclude Include="SDL_events.h" />
     <ClInclude Include="SDL_image.h" />
@@ -194,6 +196,7 @@
     <ClCompile Include="Game_Object.cpp" />
     <ClCompile Include="Great_Axe.cpp" />
     <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Load_Game.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NPCBase.cpp" />
     <ClCompile Include="NPCHinter.cpp" />
@@ -202,6 +205,7 @@
     <ClCompile Include="Ogre.cpp" />
     <ClCompile Include="PickupObjects.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Save_Game.cpp" />
     <ClCompile Include="Sniper.cpp" />
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Transform.cpp" />

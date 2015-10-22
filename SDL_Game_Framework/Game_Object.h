@@ -15,6 +15,8 @@ public:
 	bool set_transform();
 	bool set_sprite(char* img, int cols, int rows);
 
+	virtual void serialize_game_object();
+
 	AW_Sprite_Interface *sprite;
 private:
 	

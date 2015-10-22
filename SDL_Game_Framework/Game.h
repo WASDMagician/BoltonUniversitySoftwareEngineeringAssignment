@@ -16,7 +16,6 @@ public:
 	void Setup();
 	void Logic();
 	void Draw();
-	void User_Interface();
 
 	Player *new_player;
 	UI_Play_Screen *m_play_screen_ui;

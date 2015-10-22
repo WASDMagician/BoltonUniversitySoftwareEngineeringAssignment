@@ -97,12 +97,12 @@ bool UI_Play_Screen:: set_score(unsigned int score)
 
 void UI_Play_Screen:: Display()
 {
-	std::cout << "Name: " << m_name << std::endl;
+	/*std::cout << "Name: " << m_name << std::endl;
 	std::cout << "Ammo: " << m_ammunition << std::endl;
 	std::cout << "Collectibles: " << m_collectibles << std::endl;
 	std::cout << "Lives: " << m_lives << std::endl;
 	std::cout << "Health: " << m_health << std::endl;
-	std::cout << "Score: " << m_score << std::endl;
+	std::cout << "Score: " << m_score << std::endl;*/
 
 	m_flicker_object->sprite->update_everything();
 }

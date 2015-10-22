@@ -25,7 +25,6 @@ void Game::Setup()
 void Game::Logic()
 {
 	//Run every function to be used.
-	m_play_screen_ui->Flicker(1);
 	
 }
 

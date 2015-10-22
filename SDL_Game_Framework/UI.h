@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Game_Object.h"
 #include "Game_Constants.h"
+#include "GameBase.h"
 
 class UI : 
 	public Game_Object

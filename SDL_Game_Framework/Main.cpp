@@ -2,6 +2,8 @@
 #include "Game_Constants.h"
 #include <iostream>
 
+
+
 int main(int argc, char *argv[])
 {
 	GameBase::InitSDL(SCRN_WIDTH, SCRN_HEIGHT);
