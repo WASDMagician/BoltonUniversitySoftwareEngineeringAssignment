@@ -15,15 +15,33 @@ class Enemy : public Character
 {
 public:
 	Enemy();
-	Enemy(char* img, int rows, int cols, std::string name, 
-		unsigned int health, unsigned int damage, unsigned int defence);
-	~Enemy();
+	Enemy(creation_variables *initialisers);
+
+	virtual ~Enemy();
 
 	bool Enemy_Movement();
 	bool Enemy_Idle();
 	bool Enemy_Roam();
 	bool Enemy_Attack();
 	bool Enemy_Dead();
+
+	bool set_name(std::string name);
+	std::string get_name();
+
+	bool set_health(unsigned int health);
+	unsigned int get_health();
+
+	bool set_lives(unsigned int lives);
+	unsigned int get_lives();
+
+	bool set_damage(unsigned int damage);
+	unsigned int get_damage();
+
+	bool set_defence(unsigned int defence);
+	unsigned int get_defence();
+
+	std::string serialize_character();
+
 private:
 	ENEMY_STATE enemy_state;
 };

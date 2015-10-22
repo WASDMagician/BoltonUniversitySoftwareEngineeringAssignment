@@ -61,6 +61,12 @@
     <Filter Include="Source Files\tests">
       <UniqueIdentifier>{b69a1cff-c890-4846-b0bf-19bb35b740e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Levels">
+      <UniqueIdentifier>{4636ea82-8ed8-42d5-920b-7d2720e8c13e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Levels">
+      <UniqueIdentifier>{84705671-bbc5-436a-bfca-0832a06a4713}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audiomanager.h">
@@ -225,15 +231,6 @@
     <ClInclude Include="Enemy.h">
       <Filter>Header Files\Characters\Enemies</Filter>
     </ClInclude>
-    <ClInclude Include="NPCBase.h">
-      <Filter>Header Files\Characters\NPC</Filter>
-    </ClInclude>
-    <ClInclude Include="NPCHinter.h">
-      <Filter>Header Files\Characters\NPC</Filter>
-    </ClInclude>
-    <ClInclude Include="NPCShopkeeper.h">
-      <Filter>Header Files\Characters\NPC</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Header Files\Characters\Player</Filter>
     </ClInclude>
@@ -257,6 +254,21 @@
     </ClInclude>
     <ClInclude Include="Test_All.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Header Files\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC_Shopkeeper.h">
+      <Filter>Header Files\Characters\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC_Hinter.h">
+      <Filter>Header Files\Characters\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC_Base.h">
+      <Filter>Header Files\Characters\NPC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -371,15 +383,6 @@
     <ClCompile Include="Weapon.cpp">
       <Filter>Source Files\weapons</Filter>
     </ClCompile>
-    <ClCompile Include="NPCBase.cpp">
-      <Filter>Source Files\Characters\NPC</Filter>
-    </ClCompile>
-    <ClCompile Include="NPCHinter.cpp">
-      <Filter>Source Files\Characters\NPC</Filter>
-    </ClCompile>
-    <ClCompile Include="NPCShopkeeper.cpp">
-      <Filter>Source Files\Characters\NPC</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>Source Files\Characters\Enemies</Filter>
     </ClCompile>
@@ -398,11 +401,26 @@
     <ClCompile Include="Load_Game.cpp">
       <Filter>Source Files\utility</Filter>
     </ClCompile>
-    <ClCompile Include="Game_Object_Test.cpp">
-      <Filter>Source Files\tests</Filter>
-    </ClCompile>
     <ClCompile Include="Test_All.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_Everything.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC_Base.cpp">
+      <Filter>Source Files\Characters\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC_Hinter.cpp">
+      <Filter>Source Files\Characters\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC_Shopkeeper.cpp">
+      <Filter>Source Files\Characters\NPC</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

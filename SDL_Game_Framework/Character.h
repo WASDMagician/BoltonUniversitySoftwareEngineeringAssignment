@@ -4,31 +4,49 @@
 #include <string>
 #include "Game_Object.h"
 
+struct creation_variables
+{
+	char* img_path;
+	int rows;
+	int cols;
+
+	std::string name;
+	unsigned int health;
+	unsigned int damage;
+	unsigned int defence;
+
+	unsigned int animate_speed;
+};
+
 class Character: public Game_Object
 {
 public:
 	Character();
-	Character(const std::string name, const unsigned int health, const unsigned int damage, const unsigned int defence);
-	Character(char* img, int cols, int rows, std::string name, unsigned int health, unsigned int damage, unsigned int defence);
+	Character(creation_variables *initialiser);
+	
 	virtual ~Character();
 
-	void set_character_name(const std::string &name);
-	const std::string get_character_name() const;
+	virtual bool set_name(std::string name) = NULL;
+	virtual std::string get_name() = NULL;
 
-	void set_character_health(const unsigned int health);
-	const unsigned int get_character_health() const;
+	virtual bool set_lives(unsigned int lives) = NULL;
+	virtual unsigned int get_lives() = NULL;
 
-	void set_character_damage(const unsigned int damage);
-	const unsigned int get_character_damage() const;
+	virtual bool set_health(unsigned int health) = NULL;
+	virtual unsigned int get_health() = NULL;
 
-	void set_character_defence(const unsigned int defence);
-	const unsigned int get_character_defence() const;
+	virtual bool set_damage(unsigned int damage) = NULL;
+	virtual unsigned int get_damage() = NULL;
 
-	virtual std::string serialize_character();
+	virtual bool set_defence(unsigned int defence) = NULL;
+	virtual unsigned int get_defence() = NULL;
 
-private:
+	virtual std::string serialize_character() = NULL;
+
+protected:
 	std::string m_name;
 	unsigned int m_health;
+	unsigned int m_lives;
 	unsigned int m_damage;
 	unsigned int m_defence;
 };

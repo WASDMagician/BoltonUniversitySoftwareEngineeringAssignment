@@ -8,18 +8,29 @@ class UI_Play_Screen;
 class Player : public Character
 {
 public:
-	Player();
-	Player(char* img, int rows, int cols, std::string name, 
-			unsigned int health, unsigned int defence, unsigned int damage, unsigned int lives);
+	Player(creation_variables* initialisers);
 	~Player();
-
-	unsigned int get_lives();
-	void set_lives(unsigned int lives);
 
 	void update_player_ui();
 
+	 bool set_name(std::string name);
+	 std::string get_name();
+
+	 bool set_health(unsigned int health);
+	 unsigned int get_health();
+
+	 bool set_lives(unsigned int lives);
+	 unsigned int get_lives();
+
+	 bool set_damage(unsigned int damage);
+	 unsigned int get_damage();
+
+	 bool set_defence(unsigned int defence);
+	 unsigned int get_defence();
+
+	 std::string serialize_character();
+
 private:
-	unsigned int m_lives;
 	UI_Play_Screen *player_ui;
 };
 

@@ -2,15 +2,13 @@
 #define _NPC_BASE_H_
 
 #include <string>
-#include "Game_Object.h"
+#include "Character.h"
 
-class NPCBase : public Game_Object
+class NPC_Base : public Character
 {
 public:
-	NPCBase();
-	NPCBase(const std::string name);
-	NPCBase(char* img, int cols, int rows, std::string name);
-	virtual ~NPCBase();
+	NPC_Base(creation_variables *initialiser);
+	virtual ~NPC_Base();
 
 	void set_npc_name(const std::string &name);
 	const std::string get_npc_name() const;

@@ -3,6 +3,8 @@
 
 #include "GameBase.h"
 #include "Player.h"
+#include "Enemy.h"
+#include "Ogre.h"
 #include "UI_Play_Screen.h"
 
 
@@ -18,6 +20,8 @@ public:
 	void Draw();
 
 	Player *new_player;
+	Enemy *new_enemy;
+	Character *new_ogre;
 	UI_Play_Screen *m_play_screen_ui;
 	
 };

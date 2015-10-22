@@ -5,9 +5,8 @@ Enemy::Enemy()
 
 }
 
-Enemy::Enemy(char* img, int rows, int cols, std::string name, 
-	unsigned int health, unsigned int damage, unsigned int defence)
-:Character(name, health, damage, defence)
+Enemy::Enemy(creation_variables *initializer)
+:Character(initializer)
 {
 		
 }
@@ -76,5 +75,65 @@ bool Enemy::Enemy_Dead()
 	}
 
 	return false;
+}
+
+bool Enemy::set_name(std::string name)
+{
+	m_name = name;
+	return m_name == name;
+}
+
+std::string Enemy::get_name()
+{
+	return m_name;
+}
+
+bool Enemy::set_health(unsigned int health)
+{
+	m_health = health;
+	return m_health == health;
+}
+
+unsigned int Enemy::get_health()
+{
+	return m_health;
+}
+
+bool Enemy::set_lives(unsigned int lives)
+{
+	m_lives = lives;
+	return m_lives == lives;
+}
+
+unsigned int Enemy::get_lives()
+{
+	return m_lives;
+}
+
+bool Enemy::set_damage(unsigned int damage)
+{
+	m_damage = damage;
+	return m_damage == damage;
+}
+
+unsigned int Enemy::get_damage()
+{
+	return m_damage;
+}
+
+bool Enemy::set_defence(unsigned int defence)
+{
+	m_defence = defence;
+	return m_defence == defence;
+}
+
+unsigned int Enemy::get_defence()
+{
+	return m_defence;
+}
+
+std::string Enemy::serialize_character()
+{
+	return "False";
 }
 

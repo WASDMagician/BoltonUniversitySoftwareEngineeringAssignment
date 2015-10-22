@@ -2,15 +2,13 @@
 #define _NPC_HINTER_H_
 
 #include <string>
-#include "NPCBase.h"
+#include "NPC_Base.h"
 
-class NPCHinter : public NPCBase
+class NPC_Hinter : public NPC_Base
 {
 public:
-	NPCHinter();
-	NPCHinter(const std::string name, const std::string hint);
-	NPCHinter(char* img, int cols, int rows, std::string name, std::string hint);
-	virtual ~NPCHinter();
+	NPC_Hinter(creation_variables *initialiser);
+	virtual ~NPC_Hinter();
 
 	void set_npc_name(const std::string &name);
 	const std::string get_npc_name() const;
