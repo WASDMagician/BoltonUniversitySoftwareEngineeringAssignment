@@ -19,6 +19,7 @@ Object::~Object()
 bool Object::set_obtained(bool obtained)
 {
 	m_is_obtained = obtained;
+	return true;
 }
 
 bool Object::get_obtained() // you guys pass judgement on this
@@ -29,6 +30,7 @@ bool Object::get_obtained() // you guys pass judgement on this
 bool Object::set_glowing(bool glowing)
 {
 	m_is_glowing = glowing;
+	return true;
 }
 
 bool Object::get_glowing() // just an idea

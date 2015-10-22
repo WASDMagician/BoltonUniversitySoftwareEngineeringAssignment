@@ -58,6 +58,9 @@
     <Filter Include="Source Files\Characters\Enemies">
       <UniqueIdentifier>{4569df9a-022b-490c-a5e3-adceff43bc28}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\tests">
+      <UniqueIdentifier>{b69a1cff-c890-4846-b0bf-19bb35b740e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audiomanager.h">
@@ -252,6 +255,9 @@
     <ClInclude Include="Load_Game.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
+    <ClInclude Include="Test_All.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -391,6 +397,12 @@
     </ClCompile>
     <ClCompile Include="Load_Game.cpp">
       <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Object_Test.cpp">
+      <Filter>Source Files\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_All.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

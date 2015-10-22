@@ -31,3 +31,8 @@ bool Game_Object::set_transform()
 	transform->m_p_gameobject = this;
 	return true;
 }
+
+bool Game_Object::serialize_game_object()
+{
+	return false;
+}

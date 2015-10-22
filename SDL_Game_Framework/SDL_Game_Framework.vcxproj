@@ -153,6 +153,7 @@
     <ClInclude Include="smanip.h" />
     <ClInclude Include="Sniper.h" />
     <ClInclude Include="Sword.h" />
+    <ClInclude Include="Test_All.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="UI.h" />
@@ -194,6 +195,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="Game_Object.cpp" />
+    <ClCompile Include="Game_Object_Test.cpp" />
     <ClCompile Include="Great_Axe.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Load_Game.cpp" />
@@ -208,6 +210,7 @@
     <ClCompile Include="Save_Game.cpp" />
     <ClCompile Include="Sniper.cpp" />
     <ClCompile Include="Sword.cpp" />
+    <ClCompile Include="Test_All.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="UI_Play_Screen.cpp" />
