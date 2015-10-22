@@ -18,7 +18,6 @@ SUITE(Character_Tests)
 		test_enemy->transform->Increment_Move(10, 10);
 		Vector2 post_position = test_enemy->transform->get_current_position();
 		
-		std::cout << post_position << std::endl;
 		system("pause");
 
 		CHECK_EQUAL(true, pre_position != post_position);

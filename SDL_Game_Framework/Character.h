@@ -42,6 +42,7 @@ public:
 	virtual unsigned int get_defence() = NULL;
 
 	virtual std::string serialize_character() = NULL;
+	//implementation: TYPE - Image Path - Pos X - Pos Y - Name - Health - Damage - Defence - Items
 
 	bool render();
 

@@ -1,7 +1,7 @@
 #ifndef _CUSTOM_TYPES_H_
 #define _CUSTOM_TYPES_H_
 
-typedef struct Vector2{ 
+struct Vector2{ 
 	float x; 
 	float y; 
 
@@ -25,7 +25,7 @@ typedef struct Vector2{
 		return (positionOne.x > positionTwo.x && positionOne.y > positionTwo.y);
 	}
 
-	friend Vector2 &operator +(Vector2 vector, int addition)
+	friend Vector2 operator +(Vector2 vector, int addition)
 	{
 		return (Vector2{ vector.x + addition, vector.y + addition });
 	}
