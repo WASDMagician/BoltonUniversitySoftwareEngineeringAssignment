@@ -41,10 +41,11 @@ void Game::Logic()
 
 void Game::Draw()
 {
-	//new_player->transform->Move_Between();
-	//new_player->render();
-	//new_enemy->render();
-	//new_ogre->render();
-	//new_npc_shopkeeper->render();
+
 	text_box->Render_Text();
+	new_player->transform->Move_Between();
+	new_player->render();
+	new_enemy->render();
+	new_ogre->render();
+	new_npc_shopkeeper->render();
 }

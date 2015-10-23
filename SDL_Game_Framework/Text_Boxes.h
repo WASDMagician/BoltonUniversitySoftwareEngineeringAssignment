@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "Game_Object.h"
+#include "AWSprite.h"
 #include "SDL_ttf.h"
 class Game;
 
@@ -60,6 +61,8 @@ private:
 
 	int m_x_position;
 	int m_y_position;
+
+	AWSprite *m_background_sprite;
 
 	SDL_Surface *m_background_surface;
 	SDL_Rect *m_background_rect;

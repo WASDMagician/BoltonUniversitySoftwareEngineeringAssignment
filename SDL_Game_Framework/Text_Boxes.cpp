@@ -34,13 +34,8 @@ void Text_Boxes::Setup_Message(std::vector<std::string> messages)
 		text_box_message new_message{ new SDL_Surface(), messages[i], 0, 0, messages[i].size(), nRect};
 		m_messages.push_back(new_message);
 	}
-	m_background_rect = new SDL_Rect;
-	m_background_rect->x = m_x_position - 10;
-	m_background_rect->y = m_y_position - 10;
-	m_background_rect->w = m_width + 10;
-	m_background_rect->h = m_height - 10;
-	m_background_surface = SDL_CreateRGBSurface(0, m_background_rect->w, m_background_rect->h, 32, 0, 0, 150, 255);
-	SDL_FillRect(m_background_surface, NULL, SDL_MapRGB(m_background_surface->format, 0, 0, 0));
+	m_background_sprite = new AWSprite(m_width + 10, m_height - 10, 0, 0, 255);
+	m_background_sprite->set_world_position(m_x_position - 10, m_y_position - 10);
 }
 
 SDL_Surface *Text_Boxes::get_surface_message()
@@ -144,7 +139,7 @@ void Text_Boxes::Update()
 
 void Text_Boxes::Render_Text()
 {
-	SDL_BlitSurface(m_background_surface, NULL, m_p_game->screen, m_background_rect);
+	m_background_sprite->update_everything();
 	for (int i = 0; i < m_messages.size(); i++)
 	{
 		SDL_BlitSurface(m_messages[i].message_surface, NULL, m_p_game->screen, m_messages[i].rect);	
