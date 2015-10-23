@@ -13,7 +13,6 @@ ehthumbs.db
 *.log
 *.pdb
 *.opensdf
-*.dll
 *.ilk
 
 # Folder config file
