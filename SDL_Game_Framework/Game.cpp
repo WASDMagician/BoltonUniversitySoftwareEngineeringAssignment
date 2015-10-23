@@ -31,13 +31,12 @@ void Game::Setup()
 		"No punctuation", "Need to sort out rects",	"a bit jagged", "Need to add timing", "each line creates a new surface",
 	"not sure what the memory implications are", "this message adds about 3mb", "seems a bit much"});
 	text_box->set_game(this);
-	system("pause");
 }
 
 void Game::Logic()
 {
 	//Run every function to be used.
-	SDL_Delay(50);
+	//SDL_Delay(1);
 	text_box->Update();
 }
 

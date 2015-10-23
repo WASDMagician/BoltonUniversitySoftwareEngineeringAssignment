@@ -47,6 +47,7 @@ private:
 	Game *m_p_game;
 	TTF_Font *m_p_font;
 	SDL_Color *m_p_colour;
+	SDL_Color *m_p_background_colour;
 
 	std::vector<text_box_message>m_messages;
 
@@ -54,6 +55,12 @@ private:
 
 	int m_x_position;
 	int m_y_position;
+
+	SDL_Surface *m_background_surface;
+	SDL_Rect *m_background_rect;
+
+	int m_width;
+	int m_height;
 	
 };
 
