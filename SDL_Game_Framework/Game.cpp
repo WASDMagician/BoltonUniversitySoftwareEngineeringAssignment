@@ -36,7 +36,6 @@ void Game::Setup()
 void Game::Logic()
 {
 	//Run every function to be used.
-	//SDL_Delay(1);
 	text_box->Update();
 }
 

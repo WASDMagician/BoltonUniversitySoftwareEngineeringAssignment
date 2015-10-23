@@ -4,7 +4,7 @@
 
 Text_Boxes::Text_Boxes()
 :m_p_font(NULL), m_p_game(NULL), m_messages(NULL), m_p_colour(new SDL_Color{ 255, 255, 255 }), m_p_background_colour(new SDL_Color{ 0, 0, 255 }),
-m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL), m_should_flush(true)
+m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL), m_should_flush(false)
 {
 }
 
@@ -98,7 +98,7 @@ bool Text_Boxes::get_should_flush()
 	return m_should_flush;
 }
 
-void Text_Boxes::Update()
+bool Text_Boxes::flush_messages()
 {
 	if (m_should_flush)
 	{
@@ -117,7 +117,7 @@ void Text_Boxes::Update()
 		}
 		else
 		{
-			if (m_current_message < m_messages.size() - 1)
+			if (m_current_message < m_messages.size())
 			{
 				m_current_message++;
 			}
@@ -125,11 +125,20 @@ void Text_Boxes::Update()
 	}
 	else
 	{
-		set_surface_message(m_messages[m_current_message].message);
-		if (m_current_message < m_messages.size() - 1)
+		for (int i = 0; i < m_messages.size(); i++)
 		{
+			set_surface_message(m_messages[i].message);
 			m_current_message++;
 		}
+	}
+	return false;
+}
+
+void Text_Boxes::Update()
+{
+	if (m_current_message <= m_messages.size() - 1)
+	{
+		flush_messages();
 	}
 }
 

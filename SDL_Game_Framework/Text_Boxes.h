@@ -42,6 +42,8 @@ public:
 	bool set_should_flush(bool flush);
 	bool get_should_flush();
 
+	bool flush_messages();
+
 	void Update();
 
 	void Render_Text();
