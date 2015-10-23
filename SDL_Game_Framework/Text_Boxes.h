@@ -39,6 +39,9 @@ public:
 	SDL_Color *get_colour();
 	bool set_colour(SDL_Color *colour);
 
+	bool set_should_flush(bool flush);
+	bool get_should_flush();
+
 	void Update();
 
 	void Render_Text();
@@ -61,6 +64,8 @@ private:
 
 	int m_width;
 	int m_height;
+
+	bool m_should_flush;
 	
 };
 

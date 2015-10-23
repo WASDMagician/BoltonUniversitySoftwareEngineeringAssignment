@@ -4,7 +4,7 @@
 
 Text_Boxes::Text_Boxes()
 :m_p_font(NULL), m_p_game(NULL), m_messages(NULL), m_p_colour(new SDL_Color{ 255, 255, 255 }), m_p_background_colour(new SDL_Color{ 0, 0, 255 }),
-m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL)
+m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL), m_should_flush(true)
 {
 }
 
@@ -87,23 +87,45 @@ bool Text_Boxes::set_colour(SDL_Color *colour)
 	return false;
 }
 
+bool Text_Boxes::set_should_flush(bool flush)
+{
+	m_should_flush = flush;
+	return m_should_flush == flush;
+}
+
+bool Text_Boxes::get_should_flush()
+{
+	return m_should_flush;
+}
+
 void Text_Boxes::Update()
 {
-	if (m_messages[m_current_message].current_position < m_messages[m_current_message].end_position)
+	if (m_should_flush)
 	{
-		std::string curr_string = "";
-		for (int i = m_messages[m_current_message].start_position; i <= m_messages[m_current_message].current_position; i++)
-		{
-			curr_string += m_messages[m_current_message].message[i];
-		}
-		set_surface_message(curr_string);
 		if (m_messages[m_current_message].current_position < m_messages[m_current_message].end_position)
 		{
-			m_messages[m_current_message].current_position++;
+			std::string curr_string = "";
+			for (int i = m_messages[m_current_message].start_position; i <= m_messages[m_current_message].current_position; i++)
+			{
+				curr_string += m_messages[m_current_message].message[i];
+			}
+			set_surface_message(curr_string);
+			if (m_messages[m_current_message].current_position < m_messages[m_current_message].end_position)
+			{
+				m_messages[m_current_message].current_position++;
+			}
+		}
+		else
+		{
+			if (m_current_message < m_messages.size() - 1)
+			{
+				m_current_message++;
+			}
 		}
 	}
 	else
 	{
+		set_surface_message(m_messages[m_current_message].message);
 		if (m_current_message < m_messages.size() - 1)
 		{
 			m_current_message++;
