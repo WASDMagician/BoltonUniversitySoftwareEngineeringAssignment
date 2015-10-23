@@ -78,7 +78,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sdl.lib;sdlmain.lib;sdl_image.lib;sdl_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sdl.lib;sdlmain.lib;sdl_image.lib;sdl_mixer.lib;sdl_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
@@ -156,6 +156,7 @@
     <ClInclude Include="Sniper.h" />
     <ClInclude Include="Sword.h" />
     <ClInclude Include="Test_All.h" />
+    <ClInclude Include="Text_Boxes.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="UI.h" />
@@ -215,6 +216,7 @@
     <ClCompile Include="Sniper.cpp" />
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Test_All.cpp" />
+    <ClCompile Include="Text_Boxes.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="UI_Play_Screen.cpp" />

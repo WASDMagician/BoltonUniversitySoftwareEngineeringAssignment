@@ -270,6 +270,9 @@
     <ClInclude Include="NPC_Base.h">
       <Filter>Header Files\Characters\NPC</Filter>
     </ClInclude>
+    <ClInclude Include="Text_Boxes.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -421,6 +424,9 @@
     </ClCompile>
     <ClCompile Include="NPC_Shopkeeper.cpp">
       <Filter>Source Files\Characters\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="Text_Boxes.cpp">
+      <Filter>Source Files\utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
