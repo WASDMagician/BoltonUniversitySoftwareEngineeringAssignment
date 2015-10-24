@@ -143,9 +143,9 @@
     <ClInclude Include="NPC_Shopkeeper.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Ogre.h" />
-    <ClInclude Include="PickupObjects.h" />
+    <ClInclude Include="Pickup_Objects.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="PuzzleObjects.h" />
+    <ClInclude Include="Puzzle_Objects.h" />
     <ClInclude Include="random.h" />
     <ClInclude Include="Save_Game.h" />
     <ClInclude Include="SDL.h" />
@@ -201,7 +201,7 @@
     <ClCompile Include="Game_Object.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Map.cpp" />
-    <ClCompile Include="PuzzleObjects.cpp" />
+    <ClCompile Include="Puzzle_Objects.cpp" />
     <ClCompile Include="Test_Everything.cpp" />
     <ClCompile Include="Great_Axe.cpp" />
     <ClCompile Include="Inventory.cpp" />
@@ -212,7 +212,7 @@
     <ClCompile Include="NPC_Shopkeeper.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Ogre.cpp" />
-    <ClCompile Include="PickupObjects.cpp" />
+    <ClCompile Include="Pickup_Objects.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Save_Game.cpp" />
     <ClCompile Include="Sniper.cpp" />

@@ -243,9 +243,6 @@
     <ClInclude Include="Ogre.h">
       <Filter>Header Files\Characters\Enemies</Filter>
     </ClInclude>
-    <ClInclude Include="PickupObjects.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Save_Game.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
@@ -273,7 +270,10 @@
     <ClInclude Include="Text_Boxes.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
-    <ClInclude Include="PuzzleObjects.h">
+    <ClInclude Include="Pickup_Objects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Puzzle_Objects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -398,9 +398,6 @@
     <ClCompile Include="Ogre.cpp">
       <Filter>Source Files\Characters\Enemies</Filter>
     </ClCompile>
-    <ClCompile Include="PickupObjects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Save_Game.cpp">
       <Filter>Source Files\utility</Filter>
     </ClCompile>
@@ -431,7 +428,10 @@
     <ClCompile Include="Text_Boxes.cpp">
       <Filter>Source Files\utility</Filter>
     </ClCompile>
-    <ClCompile Include="PuzzleObjects.cpp">
+    <ClCompile Include="Pickup_Objects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Puzzle_Objects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
