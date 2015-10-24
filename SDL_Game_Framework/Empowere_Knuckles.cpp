@@ -10,8 +10,8 @@ Empowered_Knuckles::Empowered_Knuckles()
 	m_empowered_knuckles_attackspeed = 2;
 }
 
-Empowered_Knuckles::Empowered_Knuckles(char*img, int rows, int cols)
-:Weapon(img, rows, cols)
+Empowered_Knuckles::Empowered_Knuckles(weapon_constructor_variables *initialiser)
+:Weapon(initialiser)
 {
 }
 

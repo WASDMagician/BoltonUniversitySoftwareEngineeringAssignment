@@ -9,9 +9,9 @@ Character::Character()
 
 }
 
-Character::Character(creation_variables *initializer)
-:Game_Object(initializer->img_path, initializer->cols, initializer->rows), m_name(initializer->name), m_health(initializer->health), m_damage(initializer->damage), 
-m_defence(initializer->defence)
+Character::Character(character_creation_variables *initializer)
+:Game_Object(new game_object_constructor_variables{initializer->img_path, initializer->rows, initializer->cols, initializer->game_screen}), 
+m_name(initializer->name), m_health(initializer->health), m_damage(initializer->damage), m_defence(initializer->defence)
 {
 	sprite->set_auto_animate(initializer->animate_speed);
 }

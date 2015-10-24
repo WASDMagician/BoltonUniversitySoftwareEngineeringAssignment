@@ -9,8 +9,8 @@ Sword::Sword()
 	m_sword_attackspeed = 1.5;
 }
 
-Sword::Sword(char* img, int rows, int cols)
-:Weapon(img, rows, cols)
+Sword::Sword(weapon_constructor_variables *initialiser)
+:Weapon(initialiser)
 {
 }
 

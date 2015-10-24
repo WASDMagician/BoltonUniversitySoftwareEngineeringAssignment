@@ -5,7 +5,7 @@ Enemy::Enemy()
 
 }
 
-Enemy::Enemy(creation_variables *initializer)
+Enemy::Enemy(character_creation_variables *initializer)
 :Character(initializer)
 {	
 }

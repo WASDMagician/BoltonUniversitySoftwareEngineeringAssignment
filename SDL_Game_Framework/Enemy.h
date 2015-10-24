@@ -20,7 +20,7 @@ class Enemy : public Character
 {
 public:
 	Enemy();
-	Enemy(creation_variables *initialisers);
+	Enemy(character_creation_variables *initialisers);
 
 	virtual ~Enemy();
 

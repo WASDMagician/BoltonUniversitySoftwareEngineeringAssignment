@@ -7,7 +7,7 @@ class Ogre :
 	public Enemy
 {
 public:
-	Ogre(creation_variables *initialisers);
+	Ogre(character_creation_variables *initialisers);
 	~Ogre();
 
 private:

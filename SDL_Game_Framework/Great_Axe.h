@@ -8,7 +8,7 @@ class Great_Axe :
 {
 public:
 	Great_Axe();
-	Great_Axe(char* img, int x, int y);
+	Great_Axe(weapon_constructor_variables *initialiser);
 	~Great_Axe();
 
 	void set_great_axe_damage(const double damage);

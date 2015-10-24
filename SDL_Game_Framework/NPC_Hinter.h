@@ -7,7 +7,7 @@
 class NPC_Hinter : public NPC_Base
 {
 public:
-	NPC_Hinter(creation_variables *initialiser);
+	NPC_Hinter(character_creation_variables *initialiser);
 	virtual ~NPC_Hinter();
 
 	void set_npc_name(const std::string &name);

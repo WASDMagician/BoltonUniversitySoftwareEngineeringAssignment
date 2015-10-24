@@ -8,7 +8,7 @@ class Empowered_Knuckles :
 {
 public:
 	Empowered_Knuckles();
-	Empowered_Knuckles(char* img, int x, int y);
+	Empowered_Knuckles(weapon_constructor_variables *initialiser);
 	~Empowered_Knuckles();
 
 	void set_empowered_knuckles_damage(const double damage);

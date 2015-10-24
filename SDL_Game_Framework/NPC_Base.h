@@ -7,7 +7,7 @@
 class NPC_Base : public Character
 {
 public:
-	NPC_Base(creation_variables *initialiser);
+	NPC_Base(character_creation_variables *initialiser);
 	virtual ~NPC_Base();
 
 	bool set_name(std::string name);

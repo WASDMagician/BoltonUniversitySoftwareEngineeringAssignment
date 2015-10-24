@@ -9,8 +9,8 @@ Crossbow::Crossbow()
 	m_crossbow_attackspeed = 1;
 }
 
-Crossbow::Crossbow(char* img, int rows, int cols)
-:Weapon(img, rows, cols)
+Crossbow::Crossbow(weapon_constructor_variables *initialiser)
+:Weapon(initialiser)
 {
 }
 

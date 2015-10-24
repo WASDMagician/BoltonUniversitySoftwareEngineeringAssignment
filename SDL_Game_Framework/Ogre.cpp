@@ -1,6 +1,6 @@
 #include "Ogre.h"
 
-Ogre::Ogre(creation_variables *initialiser)
+Ogre::Ogre(character_creation_variables *initialiser)
 :Enemy(initialiser)
 {
 }

@@ -3,7 +3,7 @@
 
 
 Text_Boxes::Text_Boxes()
-:m_p_font(NULL), m_p_game(NULL), m_messages(NULL), m_p_colour(new SDL_Color{ 255, 255, 255 }), m_p_background_colour(new SDL_Color{ 0, 0, 255 }),
+:m_p_font(NULL), m_messages(NULL), m_p_colour(new SDL_Color{ 255, 255, 255 }), m_p_background_colour(new SDL_Color{ 0, 0, 255 }),
 m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL), m_should_flush(false)
 {
 }
@@ -12,7 +12,6 @@ m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL
 Text_Boxes::~Text_Boxes()
 {
 	delete m_p_font;
-	delete m_p_game;
 
 }
 
@@ -47,17 +46,6 @@ bool Text_Boxes::set_surface_message(std::string currentString)
 {
 	m_messages[m_current_message].message_surface = TTF_RenderText_Solid(get_font(), currentString.c_str(), *m_p_colour);
 	return false;
-}
-
-Game *Text_Boxes::get_game()
-{
-	return m_p_game;
-}
-
-bool Text_Boxes::set_game(Game *game)
-{
-	m_p_game = game;
-	return m_p_game == game;
 }
 
 TTF_Font *Text_Boxes::get_font()
@@ -142,6 +130,6 @@ void Text_Boxes::Render_Text()
 	m_background_sprite->update_everything();
 	for (int i = 0; i < m_messages.size(); i++)
 	{
-		SDL_BlitSurface(m_messages[i].message_surface, NULL, m_p_game->screen, m_messages[i].rect);	
+		SDL_BlitSurface(m_messages[i].message_surface, NULL, SDL_GetVideoSurface(), m_messages[i].rect);	
 	}
 }

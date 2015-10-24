@@ -1,4 +1,5 @@
 #include "Game_Object.h"
+#include "Game.h"
 
 
 Game_Object::Game_Object()
@@ -7,11 +8,10 @@ Game_Object::Game_Object()
 	set_transform();
 }
 
-Game_Object::Game_Object(char* img, int cols, int rows)
-:sprite(new AWSprite()), transform(new Transform())
+Game_Object::Game_Object(game_object_constructor_variables *initialiser)
+: sprite(new AWSprite(initialiser->img_path, (int)initialiser->rows, (int)initialiser->cols)), transform(new Transform()), game_screen(initialiser->game_screen)
 {
 	set_transform();
-	set_sprite(img, cols, rows);
 }
 
 

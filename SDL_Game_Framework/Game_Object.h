@@ -4,11 +4,21 @@
 #include "Transform.h"
 #include "AWSprite.h"
 
+class Game;
+
+struct game_object_constructor_variables
+{
+	char* img_path;
+	unsigned int cols;
+	unsigned int rows;
+	SDL_Surface* game_screen;
+};
+
 class Game_Object
 {
 public:
 	Game_Object();
-	Game_Object(char* img, int cols, int rows);
+	Game_Object(game_object_constructor_variables *initialiser);
 	~Game_Object();
 	
 	Transform* transform;
@@ -18,6 +28,8 @@ public:
 	virtual bool serialize_game_object();
 
 	AWSprite *sprite;
+
+	SDL_Surface *game_screen;
 private:
 	
 };

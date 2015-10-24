@@ -8,7 +8,7 @@ class Sword :
 {
 public:
 	Sword();
-	Sword(char* img, int x, int y);
+	Sword(weapon_constructor_variables *initialiser);
 	~Sword();
 
 	void set_sword_damage(const double damage);

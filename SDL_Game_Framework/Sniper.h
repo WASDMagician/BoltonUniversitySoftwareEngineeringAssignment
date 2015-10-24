@@ -8,7 +8,7 @@ class Sniper :
 {
 public:
 	Sniper();
-	Sniper(char* img, int x, int y);
+	Sniper(weapon_constructor_variables *initialiser);
 	~Sniper();
 
 	void set_sniper_damage(const double damage);

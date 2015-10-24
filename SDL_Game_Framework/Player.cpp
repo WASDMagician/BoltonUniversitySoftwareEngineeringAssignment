@@ -6,7 +6,7 @@
 #include "UI_Play_Screen.h"
 
 
-Player::Player(creation_variables* initialisers)
+Player::Player(character_creation_variables* initialisers)
 :Character(initialisers)
 {
 }

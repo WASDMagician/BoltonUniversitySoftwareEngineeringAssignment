@@ -8,7 +8,7 @@ class Crossbow :
 {
 public:
 	Crossbow();
-	Crossbow(char* img, int x, int y);
+	Crossbow(weapon_constructor_variables *initialiser);
 	~Crossbow();
 
 	void set_crossbow_damage(const double damage);

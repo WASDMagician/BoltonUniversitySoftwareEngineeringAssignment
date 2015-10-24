@@ -9,7 +9,7 @@ class Weapon;
 class NPC_Shopkeeper : public NPC_Base
 {
 public:
-	NPC_Shopkeeper(creation_variables *initialiser);
+	NPC_Shopkeeper(character_creation_variables *initialiser);
 	virtual ~NPC_Shopkeeper();
 
 	void set_npc_name(const std::string &name);

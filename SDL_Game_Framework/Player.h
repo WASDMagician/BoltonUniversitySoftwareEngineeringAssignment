@@ -8,7 +8,7 @@ class UI_Play_Screen;
 class Player : public Character
 {
 public:
-	Player(creation_variables* initialisers);
+	Player(character_creation_variables* initialisers);
 	~Player();
 
 	void update_player_ui();

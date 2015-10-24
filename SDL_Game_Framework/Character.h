@@ -4,7 +4,7 @@
 #include <string>
 #include "Game_Object.h"
 
-struct creation_variables
+struct character_creation_variables
 {
 	char* img_path;
 	int rows;
@@ -16,13 +16,15 @@ struct creation_variables
 	unsigned int defence;
 
 	unsigned int animate_speed;
+
+	SDL_Surface* game_screen;
 };
 
 class Character: public Game_Object
 {
 public:
 	Character();
-	Character(creation_variables *initialiser);
+	Character(character_creation_variables *initialiser);
 	
 	virtual ~Character();
 

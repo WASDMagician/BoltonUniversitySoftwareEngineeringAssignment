@@ -9,7 +9,7 @@ SUITE(Character_Tests)
 {
 	TEST(Enemy_Class_Test)
 	{
-		Enemy* test_enemy = new Enemy(new creation_variables{ "images/player_placeholder.png", 1, 1, "Test_Enemy", 100, 50, 20, 200 });
+		Enemy* test_enemy = new Enemy(new character_creation_variables{ "images/player_placeholder.png", 1, 1, "Test_Enemy", 100, 50, 20, 200 });
 		CHECK_EQUAL(true, test_enemy != NULL);
 		CHECK_EQUAL(true, test_enemy->sprite != NULL);
 		CHECK_EQUAL(true, test_enemy->transform != NULL);
@@ -24,7 +24,7 @@ SUITE(Character_Tests)
 	}
 	TEST(Ogre_Class_Test)
 	{
-		Enemy* test_ogre = new Ogre(new creation_variables{ "images/player_placeholder.png", 1, 1, "Test_Ogre", 100, 50, 20, 200 });
+		Enemy* test_ogre = new Ogre(new character_creation_variables{ "images/player_placeholder.png", 1, 1, "Test_Ogre", 100, 50, 20, 200 });
 		CHECK_EQUAL(true, test_ogre != NULL);
 		CHECK_EQUAL(true, test_ogre->sprite != NULL);
 		CHECK_EQUAL(true, test_ogre->transform != NULL);
@@ -32,7 +32,7 @@ SUITE(Character_Tests)
 	}
 	TEST(Player_Class_Test)
 	{
-		Player* test_player = new Player(new creation_variables{ "images/player_placeholder.png", 1, 1, "Test_Player", 100, 50, 20, 200 });
+		Player* test_player = new Player(new character_creation_variables{ "images/player_placeholder.png", 1, 1, "Test_Player", 100, 50, 20, 200 });
 		CHECK_EQUAL(true, test_player != NULL);
 		CHECK_EQUAL(true, test_player->sprite != NULL);
 		CHECK_EQUAL(true, test_player->transform != NULL);

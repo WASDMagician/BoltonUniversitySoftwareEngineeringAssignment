@@ -31,9 +31,6 @@ public:
 	SDL_Surface *get_surface_message();
 	bool set_surface_message(std::string);
 
-	Game *get_game();
-	bool set_game(Game *game);
-
 	TTF_Font *get_font();
 	bool set_font(TTF_Font *font);
 
@@ -50,7 +47,6 @@ public:
 	void Render_Text();
 
 private:
-	Game *m_p_game;
 	TTF_Font *m_p_font;
 	SDL_Color *m_p_colour;
 	SDL_Color *m_p_background_colour;

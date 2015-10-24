@@ -4,7 +4,7 @@
 
 #include "NPC_Base.h"
 
-NPC_Base::NPC_Base(creation_variables *initialiser)
+NPC_Base::NPC_Base(character_creation_variables *initialiser)
 :Character(initialiser)
 {
 

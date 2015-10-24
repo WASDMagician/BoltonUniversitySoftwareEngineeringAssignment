@@ -1,10 +1,44 @@
-﻿Build started 24/10/2015 14:44:45.
+﻿Build started 24/10/2015 21:27:03.
      1>Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Puzzle_Objects.cpp Pickup_Objects.cpp
-         Pickup_Objects.cpp
-         Puzzle_Objects.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Character.cpp Crossbow.cpp Empowere_Knuckles.cpp Enemy.cpp Game.cpp Game_Object.cpp Great_Axe.cpp Inventory.cpp Main.cpp NPC_Base.cpp NPC_Hinter.cpp NPC_Shopkeeper.cpp Object.cpp Ogre.cpp Pickup_Objects.cpp Player.cpp Puzzle_Objects.cpp Sniper.cpp Sword.cpp Test_Everything.cpp Text_Boxes.cpp Transform.cpp UI.cpp UI_Play_Screen.cpp Weapon.cpp
+         Text_Boxes.cpp
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(14): warning C4150: deletion of pointer to incomplete type '_TTF_Font'; no destructor called
+                 f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\sdl_ttf.h(77) : see declaration of '_TTF_Font'
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(20): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(37): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(103): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(111): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(122): warning C4018: '<=' : signed/unsigned mismatch
+     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(131): warning C4018: '<' : signed/unsigned mismatch
+         Game.cpp
          Generating Code...
+         Compiling...
+         Main.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Weapon.cpp
+         UI_Play_Screen.cpp
+         UI.cpp
+         Transform.cpp
+         Test_Everything.cpp
+         Sword.cpp
+         Sniper.cpp
+         Puzzle_Objects.cpp
+         Player.cpp
+         Pickup_Objects.cpp
+         Ogre.cpp
+         Object.cpp
+         NPC_Shopkeeper.cpp
+         NPC_Hinter.cpp
+         NPC_Base.cpp
+         Inventory.cpp
+         Great_Axe.cpp
+         Enemy.cpp
+         Empowere_Knuckles.cpp
+         Crossbow.cpp
+         Character.cpp
+         Game_Object.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\Audio.obj
          Debug\audiomanager.obj
@@ -64,4 +98,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.09
+Time Elapsed 00:00:03.14
