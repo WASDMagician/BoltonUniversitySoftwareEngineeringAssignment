@@ -11,6 +11,7 @@ public:
 	~Ogre();
 
 private:
+	Enemy *enemy;
 };
 
 #endif

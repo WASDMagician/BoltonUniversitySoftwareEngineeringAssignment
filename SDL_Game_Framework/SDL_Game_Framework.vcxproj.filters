@@ -273,6 +273,9 @@
     <ClInclude Include="Text_Boxes.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
+    <ClInclude Include="PuzzleObjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -427,6 +430,9 @@
     </ClCompile>
     <ClCompile Include="Text_Boxes.cpp">
       <Filter>Source Files\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="PuzzleObjects.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

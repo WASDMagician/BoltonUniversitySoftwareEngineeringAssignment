@@ -7,8 +7,7 @@ Enemy::Enemy()
 
 Enemy::Enemy(creation_variables *initializer)
 :Character(initializer)
-{
-		
+{	
 }
 
 Enemy::~Enemy()
@@ -41,6 +40,7 @@ bool Enemy::Enemy_Idle()
 {
 	if (enemy_state == IDLE)
 	{
+		//Stop and dont do anything
 		return true;
 	}
 
@@ -49,6 +49,11 @@ bool Enemy::Enemy_Idle()
 
 bool Enemy::Enemy_Roam()
 {
+	this->transform->Lerp_To(new Vector2{ 20, 50 }, 100, 1);
+	this->transform->Lerp_To(new Vector2{ 100, 50 }, 100, 1);
+	this->transform->Lerp_To(new Vector2{ 21, 300 }, 100, 1);
+	this->transform->Lerp_To(new Vector2{ 60, 10 }, 100, 1);
+
 	if (enemy_state == ROAMING)
 	{
 		return true;
@@ -61,6 +66,7 @@ bool Enemy::Enemy_Attack()
 {
 	if (enemy_state == ATTACK)
 	{
+		//if player is in sight, attack it
 		return true;
 	}
 
@@ -71,6 +77,7 @@ bool Enemy::Enemy_Dead()
 {
 	if (enemy_state == DEAD)
 	{
+		//handle some enemy death stuff here
 		return true;
 	}
 

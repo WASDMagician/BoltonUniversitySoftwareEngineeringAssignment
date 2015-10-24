@@ -11,6 +11,11 @@ enum ENEMY_STATE
 	DEAD
 };
 
+struct ENEMY_ROAMING
+{
+	
+};
+
 class Enemy : public Character
 {
 public:
@@ -44,6 +49,7 @@ public:
 
 private:
 	ENEMY_STATE enemy_state;
+	Character *character;
 };
 
 #endif

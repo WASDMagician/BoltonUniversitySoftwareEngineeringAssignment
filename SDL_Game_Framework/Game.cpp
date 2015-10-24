@@ -37,6 +37,7 @@ void Game::Logic()
 {
 	//Run every function to be used.
 	text_box->Update();
+	new_enemy->Enemy_Roam();
 }
 
 void Game::Draw()

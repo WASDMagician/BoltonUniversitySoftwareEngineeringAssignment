@@ -145,6 +145,7 @@
     <ClInclude Include="Ogre.h" />
     <ClInclude Include="PickupObjects.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PuzzleObjects.h" />
     <ClInclude Include="random.h" />
     <ClInclude Include="Save_Game.h" />
     <ClInclude Include="SDL.h" />
@@ -200,6 +201,7 @@
     <ClCompile Include="Game_Object.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="PuzzleObjects.cpp" />
     <ClCompile Include="Test_Everything.cpp" />
     <ClCompile Include="Great_Axe.cpp" />
     <ClCompile Include="Inventory.cpp" />
