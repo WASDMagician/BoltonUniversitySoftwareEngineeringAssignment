@@ -4,11 +4,6 @@
 Transform::Transform()
 :m_current_position(new Vector2{ -1, -1 }), m_increment(-1), m_target(NULL), current_target_position(0)
 {
-	m_position_list.push_back(new Vector2({ 0, 0 }));
-	m_position_list.push_back(new Vector2({ 0, 400 }));
-	m_position_list.push_back(new Vector2({ 400, 400}));
-	m_position_list.push_back(new Vector2({ 400, 0}));
-	//m_position_list.push_back(new Vector2({ 400, 200 }));
 }
 
 
@@ -29,6 +24,21 @@ Vector2& Transform::get_current_position()
 	return *m_current_position;
 }
 
+
+bool Transform::Add_Position(Vector2 *position)
+{
+	m_position_list.push_back(position);
+	return false;
+}
+
+bool Transform::Add_Position(std::vector<Vector2> *positions)
+{
+	for (int i = 0; i < positions->size(); i++)
+	{
+		m_position_list.push_back(positions[i]);
+	}
+	return false;
+}
 
 bool Transform::Move(float x, float y)
 {
@@ -54,23 +64,31 @@ bool Transform::Increment_Move(float x, float y)
 
 bool Transform::Move_Between()
 {
-	if (m_target == NULL)
+	if (m_position_list.size() > 0)
 	{
-		m_target = m_position_list[current_target_position];
+		if (m_target == NULL)
+		{
+			m_target = m_position_list[current_target_position];
+		}
+		if (Lerp_To(m_target, 20, 1))
+		{
+			if (current_target_position + 1 >= m_position_list.size())
+			{
+				current_target_position = 0;
+			}
+			else
+			{
+				current_target_position++;
+			}
+			m_target = m_position_list[current_target_position];
+		}
+		return true;
 	}
-	if (Lerp_To(m_target, 20, 1))
+	else
 	{
-		if (current_target_position + 1 >= m_position_list.size())
-		{
-			current_target_position = 0;
-		}
-		else
-		{
-			current_target_position++;
-		}
-		m_target = m_position_list[current_target_position];
+
+		return false;
 	}
-	return false;
 }
 
 bool Transform::Lerp_To(Vector2 *target, float increment, float rangeSnap = -1)

@@ -15,12 +15,18 @@ public:
 	Transform();
 	~Transform();
 	Game_Object *m_p_gameobject;
+
 	bool set_current_position(float x, float y);
 	Vector2 &get_current_position();
+
+	bool Add_Position(Vector2 *position);
+	bool Add_Position(std::vector<Vector2> *positions);
+
 	bool Move(float x = NULL, float y = NULL);
 	bool Increment_Move(float x = NULL, float y = NULL);
 	bool Move_Between();
 	bool Lerp_To(Vector2 *target, float increment, float rangeSnap);
+
 	bool Update_Transform();
 	bool Update_World_Position();
 	bool Update();
