@@ -8,10 +8,6 @@ Game::Game()
 
 Game::~Game()
 {
-	delete new_player;
-	delete new_enemy;
-	delete new_ogre;
-	delete new_npc_shopkeeper;
 }
 
 void Game::Setup()

@@ -23,6 +23,8 @@ public:
 	void Logic();
 	void Draw();
 
+private:
+
 	Player *new_player;
 	Enemy *new_enemy;
 	Character *new_ogre;
@@ -30,8 +32,6 @@ public:
 	NPC_Shopkeeper *new_npc_shopkeeper;
 	Text_Boxes *text_box;
 	Inventory *inventory;
-	
-	
 };
 #endif // _GAME_H_
 
