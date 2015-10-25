@@ -20,8 +20,18 @@ public:
 	~Game();
 
 	void Setup();
+
 	void Logic();
+	void Logic_Start();
+	void Logic_Play();
+	void Logic_Pause();
+	void Logic_End();
+
 	void Draw();
+	void Draw_Start();
+	void Draw_Play();
+	void Draw_Pause();
+	void Draw_End();
 
 private:
 
