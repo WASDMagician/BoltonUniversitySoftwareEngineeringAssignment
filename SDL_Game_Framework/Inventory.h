@@ -18,11 +18,15 @@ public:
 	bool remove_item();
 	bool add_item(int item_type);
 	bool work();
+
+	bool Draw();
 private:
-	int m_row;
+	int m_row[1];
 	int m_column[9];
 	Game_Object m_item;
 	std::vector<Game_Object> inv_items;
+	std::vector<AWSprite*> inv_sprite;
+	AWSprite *new_inv;
 
 	bool is_slot_taken;
 };

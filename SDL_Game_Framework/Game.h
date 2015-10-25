@@ -9,6 +9,7 @@
 #include "NPC_Shopkeeper.h"
 #include "SDL_ttf.h"
 #include "Text_Boxes.h"
+#include "Inventory.h"
 
 
 class Game :
@@ -28,7 +29,7 @@ public:
 	UI_Play_Screen *m_play_screen_ui;
 	NPC_Shopkeeper *new_npc_shopkeeper;
 	Text_Boxes *text_box;
-
+	Inventory *inventory;
 	
 	
 };

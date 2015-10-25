@@ -31,9 +31,9 @@ bool Transform::Add_Position(Vector2 *position)
 	return false;
 }
 
-bool Transform::Add_Position(std::vector<Vector2> *positions)
+bool Transform::Add_Position(std::vector<Vector2*> positions)
 {
-	for (int i = 0; i < positions->size(); i++)
+	for (int i = 0; i < positions.size(); i++)
 	{
 		m_position_list.push_back(positions[i]);
 	}

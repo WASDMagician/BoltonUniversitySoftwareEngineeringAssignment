@@ -7,8 +7,16 @@ Inventory::Inventory()
 
 Inventory::Inventory(char *img, int rows, int columns)
 {
-	m_row = rows;
-	m_column[9] = columns;
+	new_inv = new AWSprite(img, 1, 1);
+
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < columns; j++)
+		{
+			new_inv->set_world_position(250, 500);
+			inv_sprite.push_back(new_inv);
+		}
+	}
 }
 
 Inventory::~Inventory()
@@ -37,6 +45,20 @@ bool Inventory::remove_item()
 bool Inventory::work()
 {
 	return true;
+}
+
+bool Inventory::Draw()
+{
+	new_inv->update_everything();
+	
+	for (int i = 0; i < 1; i++)
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			//inv_sprite[i][j].update_everything();
+		}
+	}
+	return false;
 }
 
 

@@ -20,7 +20,7 @@ public:
 	Vector2 &get_current_position();
 
 	bool Add_Position(Vector2 *position);
-	bool Add_Position(std::vector<Vector2> *positions);
+	bool Add_Position(std::vector<Vector2*> positions);
 
 	bool Move(float x = NULL, float y = NULL);
 	bool Increment_Move(float x = NULL, float y = NULL);

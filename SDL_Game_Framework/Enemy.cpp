@@ -8,6 +8,11 @@ Enemy::Enemy()
 Enemy::Enemy(creation_variables *initializer)
 :Character(initializer)
 {	
+	enemy_state = IDLE;
+	this->transform->Add_Position(new Vector2{ 20, 20 });
+	this->transform->Add_Position(new Vector2{ 20, 500 });
+	this->transform->Add_Position(new Vector2{ 500, 500 });
+	this->transform->Add_Position(new Vector2{ 500, 20 });
 }
 
 Enemy::~Enemy()
@@ -41,6 +46,7 @@ bool Enemy::Enemy_Idle()
 	if (enemy_state == IDLE)
 	{
 		//Stop and dont do anything
+		enemy_state = ROAMING; //we need to have some timer stuff going on here
 		return true;
 	}
 
@@ -49,13 +55,9 @@ bool Enemy::Enemy_Idle()
 
 bool Enemy::Enemy_Roam()
 {
-	this->transform->Lerp_To(new Vector2{ 20, 50 }, 100, 1);
-	this->transform->Lerp_To(new Vector2{ 100, 50 }, 100, 1);
-	this->transform->Lerp_To(new Vector2{ 21, 300 }, 100, 1);
-	this->transform->Lerp_To(new Vector2{ 60, 10 }, 100, 1);
-
 	if (enemy_state == ROAMING)
 	{
+		this->transform->Move_Between();
 		return true;
 	}
 
