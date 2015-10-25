@@ -8,6 +8,7 @@ class UI_Play_Screen;
 class Player : public Character
 {
 public:
+	//char* img_path, unsigned int rows, unsigned int cols, string name, unsigned int health, unsigned int damage, unsigned int defence, unsigned animation_speed
 	Player(creation_variables* initialisers);
 	~Player();
 

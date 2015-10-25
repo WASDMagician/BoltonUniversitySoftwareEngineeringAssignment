@@ -20,6 +20,7 @@ class Enemy : public Character
 {
 public:
 	Enemy();
+	//char* img_path, unsigned int rows, unsigned int cols, string name, unsigned int health, unsigned int damage, unsigned int defence, unsigned animation_speed
 	Enemy(creation_variables *initialisers);
 
 	virtual ~Enemy();

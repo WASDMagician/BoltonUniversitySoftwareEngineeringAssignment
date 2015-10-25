@@ -23,8 +23,6 @@ public:
 
 	bool Add_Position(std::vector<Vector2*> positions);
 
-	bool Add_Position(std::vector<Vector2*>positions);
-
 
 	bool Move(float x = NULL, float y = NULL);
 	bool Increment_Move(float x = NULL, float y = NULL);

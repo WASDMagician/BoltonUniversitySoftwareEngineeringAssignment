@@ -4,6 +4,7 @@
 #include <string>
 #include "Game_Object.h"
 
+//char* img_path, unsigned int rows, unsigned int cols, string name, unsigned int health, unsigned int damage, unsigned int defence, unsigned animation_speed
 struct creation_variables
 {
 	char* img_path;
@@ -22,6 +23,7 @@ class Character: public Game_Object
 {
 public:
 	Character();
+	//char* img_path, unsigned int rows, unsigned int cols, string name, unsigned int health, unsigned int damage, unsigned int defence, unsigned animation_speed
 	Character(creation_variables *initialiser);
 	
 	virtual ~Character();

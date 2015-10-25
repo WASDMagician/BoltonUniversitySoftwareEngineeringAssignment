@@ -7,6 +7,7 @@
 class NPC_Base : public Character
 {
 public:
+	//char* img_path, unsigned int rows, unsigned int cols, string name, unsigned int health, unsigned int damage, unsigned int defence, unsigned animation_speed
 	NPC_Base(creation_variables *initialiser);
 	virtual ~NPC_Base();
 

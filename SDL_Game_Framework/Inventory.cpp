@@ -56,7 +56,6 @@ bool Inventory::Draw()
 		for (int j = 0; j < 9; j++)
 		{
 			//inv_sprite[i][j].update_everything();
-			std::cout << "made a change" << std::endl; // CAN DELETE THIS LINE OFCOURSE
 		}
 	}
 	return false;

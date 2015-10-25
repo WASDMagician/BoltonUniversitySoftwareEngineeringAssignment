@@ -27,6 +27,14 @@ public:
 	void Logic_Pause();
 	void Logic_End();
 
+	void OnKeyPressed();
+
+	void Handle_Start_Keys();
+	void Handle_Play_Keys();
+	void Handle_Pause_Keys();
+	void Handle_End_Keys();
+
+
 	void Draw();
 	void Draw_Start();
 	void Draw_Play();
@@ -35,11 +43,6 @@ public:
 
 private:
 
-	Player *new_player;
-	Enemy *new_enemy;
-	Character *new_ogre;
-	UI_Play_Screen *m_play_screen_ui;
-	NPC_Shopkeeper *new_npc_shopkeeper;
 	Text_Boxes *text_box;
 	Inventory *inventory;
 };

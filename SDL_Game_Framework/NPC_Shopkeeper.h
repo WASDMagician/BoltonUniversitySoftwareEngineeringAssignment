@@ -9,6 +9,7 @@ class Weapon;
 class NPC_Shopkeeper : public NPC_Base
 {
 public:
+	//char* img_path, unsigned int rows, unsigned int cols, string name, unsigned int health, unsigned int damage, unsigned int defence, unsigned animation_speed
 	NPC_Shopkeeper(creation_variables *initialiser);
 	virtual ~NPC_Shopkeeper();
 
