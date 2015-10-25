@@ -13,8 +13,9 @@ Game::~Game()
 void Game::Setup()
 {
 	TTF_Init();
-	
-	inventory = new Inventory("images/inv_slot.png", 1, 9);	
+	splash_box = new Text_Boxes(new text_box_creation_variables{ "fonts/game_font.ttf", 28, new SDL_Color({ 255, 0, 0 }),
+		new SDL_Color({ 0, 255, 255 }), 20, 20, { "test 1", "test 2" } });
+	inventory = new Inventory("images/inv_slot.png", 1, 9);
 	CURRENT_STATE = START_GAME;
 }
 
@@ -121,6 +122,8 @@ void Game::Draw()
 
 void Game::Draw_Start()
 {
+	splash_box->Update();
+	splash_box->Render_Text();
 }
 
 void Game::Draw_Play()

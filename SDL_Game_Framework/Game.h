@@ -43,7 +43,7 @@ public:
 
 private:
 
-	Text_Boxes *text_box;
+	Text_Boxes *splash_box;
 	Inventory *inventory;
 };
 #endif // _GAME_H_

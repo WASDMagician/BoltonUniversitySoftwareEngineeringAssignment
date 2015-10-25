@@ -3,18 +3,28 @@
 
 
 Text_Boxes::Text_Boxes()
-:m_p_font(NULL), m_p_game(NULL), m_messages(NULL), m_p_colour(new SDL_Color{ 255, 255, 255 }), m_p_background_colour(new SDL_Color{ 0, 0, 255 }),
-m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL), m_should_flush(false)
+	:m_p_font(NULL), m_messages(NULL), m_p_colour(new SDL_Color{ 255, 255, 255 }), m_p_background_colour(new SDL_Color{ 0, 0, 255 }),
+	m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL), m_should_flush(false)
 {
+}
+
+//char* font_path, int pt_size, SDL_Color* text_colour, SDL_Color *background_colour, float x_pos, float y_pos, vector<string>messages
+Text_Boxes::Text_Boxes(text_box_creation_variables *initialiser)
+	:m_p_font(NULL), m_p_colour(initialiser->text_colour), m_p_background_colour(initialiser->background_colour),
+	m_x_position(initialiser->x_position), m_y_position(initialiser->y_position), m_string_messages(initialiser->messages)
+{
+	set_font(initialiser->font_path, initialiser->pt_size);
+	Setup_Message(m_string_messages);
 }
 
 
 Text_Boxes::~Text_Boxes()
 {
 	delete m_p_font;
-	delete m_p_game;
 
 }
+
+
 
 void Text_Boxes::Setup_Message(std::vector<std::string> messages)
 {
@@ -49,17 +59,6 @@ bool Text_Boxes::set_surface_message(std::string currentString)
 	return false;
 }
 
-Game *Text_Boxes::get_game()
-{
-	return m_p_game;
-}
-
-bool Text_Boxes::set_game(Game *game)
-{
-	m_p_game = game;
-	return m_p_game == game;
-}
-
 TTF_Font *Text_Boxes::get_font()
 {
 	return m_p_font;
@@ -67,6 +66,13 @@ TTF_Font *Text_Boxes::get_font()
 
 bool Text_Boxes::set_font(TTF_Font *font)
 {
+	m_p_font = font;
+	return m_p_font == font;
+}
+
+bool Text_Boxes::set_font(char* fontPath, int ptSize)
+{
+	TTF_Font *font = TTF_OpenFont(fontPath, ptSize);
 	m_p_font = font;
 	return m_p_font == font;
 }
@@ -142,6 +148,6 @@ void Text_Boxes::Render_Text()
 	m_background_sprite->update_everything();
 	for (int i = 0; i < m_messages.size(); i++)
 	{
-		SDL_BlitSurface(m_messages[i].message_surface, NULL, m_p_game->screen, m_messages[i].rect);	
+		SDL_BlitSurface(m_messages[i].message_surface, NULL, SDL_GetVideoSurface(), m_messages[i].rect);	
 	}
 }
