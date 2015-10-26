@@ -8,6 +8,8 @@ Game::Game()
 
 Game::~Game()
 {
+	delete player;
+	delete ogre;
 }
 
 void Game::Setup()
@@ -16,6 +18,8 @@ void Game::Setup()
 	splash_box = new Text_Boxes(new text_box_creation_variables{ "fonts/game_font.ttf", 28, new SDL_Color({ 255, 0, 0 }),
 		new SDL_Color({ 0, 255, 255 }), 20, 20, { "test 1", "test 2" } });
 	inventory = new Inventory("images/inv_slot_9.png", 1, 9);
+	player = new Player(new creation_variables{ "images/alien.bmp", 2, 3, "player test", 2, 2, 2, 200 });
+	ogre = new Enemy(new creation_variables{ "images/fish.bmp", 1, 8, "enemy test", 2, 2, 2, 200 });
 
 	CURRENT_STATE = START_GAME;
 }
@@ -116,7 +120,19 @@ void Game::Handle_Pause_Keys()
 	}
 }
 
+void Game::RenderHUD()
+{ // this kind of stuff i imagine should be dealt with in the UI but for now it can be here until Text boxes work
+	int stringSize = 0;
+	int player_health = player->get_health();
+	stringSize = Print("Health:", 1, 1, WHITE);
+	stringSize = Print(player_health, stringSize + 1, 1, WHITE);
 
+	int stringSize2 = 99;
+	int enemy_health = ogre->get_health();
+	Print("Enemy Health: ", 1, 100, WHITE);
+	Print(enemy_health, stringSize2 +10, 100, WHITE);
+
+}
 
 void Game::Draw()
 {
@@ -136,6 +152,10 @@ void Game::Draw()
 void Game::Draw_Play()
 {
 	inventory->Draw();
+	player->render();
+	ogre->render();
+	RenderHUD();
+
 }
 
 void Game::Draw_Pause()

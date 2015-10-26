@@ -40,11 +40,15 @@ public:
 	void Draw_Play();
 	void Draw_Pause();
 
+	void RenderHUD();
+
 private:
 
 	Text_Boxes *splash_box;
 	Splash_Screen *splash;
 	Inventory *inventory;
+	Player *player;
+	Enemy *ogre;
 };
 #endif // _GAME_H_
 
