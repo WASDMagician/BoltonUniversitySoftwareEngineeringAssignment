@@ -10,6 +10,8 @@
 #include "SDL_ttf.h"
 #include "Text_Boxes.h"
 #include "Inventory.h"
+#include "Start_Menu_Splash.h"
+#include "End_Menu_Splash.h"
 
 
 class Game :
@@ -29,21 +31,18 @@ public:
 
 	void OnKeyPressed();
 
-	void Handle_Start_Keys();
 	void Handle_Play_Keys();
 	void Handle_Pause_Keys();
-	void Handle_End_Keys();
 
 
 	void Draw();
-	void Draw_Start();
 	void Draw_Play();
 	void Draw_Pause();
-	void Draw_End();
 
 private:
 
 	Text_Boxes *splash_box;
+	Splash_Screen *splash;
 	Inventory *inventory;
 };
 #endif // _GAME_H_
