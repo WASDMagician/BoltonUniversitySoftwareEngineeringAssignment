@@ -29,8 +29,6 @@ public:
 	 bool set_defence(unsigned int defence);
 	 unsigned int get_defence();
 
-	 std::string serialize_character();
-
 private:
 	UI_Play_Screen *player_ui;
 };

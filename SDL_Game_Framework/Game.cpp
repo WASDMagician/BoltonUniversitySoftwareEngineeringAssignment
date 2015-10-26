@@ -18,8 +18,10 @@ void Game::Setup()
 	splash_box = new Text_Boxes(new text_box_creation_variables{ "fonts/game_font.ttf", 28, new SDL_Color({ 255, 0, 0 }),
 		new SDL_Color({ 0, 255, 255 }), 20, 20, { "test 1", "test 2" } });
 	inventory = new Inventory("images/inv_slot.png", 1, 9);
-	player = new Player(new creation_variables{ "images/alien.bmp", 2, 3, "player test", 2, 2, 2, 200 });
-	ogre = new Enemy(new creation_variables{ "images/fish.bmp", 1, 8, "enemy test", 2, 2, 2, 200 });
+	player = new Player(new creation_variables{ "images/alien.bmp", 2, 3, "player test", 2, 2, 2, 200, "Player" });
+	ogre = new Enemy(new creation_variables{ "images/fish.bmp", 1, 8, "enemy test", 2, 2, 2, 200, "Enemy" });
+	ogre->serialize_character();
+	player->serialize_character();
 
 	CURRENT_STATE = START_GAME;
 }

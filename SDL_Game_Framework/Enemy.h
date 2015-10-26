@@ -46,11 +46,11 @@ public:
 	bool set_defence(unsigned int defence);
 	unsigned int get_defence();
 
-	std::string serialize_character();
-
 private:
 	ENEMY_STATE enemy_state;
 	Character *character;
+
+	std::string m_serial;
 };
 
 #endif

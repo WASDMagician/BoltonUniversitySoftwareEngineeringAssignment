@@ -77,8 +77,3 @@ void Player::update_player_ui()
 	player_ui->set_health(get_health());
 	player_ui->set_lives(m_lives);
 }
-
-std::string Player::serialize_character()
-{
-	return "False";
-}

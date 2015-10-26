@@ -1,12 +1,13 @@
 #include "Enemy.h"
 
 Enemy::Enemy()
+	:m_serial("")
 {
 
 }
 
 Enemy::Enemy(creation_variables *initializer)
-:Character(initializer)
+	: Character(initializer), m_serial("")
 {	
 	enemy_state = IDLE;
 	this->transform->Add_Position(new Vector2{ 20, 20 });
@@ -140,9 +141,3 @@ unsigned int Enemy::get_defence()
 {
 	return m_defence;
 }
-
-std::string Enemy::serialize_character()
-{
-	return "False";
-}
-

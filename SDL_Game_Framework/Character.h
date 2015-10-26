@@ -17,6 +17,8 @@ struct creation_variables
 	unsigned int defence;
 
 	unsigned int animate_speed;
+
+	std::string type;
 };
 
 class Character: public Game_Object
@@ -43,7 +45,7 @@ public:
 	virtual bool set_defence(unsigned int defence) = NULL;
 	virtual unsigned int get_defence() = NULL;
 
-	virtual std::string serialize_character() = NULL;
+	virtual std::string serialize_character();
 	//implementation: TYPE - Image Path - Pos X - Pos Y - Name - Health - Damage - Defence - Items
 
 	bool render();
@@ -54,6 +56,14 @@ protected:
 	unsigned int m_lives;
 	unsigned int m_damage;
 	unsigned int m_defence;
+
+	std::string m_serial;
+	std::string m_type;
+	//image data for storage
+	char* m_img_path;
+	int m_rows;
+	int m_cols;
+	int m_animation_speed;
 };
 
 #endif //_CHARACTER_H_
