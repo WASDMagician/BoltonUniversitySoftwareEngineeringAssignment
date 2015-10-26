@@ -12,6 +12,7 @@
 #include "Inventory.h"
 #include "Start_Menu_Splash.h"
 #include "End_Menu_Splash.h"
+#include "Pause_Menu_Splash.h"
 
 
 class Game :

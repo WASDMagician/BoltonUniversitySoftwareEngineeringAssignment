@@ -285,6 +285,9 @@
     <ClInclude Include="End_Menu_Splash.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Pause_Menu_Splash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -450,6 +453,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="End_Menu_Splash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pause_Menu_Splash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

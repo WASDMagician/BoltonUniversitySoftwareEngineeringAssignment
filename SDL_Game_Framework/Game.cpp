@@ -15,7 +15,7 @@ void Game::Setup()
 	TTF_Init();
 	splash_box = new Text_Boxes(new text_box_creation_variables{ "fonts/game_font.ttf", 28, new SDL_Color({ 255, 0, 0 }),
 		new SDL_Color({ 0, 255, 255 }), 20, 20, { "test 1", "test 2" } });
-	inventory = new Inventory("images/inv_slot.png", 1, 9);
+	inventory = new Inventory("images/inv_slot_9.png", 1, 9);
 
 	CURRENT_STATE = START_GAME;
 }
@@ -56,6 +56,9 @@ void Game::Logic_Play()
 
 void Game::Logic_Pause()
 {
+	//switch to pause splash
+	splash = new Pause_Menu_Splash(this, "images/pause_menu_splash_temp.png");
+	splash->start();
 }
 
 void Game::Logic_End()
@@ -85,10 +88,18 @@ void Game::OnKeyPressed()
 
 void Game::Handle_Play_Keys()
 {
+	if (keyDown == SDLK_p)
+	{
+		CURRENT_STATE == PAUSE_GAME;
+	}
 }
 
 void Game::Handle_Pause_Keys()
 {
+	if (keyDown == SDLK_p)
+	{
+		CURRENT_STATE == PLAY_GAME;
+	}
 }
 
 

@@ -144,6 +144,7 @@
     <ClInclude Include="NPC_Shopkeeper.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Ogre.h" />
+    <ClInclude Include="Pause_Menu_Splash.h" />
     <ClInclude Include="Pickup_Objects.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Puzzle_Objects.h" />
@@ -205,6 +206,7 @@
     <ClCompile Include="Game_Object.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Pause_Menu_Splash.cpp" />
     <ClCompile Include="Puzzle_Objects.cpp" />
     <ClCompile Include="Splash_Screen.cpp" />
     <ClCompile Include="Start_Menu_Splash.cpp" />
