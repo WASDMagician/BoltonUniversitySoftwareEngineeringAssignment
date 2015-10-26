@@ -1,12 +1,83 @@
-﻿Build started 26/10/2015 15:03:25.
-     1>Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 26-Oct-15 3:22:48 PM.
+     1>Project "C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\debug\sdl_game_framework.pdb' because it is being used by another process.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Audio.cpp audiomanager.cpp AWSprite.cpp AW_Sprite_Interface.cpp Character.cpp Crossbow.cpp Empowere_Knuckles.cpp End_Menu_Splash.cpp Enemy.cpp Game.cpp GameBase.cpp Game_Object.cpp Level.cpp Map.cpp Pause_Menu_Splash.cpp Puzzle_Objects.cpp Splash_Screen.cpp Start_Menu_Splash.cpp Test_Everything.cpp Great_Axe.cpp Inventory.cpp Load_Game.cpp Main.cpp NPC_Base.cpp NPC_Hinter.cpp NPC_Shopkeeper.cpp Object.cpp Ogre.cpp Pickup_Objects.cpp Player.cpp Save_Game.cpp Sniper.cpp Sword.cpp Test_All.cpp Text_Boxes.cpp Transform.cpp UI.cpp UI_Play_Screen.cpp UnitTest++\src\AssertException.cpp UnitTest++\src\Checks.cpp UnitTest++\src\CurrentTest.cpp UnitTest++\src\DeferredTestReporter.cpp UnitTest++\src\DeferredTestResult.cpp UnitTest++\src\MemoryOutStream.cpp UnitTest++\src\ReportAssert.cpp UnitTest++\src\Test.cpp UnitTest++\src\TestDetails.cpp UnitTest++\src\TestList.cpp UnitTest++\src\TestReporter.cpp UnitTest++\src\TestReporterStdout.cpp UnitTest++\src\TestResults.cpp UnitTest++\src\TestRunner.cpp UnitTest++\src\TimeConstraint.cpp UnitTest++\src\TimeHelpers.cpp UnitTest++\src\XmlTestReporter.cpp Weapon.cpp
+         Weapon.cpp
+         XmlTestReporter.cpp
+         TimeHelpers.cpp
+         TimeConstraint.cpp
+         TestRunner.cpp
+         TestResults.cpp
+         TestReporterStdout.cpp
+         TestReporter.cpp
+         TestList.cpp
+         TestDetails.cpp
+         Test.cpp
+         ReportAssert.cpp
+         MemoryOutStream.cpp
+         DeferredTestResult.cpp
+         DeferredTestReporter.cpp
+         CurrentTest.cpp
+         Checks.cpp
+         AssertException.cpp
+         UI_Play_Screen.cpp
+         UI.cpp
+         Generating Code...
+         Compiling...
+         Transform.cpp
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\transform.cpp(36): warning C4018: '<' : signed/unsigned mismatch
+         Text_Boxes.cpp
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(15): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(23): warning C4150: deletion of pointer to incomplete type '_TTF_Font'; no destructor called
+                 c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\sdl_ttf.h(77) : see declaration of '_TTF_Font'
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(31): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(48): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(121): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(129): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(140): warning C4018: '<=' : signed/unsigned mismatch
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_boxes.cpp(149): warning C4018: '<' : signed/unsigned mismatch
+         Test_All.cpp
+         Sword.cpp
+         Sniper.cpp
+         Save_Game.cpp
+         Player.cpp
+         Pickup_Objects.cpp
+         Ogre.cpp
+         Object.cpp
+         NPC_Shopkeeper.cpp
+         NPC_Hinter.cpp
+         NPC_Base.cpp
+         Main.cpp
+         Load_Game.cpp
+         Inventory.cpp
+         Great_Axe.cpp
+         Test_Everything.cpp
+         Start_Menu_Splash.cpp
+         Splash_Screen.cpp
+         Generating Code...
+         Compiling...
+         Puzzle_Objects.cpp
+         Pause_Menu_Splash.cpp
+         Map.cpp
+         Level.cpp
+         Game_Object.cpp
+         GameBase.cpp
          Game.cpp
-     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(98): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(106): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(109): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(117): warning C4553: '==' : operator has no effect; did you intend '='?
+         Enemy.cpp
+         End_Menu_Splash.cpp
+         Empowere_Knuckles.cpp
+         Crossbow.cpp
+         Character.cpp
+         AW_Sprite_Interface.cpp
+         AWSprite.cpp
+         audiomanager.cpp
+         Audio.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\Audio.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\Audio.obj
          Debug\audiomanager.obj
          Debug\AWSprite.obj
          Debug\AW_Sprite_Interface.obj
@@ -62,9 +133,10 @@
          Debug\TimeHelpers.obj
          Debug\XmlTestReporter.obj
          Debug\Weapon.obj
-         SDL_Game_Framework.vcxproj -> F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
-     1>Done Building Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+         SDL_Game_Framework.vcxproj -> C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.44
+Time Elapsed 00:00:24.65

@@ -46,24 +46,33 @@ void Game::Logic_Start()
 	//switch to start splash
 	splash = new Start_Menu_Splash(this, "images/splash1.png");
 	splash->start();
-	CURRENT_STATE = PLAY_GAME;
+	if (keyDown == SDLK_KP_ENTER || keyDown == SDLK_RETURN)
+	{
+		CURRENT_STATE = PLAY_GAME;
+	}	
 }
 
 void Game::Logic_Play()
 {
 	//actual game logic here
 	if (keyDown == SDLK_p)
-	{
+	{ // DURING GAME PRESS P TO PAUSE
 		CURRENT_STATE = PAUSE_GAME;
 	}
+
 }
 
 void Game::Logic_Pause()
 {
+	if (keyDown == SDLK_p)
+	{ // DURING PAUSE SOME REASON PRESSING ENTER UNPAUSES NOT P LIKE I CODED...
+		CURRENT_STATE = START_GAME;
+	}
 	//switch to pause splash
 	printf("pause");
 	splash = new Pause_Menu_Splash(this, "images/pause_menu_splash_temp.png");
 	splash->start();
+
 }
 
 void Game::Logic_End()
