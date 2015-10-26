@@ -276,6 +276,15 @@
     <ClInclude Include="Puzzle_Objects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Splash_Screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Start_Menu_Splash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="End_Menu_Splash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -432,6 +441,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Puzzle_Objects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Splash_Screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Start_Menu_Splash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="End_Menu_Splash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
