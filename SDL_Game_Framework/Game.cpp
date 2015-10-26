@@ -52,11 +52,16 @@ void Game::Logic_Start()
 void Game::Logic_Play()
 {
 	//actual game logic here
+	if (keyDown == SDLK_p)
+	{
+		CURRENT_STATE = PAUSE_GAME;
+	}
 }
 
 void Game::Logic_Pause()
 {
 	//switch to pause splash
+	printf("pause");
 	splash = new Pause_Menu_Splash(this, "images/pause_menu_splash_temp.png");
 	splash->start();
 }
