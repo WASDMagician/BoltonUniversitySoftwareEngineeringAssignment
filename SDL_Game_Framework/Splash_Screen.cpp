@@ -19,7 +19,7 @@ Splash_Screen::~Splash_Screen()
 }
 
 
-void Splash_Screen::process_keys()
+void Splash_Screen::Process_Keys()
 {
 	switch (m_p_game->keyDown)
 	{
@@ -33,13 +33,28 @@ void Splash_Screen::process_keys()
 	}
 }
 
-void Splash_Screen::start()
+void Splash_Screen::Handle_Start_Keys()
+{
+
+}
+
+void Splash_Screen::Handle_Pause_Keys()
+{
+
+}
+
+void Splash_Screen::Handle_End_Keys()
+{
+
+}
+
+void Splash_Screen::Start()
 {
 	while (!m_b_close_splash)
 	{
 		SDL_Delay(10);
 		m_p_game->GetUserInput();
-		process_keys();
+		Process_Keys();
 		SDL_BlitSurface(m_p_game->bg, NULL, m_p_game->screen, NULL);
 		SDL_Flip(m_p_game->screen);
 	}

@@ -24,12 +24,16 @@ private:
 	int m_row[1];
 	int m_column[9];
 	Game_Object m_item;
+
 	std::vector<Game_Object> inv_items;
-	std::vector<AWSprite*> inv_sprite;
-	AWSprite *new_inv;
+	std::vector<std::vector<AWSprite*>> inv_sprite;
+
+	float m_inv_bar_left_x;
+	float m_inv_bar_top_y;
+	float m_inv_bar_x_margin;
+	float m_inv_bar_y_margin;
 
 	bool is_slot_taken;
 };
 
 #endif
-

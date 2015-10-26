@@ -19,6 +19,6 @@ Start_Menu_Splash::~Start_Menu_Splash(void)
 
 bool Start_Menu_Splash::Run()
 {
-	start();
+	Start();
 	return is_game_over();
 }

@@ -13,8 +13,13 @@ public:
 	~Splash_Screen();
 
 	//virtual means if the function will be different in child classes
-	void process_keys(); // processes transition of screens
-	virtual void start();
+	void Process_Keys(); // processes transition of screens
+
+	void Handle_Start_Keys();
+	void Handle_Pause_Keys();
+	void Handle_End_Keys();
+
+	virtual void Start();
 	virtual bool Run();
 	bool is_game_over();
 

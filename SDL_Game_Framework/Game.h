@@ -33,12 +33,10 @@ public:
 	void OnKeyPressed();
 
 	void Handle_Play_Keys();
-	void Handle_Pause_Keys();
 
 
 	void Draw();
 	void Draw_Play();
-	void Draw_Pause();
 
 	void RenderHUD();
 

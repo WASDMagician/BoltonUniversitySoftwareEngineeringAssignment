@@ -61,11 +61,17 @@
     <Filter Include="Source Files\tests">
       <UniqueIdentifier>{b69a1cff-c890-4846-b0bf-19bb35b740e3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Levels">
+    <Filter Include="Header Files\screens">
+      <UniqueIdentifier>{5a9417b5-84b7-48eb-a630-e787abb85c95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\levels">
       <UniqueIdentifier>{4636ea82-8ed8-42d5-920b-7d2720e8c13e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Levels">
+    <Filter Include="Source Files\levels">
       <UniqueIdentifier>{84705671-bbc5-436a-bfca-0832a06a4713}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\screens">
+      <UniqueIdentifier>{7dfb9da8-1386-44f7-b747-48fa1d971b54}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -253,10 +259,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Level.h">
-      <Filter>Header Files\Levels</Filter>
+      <Filter>Header Files\levels</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
-      <Filter>Header Files\Levels</Filter>
+      <Filter>Header Files\levels</Filter>
     </ClInclude>
     <ClInclude Include="NPC_Shopkeeper.h">
       <Filter>Header Files\Characters\NPC</Filter>
@@ -276,17 +282,17 @@
     <ClInclude Include="Puzzle_Objects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Splash_Screen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Start_Menu_Splash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="End_Menu_Splash.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\screens</Filter>
     </ClInclude>
     <ClInclude Include="Pause_Menu_Splash.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Splash_Screen.h">
+      <Filter>Header Files\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Start_Menu_Splash.h">
+      <Filter>Header Files\screens</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -423,10 +429,10 @@
       <Filter>Source Files\tests</Filter>
     </ClCompile>
     <ClCompile Include="Level.cpp">
-      <Filter>Source Files\Levels</Filter>
+      <Filter>Source Files\levels</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
-      <Filter>Source Files\Levels</Filter>
+      <Filter>Source Files\levels</Filter>
     </ClCompile>
     <ClCompile Include="NPC_Base.cpp">
       <Filter>Source Files\Characters\NPC</Filter>
@@ -446,17 +452,17 @@
     <ClCompile Include="Puzzle_Objects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Splash_Screen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Start_Menu_Splash.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="End_Menu_Splash.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\screens</Filter>
     </ClCompile>
     <ClCompile Include="Pause_Menu_Splash.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Splash_Screen.cpp">
+      <Filter>Source Files\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Start_Menu_Splash.cpp">
+      <Filter>Source Files\screens</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

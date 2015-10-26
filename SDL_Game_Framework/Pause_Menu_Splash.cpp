@@ -18,6 +18,6 @@ Pause_Menu_Splash::~Pause_Menu_Splash(void)
 
 bool Pause_Menu_Splash::Run()
 {
-	start();
+	Start();
 	return is_game_over();
 }

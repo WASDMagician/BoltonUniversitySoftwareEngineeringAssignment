@@ -2,20 +2,25 @@
 
 
 Inventory::Inventory()
+	:m_inv_bar_left_x(250), m_inv_bar_top_y(500), m_inv_bar_x_margin(40), m_inv_bar_y_margin(40)
 {
 }
 
 Inventory::Inventory(char *img, int rows, int columns)
+	: m_inv_bar_left_x(250), m_inv_bar_top_y(500), m_inv_bar_x_margin(45), m_inv_bar_y_margin(45)
 {
-	new_inv = new AWSprite(img, 1, 1);
-
+	printf("Rows Cols: %d %d", rows, columns);
 	for (int i = 0; i < rows; i++)
 	{
+		std::vector<AWSprite*>new_row;
+		inv_sprite.push_back(std::vector<AWSprite*>());
 		for (int j = 0; j < columns; j++)
 		{
-			new_inv->set_world_position(250, 500);
-			inv_sprite.push_back(new_inv);
+			AWSprite *new_sprite = new AWSprite(img, 1, 1);
+			new_sprite->set_world_position(m_inv_bar_left_x + (j * m_inv_bar_x_margin), m_inv_bar_top_y + (i * m_inv_bar_y_margin));
+			new_row.push_back(new_sprite);
 		}
+		inv_sprite.push_back(new_row);
 	}
 }
 
@@ -48,15 +53,14 @@ bool Inventory::work()
 }
 
 bool Inventory::Draw()
-{
-	new_inv->update_everything();
-	
-	for (int i = 0; i < 1; i++)
+{	
+	for (int i = 0; i < inv_sprite.size(); i++)
 	{
-		for (int j = 0; j < 9; j++)
+		for (int j = 0; j < inv_sprite[i].size(); j++)
 		{
-			//inv_sprite[i][j].update_everything();
+			inv_sprite[i][j]->update_everything();
 		}
+		
 	}
 	return false;
 }
