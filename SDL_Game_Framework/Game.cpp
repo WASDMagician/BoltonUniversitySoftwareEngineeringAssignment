@@ -22,12 +22,13 @@ void Game::Setup()
 	ogre = new Enemy(new creation_variables{ "images/fish.bmp", 1, 8, "enemy test", 2, 2, 2, 200, "Enemy" });
 	ogre->serialize_character();
 	player->serialize_character();
-
+	
 	CURRENT_STATE = START_GAME;
 }
 
 void Game::Logic()
 {
+	printf("%d\n", CURRENT_STATE);
 	//Do not add any code here, add code to the respective functions (or in start_gae and end_game their respective splash classes)
 	switch (CURRENT_STATE)
 	{
@@ -91,8 +92,8 @@ void Game::Handle_Play_Keys()
 	if (keyDown == SDLK_p)
 	{
 		printf("Pausing\n");
-		CURRENT_STATE = PAUSE_GAME;
-		system("pause");
+		CURRENT_STATE = END_GAME;
+		Logic_Pause();
 	}
 }
 

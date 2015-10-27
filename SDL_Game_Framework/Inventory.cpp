@@ -9,7 +9,6 @@ Inventory::Inventory()
 Inventory::Inventory(char *img, int rows, int columns)
 	: m_inv_bar_left_x(250), m_inv_bar_top_y(500), m_inv_bar_x_margin(45), m_inv_bar_y_margin(45)
 {
-	printf("Rows Cols: %d %d", rows, columns);
 	for (int i = 0; i < rows; i++)
 	{
 		std::vector<AWSprite*>new_row;
