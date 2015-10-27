@@ -3,11 +3,12 @@
 #include "Game.h"
 
 Splash_Screen::Splash_Screen()
+	:m_screen("Splash_Screen"), m_b_close_splash(false), m_b_game_over(false)
 {
 }
 
-Splash_Screen::Splash_Screen(Game* pGame, char* bgImg)
-:m_b_close_splash(false), m_b_game_over(false)
+Splash_Screen::Splash_Screen(Game* pGame, char* bgImg, std::string screen)
+	:m_b_close_splash(false), m_b_game_over(false)
 {
 	m_p_game = pGame;
 	m_p_game->SetBackground(bgImg);
@@ -21,31 +22,52 @@ Splash_Screen::~Splash_Screen()
 
 void Splash_Screen::Process_Keys()
 {
-	switch (m_p_game->keyDown)
+	switch (CURRENT_STATE)
 	{
-	case (SDLK_RETURN) :
-		m_b_close_splash = true;
+	case(START_GAME) :
+		printf("Start\n");
+		Handle_Start_Keys();
 		break;
-	case(SDLK_ESCAPE) :
-		m_b_close_splash = true;
-		m_b_game_over = true;
+	case(PAUSE_GAME) :
+		printf("Pause\n");
+		Handle_Pause_Keys();
+		break;
+	case(END_GAME) :
+		printf("End\n");
+		Handle_End_Keys();
 		break;
 	}
 }
 
 void Splash_Screen::Handle_Start_Keys()
 {
-
+	switch (m_p_game->keyDown)
+	{
+	case(SDLK_RETURN) :
+		m_b_close_splash = true;
+		break;
+	}
 }
 
 void Splash_Screen::Handle_Pause_Keys()
 {
-
+	switch (m_p_game->keyDown)
+	{
+	case(SDLK_p) :
+		printf("Testing");
+		m_b_close_splash = true;
+		break;
+	}
 }
 
 void Splash_Screen::Handle_End_Keys()
 {
-
+	switch (m_p_game->keyDown)
+	{
+	case(SDLK_ESCAPE) :
+		m_b_game_over = true;
+		break;
+	}
 }
 
 void Splash_Screen::Start()

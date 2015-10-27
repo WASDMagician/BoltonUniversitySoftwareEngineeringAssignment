@@ -9,7 +9,7 @@ class Splash_Screen
 {
 public:
 	Splash_Screen();
-	Splash_Screen(Game* game, char* bgImg);
+	Splash_Screen(Game* game, char* bgImg, std::string screen);
 	~Splash_Screen();
 
 	//virtual means if the function will be different in child classes
@@ -27,6 +27,9 @@ private:
 	Game* m_p_game; // game pointer to game object
 	bool m_b_close_splash;
 	bool m_b_game_over;
+
+protected:
+	std::string m_screen;
 };
 
 #endif

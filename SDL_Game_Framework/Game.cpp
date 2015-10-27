@@ -74,9 +74,6 @@ void Game::Logic_End()
 	splash->Start();
 }
 
-
-
-
 void Game::OnKeyPressed()
 {
 	switch (CURRENT_STATE)
@@ -93,7 +90,9 @@ void Game::Handle_Play_Keys()
 {
 	if (keyDown == SDLK_p)
 	{
+		printf("Pausing\n");
 		CURRENT_STATE = PAUSE_GAME;
+		system("pause");
 	}
 }
 
