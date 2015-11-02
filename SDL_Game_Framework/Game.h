@@ -7,6 +7,7 @@
 #include "Ogre.h"
 #include "UI_Play_Screen.h"
 #include "NPC_Shopkeeper.h"
+#include "NPC_Hinter.h"
 #include "SDL_ttf.h"
 #include "Text_Boxes.h"
 #include "Inventory.h"
@@ -47,6 +48,7 @@ private:
 	Inventory *inventory;
 	Player *player;
 	Enemy *ogre;
+	NPC_Hinter *clown;
 };
 #endif // _GAME_H_
 

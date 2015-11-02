@@ -20,8 +20,17 @@ void Game::Setup()
 	inventory = new Inventory("images/inv_slot.png", 1, 9);
 	player = new Player(new creation_variables{ "images/alien.bmp", 2, 3, "player test", 2, 2, 2, 200, "Player" });
 	ogre = new Enemy(new creation_variables{ "images/fish.bmp", 1, 8, "enemy test", 2, 2, 2, 200, "Enemy" });
+	clown = new NPC_Hinter(new creation_variables{ "images/clown.png", 1, 1, "npc test", 0, 0, 1000, 0, "NPC" });
+	Vector2 PointA;
+	PointA.x = 10;
+	PointA.y = 10;
+	Vector2 PointB;
+	PointB.x = 100;
+	PointB.y = 100;
+	clown->set_points(PointA, PointB);
 	ogre->serialize_character();
 	player->serialize_character();
+	clown->serialize_character();
 	
 	CURRENT_STATE = START_GAME;
 }
@@ -59,6 +68,7 @@ void Game::Logic_Start()
 void Game::Logic_Play()
 {
 	//actual game logic here
+	clown->move();
 }
 
 void Game::Logic_Pause()
@@ -129,6 +139,7 @@ void Game::Draw_Play()
 	inventory->Draw();
 	player->render();
 	ogre->render();
+	clown->render();
 	RenderHUD();
 
 }

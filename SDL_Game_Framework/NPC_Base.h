@@ -26,9 +26,17 @@ public:
 	bool set_defence(unsigned int defence);
 	unsigned int get_defence();
 
+	bool set_points(Vector2 pointA, Vector2 pointB);
+	void move();
+
+	virtual bool react() = NULL;
+
 	std::string serialize_character();
 
 private:
+	Vector2 m_PointA;
+	Vector2 m_PointB;
+	bool m_Direction;
 };
 
 #endif //_NPC_BASE_H_

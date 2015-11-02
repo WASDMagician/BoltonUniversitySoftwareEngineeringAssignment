@@ -69,6 +69,29 @@ unsigned int NPC_Base::get_defence()
 	return m_defence;
 }
 
+bool NPC_Base::set_points(Vector2 pointA, Vector2 pointB)
+{
+	m_PointA = pointA;
+	m_PointB = pointB;
+	return (m_PointA == pointA && m_PointB == pointB);
+}
+
+void NPC_Base::move()
+{
+	this->transform->Move(m_PointA.x, m_PointB.y);
+	if (this->transform->get_current_position() == m_PointA && m_Direction)
+	{
+		m_Direction = !m_Direction;
+		this->transform->Lerp_To(&m_PointB, 10.0f, 1.0f);
+	}
+
+	if (this->transform->get_current_position() == m_PointB && !m_Direction)
+	{
+		m_Direction = !m_Direction;
+		this->transform->Lerp_To(&m_PointA, 10.0f, 1.0f);
+	}
+}
+
 std::string NPC_Base::serialize_character()
 {
 	return "False";
