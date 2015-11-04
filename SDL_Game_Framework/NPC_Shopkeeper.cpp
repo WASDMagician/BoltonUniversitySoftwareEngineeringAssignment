@@ -25,3 +25,8 @@ void NPC_Shopkeeper::add_to_shop(int newWeapon, int price)
 {
 	m_stock.insert(std::pair<int, int>(newWeapon, price));
 }
+
+bool NPC_Shopkeeper::react()
+{
+	std::cout << m_hint << "\n"; //should be with strange magic shit
+}

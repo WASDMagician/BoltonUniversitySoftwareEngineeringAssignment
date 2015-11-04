@@ -4,6 +4,7 @@
 #include "GameBase.h"
 #include "UI_Play_Screen.h"
 #include "NPC_Shopkeeper.h"
+#include "NPC_Hinter.h"
 #include "SDL_ttf.h"
 #include "Text_Boxes.h"
 #include "Inventory.h"
@@ -28,12 +29,18 @@ public:
 //	Text_Boxes *splash_box;
 	Splash_Screen *splash;
 	Inventory *inventory;
+<<<<<<< HEAD
 	Character *ogre;
 	Character *jesus;
 	Character *player;
 	Weapon *crossbow;
 	Weapon *great_axe;
 	Weapon *sniper;
+=======
+	Player *player;
+	Enemy *ogre;
+	NPC_Hinter *clown;
+>>>>>>> refs/remotes/origin/master
 };
 #endif // _GAME_H_
 

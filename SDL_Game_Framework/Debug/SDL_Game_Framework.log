@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 02/11/2015 17:12:40.
      1>Project "E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
@@ -5,6 +6,16 @@
          Start_Menu_Splash.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
+=======
+﻿Build started 02/11/2015 13:59:25.
+     1>Project "C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\VisualStudio\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt NPC_Base.cpp
+         NPC_Base.cpp
+       Link:
+         E:\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\Audio.obj
+         Debug\audiomanager.obj
+>>>>>>> refs/remotes/origin/master
          Debug\AWSprite.obj
          Debug\AW_Sprite_Interface.obj
          Debug\Character.obj
@@ -62,6 +73,7 @@
          Debug\TimeHelpers.obj
          Debug\XmlTestReporter.obj
          Debug\Weapon.obj
+<<<<<<< HEAD
          Debug\Weapon_Creator.obj
          Debug\Weapon_Factory_Implementation.obj
          SDL_Game_Framework.vcxproj -> E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
@@ -70,3 +82,11 @@
 Build succeeded.
 
 Time Elapsed 00:00:01.34
+=======
+         SDL_Game_Framework.vcxproj -> C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.69
+>>>>>>> refs/remotes/origin/master

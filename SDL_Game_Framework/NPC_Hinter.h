@@ -13,6 +13,7 @@ public:
 
 	void set_npc_hint(const std::string &hint);
 	const std::string get_npc_hint();
+	bool react();
 
 private:
 	std::string m_hint;
