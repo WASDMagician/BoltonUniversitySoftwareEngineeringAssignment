@@ -3,8 +3,7 @@
 
 #include "NPC_Shopkeeper.h"
 
-NPC_Shopkeeper::NPC_Shopkeeper(creation_variables *initialiser)
-:NPC_Base(initialiser)
+NPC_Shopkeeper::NPC_Shopkeeper()
 {
 }
 

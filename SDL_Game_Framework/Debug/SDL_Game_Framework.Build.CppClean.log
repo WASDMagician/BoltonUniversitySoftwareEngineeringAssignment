@@ -1,65 +1,68 @@
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\vc120.pdb
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\vc120.idb
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\ui.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\ui_play_screen.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\assertexception.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\checks.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\currenttest.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\deferredtestreporter.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\deferredtestresult.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\memoryoutstream.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\reportassert.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\test.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testdetails.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testlist.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testreporter.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testreporterstdout.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testresults.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testrunner.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\timeconstraint.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\timehelpers.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\xmltestreporter.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\weapon.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\splash_screen.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\start_menu_splash.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\test_everything.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\great_axe.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\inventory.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\load_game.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\main.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\npc_base.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\npc_hinter.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\npc_shopkeeper.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\object.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\ogre.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\pickup_objects.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\player.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\save_game.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sniper.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sword.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\test_all.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\text_boxes.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\transform.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\audio.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\audiomanager.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\awsprite.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\aw_sprite_interface.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\character.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\crossbow.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\empowere_knuckles.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\end_menu_splash.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\enemy.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\game.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\gamebase.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\game_object.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\level.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\map.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\pause_menu_splash.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\puzzle_objects.obj
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\debug\sdl_game_framework.pdb
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\cl.command.1.tlog
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\cl.read.1.tlog
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\cl.write.1.tlog
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link.command.1.tlog
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link.read.1.tlog
-c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link.write.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\vc120.pdb
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\vc120.idb
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\ui.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\ui_play_screen.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\assertexception.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\checks.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\currenttest.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\deferredtestreporter.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\deferredtestresult.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\memoryoutstream.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\reportassert.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\test.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testdetails.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testlist.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testreporter.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testreporterstdout.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testresults.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\testrunner.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\timeconstraint.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\timehelpers.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\xmltestreporter.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\weapon.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\puzzle_objects.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\splash_screen.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\start_menu_splash.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\test_everything.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\great_axe.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\inventory.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\load_game.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\main.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\npc_hinter.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\npc_shopkeeper.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\object.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\ogre.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\pickup_objects.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\save_game.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sniper.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sword.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\test_all.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\text_boxes.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\audiomanager.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\awsprite.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\aw_sprite_interface.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\character.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\crossbow.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\empowere_knuckles.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\end_menu_splash.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\enemy.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\enemy_creator.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\enemy_factory_implementation.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\game.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\gamebase.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\level.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\map.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\pause_menu_splash.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\npc_base.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\player.obj
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\debug\sdl_game_framework.pdb
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\cl.command.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\cl.read.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\cl.write.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link-cvtres.read.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link-cvtres.write.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link-rc.read.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link-rc.write.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link.command.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link.read.1.tlog
+f:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\debug\sdl_game.8e28e0d2.tlog\link.write.1.tlog

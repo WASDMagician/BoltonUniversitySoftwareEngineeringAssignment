@@ -1,4 +1,4 @@
-#include "Empowere_Knuckles.h"
+#include "Empowered_Knuckles.h"
 // Niall -> empowered_knuckles Weak but Fastest, Normal range (melee)
 
 Empowered_Knuckles::Empowered_Knuckles()
@@ -47,4 +47,9 @@ void Empowered_Knuckles::set_empowered_knuckles_attackspeed(const double atkspd)
 const double Empowered_Knuckles::get_empowered_knuckles_attackspeed() const
 {
 	return m_empowered_knuckles_attackspeed;
+}
+
+void Empowered_Knuckles::Render()
+{
+	update_everything();
 }

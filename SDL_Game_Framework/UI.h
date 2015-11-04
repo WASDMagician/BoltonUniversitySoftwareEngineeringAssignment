@@ -3,16 +3,18 @@
 
 #include <string>
 #include <iostream>
-#include "Game_Object.h"
 #include "Game_Constants.h"
+#include "AW_Sprite_Interface.h"
 #include "GameBase.h"
 
-class UI : 
-	public Game_Object
+class UI
 {
 public:
 	UI();
 	virtual ~UI();
 	virtual void Display(); // i know Joe likes his bools rather than void	
+
+protected:
+	AW_Sprite_Interface *sprite;
 };
 #endif

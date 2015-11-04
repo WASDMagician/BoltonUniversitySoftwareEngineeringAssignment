@@ -11,6 +11,8 @@ public:
 	Sniper(char* img, int x, int y);
 	~Sniper();
 
+
+	void Render();
 	void set_sniper_damage(const double damage);
 	const double get_sniper_damage() const;
 

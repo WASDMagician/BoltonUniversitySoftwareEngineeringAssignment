@@ -11,6 +11,7 @@ public:
 	Sword(char* img, int x, int y);
 	~Sword();
 
+	void Render();
 	void set_sword_damage(const double damage);
 	const double get_sword_damage() const;
 

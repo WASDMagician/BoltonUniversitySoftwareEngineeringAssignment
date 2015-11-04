@@ -46,3 +46,8 @@ const double Great_Axe::get_great_axe_attackspeed() const
 {
 	return m_great_axe_attackspeed;
 }
+
+void Great_Axe::Render()
+{
+	update_everything();
+}

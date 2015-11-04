@@ -1,24 +1,33 @@
 #include "Enemy.h"
 
 Enemy::Enemy()
-	:m_serial("")
 {
-
 }
 
-Enemy::Enemy(creation_variables *initializer)
-	: Character(initializer), m_serial("")
-{	
-	enemy_state = IDLE;
-	this->transform->Add_Position(new Vector2{ 20, 20 });
-	this->transform->Add_Position(new Vector2{ 20, 500 });
-	this->transform->Add_Position(new Vector2{ 500, 500 });
-	this->transform->Add_Position(new Vector2{ 500, 20 });
+Enemy::Enemy(char* imgPath, int rows, int cols, int animationSpeed)
+	:Character(imgPath, rows, cols, animationSpeed)
+{
 }
 
 Enemy::~Enemy()
 {
 
+}
+
+bool Enemy::Setup(char* imgPath, int rows, int cols, int animationSpeed)
+{
+	setImage(imgPath, rows, cols);
+	return false;
+}
+
+void Enemy::Update()
+{
+
+}
+
+void Enemy::Render()
+{
+	update_everything();
 }
 
 bool Enemy::Enemy_Movement()
@@ -58,7 +67,7 @@ bool Enemy::Enemy_Roam()
 {
 	if (enemy_state == ROAMING)
 	{
-		this->transform->Move_Between();
+		Move_Between();
 		return true;
 	}
 
@@ -104,11 +113,6 @@ bool Enemy::set_health(unsigned int health)
 	return m_health == health;
 }
 
-unsigned int Enemy::get_health()
-{
-	return m_health;
-}
-
 bool Enemy::set_lives(unsigned int lives)
 {
 	m_lives = lives;
@@ -118,6 +122,11 @@ bool Enemy::set_lives(unsigned int lives)
 unsigned int Enemy::get_lives()
 {
 	return m_lives;
+}
+
+unsigned int Enemy::get_health()
+{
+	return m_health;
 }
 
 bool Enemy::set_damage(unsigned int damage)

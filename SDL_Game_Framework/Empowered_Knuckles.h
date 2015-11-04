@@ -11,6 +11,8 @@ public:
 	Empowered_Knuckles(char* img, int x, int y);
 	~Empowered_Knuckles();
 
+	void Render();
+
 	void set_empowered_knuckles_damage(const double damage);
 	const double get_empowered_knuckles_damage() const;
 

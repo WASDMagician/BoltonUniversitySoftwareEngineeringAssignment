@@ -1,10 +1,9 @@
 #ifndef _TEXT_BOXES_H_
 #define _TEXT_BOXES_H_
-
+/*
 #include <string>
 #include <vector>
 
-#include "Game_Object.h"
 #include "AWSprite.h"
 #include "SDL_ttf.h"
 class Game;
@@ -21,19 +20,8 @@ struct text_box_creation_variables
 	std::vector<std::string>messages;
 };
 
-struct text_box_message
-{
-	SDL_Surface *message_surface;
-	std::string message;
-	int start_position;
-	int current_position;
-	int end_position;
 
-	SDL_Rect *rect;
-};
-
-class Text_Boxes:
-	public Game_Object
+class Text_Boxes
 {
 public:
 	Text_Boxes();
@@ -84,5 +72,5 @@ private:
 	bool m_should_flush;
 	
 };
-
+*/
 #endif //_TEXT_BOXE_H_

@@ -1,10 +1,10 @@
 #ifndef _OBJECT_H_
 #define _OBJECT_H_
 
-#include "Game_Object.h"
+#include "AW_Sprite_Interface.h"
 
 class Object :
-	public Game_Object
+	public AW_Sprite_Interface
 {
 public:
 	Object();

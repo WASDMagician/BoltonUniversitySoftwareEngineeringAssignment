@@ -1,7 +1,7 @@
 #include "Text_Boxes.h"
 #include "Game.h"
 
-
+/*
 Text_Boxes::Text_Boxes()
 	:m_p_font(NULL), m_messages(NULL), m_p_colour(new SDL_Color{ 255, 255, 255 }), m_p_background_colour(new SDL_Color{ 0, 0, 255 }),
 	m_current_message(0), m_x_position(50), m_y_position(50), m_background_rect(NULL), m_should_flush(false)
@@ -151,3 +151,4 @@ void Text_Boxes::Render_Text()
 		SDL_BlitSurface(m_messages[i].message_surface, NULL, SDL_GetVideoSurface(), m_messages[i].rect);	
 	}
 }
+*/

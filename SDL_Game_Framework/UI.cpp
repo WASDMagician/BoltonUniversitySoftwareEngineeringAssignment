@@ -7,6 +7,7 @@ UI::UI() //default constructor
 UI::~UI()
 {
 	//Appropriate memory clean up here
+	delete sprite;
 }
 
 void UI::Display()

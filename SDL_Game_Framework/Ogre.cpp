@@ -1,10 +1,17 @@
 #include "Ogre.h"
 
-Ogre::Ogre(creation_variables *initialiser)
-:Enemy(initialiser)
+Ogre::Ogre()
+	:Enemy()
+{
+
+}
+
+Ogre::Ogre(char* imgPath, int rows, int cols, int animationSpeed)
+	: Enemy(imgPath, rows, cols, animationSpeed)
 {
 }
 
 Ogre::~Ogre()
 {
+
 }

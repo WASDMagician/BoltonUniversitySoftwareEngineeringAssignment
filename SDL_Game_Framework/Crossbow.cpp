@@ -47,3 +47,8 @@ const double Crossbow::get_crossbow_attackspeed() const
 {
 	return m_crossbow_attackspeed;
 }
+
+void Crossbow::Render()
+{
+	update_everything();
+}
