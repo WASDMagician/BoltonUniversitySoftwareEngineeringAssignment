@@ -28,20 +28,20 @@ void AW_Sprite_Interface::Render()
 	update_everything();
 }
 
-bool AW_Sprite_Interface::Move_To(int x, int y)
+bool AW_Sprite_Interface::Move_To(float x, float y)
 {
 	set_world_position(x, y);
 	return false;
 }
 
-bool AW_Sprite_Interface::Move_Increment(int x, int y)
+bool AW_Sprite_Interface::Move_Increment(float x, float y)
 {
 	set_world_position_x(get_x() + x);
 	set_world_position_y(get_y() + y);
 	return false;
 }
 
-bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, int moveSpeed, int rangeSnap)
+bool AW_Sprite_Interface::Lerp_To(Vector2<float, float> *target, int moveSpeed, int rangeSnap)
 {
 	float lerp_x = get_x() + (target->x - get_x()) / moveSpeed;
 	float lerp_y = get_y() + (target->y - get_y()) / moveSpeed;
@@ -87,12 +87,12 @@ bool AW_Sprite_Interface::Move_Between()
 	}
 }
 
-void AW_Sprite_Interface::Add_Patrol_Position(Vector2<int, int> *position)
+void AW_Sprite_Interface::Add_Patrol_Position(Vector2<float, float> *position)
 {
 	m_patrol_positions.push_back(position);
 }
 
-void AW_Sprite_Interface::Add_Patrol_Position(std::vector<Vector2<int, int>*>position)
+void AW_Sprite_Interface::Add_Patrol_Position(std::vector<Vector2<float, float>*>position)
 {
 	for (int i = 0; i < position.size(); i++)
 	{
@@ -107,7 +107,7 @@ void AW_Sprite_Interface::Remove_Patrol_Position(int index)
 
 
 //this may not work, check at earliest opportunity
-bool AW_Sprite_Interface::In_Range(Vector2<int, int>*position, Vector2<int, int>*target, int distance)
+bool AW_Sprite_Interface::In_Range(Vector2<float, float>*position, Vector2<float, float>*target, int distance)
 {
 	if (position->x < target->x + distance && position->x > target->x - distance)
 	{
@@ -117,9 +117,4 @@ bool AW_Sprite_Interface::In_Range(Vector2<int, int>*position, Vector2<int, int>
 		}
 		return false;
 	}
-}
-
-Vector2<int, int> *AW_Sprite_Interface::get_current_position()
-{
-	return m_current_position;
 }
