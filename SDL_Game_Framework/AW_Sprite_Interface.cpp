@@ -106,7 +106,7 @@ void AW_Sprite_Interface::Remove_Patrol_Position(int index)
 }
 
 
-//this may not work, check at earliest opportunity
+//this may not work, check at earliest opportunity //added for commit shit
 bool AW_Sprite_Interface::In_Range(Vector2<int, int>*position, Vector2<int, int>*target, int distance)
 {
 	if (position->x < target->x + distance && position->x > target->x - distance)
