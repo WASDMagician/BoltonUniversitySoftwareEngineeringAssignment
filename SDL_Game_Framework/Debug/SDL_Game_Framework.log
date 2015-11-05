@@ -1,147 +1,122 @@
-﻿Build started 05/11/2015 16:08:44.
+<<<<<<< HEAD
+<<<<<<< HEAD
+﻿Build started 02/11/2015 17:12:40.
      1>Project "E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt End_Menu_Splash.cpp Game.cpp Main.cpp Play_Screen.cpp Splash_Screen.cpp Start_Menu_Splash.cpp Text_Box.cpp Text_Boxes.cpp
-         Text_Boxes.cpp
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(32): error C2955: 'Vector2' : use of class template requires template argument list
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\vector2.h(7) : see declaration of 'Vector2'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-         Text_Box.cpp
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(32): error C2955: 'Vector2' : use of class template requires template argument list
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\vector2.h(7) : see declaration of 'Vector2'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(28): warning C4150: deletion of pointer to incomplete type '_TTF_Font'; no destructor called
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\sdl_ttf.h(77) : see declaration of '_TTF_Font'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(54): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(61): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(69): warning C4244: '=' : conversion from 'float' to 'Sint16', possible loss of data
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(70): warning C4244: '=' : conversion from 'float' to 'Sint16', possible loss of data
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(94): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(137): warning C4018: '<' : signed/unsigned mismatch
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Start_Menu_Splash.cpp
          Start_Menu_Splash.cpp
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(32): error C2955: 'Vector2' : use of class template requires template argument list
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\vector2.h(7) : see declaration of 'Vector2'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-         Splash_Screen.cpp
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(32): error C2955: 'Vector2' : use of class template requires template argument list
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\vector2.h(7) : see declaration of 'Vector2'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-         Play_Screen.cpp
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(32): error C2955: 'Vector2' : use of class template requires template argument list
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\vector2.h(7) : see declaration of 'Vector2'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-         Main.cpp
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(32): error C2955: 'Vector2' : use of class template requires template argument list
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\vector2.h(7) : see declaration of 'Vector2'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
+=======
+﻿Build started 31/10/2015 15:58:16.
+     1>Project "C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
          Game.cpp
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(32): error C2955: 'Vector2' : use of class template requires template argument list
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\vector2.h(7) : see declaration of 'Vector2'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(35): error C2061: syntax error : identifier 'Player'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(35): error C2143: syntax error : missing ';' before '{'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(35): error C2143: syntax error : missing ';' before '}'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(35): error C2143: syntax error : missing ';' before ')'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(36): error C2061: syntax error : identifier 'Enemy'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(36): error C2143: syntax error : missing ';' before '{'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(36): error C2143: syntax error : missing ';' before '}'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(36): error C2143: syntax error : missing ';' before ')'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(37): error C2061: syntax error : identifier 'creation_variables'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(37): error C2143: syntax error : missing ';' before '{'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(37): error C2143: syntax error : missing ')' before ';'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(37): error C2143: syntax error : missing ';' before '}'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(37): error C2059: syntax error : ')'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(38): error C2133: 'PointA' : unknown size
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(38): error C2512: 'Vector2' : no appropriate default constructor available
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(41): error C2133: 'PointB' : unknown size
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(41): error C2512: 'Vector2' : no appropriate default constructor available
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(44): error C2664: 'bool NPC_Base::set_points(Vector2,Vector2)' : cannot convert argument 1 from 'Vector2' to 'Vector2'
-                 Cannot copy construct class 'Vector2' due to ambiguous copy constructors or no available copy constructor
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(45): error C2039: 'serialize_character' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(46): error C2039: 'serialize_character' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(51): error C2248: 'NPC_Base::serialize_character' : cannot access protected member declared in class 'NPC_Base'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(37) : see declaration of 'NPC_Base::serialize_character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(7) : see declaration of 'NPC_Base'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(56): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(57): error C2059: syntax error : '}'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(57): error C2143: syntax error : missing ';' before '}'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(60): error C2143: syntax error : missing ';' before '{'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(60): error C2447: '{' : missing function header (old-style formal list?)
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(75): error C2039: 'sprite' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(75): error C2227: left of '->set_world_position' must point to class/struct/union/generic type
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(83): error C2248: 'NPC_Base::move' : cannot access protected member declared in class 'NPC_Base'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(33) : see declaration of 'NPC_Base::move'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(7) : see declaration of 'NPC_Base'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(98): error C2039: 'sprite' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(98): error C2227: left of '->get_x' must point to class/struct/union/generic type
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(99): error C2039: 'sprite' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(99): error C2227: left of '->get_y' must point to class/struct/union/generic type
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(137): error C2039: 'is_blocking' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(142): error C2039: 'is_blocking' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(149): error C2039: 'is_blocking' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(151): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(187): error C2039: 'render' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(188): error C2039: 'render' : is not a member of 'Character'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\character.h(8) : see declaration of 'Character'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(189): error C2039: 'render' : is not a member of 'NPC_Hinter'
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_hinter.h(7) : see declaration of 'NPC_Hinter'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(192): warning C4018: '<' : signed/unsigned mismatch
-         End_Menu_Splash.cpp
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\npc_base.h(32): error C2955: 'Vector2' : use of class template requires template argument list
-                 e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\vector2.h(7) : see declaration of 'Vector2'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(48): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(57): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C2143: syntax error : missing ';' before '*'
-     1>e:\uni\year 2\semester 1\software engineering\assignment\sdl_game_framework\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.h(58): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-         Generating Code...
-     1>Done Building Project "E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\kyle\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(151): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\kyle\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(191): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\Audio.obj
+>>>>>>> refs/remotes/origin/master
+=======
+﻿Build started 02/11/2015 13:59:25.
+     1>Project "C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\VisualStudio\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt NPC_Base.cpp
+         NPC_Base.cpp
+       Link:
+         E:\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\Audio.obj
+>>>>>>> origin/master
+         Debug\audiomanager.obj
+>>>>>>> refs/remotes/origin/master
+         Debug\AWSprite.obj
+         Debug\AW_Sprite_Interface.obj
+         Debug\Character.obj
+         Debug\Crossbow.obj
+         Debug\Empowere_Knuckles.obj
+         Debug\End_Menu_Splash.obj
+         Debug\Enemy.obj
+         Debug\Character_Creator.obj
+         Debug\Character_Factory_Implementation.obj
+         Debug\Game.obj
+         Debug\GameBase.obj
+         Debug\Jesus.obj
+         Debug\Level.obj
+         Debug\Map.obj
+         Debug\Pause_Menu_Splash.obj
+<<<<<<< HEAD
+         Debug\Play_Screen.obj
+=======
+         Debug\Projectile.obj
+>>>>>>> refs/remotes/origin/master
+         Debug\Puzzle_Objects.obj
+         Debug\Splash_Screen.obj
+         Debug\Start_Menu_Splash.obj
+         Debug\Test_Everything.obj
+         Debug\Great_Axe.obj
+         Debug\Inventory.obj
+         Debug\Load_Game.obj
+         Debug\Main.obj
+         Debug\NPC_Base.obj
+         Debug\NPC_Hinter.obj
+         Debug\NPC_Shopkeeper.obj
+         Debug\Object.obj
+         Debug\Ogre.obj
+         Debug\Pickup_Objects.obj
+         Debug\Player.obj
+         Debug\Save_Game.obj
+         Debug\Sniper.obj
+         Debug\Sword.obj
+         Debug\Test_All.obj
+         Debug\Text_Box.obj
+         Debug\Text_Boxes.obj
+         Debug\UI.obj
+         Debug\UI_Play_Screen.obj
+         Debug\AssertException.obj
+         Debug\Checks.obj
+         Debug\CurrentTest.obj
+         Debug\DeferredTestReporter.obj
+         Debug\DeferredTestResult.obj
+         Debug\MemoryOutStream.obj
+         Debug\ReportAssert.obj
+         Debug\Test.obj
+         Debug\TestDetails.obj
+         Debug\TestList.obj
+         Debug\TestReporter.obj
+         Debug\TestReporterStdout.obj
+         Debug\TestResults.obj
+         Debug\TestRunner.obj
+         Debug\TimeConstraint.obj
+         Debug\TimeHelpers.obj
+         Debug\XmlTestReporter.obj
+         Debug\Weapon.obj
+<<<<<<< HEAD
+<<<<<<< HEAD
+         Debug\Weapon_Creator.obj
+         Debug\Weapon_Factory_Implementation.obj
+         SDL_Game_Framework.vcxproj -> E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "E:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:05.66
+Time Elapsed 00:00:01.34
+=======
+         SDL_Game_Framework.vcxproj -> C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.48
+>>>>>>> refs/remotes/origin/master
+=======
+         SDL_Game_Framework.vcxproj -> C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.69
+<<<<<<< HEAD
+>>>>>>> refs/remotes/origin/master
+=======
+>>>>>>> origin/master
+>>>>>>> refs/remotes/origin/master

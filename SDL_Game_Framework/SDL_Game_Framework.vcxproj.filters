@@ -294,6 +294,7 @@
     <ClInclude Include="Start_Menu_Splash.h">
       <Filter>Header Files\screens</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Enemy.h">
       <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
     </ClInclude>
@@ -332,9 +333,10 @@
     </ClInclude>
     <ClInclude Include="Text_Box.h">
       <Filter>Header Files\text box</Filter>
-    </ClInclude>
+=======
     <ClInclude Include="Projectile.h">
       <Filter>Header Files</Filter>
+>>>>>>> refs/remotes/origin/master
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -494,6 +496,7 @@
     <ClCompile Include="Start_Menu_Splash.cpp">
       <Filter>Source Files\screens</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Jesus.cpp">
       <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
@@ -517,9 +520,10 @@
     </ClCompile>
     <ClCompile Include="Text_Box.cpp">
       <Filter>Source Files\text box</Filter>
-    </ClCompile>
+=======
     <ClCompile Include="Projectile.cpp">
       <Filter>Source Files</Filter>
+>>>>>>> refs/remotes/origin/master
     </ClCompile>
   </ItemGroup>
 </Project>
