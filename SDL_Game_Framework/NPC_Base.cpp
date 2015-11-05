@@ -5,6 +5,13 @@
 #include "NPC_Base.h"
 
 NPC_Base::NPC_Base()
+	:Character()
+{
+
+}
+
+NPC_Base::NPC_Base(char* img, int rows, int cols, int animSpeed)
+: Character(img, rows, cols, animSpeed)
 {
 
 }
@@ -68,28 +75,24 @@ unsigned int NPC_Base::get_defence()
 	return m_defence;
 }
 
-bool NPC_Base::set_points(Vector2 pointA, Vector2 pointB)
-{
-	m_PointA = pointA;
-	m_PointB = pointB;
-	return (m_PointA == pointA && m_PointB == pointB);
-}
+//this is unecessary, use void Add_Patrol_Position(std::vector<Vector2<float, float>*> position); with a vector of positions, that will have the NPC
+//move between those positions.
 
-void NPC_Base::move()
+/*void NPC_Base::move()
 {
-	this->transform->Move(m_PointA.x, m_PointB.y);
-	if (this->transform->get_current_position() == m_PointA && m_Direction)
+	this->Move_To(m_PointA.x, m_PointB.y);
+	if (this->get_current_position() == m_PointA && m_Direction == true)
 	{
 		m_Direction = !m_Direction;
-		this->transform->Lerp_To(&m_PointB, 10.0f, 1.0f);
+		this->Lerp_To(&m_PointB, 10.0f, 1.0f);
 	}
 
-	if (this->transform->get_current_position() == m_PointB && !m_Direction)
+	if (this->get_current_position() == m_PointB && m_Direction == false)
 	{
 		m_Direction = !m_Direction;
-		this->transform->Lerp_To(&m_PointA, 10.0f, 1.0f);
+		this->Lerp_To(&m_PointA, 10.0f, 1.0f);
 	}
-}
+}*/
 
 std::string NPC_Base::serialize_character()
 {
