@@ -31,8 +31,7 @@ void Game::Setup()
 		new SDL_Color({ 0, 255, 255 }), 20, 20, { "test 1", "test 2" } });
 		*/
 	inventory = new Inventory("images/inv_slot.png", 1, 9);
-<<<<<<< HEAD
-=======
+
 	player = new Player(new creation_variables{ "images/alien.bmp", 2, 3, "player test", 2, 2, 2, 200, "Player" });
 	ogre = new Enemy(new creation_variables{ "images/fish.bmp", 1, 8, "enemy test", 2, 2, 2, 200, "Enemy" });
 	clown = new NPC_Hinter(new creation_variables{ "images/clown.png", 1, 1, "npc test", 0, 0, 1000, 0, "NPC" });
@@ -45,11 +44,14 @@ void Game::Setup()
 	clown->set_points(PointA, PointB);
 	ogre->serialize_character();
 	player->serialize_character();
+
+	projectile = new Projectile("images/bullet.png", 0, 0);
+
+
 	clown->serialize_character();
-	
+
 	CURRENT_STATE = START_GAME;
 }
->>>>>>> refs/remotes/origin/master
 
 	Run();
 }
@@ -57,49 +59,32 @@ void Game::Setup()
 void Game::Run()
 {
 	splash = new Start_Menu_Splash(this, "images/splash1.png");
-<<<<<<< HEAD
 	splash->Run();
 	splash = new Play_Screen(this, "images/splash2.png");
 	splash->Run();
 	splash = new End_Menu_Splash(this, "images/splash1.png");
 	splash->Run();
-}
-=======
-	splash->Start();
-	CURRENT_STATE = PLAY_GAME;
+	//CURRENT_STATE = PLAY_GAME;
 }
 
 void Game::Logic_Play()
 {
 	//actual game logic here
-	clown->move();
-}
 
-void Game::Logic_Pause()
-{
-	splash = new Pause_Menu_Splash(this, "images/pause_menu_splash_temp.png");
-	splash->Start();
-	CURRENT_STATE = PLAY_GAME;
-}
+	Handle_Projectile();
+	player->sprite->set_world_position(200, 200);
 
-void Game::Logic_End()
-{
-	//switch to end splash
-	splash = new End_Menu_Splash(this, "images/splash2.png");
-	splash->Start();
-}
-
-void Game::OnKeyPressed()
-{
-	switch (CURRENT_STATE)
+	//we need a for loop here for enemies to check their health
+	if (ogre->get_health() <= 0)
 	{
-	case(PLAY_GAME) :
-		Handle_Play_Keys();
-		break;
-	default:
-		break;
+		//if they are dead, run some code here - eg. erase or something
 	}
+
+	clown->move();
+
 }
+
+
 
 void Game::Handle_Play_Keys()
 {
@@ -108,6 +93,64 @@ void Game::Handle_Play_Keys()
 		printf("Pausing\n");
 		CURRENT_STATE = END_GAME;
 		Logic_Pause();
+	}
+
+	float player_x = player->sprite->get_x();
+	float player_y = player->sprite->get_y();
+
+	if (keyDown == SDLK_UP)
+	{
+		//1
+		projectile = new Projectile("images/bullet.png", 1, 1);
+		projectile->direction = 1;
+		projectile->set_world_position(player_x, player_y);
+		proj_array.push_back(*projectile);
+	}
+	if (keyDown == SDLK_DOWN)
+	{
+		//2
+		projectile = new Projectile("images/bullet.png", 1, 1);
+		projectile->direction = 2;
+		projectile->set_world_position(player_x, player_y);
+		proj_array.push_back(*projectile);
+	}
+	if (keyDown == SDLK_LEFT)
+	{
+		//3
+		projectile = new Projectile("images/bullet.png", 1, 1);
+		projectile->direction = 3;
+		projectile->set_world_position(player_x, player_y);
+		proj_array.push_back(*projectile);
+	}
+	if (keyDown == SDLK_RIGHT)
+	{
+		//4
+		projectile = new Projectile("images/bullet.png", 1, 1);
+		projectile->direction = 4;
+		projectile->set_world_position(player_x, player_y);
+		proj_array.push_back(*projectile);
+	}
+
+	//simple player blocking for now - perhaps we could make this more fun?
+	if (keyDown == SDLK_LCTRL || keyDown == SDLK_RCTRL)
+	{
+		player->is_blocking = true;
+		//if player is blocking enemy cant hit
+	}
+	else if (keyUp == SDLK_LCTRL || keyUp == SDLK_RCTRL)
+	{
+		player->is_blocking = false;
+		//if player isnt blocking enemy can hit
+	}
+}
+
+void Game::Handle_Projectile()
+{
+	std::cout << player->is_blocking << std::endl;
+
+	for (int i = 0; i < proj_array.size(); i++)
+	{
+		//proj_array[i].Update();
 	}
 }
 
@@ -146,5 +189,9 @@ void Game::Draw_Play()
 	clown->render();
 	RenderHUD();
 
+	for (int i = 0; i < proj_array.size(); i++)
+	{
+		//proj_array[i].update_everything();
+		//projectile->update_everything();
+	}
 }
->>>>>>> refs/remotes/origin/master

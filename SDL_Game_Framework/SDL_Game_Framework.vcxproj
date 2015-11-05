@@ -148,7 +148,11 @@
     <ClInclude Include="Pause_Menu_Splash.h" />
     <ClInclude Include="Pickup_Objects.h" />
     <ClInclude Include="Player.h" />
+<<<<<<< HEAD
     <ClInclude Include="Play_Screen.h" />
+=======
+    <ClInclude Include="Projectile.h" />
+>>>>>>> refs/remotes/origin/master
     <ClInclude Include="Puzzle_Objects.h" />
     <ClInclude Include="random.h" />
     <ClInclude Include="Save_Game.h" />
@@ -214,7 +218,11 @@
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Pause_Menu_Splash.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Play_Screen.cpp" />
+=======
+    <ClCompile Include="Projectile.cpp" />
+>>>>>>> refs/remotes/origin/master
     <ClCompile Include="Puzzle_Objects.cpp" />
     <ClCompile Include="Splash_Screen.cpp" />
     <ClCompile Include="Start_Menu_Splash.cpp" />
