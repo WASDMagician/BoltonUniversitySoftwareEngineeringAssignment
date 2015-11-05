@@ -2,13 +2,11 @@
 #define _INVENTORY_H_
 
 #include <vector>
-#include "AWSprite.h"
-#include "Game_Object.h"
+#include "AW_Sprite_Interface.h"
 
 const int NUM_GAME_OBJECTS = 20;
 
-class Inventory :
-	public AWSprite
+class Inventory 
 {
 public:
 	Inventory();
@@ -23,10 +21,10 @@ public:
 private:
 	int m_row[1];
 	int m_column[9];
-	Game_Object m_item;
+	AW_Sprite_Interface m_item;
 
-	std::vector<Game_Object> inv_items;
-	std::vector<std::vector<AWSprite*>> inv_sprite;
+	std::vector<AW_Sprite_Interface> inv_items;
+	std::vector<std::vector<AW_Sprite_Interface*>> inv_sprite;
 
 	float m_inv_bar_left_x;
 	float m_inv_bar_top_y;

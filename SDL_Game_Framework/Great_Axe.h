@@ -11,6 +11,8 @@ public:
 	Great_Axe(char* img, int x, int y);
 	~Great_Axe();
 
+
+	void Render();
 	void set_great_axe_damage(const double damage);
 	const double get_great_axe_damage() const;
 

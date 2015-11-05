@@ -5,12 +5,18 @@
 
 class UI_Play_Screen;
 
-class Player : public Character
+class Player : 
+	public Character
 {
 public:
 	//char* img_path, unsigned int rows, unsigned int cols, string name, unsigned int health, unsigned int damage, unsigned int defence, unsigned animation_speed
-	Player(creation_variables* initialisers);
+	Player();
+	Player(char* imgPath, int rows, int cols, int animationSpeed);
 	~Player();
+
+	bool Setup(char* imgPath, int rows, int cols, int animationSpeed);
+	void Update();
+	void Render();
 
 	void update_player_ui();
 

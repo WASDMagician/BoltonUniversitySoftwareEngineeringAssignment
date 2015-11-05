@@ -28,36 +28,6 @@
     <Filter Include="UnitTest++">
       <UniqueIdentifier>{049fe604-87dd-47b3-8473-7621ac78f60c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\weapons">
-      <UniqueIdentifier>{86d6b09b-3d1b-4b0c-8012-69ecc37aae7d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\weapons">
-      <UniqueIdentifier>{ee9d8400-b57c-4860-89b5-1d0ef001707a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Characters">
-      <UniqueIdentifier>{ef079ea6-9981-481d-bd24-2aa0aff6f243}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Characters\Enemies">
-      <UniqueIdentifier>{98d03c6c-5ab6-40ce-8030-261657308214}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Characters\NPC">
-      <UniqueIdentifier>{ce1f55b5-eb8c-4f5c-8d56-965ca4b0b8c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Characters\Player">
-      <UniqueIdentifier>{8e383215-c965-4475-9056-9d8cb7ea77d2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Characters">
-      <UniqueIdentifier>{abba65e7-b0bb-44b3-b77e-3276f7f43e6d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Characters\Player">
-      <UniqueIdentifier>{9bd0dbb4-cc0c-4a09-9666-a7170f81cb03}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Characters\NPC">
-      <UniqueIdentifier>{eb669db7-d327-401d-af08-bad06c057e66}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Characters\Enemies">
-      <UniqueIdentifier>{4569df9a-022b-490c-a5e3-adceff43bc28}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\tests">
       <UniqueIdentifier>{b69a1cff-c890-4846-b0bf-19bb35b740e3}</UniqueIdentifier>
     </Filter>
@@ -72,6 +42,57 @@
     </Filter>
     <Filter Include="Source Files\screens">
       <UniqueIdentifier>{7dfb9da8-1386-44f7-b747-48fa1d971b54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories">
+      <UniqueIdentifier>{41f03c25-bacc-41ae-8a18-f7be41457051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories">
+      <UniqueIdentifier>{85d1ee05-ec48-4c55-8bb9-52e39e425029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories\Character">
+      <UniqueIdentifier>{f5bbd7a5-7f3a-4772-b0e1-2c5f68a19e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories\Character\Characters">
+      <UniqueIdentifier>{ef079ea6-9981-481d-bd24-2aa0aff6f243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories\Character\Characters\Enemies">
+      <UniqueIdentifier>{98d03c6c-5ab6-40ce-8030-261657308214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories\Character\Characters\NPC">
+      <UniqueIdentifier>{ce1f55b5-eb8c-4f5c-8d56-965ca4b0b8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories\Character\Characters\Player">
+      <UniqueIdentifier>{8e383215-c965-4475-9056-9d8cb7ea77d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories\Weapons">
+      <UniqueIdentifier>{433d6588-1e03-42d1-b2f9-21eaf86068aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories\Characters">
+      <UniqueIdentifier>{abba65e7-b0bb-44b3-b77e-3276f7f43e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories\Characters\Player">
+      <UniqueIdentifier>{9bd0dbb4-cc0c-4a09-9666-a7170f81cb03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories\Characters\NPC">
+      <UniqueIdentifier>{eb669db7-d327-401d-af08-bad06c057e66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories\Characters\Enemies">
+      <UniqueIdentifier>{4569df9a-022b-490c-a5e3-adceff43bc28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories\Weapons">
+      <UniqueIdentifier>{9cf5ed59-e369-4a02-b199-8764deadcaed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Factories\Weapons\weapons">
+      <UniqueIdentifier>{86d6b09b-3d1b-4b0c-8012-69ecc37aae7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories\Weapons\weapons">
+      <UniqueIdentifier>{ee9d8400-b57c-4860-89b5-1d0ef001707a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\text box">
+      <UniqueIdentifier>{7b7ba6f3-814e-4345-ad37-f191775c1917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\text box">
+      <UniqueIdentifier>{0a277521-676c-4f57-a56f-4c9def773a0e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -186,15 +207,6 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Game_Object.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Header Files\utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Custom_Types.h">
-      <Filter>Header Files\utility</Filter>
-    </ClInclude>
     <ClInclude Include="Object.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -202,27 +214,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Great_Axe.h">
-      <Filter>Header Files\weapons</Filter>
+      <Filter>Header Files\Factories\Weapons\weapons</Filter>
     </ClInclude>
     <ClInclude Include="Sniper.h">
-      <Filter>Header Files\weapons</Filter>
+      <Filter>Header Files\Factories\Weapons\weapons</Filter>
     </ClInclude>
     <ClInclude Include="Sword.h">
-      <Filter>Header Files\weapons</Filter>
+      <Filter>Header Files\Factories\Weapons\weapons</Filter>
     </ClInclude>
     <ClInclude Include="Weapon.h">
-      <Filter>Header Files\weapons</Filter>
-    </ClInclude>
-    <ClInclude Include="Empowere_Knuckles.h">
-      <Filter>Header Files\weapons</Filter>
+      <Filter>Header Files\Factories\Weapons\weapons</Filter>
     </ClInclude>
     <ClInclude Include="AW_Sprite_Interface.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
     <ClInclude Include="Inventory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Audio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Consts.h">
@@ -231,23 +237,17 @@
     <ClInclude Include="UI_Play_Screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Header Files\Characters</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files\Characters\Enemies</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Header Files\Characters\Player</Filter>
+      <Filter>Header Files\Factories\Character\Characters\Player</Filter>
     </ClInclude>
     <ClInclude Include="Crossbow.h">
-      <Filter>Header Files\weapons</Filter>
+      <Filter>Header Files\Factories\Weapons\weapons</Filter>
     </ClInclude>
     <ClInclude Include="Game_Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ogre.h">
-      <Filter>Header Files\Characters\Enemies</Filter>
+      <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
     </ClInclude>
     <ClInclude Include="Save_Game.h">
       <Filter>Header Files\utility</Filter>
@@ -265,13 +265,13 @@
       <Filter>Header Files\levels</Filter>
     </ClInclude>
     <ClInclude Include="NPC_Shopkeeper.h">
-      <Filter>Header Files\Characters\NPC</Filter>
+      <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
     </ClInclude>
     <ClInclude Include="NPC_Hinter.h">
-      <Filter>Header Files\Characters\NPC</Filter>
+      <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
     </ClInclude>
     <ClInclude Include="NPC_Base.h">
-      <Filter>Header Files\Characters\NPC</Filter>
+      <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
     </ClInclude>
     <ClInclude Include="Text_Boxes.h">
       <Filter>Header Files\utility</Filter>
@@ -293,6 +293,45 @@
     </ClInclude>
     <ClInclude Include="Start_Menu_Splash.h">
       <Filter>Header Files\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Source Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_Creator.h">
+      <Filter>Header Files\Factories\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_Factory.h">
+      <Filter>Header Files\Factories\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Character_Factory_Implementation.h">
+      <Filter>Header Files\Factories\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\Factories\Character\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Jesus.h">
+      <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon_Creator.h">
+      <Filter>Header Files\Factories\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon_Factory.h">
+      <Filter>Header Files\Factories\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon_Factory_Implementation.h">
+      <Filter>Header Files\Factories\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Empowered_Knuckles.h">
+      <Filter>Header Files\Factories\Weapons\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Play_Screen.h">
+      <Filter>Header Files\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Text_Box.h">
+      <Filter>Header Files\text box</Filter>
     </ClInclude>
     <ClInclude Include="Projectile.h">
       <Filter>Header Files</Filter>
@@ -365,12 +404,6 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game_Object.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Source Files\utility</Filter>
-    </ClCompile>
     <ClCompile Include="Object.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -378,19 +411,19 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sword.cpp">
-      <Filter>Source Files\weapons</Filter>
+      <Filter>Source Files\Factories\Weapons\weapons</Filter>
     </ClCompile>
     <ClCompile Include="Sniper.cpp">
-      <Filter>Source Files\weapons</Filter>
+      <Filter>Source Files\Factories\Weapons\weapons</Filter>
     </ClCompile>
     <ClCompile Include="Empowere_Knuckles.cpp">
-      <Filter>Source Files\weapons</Filter>
+      <Filter>Source Files\Factories\Weapons\weapons</Filter>
     </ClCompile>
     <ClCompile Include="Great_Axe.cpp">
-      <Filter>Source Files\weapons</Filter>
+      <Filter>Source Files\Factories\Weapons\weapons</Filter>
     </ClCompile>
     <ClCompile Include="Crossbow.cpp">
-      <Filter>Source Files\weapons</Filter>
+      <Filter>Source Files\Factories\Weapons\weapons</Filter>
     </ClCompile>
     <ClCompile Include="AW_Sprite_Interface.cpp">
       <Filter>Source Files\utility</Filter>
@@ -398,26 +431,20 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Audio.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="UI_Play_Screen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Character.cpp">
-      <Filter>Source Files\Characters</Filter>
-    </ClCompile>
     <ClCompile Include="Weapon.cpp">
-      <Filter>Source Files\weapons</Filter>
+      <Filter>Source Files\Factories\Weapons\weapons</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files\Characters\Enemies</Filter>
+      <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Source Files\Characters\Player</Filter>
+      <Filter>Source Files\Factories\Characters\Player</Filter>
     </ClCompile>
     <ClCompile Include="Ogre.cpp">
-      <Filter>Source Files\Characters\Enemies</Filter>
+      <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
     <ClCompile Include="Save_Game.cpp">
       <Filter>Source Files\utility</Filter>
@@ -438,13 +465,13 @@
       <Filter>Source Files\levels</Filter>
     </ClCompile>
     <ClCompile Include="NPC_Base.cpp">
-      <Filter>Source Files\Characters\NPC</Filter>
+      <Filter>Source Files\Factories\Characters\NPC</Filter>
     </ClCompile>
     <ClCompile Include="NPC_Hinter.cpp">
-      <Filter>Source Files\Characters\NPC</Filter>
+      <Filter>Source Files\Factories\Characters\NPC</Filter>
     </ClCompile>
     <ClCompile Include="NPC_Shopkeeper.cpp">
-      <Filter>Source Files\Characters\NPC</Filter>
+      <Filter>Source Files\Factories\Characters\NPC</Filter>
     </ClCompile>
     <ClCompile Include="Text_Boxes.cpp">
       <Filter>Source Files\utility</Filter>
@@ -466,6 +493,30 @@
     </ClCompile>
     <ClCompile Include="Start_Menu_Splash.cpp">
       <Filter>Source Files\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Jesus.cpp">
+      <Filter>Source Files\Factories\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_Factory_Implementation.cpp">
+      <Filter>Source Files\Factories\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character_Creator.cpp">
+      <Filter>Source Files\Factories\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon_Creator.cpp">
+      <Filter>Source Files\Factories\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon_Factory_Implementation.cpp">
+      <Filter>Source Files\Factories\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\Factories\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Play_Screen.cpp">
+      <Filter>Source Files\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Text_Box.cpp">
+      <Filter>Source Files\text box</Filter>
     </ClCompile>
     <ClCompile Include="Projectile.cpp">
       <Filter>Source Files</Filter>

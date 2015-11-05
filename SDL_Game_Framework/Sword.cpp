@@ -46,3 +46,8 @@ const double Sword::get_sword_attackspeed() const
 {
 	return m_sword_attackspeed;
 }
+
+void Sword::Render()
+{
+	update_everything();
+}

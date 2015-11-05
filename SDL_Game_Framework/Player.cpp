@@ -6,11 +6,31 @@
 #include "UI_Play_Screen.h"
 
 
-Player::Player(creation_variables* initialisers)
-:Character(initialisers)
+Player::Player()
 {
 }
 
+Player::Player(char* imgPath, int rows, int cols, int animationSpeed)
+	:Character(imgPath, rows, cols, animationSpeed)
+{
+	
+}
+
+bool Player::Setup(char* imgPath, int rows, int cols, int animationSpeed)
+{
+	setImage(imgPath, rows, cols);
+	return false;
+}
+
+void Player::Update()
+{
+
+}
+
+void Player::Render()
+{
+	update_everything();
+}
 
 Player::~Player()
 {

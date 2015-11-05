@@ -117,7 +117,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Audio.h" />
     <ClInclude Include="audiomanager.h" />
     <ClInclude Include="AWFont.h" />
     <ClInclude Include="AWSprite.h" />
@@ -126,16 +125,18 @@
     <ClInclude Include="console.h" />
     <ClInclude Include="Consts.h" />
     <ClInclude Include="Crossbow.h" />
-    <ClInclude Include="Custom_Types.h" />
-    <ClInclude Include="Empowere_Knuckles.h" />
+    <ClInclude Include="Empowered_Knuckles.h" />
     <ClInclude Include="End_Menu_Splash.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Character_Creator.h" />
+    <ClInclude Include="Character_Factory.h" />
+    <ClInclude Include="Character_Factory_Implementation.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameBase.h" />
     <ClInclude Include="Game_Constants.h" />
-    <ClInclude Include="Game_Object.h" />
     <ClInclude Include="Great_Axe.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="Jesus.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Load_Game.h" />
     <ClInclude Include="Map.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Pause_Menu_Splash.h" />
     <ClInclude Include="Pickup_Objects.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Play_Screen.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="Puzzle_Objects.h" />
     <ClInclude Include="random.h" />
@@ -162,9 +164,9 @@
     <ClInclude Include="Start_Menu_Splash.h" />
     <ClInclude Include="Sword.h" />
     <ClInclude Include="Test_All.h" />
+    <ClInclude Include="Text_Box.h" />
     <ClInclude Include="Text_Boxes.h" />
     <ClInclude Include="timer.h" />
-    <ClInclude Include="Transform.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UI_Play_Screen.h" />
     <ClInclude Include="UnitTest++\src\AssertException.h" />
@@ -190,10 +192,13 @@
     <ClInclude Include="UnitTest++\src\TimeHelpers.h" />
     <ClInclude Include="UnitTest++\src\UnitTest++.h" />
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h" />
+    <ClInclude Include="Vector2.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="Weapon_Creator.h" />
+    <ClInclude Include="Weapon_Factory.h" />
+    <ClInclude Include="Weapon_Factory_Implementation.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Audio.cpp" />
     <ClCompile Include="audiomanager.cpp" />
     <ClCompile Include="AWSprite.cpp" />
     <ClCompile Include="AW_Sprite_Interface.cpp" />
@@ -202,12 +207,15 @@
     <ClCompile Include="Empowere_Knuckles.cpp" />
     <ClCompile Include="End_Menu_Splash.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Character_Creator.cpp" />
+    <ClCompile Include="Character_Factory_Implementation.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameBase.cpp" />
-    <ClCompile Include="Game_Object.cpp" />
+    <ClCompile Include="Jesus.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Pause_Menu_Splash.cpp" />
+    <ClCompile Include="Play_Screen.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Puzzle_Objects.cpp" />
     <ClCompile Include="Splash_Screen.cpp" />
@@ -228,8 +236,8 @@
     <ClCompile Include="Sniper.cpp" />
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Test_All.cpp" />
+    <ClCompile Include="Text_Box.cpp" />
     <ClCompile Include="Text_Boxes.cpp" />
-    <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="UI_Play_Screen.cpp" />
     <ClCompile Include="UnitTest++\src\AssertException.cpp" />
@@ -250,6 +258,8 @@
     <ClCompile Include="UnitTest++\src\TimeHelpers.cpp" />
     <ClCompile Include="UnitTest++\src\XmlTestReporter.cpp" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="Weapon_Creator.cpp" />
+    <ClCompile Include="Weapon_Factory_Implementation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

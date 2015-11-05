@@ -24,7 +24,7 @@ public:
 	void Display();
 
 	bool m_flickering;
-	Game_Object *m_flicker_object;
+	AW_Sprite_Interface *m_flicker_object;
 	
 
 private:

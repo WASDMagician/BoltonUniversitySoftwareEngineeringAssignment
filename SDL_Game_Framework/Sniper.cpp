@@ -48,3 +48,8 @@ const double Sniper::get_sniper_attackspeed() const
 {
 	return m_sniper_attackspeed;
 }
+
+void Sniper::Render()
+{
+	update_everything();
+}

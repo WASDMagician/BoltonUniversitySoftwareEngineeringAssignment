@@ -11,6 +11,8 @@ public:
 	Crossbow(char* img, int x, int y);
 	~Crossbow();
 
+	void Render();
+
 	void set_crossbow_damage(const double damage);
 	const double get_crossbow_damage() const;
 

@@ -3,8 +3,7 @@
 
 #include "NPC_Hinter.h"
 
-NPC_Hinter::NPC_Hinter(creation_variables *initialiser)
-:NPC_Base(initialiser)
+NPC_Hinter::NPC_Hinter()
 {
 
 }
@@ -27,4 +26,5 @@ const std::string NPC_Hinter::get_npc_hint()
 bool NPC_Hinter::react()
 {
 	std::cout << m_hint << "\n"; //should be with strange magic shit
+	return false;
 }

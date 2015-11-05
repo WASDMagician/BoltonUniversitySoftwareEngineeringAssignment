@@ -7,7 +7,7 @@ Weapon::Weapon()
 
 
 Weapon::Weapon(char* img, int rows, int cols)
-:Game_Object(img, rows, cols)
+	:AW_Sprite_Interface(img, rows, cols)
 {
 }
 
