@@ -18,6 +18,7 @@ public:
 	void set_npc_greeting(const std::string &greeting);
 	const std::string get_npc_greeting();
 	void add_to_shop(int newWeapon, int price);
+	bool react();
 
 private:
 	std::string m_name;

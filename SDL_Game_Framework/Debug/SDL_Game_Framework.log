@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 31/10/2015 15:58:16.
      1>Project "C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
@@ -7,6 +8,15 @@
      1>c:\users\kyle\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\game.cpp(191): warning C4018: '<' : signed/unsigned mismatch
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\Audio.obj
+=======
+﻿Build started 02/11/2015 13:59:25.
+     1>Project "C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\VisualStudio\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt NPC_Base.cpp
+         NPC_Base.cpp
+       Link:
+         E:\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\Audio.obj
+>>>>>>> origin/master
          Debug\audiomanager.obj
          Debug\AWSprite.obj
          Debug\AW_Sprite_Interface.obj
@@ -63,9 +73,18 @@
          Debug\TimeHelpers.obj
          Debug\XmlTestReporter.obj
          Debug\Weapon.obj
+<<<<<<< HEAD
          SDL_Game_Framework.vcxproj -> C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
      1>Done Building Project "C:\Users\Kyle\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
 Time Elapsed 00:00:01.48
+=======
+         SDL_Game_Framework.vcxproj -> C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.69
+>>>>>>> origin/master

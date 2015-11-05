@@ -20,15 +20,28 @@ void Game::Setup()
 	inventory = new Inventory("images/inv_slot.png", 1, 9);
 	player = new Player(new creation_variables{ "images/alien.bmp", 2, 3, "player test", 2, 2, 2, 200, "Player" });
 	ogre = new Enemy(new creation_variables{ "images/fish.bmp", 1, 8, "enemy test", 2, 2, 2, 200, "Enemy" });
+	clown = new NPC_Hinter(new creation_variables{ "images/clown.png", 1, 1, "npc test", 0, 0, 1000, 0, "NPC" });
+	Vector2 PointA;
+	PointA.x = 10;
+	PointA.y = 10;
+	Vector2 PointB;
+	PointB.x = 100;
+	PointB.y = 100;
+	clown->set_points(PointA, PointB);
 	ogre->serialize_character();
 	player->serialize_character();
+
 	projectile = new Projectile("images/bullet.png", 0, 0);
+
+
+	clown->serialize_character();
 
 	CURRENT_STATE = START_GAME;
 }
 
 void Game::Logic()
 {
+	printf("%d\n", CURRENT_STATE);
 	//Do not add any code here, add code to the respective functions (or in start_gae and end_game their respective splash classes)
 	switch (CURRENT_STATE)
 	{
@@ -59,6 +72,7 @@ void Game::Logic_Start()
 void Game::Logic_Play()
 {
 	//actual game logic here
+
 	Handle_Projectile();
 	player->sprite->set_world_position(200, 200);
 
@@ -67,6 +81,9 @@ void Game::Logic_Play()
 	{
 		//if they are dead, run some code here - eg. erase or something
 	}
+
+	clown->move();
+
 }
 
 void Game::Logic_Pause()
@@ -100,8 +117,8 @@ void Game::Handle_Play_Keys()
 	if (keyDown == SDLK_p)
 	{
 		printf("Pausing\n");
-		CURRENT_STATE = PAUSE_GAME;
-		system("pause");
+		CURRENT_STATE = END_GAME;
+		Logic_Pause();
 	}
 
 	float player_x = player->sprite->get_x();
@@ -195,6 +212,7 @@ void Game::Draw_Play()
 	inventory->Draw();
 	player->render();
 	ogre->render();
+	clown->render();
 	RenderHUD();
 
 	for (int i = 0; i < proj_array.size(); i++)
