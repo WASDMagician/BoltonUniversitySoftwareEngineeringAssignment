@@ -22,6 +22,7 @@ void Game::Setup()
 	ogre = new Enemy(new creation_variables{ "images/fish.bmp", 1, 8, "enemy test", 2, 2, 2, 200, "Enemy" });
 	ogre->serialize_character();
 	player->serialize_character();
+	projectile = new Projectile("images/bullet.png", 0, 0);
 
 	CURRENT_STATE = START_GAME;
 }
@@ -58,6 +59,14 @@ void Game::Logic_Start()
 void Game::Logic_Play()
 {
 	//actual game logic here
+	Handle_Projectile();
+	player->sprite->set_world_position(200, 200);
+
+	//we need a for loop here for enemies to check their health
+	if (ogre->get_health() <= 0)
+	{
+		//if they are dead, run some code here - eg. erase or something
+	}
 }
 
 void Game::Logic_Pause()
@@ -93,6 +102,64 @@ void Game::Handle_Play_Keys()
 		printf("Pausing\n");
 		CURRENT_STATE = PAUSE_GAME;
 		system("pause");
+	}
+
+	float player_x = player->sprite->get_x();
+	float player_y = player->sprite->get_y();
+
+	if (keyDown == SDLK_UP)
+	{
+		//1
+		projectile = new Projectile("images/bullet.png", 1, 1);
+		projectile->direction = 1;
+		projectile->set_world_position(player_x, player_y);
+		proj_array.push_back(*projectile);
+	}
+	if (keyDown == SDLK_DOWN)
+	{
+		//2
+		projectile = new Projectile("images/bullet.png", 1, 1);
+		projectile->direction = 2;
+		projectile->set_world_position(player_x, player_y);
+		proj_array.push_back(*projectile);
+	}
+	if (keyDown == SDLK_LEFT)
+	{
+		//3
+		projectile = new Projectile("images/bullet.png", 1, 1);
+		projectile->direction = 3;
+		projectile->set_world_position(player_x, player_y);
+		proj_array.push_back(*projectile);
+	}
+	if (keyDown == SDLK_RIGHT)
+	{
+		//4
+		projectile = new Projectile("images/bullet.png", 1, 1);
+		projectile->direction = 4;
+		projectile->set_world_position(player_x, player_y);
+		proj_array.push_back(*projectile);
+	}
+
+	//simple player blocking for now - perhaps we could make this more fun?
+	if (keyDown == SDLK_LCTRL || keyDown == SDLK_RCTRL)
+	{
+		player->is_blocking = true;
+		//if player is blocking enemy cant hit
+	}
+	else if (keyUp == SDLK_LCTRL || keyUp == SDLK_RCTRL)
+	{
+		player->is_blocking = false;
+		//if player isnt blocking enemy can hit
+	}
+}
+
+void Game::Handle_Projectile()
+{
+	std::cout << player->is_blocking << std::endl;
+
+	for (int i = 0; i < proj_array.size(); i++)
+	{
+		//proj_array[i].Update();
 	}
 }
 
@@ -130,4 +197,9 @@ void Game::Draw_Play()
 	ogre->render();
 	RenderHUD();
 
+	for (int i = 0; i < proj_array.size(); i++)
+	{
+		//proj_array[i].update_everything();
+		//projectile->update_everything();
+	}
 }

@@ -294,6 +294,9 @@
     <ClInclude Include="Start_Menu_Splash.h">
       <Filter>Header Files\screens</Filter>
     </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -463,6 +466,9 @@
     </ClCompile>
     <ClCompile Include="Start_Menu_Splash.cpp">
       <Filter>Source Files\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

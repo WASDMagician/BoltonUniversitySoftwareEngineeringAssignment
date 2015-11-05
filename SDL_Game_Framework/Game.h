@@ -13,6 +13,7 @@
 #include "Start_Menu_Splash.h"
 #include "End_Menu_Splash.h"
 #include "Pause_Menu_Splash.h"
+#include "Projectile.h"
 
 
 class Game :
@@ -33,7 +34,7 @@ public:
 	void OnKeyPressed();
 
 	void Handle_Play_Keys();
-
+	void Handle_Projectile();
 
 	void Draw();
 	void Draw_Play();
@@ -47,6 +48,9 @@ private:
 	Inventory *inventory;
 	Player *player;
 	Enemy *ogre;
+	Projectile *projectile;
+
+	std::vector<Projectile> proj_array;
 };
 #endif // _GAME_H_
 

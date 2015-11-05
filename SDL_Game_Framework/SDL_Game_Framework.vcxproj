@@ -147,6 +147,7 @@
     <ClInclude Include="Pause_Menu_Splash.h" />
     <ClInclude Include="Pickup_Objects.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Projectile.h" />
     <ClInclude Include="Puzzle_Objects.h" />
     <ClInclude Include="random.h" />
     <ClInclude Include="Save_Game.h" />
@@ -207,6 +208,7 @@
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Pause_Menu_Splash.cpp" />
+    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Puzzle_Objects.cpp" />
     <ClCompile Include="Splash_Screen.cpp" />
     <ClCompile Include="Start_Menu_Splash.cpp" />
