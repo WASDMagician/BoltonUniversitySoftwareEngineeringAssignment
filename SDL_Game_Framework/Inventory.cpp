@@ -53,9 +53,9 @@ bool Inventory::work()
 
 bool Inventory::Draw()
 {	
-	for (int i = 0; i < inv_sprite.size(); i++)
+	for (unsigned int i = 0; i < inv_sprite.size(); i++)
 	{
-		for (int j = 0; j < inv_sprite[i].size(); j++)
+		for (unsigned int j = 0; j < inv_sprite[i].size(); j++)
 		{
 			inv_sprite[i][j]->update_everything();
 		}
