@@ -28,6 +28,13 @@ void AW_Sprite_Interface::Render()
 	update_everything();
 }
 
+bool AW_Sprite_Interface::Move_By(int xAmount, int yAmount)
+{
+	set_world_position_x(get_x() + xAmount);
+	set_world_position_y(get_y() + yAmount);
+	return false;
+}
+
 bool AW_Sprite_Interface::Move_To(int x, int y)
 {
 	set_world_position(x, y);

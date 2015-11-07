@@ -25,12 +25,13 @@ void Splash_Screen::Start()
 	Setup();
 	while (!m_b_close_splash)
 	{
+		SDL_Flip(m_p_game->screen);
 		SDL_Delay(10);
 		m_p_game->GetUserInput();
 		Handle_Keys();
 		Logic();
 		Render();
-		SDL_Flip(m_p_game->screen);
+		
 	}
 }
 

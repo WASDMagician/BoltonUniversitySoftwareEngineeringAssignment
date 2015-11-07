@@ -138,8 +138,7 @@
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Jesus.h" />
     <ClInclude Include="Level.h" />
-    <ClInclude Include="Load_Game.h" />
-    <ClInclude Include="Map.h" />
+    <ClInclude Include="Level_One.h" />
     <ClInclude Include="NPC_Base.h" />
     <ClInclude Include="NPC_Hinter.h" />
     <ClInclude Include="NPC_Shopkeeper.h" />
@@ -152,7 +151,6 @@
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="Puzzle_Objects.h" />
     <ClInclude Include="random.h" />
-    <ClInclude Include="Save_Game.h" />
     <ClInclude Include="SDL.h" />
     <ClInclude Include="SDL_events.h" />
     <ClInclude Include="SDL_image.h" />
@@ -213,7 +211,7 @@
     <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="Jesus.cpp" />
     <ClCompile Include="Level.cpp" />
-    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Level_One.cpp" />
     <ClCompile Include="Pause_Menu_Splash.cpp" />
     <ClCompile Include="Play_Screen.cpp" />
     <ClCompile Include="Projectile.cpp" />
@@ -223,7 +221,6 @@
     <ClCompile Include="Test_Everything.cpp" />
     <ClCompile Include="Great_Axe.cpp" />
     <ClCompile Include="Inventory.cpp" />
-    <ClCompile Include="Load_Game.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NPC_Base.cpp" />
     <ClCompile Include="NPC_Hinter.cpp" />
@@ -232,7 +229,6 @@
     <ClCompile Include="Ogre.cpp" />
     <ClCompile Include="Pickup_Objects.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Save_Game.cpp" />
     <ClCompile Include="Sniper.cpp" />
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Test_All.cpp" />

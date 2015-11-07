@@ -1,6 +1,9 @@
 #ifndef _PLAY_SPLASH_H_
 #define _PLAY_SPLASH_H_
 
+#include "Character_Factory_Implementation.h"
+#include "Level.h"
+
 #include "Splash_Screen.h"
 class Play_Screen :
 	public Splash_Screen
@@ -13,6 +16,8 @@ public:
 	void Setup();
 	void Logic();
 	void Handle_Keys();
+
+	void Move(int xAmount, int yAmount);
 
 	void Render();
 	void Render_Back();
@@ -28,6 +33,10 @@ public:
 
 private:
 	
+	Level *m_level;
+	Character_Factory_Implementation* char_factory;
+	Character *m_player;
+
 	bool m_b_paused;
 };
 

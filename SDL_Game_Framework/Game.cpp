@@ -29,7 +29,6 @@ void Game::Run()
 	splash->Run();
 	splash = new End_Menu_Splash(this, "images/splash1.png");
 	splash->Run();
-	//CURRENT_STATE = PLAY_GAME;
 }
 
 /*

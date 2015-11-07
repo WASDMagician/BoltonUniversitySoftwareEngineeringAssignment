@@ -50,7 +50,6 @@ void Text_Box::Position_Setting(bool boxShouldBeDrawn, float boxX = 0, float box
 void Text_Box::Setup_Box()
 {
 	m_box = new AWSprite();
-	printf("%d %d %d %d %d", m_max_line_width, m_text_x_margin, m_line_height, m_number_of_lines, m_text_y_margin);
 	m_box->setImage(m_max_line_width + (m_text_x_margin * 2), ((m_line_height * m_number_of_lines) + m_text_y_margin * 2), m_box_color.r, m_box_color.g, m_box_color.b);
 
 	m_box->set_world_position(m_box_x, m_box_y);
@@ -136,7 +135,6 @@ void Text_Box::Display()
 	}
 	for (int i = 0; i < m_text_lines.size(); i++)
 	{
-		printf("%d %d %d %d\n", m_text_rects[i]->w, m_text_rects[i]->h, m_text_rects[i]->x, m_text_rects[i]->y);
 		SDL_BlitSurface(m_text_lines[i], NULL, SDL_GetVideoSurface(), m_text_rects[i]);
 	}
 }

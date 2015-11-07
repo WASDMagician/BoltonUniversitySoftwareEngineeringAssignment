@@ -26,16 +26,14 @@ public:
 	bool operator ==(Vector2<T, T2> incoming);
 
 	bool operator !=(float incoming);
-	bool operator !=(Vector2<T, T2> incoming);
-
-	
+	bool operator !=(Vector2<T, T2> incoming);	
+	friend ostream& operator << (ostream &os, Vector2<T, T2>input);
 };
 
 
 template <class T, class T2>
 Vector2<T, T2>::Vector2(void)
 {
-
 }
 
 template <class T, class T2>
@@ -45,6 +43,12 @@ Vector2<T, T2>::Vector2(T nx, T2 ny)
 	this->y = ny;
 }
 
+
+template <class T, class T2>
+Vector2<T, T2>::~Vector2()
+{
+
+}
 
 template <class T, class T2>
 bool Vector2<T, T2>:: operator >= (float incoming)
