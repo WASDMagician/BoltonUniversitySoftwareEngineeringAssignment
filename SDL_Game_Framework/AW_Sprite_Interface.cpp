@@ -28,7 +28,6 @@ void AW_Sprite_Interface::Render()
 	update_everything();
 }
 
-<<<<<<< HEAD
 bool AW_Sprite_Interface::Move_By(int xAmount, int yAmount)
 {
 	set_world_position_x(get_x() + xAmount);
@@ -37,9 +36,6 @@ bool AW_Sprite_Interface::Move_By(int xAmount, int yAmount)
 }
 
 bool AW_Sprite_Interface::Move_To(int x, int y)
-=======
-bool AW_Sprite_Interface::Move_To(float x, float y)
->>>>>>> origin/master
 {
 	set_world_position(x, y);
 	return false;

@@ -16,12 +16,9 @@ public:
 	void Update();
 	void Render();
 
-<<<<<<< HEAD
 	bool Move_By(int xAmount, int yAmount);
 	bool Move_To(int x, int y);
-=======
-	bool Move_To(float x, float y);
->>>>>>> origin/master
+
 	bool Move_Increment(int x, int y);
 	bool Move_Between();
 
