@@ -58,7 +58,7 @@ void Text_Box::Setup_Box()
 
 void Text_Box::set_rects()
 {
-	for (int i = 0; i < m_text_lines.size(); i++)
+	for (unsigned int i = 0; i < m_text_lines.size(); i++)
 	{
 		SDL_Rect *new_rect= new SDL_Rect();
 		int width = 0;

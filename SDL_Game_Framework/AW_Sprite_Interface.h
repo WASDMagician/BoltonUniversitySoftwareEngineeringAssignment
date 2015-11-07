@@ -16,7 +16,7 @@ public:
 	void Update();
 	void Render();
 
-	bool Move_To(int x, int y);
+	bool Move_To(float x, float y);
 	bool Move_Increment(int x, int y);
 	bool Move_Between();
 

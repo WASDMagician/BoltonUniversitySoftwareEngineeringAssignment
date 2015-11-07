@@ -19,8 +19,8 @@ AW_Sprite_Interface::~AW_Sprite_Interface()
 
 void AW_Sprite_Interface::Update()
 {
-	m_current_position->x = get_x();
-	m_current_position->y = get_y();
+	m_current_position->x = (int)get_x();
+	m_current_position->y = (int)get_y();
 }
 
 void AW_Sprite_Interface::Render()
@@ -28,7 +28,7 @@ void AW_Sprite_Interface::Render()
 	update_everything();
 }
 
-bool AW_Sprite_Interface::Move_To(int x, int y)
+bool AW_Sprite_Interface::Move_To(float x, float y)
 {
 	set_world_position(x, y);
 	return false;
@@ -51,7 +51,7 @@ bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, int moveSpeed, int 
 	{
 		if (In_Range(m_current_position, target, rangeSnap))
 		{
-			Move_To(target->x, target->y);
+			Move_To((float)target->x, (float)target->y);
 			return true;
 		}
 	}
@@ -94,7 +94,7 @@ void AW_Sprite_Interface::Add_Patrol_Position(Vector2<int, int> *position)
 
 void AW_Sprite_Interface::Add_Patrol_Position(std::vector<Vector2<int, int>*>position)
 {
-	for (int i = 0; i < position.size(); i++)
+	for (unsigned int i = 0; i < position.size(); i++)
 	{
 		m_patrol_positions.push_back(position[i]);
 	}
