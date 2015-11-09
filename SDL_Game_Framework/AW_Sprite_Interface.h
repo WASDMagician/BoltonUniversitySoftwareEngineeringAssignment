@@ -32,6 +32,8 @@ public:
 	void Remove_Patrol_Position(int index);
 
 	Vector2<int, int>*get_current_position();
+
+	void Debug();
 	
 
 private:

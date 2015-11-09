@@ -26,13 +26,13 @@ void Play_Screen::Setup()
 	m_b_paused = false;
 	char_factory = new Character_Factory_Implementation();
 	m_player = char_factory->Make_Character(PLAYER);
-	m_player->set_world_position(400, 300);
+	m_player->Move_To(400, 300);
 	m_level = new Level_One();
 }
 
 void Play_Screen::Logic()
 {
-
+	m_level->Move_Enemies();
 }
 
 void Play_Screen::Handle_Keys()
@@ -71,7 +71,6 @@ void Play_Screen::Handle_Keys()
 void Play_Screen::Move(int xAmount, int yAmount)
 {
 	m_level->Move(xAmount, yAmount);
-	m_level->Move_Enemies();
 }
 
 void Play_Screen::Render()
