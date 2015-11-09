@@ -36,8 +36,11 @@ public:
 	 unsigned int get_defence();
 
 	 bool is_blocking = false;
+	 
 private:
 	UI_Play_Screen *player_ui;
+
+	
 };
 
 #endif

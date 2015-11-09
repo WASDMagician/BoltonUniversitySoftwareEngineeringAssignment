@@ -3,6 +3,7 @@
 
 Level::Level()
 {
+	char_fac = new Character_Factory_Implementation();
 }
 
 

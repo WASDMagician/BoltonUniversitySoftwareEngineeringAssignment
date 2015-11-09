@@ -15,9 +15,11 @@ public:
 
 	virtual void Setup() = 0;
 	virtual void Move(int xAmount, int yAmount) = 0;
+	virtual void Move_Enemies() = 0;
 	void Render();
 
 protected:
+	Character_Factory_Implementation *char_fac;
 	std::vector<AW_Sprite_Interface*>m_areas;
 	std::vector<Character*>m_enemies;
 

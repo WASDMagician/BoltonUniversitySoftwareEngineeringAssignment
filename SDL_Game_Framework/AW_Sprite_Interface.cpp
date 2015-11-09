@@ -1,13 +1,13 @@
 #include "AW_Sprite_Interface.h"
 
 AW_Sprite_Interface::AW_Sprite_Interface()
-	:AWSprite()
+	:AWSprite(), m_current_target(NULL), m_current_position(NULL), m_current_target_index(0), m_patrol_positions(NULL)
 {
 
 }
 
 AW_Sprite_Interface::AW_Sprite_Interface(char* imgPath, int rows, int cols)
-	:AWSprite(imgPath, rows, cols)
+	: AWSprite(imgPath, rows, cols), m_current_target(NULL), m_current_position(NULL), m_current_target_index(0), m_patrol_positions(NULL)
 {
 	
 }
@@ -50,6 +50,7 @@ bool AW_Sprite_Interface::Move_Increment(int x, int y)
 
 bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, int moveSpeed, int rangeSnap)
 {
+	printf("Lerp to: %d %d %d\n", target, moveSpeed, rangeSnap);
 	float lerp_x = get_x() + (target->x - get_x()) / moveSpeed;
 	float lerp_y = get_y() + (target->y - get_y()) / moveSpeed;
 
@@ -67,10 +68,12 @@ bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, int moveSpeed, int 
 
 bool AW_Sprite_Interface::Move_Between()
 {
+	
 	if (m_patrol_positions.size() > 0)
 	{
 		if (m_current_target == NULL)
 		{
+			printf("M_current_Tragte is null\n");
 			m_current_target = m_patrol_positions[m_current_target_index];
 		}
 		if (Lerp_To(m_current_position, 20, 1))
@@ -101,9 +104,9 @@ void AW_Sprite_Interface::Add_Patrol_Position(Vector2<int, int> *position)
 
 void AW_Sprite_Interface::Add_Patrol_Position(std::vector<Vector2<int, int>*>position)
 {
-	for (unsigned int i = 0; i < position.size(); i++)
+	for (auto &p : position)
 	{
-		m_patrol_positions.push_back(position[i]);
+		m_patrol_positions.push_back(p);
 	}
 }
 
@@ -113,7 +116,6 @@ void AW_Sprite_Interface::Remove_Patrol_Position(int index)
 }
 
 
-//this may not work, check at earliest opportunity
 bool AW_Sprite_Interface::In_Range(Vector2<int, int>*position, Vector2<int, int>*target, int distance)
 {
 	if (position->x < target->x + distance && position->x > target->x - distance)

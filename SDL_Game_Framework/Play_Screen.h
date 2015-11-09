@@ -2,6 +2,7 @@
 #define _PLAY_SPLASH_H_
 
 #include "Character_Factory_Implementation.h"
+#include "Player.h"
 #include "Level.h"
 
 #include "Splash_Screen.h"

@@ -62,7 +62,6 @@ void Play_Screen::Handle_Keys()
 	switch (m_p_game->keyUp)
 	{
 	case(SDLK_p) :
-		printf("Paused: %d\n", m_b_paused);
 		break;
 	default:
 		break;
@@ -72,6 +71,7 @@ void Play_Screen::Handle_Keys()
 void Play_Screen::Move(int xAmount, int yAmount)
 {
 	m_level->Move(xAmount, yAmount);
+	m_level->Move_Enemies();
 }
 
 void Play_Screen::Render()

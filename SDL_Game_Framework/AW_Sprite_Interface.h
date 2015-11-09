@@ -24,7 +24,7 @@ public:
 
 	bool Lerp_To(Vector2<int, int> *target, int moveSpeed, int rangeSnap);
 
-	void Add_Patrol_Position(Vector2<int, int>* position);
+	void Add_Patrol_Position(Vector2<int, int> *position);
 	void Add_Patrol_Position(std::vector<Vector2<int, int>*> position);
 
 	bool In_Range(Vector2<int, int> *position, Vector2<int, int> *target, int rangeSnap);

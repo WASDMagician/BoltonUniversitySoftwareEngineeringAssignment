@@ -13,7 +13,10 @@ Player::Player()
 Player::Player(char* imgPath, int rows, int cols, int animationSpeed)
 	:Character(imgPath, rows, cols, animationSpeed)
 {
-	
+}
+
+Player::~Player()
+{
 }
 
 bool Player::Setup(char* imgPath, int rows, int cols, int animationSpeed)
@@ -30,11 +33,6 @@ void Player::Update()
 void Player::Render()
 {
 	update_everything();
-}
-
-Player::~Player()
-{
-	//Make sure we delete the pointers
 }
 
 bool Player::set_name(std::string name)
