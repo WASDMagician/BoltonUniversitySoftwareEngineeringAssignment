@@ -330,6 +330,9 @@
     <ClInclude Include="Level_One.h">
       <Filter>Header Files\levels</Filter>
     </ClInclude>
+    <ClInclude Include="Clown.h">
+      <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -508,6 +511,9 @@
     </ClCompile>
     <ClCompile Include="Level_One.cpp">
       <Filter>Source Files\levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Clown.cpp">
+      <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

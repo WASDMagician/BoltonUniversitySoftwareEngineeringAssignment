@@ -4,7 +4,7 @@
 #include "Character_Factory.h"
 #include <vector>
 
-enum CHARACTER_TYPES {PLAYER, OGRE, JESUS};
+enum CHARACTER_TYPES {PLAYER, OGRE, JESUS, CLOWN};
 
 class Character_Factory_Implementation :
 	public Character_Factory

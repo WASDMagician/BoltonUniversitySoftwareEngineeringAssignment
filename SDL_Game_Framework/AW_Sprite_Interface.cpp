@@ -53,12 +53,12 @@ bool AW_Sprite_Interface::Move_Increment(int x, int y)
 	return false;
 }
 
-bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, int moveSpeed, int rangeSnap)
+bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, double moveSpeed, int rangeSnap)
 {
-	float lerp_x = get_x() + (target->x - get_x()) / moveSpeed;
-	float lerp_y = get_y() + (target->y - get_y()) / moveSpeed;
+	double lerp_x = get_x() + (target->x - get_x()) / moveSpeed;
+	double lerp_y = get_y() + (target->y - get_y()) / moveSpeed;
 
-	Move_To(lerp_x, lerp_y);
+	Move_To((float)lerp_x, (float)lerp_y);
 	if (rangeSnap != -1)
 	{
 		if (In_Range(m_current_position, target, rangeSnap))
@@ -134,6 +134,7 @@ bool AW_Sprite_Interface::In_Range(Vector2<int, int>*position, Vector2<int, int>
 		}
 		return false;
 	}
+	return false; // this true, nothing appears, this false, all enemies are in the top right corner, this was previously not here thus creating a warning "not all paths return a value"
 }
 
 Vector2<int, int> *AW_Sprite_Interface::get_current_position()

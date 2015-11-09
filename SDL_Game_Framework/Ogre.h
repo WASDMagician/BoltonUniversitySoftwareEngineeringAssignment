@@ -11,4 +11,4 @@ public:
 	Ogre(char* imgPath, int rows, int cols, int animationSpeed);
 	~Ogre();
 };
-#endif
+#endif //_OGRE_H_

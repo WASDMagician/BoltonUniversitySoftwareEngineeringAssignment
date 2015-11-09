@@ -32,10 +32,10 @@ void Level_One::Setup()
 	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area4.png", 1, 1);
 	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1);
 	
-	area_one->set_world_position_x(-area_one->get_width());
-	area_three->set_world_position_y(-area_three->get_height());
-	area_four->set_world_position_y(area_four->get_height());
-	area_five->set_world_position_x(area_five->get_width());
+	area_one->set_world_position_x(-(float)area_one->get_width());
+	area_three->set_world_position_y(-(float)area_three->get_height());
+	area_four->set_world_position_y((float)area_four->get_height());
+	area_five->set_world_position_x((float)area_five->get_width());
 
 	m_areas.push_back(area_one);
 	m_areas.push_back(area_two);
@@ -47,6 +47,10 @@ void Level_One::Setup()
 	enemy->Add_Patrol_Position(new Vector2<int, int>(10, 20));
 	enemy->Add_Patrol_Position(new Vector2<int, int>(100, 100));
 	m_enemies.push_back(enemy);
+	Character *clown = char_fac->Make_Character(CLOWN);
+	clown->Add_Patrol_Position(new Vector2<int, int>(500,600));
+	clown->Add_Patrol_Position(new Vector2<int, int>(600,700));
+	m_enemies.push_back(clown);
 }
 
 void Level_One::Move(int xAmount, int yAmount)

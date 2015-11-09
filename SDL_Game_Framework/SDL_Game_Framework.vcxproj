@@ -122,6 +122,7 @@
     <ClInclude Include="AWSprite.h" />
     <ClInclude Include="AW_Sprite_Interface.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Clown.h" />
     <ClInclude Include="console.h" />
     <ClInclude Include="Consts.h" />
     <ClInclude Include="Crossbow.h" />
@@ -201,6 +202,7 @@
     <ClCompile Include="AWSprite.cpp" />
     <ClCompile Include="AW_Sprite_Interface.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Clown.cpp" />
     <ClCompile Include="Crossbow.cpp" />
     <ClCompile Include="Empowere_Knuckles.cpp" />
     <ClCompile Include="End_Menu_Splash.cpp" />

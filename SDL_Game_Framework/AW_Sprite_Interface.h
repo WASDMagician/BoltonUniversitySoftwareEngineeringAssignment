@@ -22,7 +22,7 @@ public:
 	bool Move_Increment(int x, int y);
 	bool Move_Between();
 
-	bool Lerp_To(Vector2<int, int> *target, int moveSpeed, int rangeSnap);
+	bool Lerp_To(Vector2<int, int> *target, double moveSpeed, int rangeSnap);
 
 	void Add_Patrol_Position(Vector2<int, int> *position);
 	void Add_Patrol_Position(std::vector<Vector2<int, int>*> position);

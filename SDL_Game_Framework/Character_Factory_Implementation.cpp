@@ -4,12 +4,14 @@
 #include "Enemy.h"
 #include "Ogre.h"
 #include "Jesus.h"
+#include "Clown.h"
 
 Character_Factory_Implementation::Character_Factory_Implementation()
 {
 	IMAGES.push_back("images/Fish.bmp");
 	IMAGES.push_back("images/alien.bmp");
 	IMAGES.push_back("images/jesus.bmp");
+	IMAGES.push_back("images/clown.png");
 }
 
 
@@ -30,6 +32,9 @@ Character* Character_Factory_Implementation::Make_Character(int CharacterType)
 		break;
 	case JESUS:
 		return new Jesus(IMAGES[CharacterType], 1, 1, 1);
+		break;
+	case CLOWN:
+		return new Clown(IMAGES[CharacterType], 1, 1, 1);
 		break;
 	default:
 		return NULL;
