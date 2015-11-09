@@ -35,7 +35,7 @@ bool AW_Sprite_Interface::Move_By(int xAmount, int yAmount)
 	return false;
 }
 
-bool AW_Sprite_Interface::Move_To(int x, int y)
+bool AW_Sprite_Interface::Move_To(float x, float y)
 {
 	set_world_position(x, y);
 	return false;
