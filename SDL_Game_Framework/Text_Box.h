@@ -26,7 +26,7 @@ public:
 
 	void Add_Message(std::string message); //add a new line to the text box
 
-	std::string get_message(int index); //get string of message at index
+	std::string get_message(unsigned int index); //get string of message at index
 	std::vector<std::string>get_messages(); //get a vector of all lines in text box
 
 	void Display(); //display text box

@@ -50,7 +50,7 @@ void Text_Box::Position_Setting(bool boxShouldBeDrawn, float boxX = 0, float box
 void Text_Box::Setup_Box()
 {
 	m_box = new AWSprite();
-	m_box->setImage(m_max_line_width + (m_text_x_margin * 2), ((m_line_height * m_number_of_lines) + m_text_y_margin * 2), m_box_color.r, m_box_color.g, m_box_color.b);
+	m_box->setImage(m_max_line_width + (int)(m_text_x_margin * 2), (int)((m_line_height * m_number_of_lines) + (int)m_text_y_margin * 2), m_box_color.r, m_box_color.g, m_box_color.b);
 
 	m_box->set_world_position(m_box_x, m_box_y);
 }
@@ -65,8 +65,8 @@ void Text_Box::set_rects()
 		TTF_SizeText(m_font, m_messages[i].c_str(), &width, &height);
 		new_rect->w = width;
 		new_rect->h = height;
-		new_rect->x = m_box_x + m_text_x_margin;
-		new_rect->y = m_box_y + ((i * m_line_height) + m_text_y_margin);
+		new_rect->x = (Sint16)m_box_x + (Sint16)m_text_x_margin;
+		new_rect->y = (Sint16)m_box_y + ((i * m_line_height) + (Sint16)m_text_y_margin);
 		m_text_rects.push_back(new_rect);
 	}
 }
@@ -88,7 +88,7 @@ void Text_Box::Add_Message(std::string message)
 	set_rects();
 }
 
-std::string Text_Box::get_message(int i)
+std::string Text_Box::get_message(unsigned int i)
 {
 	return (i < m_messages.size()) ? (m_messages[i]) : ("!!Index out of range, that messages does not exist!!"); //@TESTING
 }
@@ -133,7 +133,7 @@ void Text_Box::Display()
 	{
 		m_box->update_everything();
 	}
-	for (int i = 0; i < m_text_lines.size(); i++)
+	for (unsigned int i = 0; i < m_text_lines.size(); i++)
 	{
 		SDL_BlitSurface(m_text_lines[i], NULL, SDL_GetVideoSurface(), m_text_rects[i]);
 	}
