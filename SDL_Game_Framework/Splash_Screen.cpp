@@ -16,7 +16,6 @@ Splash_Screen::Splash_Screen(Game* pGame, char* bgImg, std::string screen)
 
 Splash_Screen::~Splash_Screen()
 {
-	delete m_p_game;
 }
 
 
@@ -31,7 +30,6 @@ void Splash_Screen::Start()
 		Handle_Keys();
 		Logic();
 		Render();
-		
 	}
 }
 
@@ -47,13 +45,6 @@ void Splash_Screen::Logic()
 
 void Splash_Screen::Handle_Keys()
 {
-	switch (m_p_game->keyDown)
-	{
-	case(SDLK_SPACE):
-			printf("Default");
-			m_b_close_splash = true;
-			break;
-	}
 }
 
 void Splash_Screen::Render()
@@ -79,7 +70,7 @@ void Splash_Screen:: Render_Front()
 
 bool Splash_Screen::Run()
 {
-	return true;
+	return m_b_close_splash;
 }
 
 bool Splash_Screen::is_game_over()

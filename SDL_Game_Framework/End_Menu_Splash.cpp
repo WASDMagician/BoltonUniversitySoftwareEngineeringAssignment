@@ -2,15 +2,15 @@
 #include "Game.h"
 
 End_Menu_Splash::End_Menu_Splash()
-	:Splash_Screen(NULL, NULL, "End_Menu_Splash")
+:Splash_Screen(NULL, NULL, "End_Menu_Splash"), gameover_box(NULL)
 {
-
+	gameover_box = new Text_Box();
 }
 
 End_Menu_Splash::End_Menu_Splash(Game *pGame, char* bgImg)
-	: Splash_Screen(pGame, bgImg, "End_Menu_Splash")
+: Splash_Screen(pGame, bgImg, "End_Menu_Splash"), gameover_box(NULL)
 {
-
+	gameover_box = new Text_Box();
 }
 
 End_Menu_Splash::~End_Menu_Splash(void)
@@ -20,7 +20,13 @@ End_Menu_Splash::~End_Menu_Splash(void)
 
 void End_Menu_Splash::Setup()
 {
-
+	gameover_box->set_font("fonts/game_font.ttf", 20);
+	gameover_box->set_color(200, 0, 0);
+	gameover_box->set_box_color(255, 255, 255);
+	gameover_box->Position_Setting(true, 50, 50, 10, 10);
+	gameover_box->Add_Message("Thank you for playing our game\nPress Escape to exit");
+	gameover_box->Setup_Box();
+	gameover_box->set_rects();
 }
 
 void End_Menu_Splash::Handle_Keys()
@@ -30,8 +36,9 @@ void End_Menu_Splash::Handle_Keys()
 	case(SDLK_SPACE) :
 		printf("End");
 		break;
-	case(SDLK_RETURN):
+	case(SDLK_ESCAPE) :
 		m_b_game_over = true;
+		m_b_close_splash = true;
 		break;
 	}
 }
@@ -52,6 +59,7 @@ void End_Menu_Splash::Render_Mid()
 
 void End_Menu_Splash::Render_Front()
 {
+	gameover_box->Display();
 }
 
 bool End_Menu_Splash::Run()

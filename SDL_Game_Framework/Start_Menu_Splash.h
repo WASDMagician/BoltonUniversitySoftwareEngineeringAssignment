@@ -23,7 +23,7 @@ public:
 	bool Run();
 
 private:
-	Text_Box tb;
+	Text_Box* instruction_box;
 };
 
 #endif // _Start_Menu_Splash_H_

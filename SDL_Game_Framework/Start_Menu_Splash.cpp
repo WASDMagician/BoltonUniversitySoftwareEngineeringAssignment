@@ -4,31 +4,33 @@
 
 
 Start_Menu_Splash::Start_Menu_Splash()
-	:Splash_Screen(NULL, NULL, "Start_Menu_Splash")
+:Splash_Screen(NULL, NULL, "Start_Menu_Splash"), instruction_box(NULL)
 {
-
+	instruction_box = new Text_Box();
 }
 
 Start_Menu_Splash::Start_Menu_Splash(Game *pGame, char* bgImg)
-: Splash_Screen(pGame, bgImg, "Start_Menu_Splash")
+: Splash_Screen(pGame, bgImg, "Start_Menu_Splash"), instruction_box(NULL)
 {
+	instruction_box = new Text_Box();
 	m_p_game->SetBackground(bgImg);
 }
 
 Start_Menu_Splash::~Start_Menu_Splash(void)
 {
-
+	delete instruction_box;
+	instruction_box = NULL;
 }
 
 void Start_Menu_Splash::Setup()
 {
-	tb.set_font("fonts/game_font.ttf", 28);
-	tb.set_color(200, 0, 0);
-	tb.set_box_color(255, 255, 255);
-	tb.Position_Setting(true, 50, 50, 10, 10);
-	tb.Add_Message("This is a test\nAnother test\nYet Another Test\n testing testing\nkEEP Adding stuff\nhow far will it go\ntrolololollol");
-	tb.Setup_Box();
-	tb.set_rects();
+	instruction_box->set_font("fonts/game_font.ttf", 20);
+	instruction_box->set_color(200, 0, 0);
+	instruction_box->set_box_color(255, 255, 255);
+	instruction_box->Position_Setting(true, 50, 50, 10, 10);
+	instruction_box->Add_Message("Welcome to our game\nPress Enter to start\nFind the exits\nWin the game");
+	instruction_box->Setup_Box();
+	instruction_box->set_rects();
 }
 
 void Start_Menu_Splash:: Handle_Keys()
@@ -57,7 +59,7 @@ void Start_Menu_Splash:: Render_Back()
 void Start_Menu_Splash:: Render_Mid()
 {
 	
-	tb.Display();
+	instruction_box->Display();
 }
 
 void Start_Menu_Splash:: Render_Front()

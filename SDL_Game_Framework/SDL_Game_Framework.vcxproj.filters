@@ -333,6 +333,9 @@
     <ClInclude Include="Level_Two.h">
       <Filter>Header Files\levels</Filter>
     </ClInclude>
+    <ClInclude Include="Level_Three.h">
+      <Filter>Header Files\levels</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -513,6 +516,9 @@
       <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
     <ClCompile Include="Level_Two.cpp">
+      <Filter>Source Files\levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Level_Three.cpp">
       <Filter>Source Files\levels</Filter>
     </ClCompile>
   </ItemGroup>

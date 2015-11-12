@@ -23,7 +23,7 @@ public:
 	bool Run();
 
 private:
-
+	Text_Box* gameover_box;
 };
 
 #endif // _End_Menu_Splash_H_

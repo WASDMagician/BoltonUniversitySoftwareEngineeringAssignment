@@ -140,6 +140,7 @@
     <ClInclude Include="Jesus.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Level_One.h" />
+    <ClInclude Include="Level_Three.h" />
     <ClInclude Include="Level_Two.h" />
     <ClInclude Include="NPC_Base.h" />
     <ClInclude Include="NPC_Hinter.h" />
@@ -214,6 +215,7 @@
     <ClCompile Include="Jesus.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Level_One.cpp" />
+    <ClCompile Include="Level_Three.cpp" />
     <ClCompile Include="Level_Two.cpp" />
     <ClCompile Include="Play_Screen.cpp" />
     <ClCompile Include="Projectile.cpp" />

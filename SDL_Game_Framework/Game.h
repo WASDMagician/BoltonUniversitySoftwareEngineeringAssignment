@@ -2,18 +2,9 @@
 #define _GAME_H_
 
 #include "GameBase.h"
-#include "UI_Play_Screen.h"
-#include "NPC_Shopkeeper.h"
-#include "NPC_Hinter.h"
 #include "SDL_ttf.h"
 #include "Text_Box.h"
-#include "Inventory.h"
-#include "Start_Menu_Splash.h"
-#include "Play_Screen.h"
-#include "End_Menu_Splash.h"
-#include "Character.h"
-#include "Weapon.h"
-#include "Projectile.h"
+#include "Splash_Screen.h"
 
 
 class Game :
@@ -25,13 +16,11 @@ public:
 
 	void Setup();
 	void Run();
+	void Draw();
 
 private:
 	Splash_Screen *splash;
-
-	Projectile *projectile;
-
-	std::vector<Projectile> proj_array;
+	Text_Box *credit_box;
 };
 #endif // _GAME_H_
 

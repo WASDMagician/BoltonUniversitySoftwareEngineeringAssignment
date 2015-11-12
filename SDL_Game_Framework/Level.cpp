@@ -15,6 +15,7 @@ Level::Level(std::string name)
 
 Level::~Level()
 {
+	printf("Destroctor called on level: %s\n", m_level_name);
 	delete char_fac;
 	char_fac = NULL;
 

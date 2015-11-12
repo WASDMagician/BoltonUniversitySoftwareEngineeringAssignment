@@ -49,11 +49,6 @@ void Level_Two::Setup()
 	m_areas.push_back(area_four);
 	m_areas.push_back(area_five);
 
-	Character *enemy = char_fac->Make_Character(OGRE);
-	enemy->Add_Patrol_Position(new Vector2<int, int>(10, 20));
-	enemy->Add_Patrol_Position(new Vector2<int, int>(100, 100));
-	m_enemies.push_back(enemy);
-
 	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1);
 }
 

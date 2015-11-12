@@ -1,6 +1,7 @@
 #include "Play_Screen.h"
 #include "Level_One.h"
 #include "Level_Two.h"
+#include "Level_Three.h"
 #include "Game.h"
 
 Play_Screen::Play_Screen()
@@ -32,18 +33,31 @@ void Play_Screen::Setup()
 void Play_Screen::Logic()
 {
 	m_level->Move_Enemies();
+	if (Check_Level_Trigger())
+	{
+		if (m_level->get_level_name() == "one")
+		{
+			delete m_level;
+			m_level = NULL;
+			m_level = new Level_Two("two");
+		}
+		else if (m_level->get_level_name() == "two")
+		{
+			delete m_level;
+			m_level = NULL;
+			m_level = new Level_Three("three");
+		}
+		else if (m_level->get_level_name() == "three")
+		{
+			m_b_close_splash = true;
+		}
+	}
 }
 
 void Play_Screen::Handle_Keys()
 {
 	switch (m_p_game->keyDown)
 	{
-	case(SDLK_SPACE) :
-		printf("Play");
-		break;
-	case(SDLK_RETURN) :
-		printf("Switch");
-		m_b_close_splash = true;
 	case(SDLK_LEFT) :
 		Move(10, 0);
 		break;
@@ -57,26 +71,11 @@ void Play_Screen::Handle_Keys()
 		Move(0, -10);
 		break;
 	}
-
-	switch (m_p_game->keyUp)
-	{
-	case(SDLK_p) :
-		break;
-	default:
-		break;
-	}
 }
 
 void Play_Screen::Move(int xAmount, int yAmount)
 {
 	m_level->Move(xAmount, yAmount);
-	if (Check_Level_Trigger())
-	{
-		if (m_level->get_level_name() == "one")
-		{
-			m_level = new Level_Two("Two");
-		}
-	}
 }
 
 bool Play_Screen::Check_Level_Trigger()
