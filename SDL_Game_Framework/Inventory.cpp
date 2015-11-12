@@ -15,7 +15,7 @@ Inventory::Inventory(char *img, int rows, int columns)
 		inv_sprite.push_back(std::vector<AW_Sprite_Interface*>());
 		for (int j = 0; j < columns; j++)
 		{
-			AW_Sprite_Interface *new_sprite = new AW_Sprite_Interface(img, 1, 1);
+			AW_Sprite_Interface *new_sprite = new AW_Sprite_Interface(img, 1, 1, 1);
 			new_sprite->set_world_position(m_inv_bar_left_x + (j * m_inv_bar_x_margin), m_inv_bar_top_y + (i * m_inv_bar_y_margin));
 			new_row.push_back(new_sprite);
 		}

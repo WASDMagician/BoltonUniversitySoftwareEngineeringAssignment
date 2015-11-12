@@ -8,7 +8,7 @@ class Crossbow :
 {
 public:
 	Crossbow();
-	Crossbow(char* img, int x, int y);
+	Crossbow(char* img, int rows, int cols, int animationSpeed);
 	~Crossbow();
 
 	void Render();

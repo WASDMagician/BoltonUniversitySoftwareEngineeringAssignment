@@ -37,7 +37,7 @@ bool NPC_Base::set_health(unsigned int health)
 	return m_health == health;
 }
 
-unsigned int NPC_Base::get_health()
+int NPC_Base::get_health()
 {
 	return m_health;
 }

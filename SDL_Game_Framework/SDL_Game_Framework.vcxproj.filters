@@ -94,6 +94,12 @@
     <Filter Include="Source Files\text box">
       <UniqueIdentifier>{0a277521-676c-4f57-a56f-4c9def773a0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Factories\Objects">
+      <UniqueIdentifier>{17d55d49-cc6e-4de1-9ff5-2ac853863028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Factories\Objects">
+      <UniqueIdentifier>{9aba51d4-a933-4624-8345-d432d9267c6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audiomanager.h">
@@ -264,12 +270,6 @@
     <ClInclude Include="NPC_Base.h">
       <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
     </ClInclude>
-    <ClInclude Include="Text_Boxes.h">
-      <Filter>Header Files\utility</Filter>
-    </ClInclude>
-    <ClInclude Include="Pickup_Objects.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Puzzle_Objects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -284,9 +284,6 @@
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Source Files\utility</Filter>
     </ClInclude>
     <ClInclude Include="Character_Creator.h">
       <Filter>Header Files\Factories\Character</Filter>
@@ -335,6 +332,18 @@
     </ClInclude>
     <ClInclude Include="Level_Three.h">
       <Filter>Header Files\levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Header Files\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Pickup_Objects.h">
+      <Filter>Header Files\Factories\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Pick_Objects_Factory.h">
+      <Filter>Header Files\Factories\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Pick_Objects_Factory_Implementation.h">
+      <Filter>Header Files\Factories\Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -464,12 +473,6 @@
     <ClCompile Include="NPC_Shopkeeper.cpp">
       <Filter>Source Files\Factories\Characters\NPC</Filter>
     </ClCompile>
-    <ClCompile Include="Text_Boxes.cpp">
-      <Filter>Source Files\utility</Filter>
-    </ClCompile>
-    <ClCompile Include="Pickup_Objects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Puzzle_Objects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -520,6 +523,12 @@
     </ClCompile>
     <ClCompile Include="Level_Three.cpp">
       <Filter>Source Files\levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Pickup_Objects.cpp">
+      <Filter>Source Files\Factories\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Pick_Objects_Factory_Implementation.cpp">
+      <Filter>Source Files\Factories\Objects</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

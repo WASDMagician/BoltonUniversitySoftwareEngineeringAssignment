@@ -8,7 +8,7 @@ class Empowered_Knuckles :
 {
 public:
 	Empowered_Knuckles();
-	Empowered_Knuckles(char* img, int x, int y);
+	Empowered_Knuckles(char* img, int rows, int cols, int animationSpeed);
 	~Empowered_Knuckles();
 
 	void Render();

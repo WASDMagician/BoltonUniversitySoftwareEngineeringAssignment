@@ -10,8 +10,8 @@ Sniper::Sniper()
 	m_sniper_attackspeed = 0.25;
 }
 
-Sniper::Sniper(char*img, int rows, int cols)
-:Weapon(img, rows, cols)
+Sniper::Sniper(char*img, int rows, int cols, int animationSpeed)
+:Weapon(img, rows, cols, animationSpeed)
 {
 }
 

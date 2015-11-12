@@ -9,6 +9,5 @@ public:
 	~Level_Three();
 	void Setup();
 	void Move(int xAmount, int yAmount);
-	void Move_Enemies();
 };
 

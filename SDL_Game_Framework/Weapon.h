@@ -7,7 +7,7 @@ class Weapon :
 {
 public:
 	Weapon();
-	Weapon(char* img, int rows, int cols);
+	Weapon(char* img, int rows, int cols, int animationSpeed);
 	~Weapon();
 	virtual void Render() = 0;
 };

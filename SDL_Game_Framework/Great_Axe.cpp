@@ -8,8 +8,8 @@ Great_Axe::Great_Axe()
 	m_great_axe_attackspeed = 0.5;
 }
 
-Great_Axe::Great_Axe(char*img, int rows, int cols)
-:Weapon(img, rows, cols)
+Great_Axe::Great_Axe(char*img, int rows, int cols, int animationSpeed)
+:Weapon(img, rows, cols, animationSpeed)
 {
 }
 

@@ -20,6 +20,8 @@ public:
 
 	void Move(int xAmount, int yAmount);
 	bool Check_Level_Trigger();
+	bool Check_Enemy_Trigger();
+	bool Check_Coin_Trigger();
 
 	void Render();
 	void Render_Back();
@@ -36,6 +38,8 @@ private:
 	Character *m_player;
 
 	bool m_b_paused;
+
+	bool m_b_has_attacked;
 };
 
 #endif // _PLAY_SPLASH_H_

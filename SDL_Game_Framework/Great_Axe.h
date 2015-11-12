@@ -8,7 +8,7 @@ class Great_Axe :
 {
 public:
 	Great_Axe();
-	Great_Axe(char* img, int x, int y);
+	Great_Axe(char* img, int x, int y, int animationSpeed);
 	~Great_Axe();
 
 

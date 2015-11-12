@@ -17,7 +17,7 @@ public:
 
 	std::string m_name;
 	bool set_health(unsigned int health);
-	unsigned int get_health();
+	int get_health();
 
 	bool set_lives(unsigned int lives);
 	unsigned int get_lives();
@@ -32,7 +32,6 @@ public:
 
 	std::string serialize_character();
 
-private:
 };
 
 #endif //_NPC_BASE_H_

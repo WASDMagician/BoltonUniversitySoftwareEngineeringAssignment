@@ -32,11 +32,11 @@ Level_Three::~Level_Three()
 
 void Level_Three::Setup()
 {
-	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/area1.png", 1, 1);
-	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/area2.png", 1, 1);
-	AW_Sprite_Interface *area_three = new AW_Sprite_Interface("images/area3.png", 1, 1);
-	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area4.png", 1, 1);
-	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1);
+	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/area1.png", 1, 1, 1);
+	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/area2.png", 1, 1, 1);
+	AW_Sprite_Interface *area_three = new AW_Sprite_Interface("images/area3.png", 1, 1, 1);
+	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area4.png", 1, 1, 1);
+	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1, 1);
 
 	area_one->set_world_position_x(-(float)area_one->get_width());
 	area_three->set_world_position_y(-(float)area_three->get_height());
@@ -49,7 +49,7 @@ void Level_Three::Setup()
 	m_areas.push_back(area_four);
 	m_areas.push_back(area_five);
 
-	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1);
+	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
 	level_trigger->set_world_position(500, 500);
 }
 
@@ -64,12 +64,4 @@ void Level_Three::Move(int xAmount, int yAmount)
 		e->Move_By(xAmount, yAmount);
 	}
 	level_trigger->Move_By(xAmount, yAmount);
-}
-
-void Level_Three::Move_Enemies()
-{
-	for (auto &e : m_enemies)
-	{
-		e->Move_Between();
-	}
 }

@@ -5,13 +5,13 @@
 #include "Game.h"
 
 Play_Screen::Play_Screen()
-	:Splash_Screen(NULL, NULL, "Play_Screen")
+:Splash_Screen(NULL, NULL, "Play_Screen"), m_b_has_attacked(false)
 {
 
 }
 
 Play_Screen::Play_Screen(Game *pGame, char* bgImg)
-	: Splash_Screen(pGame, bgImg, "Play_Screen")
+: Splash_Screen(pGame, bgImg, "Play_Screen"), m_b_has_attacked(false)
 {
 	m_p_game->SetBackground(bgImg);
 }
@@ -32,7 +32,6 @@ void Play_Screen::Setup()
 
 void Play_Screen::Logic()
 {
-	m_level->Move_Enemies();
 	if (Check_Level_Trigger())
 	{
 		if (m_level->get_level_name() == "one")
@@ -52,6 +51,8 @@ void Play_Screen::Logic()
 			m_b_close_splash = true;
 		}
 	}
+	Check_Enemy_Trigger();
+	Check_Coin_Trigger();
 }
 
 void Play_Screen::Handle_Keys()
@@ -81,6 +82,61 @@ void Play_Screen::Move(int xAmount, int yAmount)
 bool Play_Screen::Check_Level_Trigger()
 {
 	return (m_level->get_trigger()->bb_collision(m_player));
+}
+
+bool Play_Screen::Check_Enemy_Trigger()
+{
+	for (auto &enemy : m_level->get_enemies())
+	{
+		if (enemy != NULL)
+		{
+			if (enemy->bb_collision(m_player))
+			{
+				if (!m_b_has_attacked)
+				{
+					m_b_has_attacked = false; //should be true
+					m_player->Attack(enemy);
+					enemy->Attack(m_player);
+
+					printf("Player: %d %u %u\n", m_player->get_health(), m_player->get_damage(), m_player->get_defence());
+					printf("Enemy: %d, %u, %u\n", enemy->get_health(), enemy->get_damage(), enemy->get_health());
+
+					if (!enemy->Check_Health())
+					{
+						enemy->set_visibility(false);
+					}
+
+					if (!m_player->Check_Health())
+					{
+						m_b_close_splash = true;
+					}
+
+					
+				}
+			}
+			else
+			{
+				m_b_has_attacked = false;
+			}
+		}
+		
+	}
+	return true;
+}
+
+bool Play_Screen::Check_Coin_Trigger()
+{
+	for (auto &c : m_level->get_pickables())
+	{
+		if (m_player->bb_collision(c))
+		{
+			m_player->set_score(m_player->get_score() + 1);
+			printf("Player Score: %d\n", m_player->get_score());
+			c->set_visibility(false);
+			return true;
+		}
+	}
+	return false;
 }
 
 void Play_Screen::Render()

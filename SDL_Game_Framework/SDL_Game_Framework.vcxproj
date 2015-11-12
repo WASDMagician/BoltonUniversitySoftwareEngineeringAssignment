@@ -148,6 +148,8 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="Ogre.h" />
     <ClInclude Include="Pickup_Objects.h" />
+    <ClInclude Include="Pick_Objects_Factory.h" />
+    <ClInclude Include="Pick_Objects_Factory_Implementation.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Play_Screen.h" />
     <ClInclude Include="Projectile.h" />
@@ -165,7 +167,6 @@
     <ClInclude Include="Sword.h" />
     <ClInclude Include="Test_All.h" />
     <ClInclude Include="Text_Box.h" />
-    <ClInclude Include="Text_Boxes.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UI_Play_Screen.h" />
@@ -217,6 +218,7 @@
     <ClCompile Include="Level_One.cpp" />
     <ClCompile Include="Level_Three.cpp" />
     <ClCompile Include="Level_Two.cpp" />
+    <ClCompile Include="Pick_Objects_Factory_Implementation.cpp" />
     <ClCompile Include="Play_Screen.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Puzzle_Objects.cpp" />
@@ -237,7 +239,6 @@
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Test_All.cpp" />
     <ClCompile Include="Text_Box.cpp" />
-    <ClCompile Include="Text_Boxes.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="UI_Play_Screen.cpp" />
     <ClCompile Include="UnitTest++\src\AssertException.cpp" />

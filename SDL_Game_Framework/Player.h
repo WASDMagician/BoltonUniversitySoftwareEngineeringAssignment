@@ -9,7 +9,6 @@ class Player :
 	public Character
 {
 public:
-	//char* img_path, unsigned int rows, unsigned int cols, string name, unsigned int health, unsigned int damage, unsigned int defence, unsigned animation_speed
 	Player();
 	Player(char* imgPath, int rows, int cols, int animationSpeed);
 	~Player();
@@ -24,7 +23,7 @@ public:
 	 std::string get_name();
 
 	 bool set_health(unsigned int health);
-	 unsigned int get_health();
+	 int get_health();
 
 	 bool set_lives(unsigned int lives);
 	 unsigned int get_lives();
@@ -35,10 +34,15 @@ public:
 	 bool set_defence(unsigned int defence);
 	 unsigned int get_defence();
 
+	 bool set_score(int score);
+	 int get_score();
+
 	 bool is_blocking = false;
 
-	 bool Attack(Character* target);
-	 bool Defend(Character* target);
+	 void Attack(Character* target);
+	 void Defend(Character* target);
+
+	 bool Check_Health();
 	 
 private:
 	UI_Play_Screen *player_ui;

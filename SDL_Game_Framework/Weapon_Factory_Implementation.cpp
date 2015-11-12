@@ -21,10 +21,10 @@ Weapon* Weapon_Factory_Implementation::Make_Weapon(int weaponType)
 	switch (weaponType)
 	{
 	case(CROSSBOW) :
-		return new Crossbow("images/jesus.bmp", 250, 250);
+		return new Crossbow("images/jesus.bmp", 1, 1, 1);
 		break;
 	case(EMPOWERED_KNUCKLES) :
-		return new Empowered_Knuckles("images/jesus.bmp", 500, 500);
+		return new Empowered_Knuckles("images/jesus.bmp", 1, 1, 1);
 		break;
 	case(GREAT_AXE) :
 		return new Great_Axe();

@@ -8,7 +8,7 @@ class Sniper :
 {
 public:
 	Sniper();
-	Sniper(char* img, int x, int y);
+	Sniper(char* img, int x, int y, int animationSpeed);
 	~Sniper();
 
 

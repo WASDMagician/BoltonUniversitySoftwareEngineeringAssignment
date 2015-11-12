@@ -7,11 +7,12 @@
 
 
 Player::Player()
+:Character()
 {
 }
 
 Player::Player(char* imgPath, int rows, int cols, int animationSpeed)
-	:Character(imgPath, rows, cols, animationSpeed)
+: Character(imgPath, rows, cols, animationSpeed)
 {
 }
 
@@ -52,7 +53,7 @@ bool Player::set_health(unsigned int health)
 	return m_health == health;
 }
 
-unsigned int Player::get_health()
+int Player::get_health()
 {
 	return m_health;
 }
@@ -96,12 +97,28 @@ void Player::update_player_ui()
 	player_ui->set_lives(m_lives);
 }
 
-bool Player::Attack(Character* target)
+bool Player::set_score(int score)
 {
-	return false;
+	m_score = score;
+	return m_score == score;
 }
 
-bool Player::Defend(Character* target)
+int Player::get_score()
 {
-	return false;
+	return m_score;
+}
+
+void Player::Attack(Character* target)
+{
+	target->Defend(target);
+}
+
+void Player::Defend(Character* target)
+{
+	m_health -= target->get_damage() - get_defence();
+}
+
+bool Player::Check_Health()
+{
+	return m_health > 0;
 }

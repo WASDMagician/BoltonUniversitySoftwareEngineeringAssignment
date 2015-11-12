@@ -1,11 +1,12 @@
 #include "Enemy.h"
 
 Enemy::Enemy()
+:Character()
 {
 }
 
 Enemy::Enemy(char* imgPath, int rows, int cols, int animationSpeed)
-	:Character(imgPath, rows, cols, animationSpeed)
+:Character(imgPath, rows, cols, animationSpeed)
 {
 }
 
@@ -124,7 +125,7 @@ unsigned int Enemy::get_lives()
 	return m_lives;
 }
 
-unsigned int Enemy::get_health()
+int Enemy::get_health()
 {
 	return m_health;
 }
@@ -151,12 +152,28 @@ unsigned int Enemy::get_defence()
 	return m_defence;
 }
 
-bool Enemy::Attack(Character* target)
+bool Enemy::set_score(int score)
 {
-	return false;
+	m_score = score;
+	return m_score == score;
 }
 
-bool Enemy::Defend(Character* target)
+int Enemy::get_score()
 {
-	return false;
+	return m_score;
+}
+
+void Enemy::Attack(Character* target)
+{
+	target->Defend(target);
+}
+
+void Enemy::Defend(Character* target)
+{
+	m_health -= target->get_damage() - get_defence();
+}
+
+bool Enemy::Check_Health()
+{
+	return m_health > 0;
 }

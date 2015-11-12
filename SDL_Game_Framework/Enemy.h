@@ -3,8 +3,6 @@
 
 #include "Character.h"
 
-//DO I NEED TO RE-ADD CHARACTER CLASS FOR ENEMY AND PLAYER
-
 enum ENEMY_STATE
 {
 	IDLE,
@@ -17,6 +15,7 @@ class Enemy :
 	public Character
 {
 public:
+
 	Enemy();
 	Enemy(char* imgPath, int rows, int cols, int animationSpeed);
 	virtual ~Enemy();
@@ -35,7 +34,7 @@ public:
 	virtual std::string get_name();
 
 	virtual bool set_health(unsigned int health);
-	virtual unsigned int get_health();
+	virtual int get_health();
 
 	virtual bool set_lives(unsigned int lives);
 	virtual unsigned int get_lives();
@@ -46,8 +45,13 @@ public:
 	virtual bool set_defence(unsigned int defence);
 	virtual unsigned int get_defence();
 
-	virtual bool Attack(Character* target);
-	virtual bool Defend(Character* target);
+	virtual bool set_score(int score);
+	virtual int get_score();
+
+	virtual void Attack(Character* target);
+	virtual void Defend(Character* target);
+
+	virtual bool Check_Health();
 
 protected:
 	ENEMY_STATE enemy_state;

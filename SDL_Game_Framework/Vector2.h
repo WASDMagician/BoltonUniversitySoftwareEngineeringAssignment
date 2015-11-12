@@ -12,6 +12,7 @@ public:
 	T x;
 	T2 y;
 
+private:
 	bool operator >(float incoming);
 	bool operator >=(float incoming);
 	bool operator >(Vector2<T, T2> incoming);
