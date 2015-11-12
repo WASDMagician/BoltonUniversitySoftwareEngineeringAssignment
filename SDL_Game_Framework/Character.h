@@ -31,6 +31,9 @@ public:
 	virtual bool set_defence(unsigned int defence) = 0;
 	virtual unsigned int get_defence() = 0;
 
+	virtual bool Attack(Character *target) = 0;
+	virtual bool Defend(Character *target) = 0;
+
 protected:
 	std::string m_name;
 	unsigned int m_health;

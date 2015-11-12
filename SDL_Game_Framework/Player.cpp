@@ -95,3 +95,13 @@ void Player::update_player_ui()
 	player_ui->set_health(get_health());
 	player_ui->set_lives(m_lives);
 }
+
+bool Player::Attack(Character* target)
+{
+	return false;
+}
+
+bool Player::Defend(Character* target)
+{
+	return false;
+}

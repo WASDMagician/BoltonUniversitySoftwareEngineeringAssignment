@@ -19,6 +19,7 @@ public:
 	void Handle_Keys();
 
 	void Move(int xAmount, int yAmount);
+	bool Check_Level_Trigger();
 
 	void Render();
 	void Render_Back();
@@ -27,10 +28,6 @@ public:
 
 	bool Run();
 
-	void Toggle_Pause();
-
-	char* m_unpaused_image_path;
-	char* m_paused_image_path;
 
 private:
 	

@@ -150,3 +150,13 @@ unsigned int Enemy::get_defence()
 {
 	return m_defence;
 }
+
+bool Enemy::Attack(Character* target)
+{
+	return false;
+}
+
+bool Enemy::Defend(Character* target)
+{
+	return false;
+}

@@ -1,5 +1,6 @@
 #include "Play_Screen.h"
 #include "Level_One.h"
+#include "Level_Two.h"
 #include "Game.h"
 
 Play_Screen::Play_Screen()
@@ -12,8 +13,6 @@ Play_Screen::Play_Screen(Game *pGame, char* bgImg)
 	: Splash_Screen(pGame, bgImg, "Play_Screen")
 {
 	m_p_game->SetBackground(bgImg);
-	m_unpaused_image_path = bgImg;
-	m_paused_image_path = "images/pause_menu_splash_temp.png";
 }
 
 Play_Screen::~Play_Screen(void)
@@ -27,7 +26,7 @@ void Play_Screen::Setup()
 	char_factory = new Character_Factory_Implementation();
 	m_player = char_factory->Make_Character(PLAYER);
 	m_player->Move_To(400, 300);
-	m_level = new Level_One();
+	m_level = new Level_One("one");
 }
 
 void Play_Screen::Logic()
@@ -71,6 +70,18 @@ void Play_Screen::Handle_Keys()
 void Play_Screen::Move(int xAmount, int yAmount)
 {
 	m_level->Move(xAmount, yAmount);
+	if (Check_Level_Trigger())
+	{
+		if (m_level->get_level_name() == "one")
+		{
+			m_level = new Level_Two("Two");
+		}
+	}
+}
+
+bool Play_Screen::Check_Level_Trigger()
+{
+	return (m_level->get_trigger()->bb_collision(m_player));
 }
 
 void Play_Screen::Render()
@@ -100,18 +111,4 @@ bool Play_Screen::Run()
 {
 	Start();
 	return is_game_over();
-}
-
-void Play_Screen::Toggle_Pause()
-{
-	m_b_paused = !m_b_paused;
-	if (m_b_paused)
-	{
-		m_p_game->SetBackground(m_paused_image_path);
-	}
-	else
-	{
-		m_p_game->SetBackground(m_unpaused_image_path);
-	}
-	
 }

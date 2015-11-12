@@ -140,12 +140,12 @@
     <ClInclude Include="Jesus.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Level_One.h" />
+    <ClInclude Include="Level_Two.h" />
     <ClInclude Include="NPC_Base.h" />
     <ClInclude Include="NPC_Hinter.h" />
     <ClInclude Include="NPC_Shopkeeper.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Ogre.h" />
-    <ClInclude Include="Pause_Menu_Splash.h" />
     <ClInclude Include="Pickup_Objects.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Play_Screen.h" />
@@ -214,7 +214,7 @@
     <ClCompile Include="Jesus.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Level_One.cpp" />
-    <ClCompile Include="Pause_Menu_Splash.cpp" />
+    <ClCompile Include="Level_Two.cpp" />
     <ClCompile Include="Play_Screen.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Puzzle_Objects.cpp" />

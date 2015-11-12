@@ -36,6 +36,9 @@ public:
 	 unsigned int get_defence();
 
 	 bool is_blocking = false;
+
+	 bool Attack(Character* target);
+	 bool Defend(Character* target);
 	 
 private:
 	UI_Play_Screen *player_ui;

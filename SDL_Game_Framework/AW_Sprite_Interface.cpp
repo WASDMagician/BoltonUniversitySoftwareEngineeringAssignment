@@ -71,8 +71,7 @@ bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, double moveSpeed, i
 }
 
 bool AW_Sprite_Interface::Move_Between()
-{	
-	printf("Moving\n");
+{
 	Lerp_To(new Vector2<int, int>(2000, 2000), 0.01, 1);
 	return true;
 	/*if (m_patrol_positions.size() > 0)

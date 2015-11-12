@@ -276,9 +276,6 @@
     <ClInclude Include="End_Menu_Splash.h">
       <Filter>Header Files\screens</Filter>
     </ClInclude>
-    <ClInclude Include="Pause_Menu_Splash.h">
-      <Filter>Header Files\screens</Filter>
-    </ClInclude>
     <ClInclude Include="Splash_Screen.h">
       <Filter>Header Files\screens</Filter>
     </ClInclude>
@@ -332,6 +329,9 @@
     </ClInclude>
     <ClInclude Include="Clown.h">
       <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Level_Two.h">
+      <Filter>Header Files\levels</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -473,9 +473,6 @@
     <ClCompile Include="End_Menu_Splash.cpp">
       <Filter>Source Files\screens</Filter>
     </ClCompile>
-    <ClCompile Include="Pause_Menu_Splash.cpp">
-      <Filter>Source Files\screens</Filter>
-    </ClCompile>
     <ClCompile Include="Splash_Screen.cpp">
       <Filter>Source Files\screens</Filter>
     </ClCompile>
@@ -514,6 +511,9 @@
     </ClCompile>
     <ClCompile Include="Clown.cpp">
       <Filter>Source Files\Factories\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Level_Two.cpp">
+      <Filter>Source Files\levels</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

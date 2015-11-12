@@ -2,10 +2,16 @@
 
 
 Level_One::Level_One()
+:Level()
 {
 	Setup();
 }
 
+Level_One::Level_One(std::string name)
+:Level(name)
+{
+	Setup();
+}
 
 Level_One::~Level_One()
 {
@@ -47,10 +53,8 @@ void Level_One::Setup()
 	enemy->Add_Patrol_Position(new Vector2<int, int>(10, 20));
 	enemy->Add_Patrol_Position(new Vector2<int, int>(100, 100));
 	m_enemies.push_back(enemy);
-	Character *clown = char_fac->Make_Character(CLOWN);
-	clown->Add_Patrol_Position(new Vector2<int, int>(500,600));
-	clown->Add_Patrol_Position(new Vector2<int, int>(600,700));
-	m_enemies.push_back(clown);
+
+	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1);
 }
 
 void Level_One::Move(int xAmount, int yAmount)
@@ -63,6 +67,7 @@ void Level_One::Move(int xAmount, int yAmount)
 	{
 		e->Move_By(xAmount, yAmount);
 	}
+	level_trigger->Move_By(xAmount, yAmount);
 }
 
 void Level_One::Move_Enemies()

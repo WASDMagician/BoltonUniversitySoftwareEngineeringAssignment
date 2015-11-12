@@ -46,6 +46,9 @@ public:
 	virtual bool set_defence(unsigned int defence);
 	virtual unsigned int get_defence();
 
+	virtual bool Attack(Character* target);
+	virtual bool Defend(Character* target);
+
 protected:
 	ENEMY_STATE enemy_state;
 };
