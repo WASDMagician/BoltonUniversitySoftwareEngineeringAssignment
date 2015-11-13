@@ -79,18 +79,18 @@ void Level_One::Setup()
 	}
 
 	// temp variables //
-	int randX = rand() % 400 + 100;
-	int randY = rand() % 400 + 100;
-	int randX2 = rand() % 250 + (-50);
-	int randY2 = rand() % 250 + (-50);
+	unsigned int randX = rand() % 400 + 100;
+	unsigned int randY = rand() % 400 + 100;
+	unsigned int randX2 = rand() % 250 + (-50);
+	unsigned int randY2 = rand() % 250 + (-50);
 	for (auto &a : m_areas)
 	{
 		Weapon *sword = weapon_fac->Make_Weapon(SWORD);
-		sword->set_world_position(a->get_x() + randX, a->get_y() + randY);
+		sword->set_world_position( (float)randX,  (float)randY);
 		m_weapons.push_back(sword);
 
 		Weapon *pickaxe = weapon_fac->Make_Weapon(GREAT_AXE);
-		pickaxe->set_world_position(a->get_x() + randX2, a->get_y() + randY2);
+		pickaxe->set_world_position(a->get_x() + (float)randX2, a->get_y() + (float)randY2);
 		m_weapons.push_back(pickaxe);
 	}
 
