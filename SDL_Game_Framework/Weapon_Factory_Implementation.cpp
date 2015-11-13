@@ -27,13 +27,13 @@ Weapon* Weapon_Factory_Implementation::Make_Weapon(int weaponType)
 		return new Empowered_Knuckles("images/jesus.bmp", 1, 1, 1);
 		break;
 	case(GREAT_AXE) :
-		return new Great_Axe();
+		return new Great_Axe("images/pickaxe.bmp", 12, 1, 100);
 		break;
 	case(SNIPER):
-		return new Sniper();
+		return new Sniper("images/jesus.bmp", 1, 1, 1);
 		break;
 	case(SWORD) :
-		return new Sword();
+		return new Sword("images/swords.bmp", 8, 1, 1);
 		break;
 	default:
 		return NULL;

@@ -6,6 +6,7 @@ Level::Level()
 {
 	char_fac = new Character_Factory_Implementation();
 	pickup_fac = new Pick_Objects_Factory_Implementation();
+	weapon_fac = new Weapon_Factory_Implementation();
 }
 
 Level::Level(std::string name)
@@ -13,6 +14,7 @@ Level::Level(std::string name)
 {
 	char_fac = new Character_Factory_Implementation();
 	pickup_fac = new Pick_Objects_Factory_Implementation();
+	weapon_fac = new Weapon_Factory_Implementation();
 }
 
 Level::~Level()
@@ -23,6 +25,9 @@ Level::~Level()
 
 	delete pickup_fac;
 	pickup_fac = NULL;
+
+	delete weapon_fac;
+	weapon_fac = NULL;
 
 	for (auto &a : m_areas)
 	{
@@ -73,6 +78,10 @@ void Level::Render()
 	{
 		p->update_everything();
 	}
+	for (auto &w : m_weapons)
+	{
+		w->update_everything();
+	}
 	level_trigger->update_everything();
 }
 
@@ -89,4 +98,9 @@ std::vector<Character*> Level::get_enemies()
 std::vector<Pickup_Objects*> Level::get_pickables()
 {
 	return m_pickables;
+}
+
+std::vector<Weapon*> Level::get_weapons()
+{
+	return m_weapons;
 }

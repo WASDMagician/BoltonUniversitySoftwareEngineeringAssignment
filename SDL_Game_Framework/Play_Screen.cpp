@@ -53,6 +53,7 @@ void Play_Screen::Logic()
 	}
 	Check_Enemy_Trigger();
 	Check_Coin_Trigger();
+	Check_Weapon_Trigger();
 }
 
 void Play_Screen::Handle_Keys()
@@ -133,6 +134,23 @@ bool Play_Screen::Check_Coin_Trigger()
 			m_player->set_score(m_player->get_score() + 1);
 			printf("Player Score: %d\n", m_player->get_score());
 			c->set_visibility(false);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool Play_Screen::Check_Weapon_Trigger()
+{
+	for (auto &w : m_level->get_weapons())
+	{
+		if (m_player->bb_collision(w))
+		{
+			m_player->set_score(m_player->get_score() + 1);
+			m_player->set_damage(m_player->get_damage() + 10);
+			printf("Player Score: %d\n", m_player->get_score());
+			printf("Player Damage: %d\n", m_player->get_damage());
+			w->set_visibility(false);
 			return true;
 		}
 	}

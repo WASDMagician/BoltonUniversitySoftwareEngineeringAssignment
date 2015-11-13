@@ -22,6 +22,7 @@ public:
 	bool Check_Level_Trigger();
 	bool Check_Enemy_Trigger();
 	bool Check_Coin_Trigger();
+	bool Check_Weapon_Trigger();
 
 	void Render();
 	void Render_Back();
