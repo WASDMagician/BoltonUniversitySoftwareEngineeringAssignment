@@ -55,10 +55,10 @@ bool AW_Sprite_Interface::Move_Increment(int x, int y)
 
 bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, double moveSpeed, int rangeSnap)
 {
-	int lerp_x = get_x() + (target->x - get_x()) / moveSpeed;
-	int lerp_y = get_y() + (target->y - get_y()) / moveSpeed;
+	double lerp_x = get_x() + (target->x - get_x()) / moveSpeed;
+	double lerp_y = get_y() + (target->y - get_y()) / moveSpeed;
 
-	Move_By(get_x() + lerp_x, get_y() + lerp_y);
+	Move_By((int)get_x() + (int)lerp_x, (int)get_y() + (int)lerp_y);
 	if (rangeSnap != -1)
 	{
 		if (In_Range(m_current_position, target, rangeSnap))

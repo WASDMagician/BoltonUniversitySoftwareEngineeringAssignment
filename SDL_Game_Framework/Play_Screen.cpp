@@ -98,7 +98,7 @@ bool Play_Screen::Check_Enemy_Trigger()
 					m_b_has_attacked = false; //should be true
 					m_player->Attack(enemy);
 					enemy->Attack(m_player);
-
+					 // DISPLAY REDUCTION IN LIVES IF U GET REKT IN HERE 
 					printf("Player: %d %u %u\n", m_player->get_health(), m_player->get_damage(), m_player->get_defence());
 					printf("Enemy: %d, %u, %u\n", enemy->get_health(), enemy->get_damage(), enemy->get_health());
 
