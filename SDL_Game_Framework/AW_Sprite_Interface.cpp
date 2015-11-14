@@ -141,6 +141,13 @@ Vector2<int, int> *AW_Sprite_Interface::get_current_position()
 	return m_current_position;
 }
 
+void AW_Sprite_Interface::Randomize_Position(int xPos, int width, int yPos, int height)
+{
+	int rand_x = rand() % width;
+	int rand_y = rand() % height;
+	set_world_position(xPos + rand_x, yPos + rand_y);
+}
+
 void AW_Sprite_Interface::Debug()
 {
 	printf("AW_Sprite_Debug: \n");

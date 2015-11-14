@@ -33,6 +33,8 @@ public:
 
 	Vector2<int, int>*get_current_position();
 
+	void Randomize_Position(int xPos, int width, int yPos, int height);
+
 	void Debug();
 	
 

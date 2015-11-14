@@ -73,27 +73,13 @@ void Level_One::Setup()
 		for (int i = 0; i < 10; i++)
 		{
 			Pickup_Objects *coin = pickup_fac->Make_Object(COIN);
-			coin->set_world_position(a->get_x() + i*i, a->get_y() + i*i);
+			coin->Randomize_Position(a->get_x(), a->get_width(), a->get_y(), a->get_height());
 			m_pickables.push_back(coin);
 		}
-	}
-
-	// temp variables //
-	unsigned int randX = rand() % 400 + 100;
-	unsigned int randY = rand() % 400 + 100;
-	unsigned int randX2 = rand() % 250 + (-50);
-	unsigned int randY2 = rand() % 250 + (-50);
-	Weapon *sword = weapon_fac->Make_Weapon(SWORD);
-	sword->set_world_position((float)randX, (float)randY);
-	m_weapons.push_back(sword);
-
-	for (auto &a : m_areas)
-	{
 		Weapon *pickaxe = weapon_fac->Make_Weapon(GREAT_AXE);
-		pickaxe->set_world_position(a->get_x() + (float)randX2, a->get_y() + (float)randY2);
+		pickaxe->Randomize_Position(a->get_x(), a->get_width(), a->get_y(), a->get_height());
 		m_weapons.push_back(pickaxe);
 	}
-
 	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
 }
 
