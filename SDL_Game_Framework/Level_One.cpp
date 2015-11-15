@@ -63,7 +63,7 @@ void Level_One::Setup()
 	m_enemies.push_back(enemy2);
 
 	Character *enemy3 = char_fac->Make_Character(CLOWN);
-	enemy3->set_world_position(-350, -350);
+	enemy3->set_world_position(-350, 0);
 	enemy3->Add_Patrol_Position(new Vector2<int, int>(10, 20));
 	enemy3->Add_Patrol_Position(new Vector2<int, int>(100, 100));
 	m_enemies.push_back(enemy3);
@@ -81,28 +81,4 @@ void Level_One::Setup()
 		m_weapons.push_back(pickaxe);
 	}
 	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
-}
-
-void Level_One::Move(int xAmount, int yAmount)
-{
-	for (auto &a : m_areas)
-	{
-		a->Move_By(xAmount, yAmount);
-	}
-	for (auto &e : m_enemies)
-	{
-		if (e != NULL)
-		{
-			e->Move_By(xAmount, yAmount);
-		}
-	}
-	for (auto &c : m_pickables)
-	{
-		c->Move_By(xAmount, yAmount);
-	}
-	for (auto &d : m_weapons)
-	{
-		d->Move_By(xAmount, yAmount);
-	}
-	level_trigger->Move_By(xAmount, yAmount);
 }

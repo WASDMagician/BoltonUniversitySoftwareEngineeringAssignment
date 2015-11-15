@@ -16,13 +16,13 @@ public:
 	Level();
 	Level(std::string name);
 	virtual ~Level();
-	virtual void Move(int xAmount, int yAmount) = 0;
 	bool set_level_name(std::string name);
 	std::string get_level_name();
 	AW_Sprite_Interface* get_trigger();
 	std::vector<Character*>get_enemies();
 	std::vector<Pickup_Objects*>get_pickables();
 	std::vector<Weapon*>get_weapons();
+	void Move(int xAmount, int yAmount);
 	void Render();
 
 protected:

@@ -19,7 +19,6 @@ Level::Level(std::string name)
 
 Level::~Level()
 {
-	printf("Destroctor called on level: %s\n", m_level_name);
 	delete char_fac;
 	char_fac = NULL;
 
@@ -56,6 +55,30 @@ bool Level::set_level_name(std::string name)
 std::string Level::get_level_name()
 {
 	return m_level_name;
+}
+
+void Level::Move(int xAmount, int yAmount)
+{
+	for (auto &a : m_areas)
+	{
+		a->Move_By(xAmount, yAmount);
+	}
+	for (auto &e : m_enemies)
+	{
+		if (e != NULL)
+		{
+			e->Move_By(xAmount, yAmount);
+		}
+	}
+	for (auto &c : m_pickables)
+	{
+		c->Move_By(xAmount, yAmount);
+	}
+	for (auto &d : m_weapons)
+	{
+		d->Move_By(xAmount, yAmount);
+	}
+	level_trigger->Move_By(xAmount, yAmount);
 }
 
 void Level::Render()

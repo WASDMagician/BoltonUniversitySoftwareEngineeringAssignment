@@ -51,16 +51,3 @@ void Level_Two::Setup()
 
 	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
 }
-
-void Level_Two::Move(int xAmount, int yAmount)
-{
-	for (auto &a : m_areas)
-	{
-		a->Move_By(xAmount, yAmount);
-	}
-	for (auto &e : m_enemies)
-	{
-		e->Move_By(xAmount, yAmount);
-	}
-	level_trigger->Move_By(xAmount, yAmount);
-}

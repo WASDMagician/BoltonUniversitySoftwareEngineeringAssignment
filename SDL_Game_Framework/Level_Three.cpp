@@ -53,15 +53,3 @@ void Level_Three::Setup()
 	level_trigger->set_world_position(500, 500);
 }
 
-void Level_Three::Move(int xAmount, int yAmount)
-{
-	for (auto &a : m_areas)
-	{
-		a->Move_By(xAmount, yAmount);
-	}
-	for (auto &e : m_enemies)
-	{
-		e->Move_By(xAmount, yAmount);
-	}
-	level_trigger->Move_By(xAmount, yAmount);
-}

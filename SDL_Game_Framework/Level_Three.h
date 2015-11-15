@@ -8,6 +8,5 @@ public:
 	Level_Three(std::string name);
 	~Level_Three();
 	void Setup();
-	void Move(int xAmount, int yAmount);
 };
 

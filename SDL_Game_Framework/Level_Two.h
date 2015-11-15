@@ -8,6 +8,5 @@ public:
 	Level_Two(std::string name);
 	~Level_Two();
 	void Setup();
-	void Move(int xAmount, int yAmount);
 };
 
