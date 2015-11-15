@@ -145,7 +145,7 @@ void AW_Sprite_Interface::Randomize_Position(int xPos, int width, int yPos, int 
 {
 	int rand_x = rand() % width;
 	int rand_y = rand() % height;
-	set_world_position(xPos + rand_x, yPos + rand_y);
+	set_world_position((float)xPos + (float)rand_x, (float)yPos + (float)rand_y);
 }
 
 void AW_Sprite_Interface::Debug()

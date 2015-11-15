@@ -73,11 +73,11 @@ void Level_One::Setup()
 		for (int i = 0; i < 10; i++)
 		{
 			Pickup_Objects *coin = pickup_fac->Make_Object(COIN);
-			coin->Randomize_Position(a->get_x(), a->get_width(), a->get_y(), a->get_height());
+			coin->Randomize_Position((int)a->get_x(), (int)a->get_width(), (int)a->get_y(), (int)a->get_height());
 			m_pickables.push_back(coin);
 		}
 		Weapon *pickaxe = weapon_fac->Make_Weapon(GREAT_AXE);
-		pickaxe->Randomize_Position(a->get_x(), a->get_width(), a->get_y(), a->get_height());
+		pickaxe->Randomize_Position((int)a->get_x(), (int)a->get_width(), (int)a->get_y(), (int)a->get_height());
 		m_weapons.push_back(pickaxe);
 	}
 	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
