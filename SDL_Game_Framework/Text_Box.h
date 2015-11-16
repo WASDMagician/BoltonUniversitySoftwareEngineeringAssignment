@@ -24,10 +24,15 @@ public:
 	void Setup_Box();
 	void set_rects();
 
+	void set_position(int x, int y);
+
 	void Add_Message(std::string message); //add a new line to the text box
 
 	std::string get_message(unsigned int index); //get string of message at index
 	std::vector<std::string>get_messages(); //get a vector of all lines in text box
+
+	void set_should_display(bool display);
+	bool get_should_display();
 
 	void Display(); //display text box
 
@@ -49,6 +54,7 @@ private:
 	SDL_Color m_box_color; //colour of the box
 
 	//display
+	bool m_b_should_display;
 	bool m_box_should_be_drawn;
 	float m_box_x; //left of box
 	float m_box_y; //top of box

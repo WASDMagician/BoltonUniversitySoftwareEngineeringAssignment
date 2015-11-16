@@ -61,18 +61,22 @@ void Level_One::Setup()
 	enemy->set_world_position(500, 500);
 	enemy->Add_Patrol_Position(new Vector2<float, float>(10, 20));
 	enemy->Add_Patrol_Position(new Vector2<float, float>(100, 100));
+	enemy->set_display_box(false);
 	m_enemies.push_back(enemy);
 
 	Character *enemy2 = char_fac->Make_Character(JESUS);
 	enemy2->set_world_position(750,750);
 	enemy2->Add_Patrol_Position(new Vector2<float, float>(10, 20));
 	enemy2->Add_Patrol_Position(new Vector2<float, float>(100, 100));
+	enemy2->set_display_box(false);
 	m_enemies.push_back(enemy2);
 
 	Character *npc1 = char_fac->Make_Character(CLOWN);
 	npc1->set_world_position(-350, 0);
 	npc1->Add_Patrol_Position(new Vector2<float, float>(10, 20));
 	npc1->Add_Patrol_Position(new Vector2<float, float>(100, 100));
+	npc1->set_display_box(false);
+	npc1->set_message("You are near to a \nsomething or \nother rune type thingy\n");
 	m_npcs.push_back(npc1);
 
 	for (auto &a : m_areas)

@@ -84,7 +84,7 @@ void Play_Screen::Handle_Keys()
 	Move(x_move, y_move);
 	for (size_t i = 0; i < m_level->get_enemies().size(); i++)
 	{
-		printf("Angle: %d Distance: %d\n", m_player->get_angle_between(m_level->get_enemies()[i]), m_player->get_distance_between(m_level->get_enemies()[i]));
+		//printf("Angle: %d Distance: %d\n", m_player->get_angle_between(m_level->get_enemies()[i]), m_player->get_distance_between(m_level->get_enemies()[i])); //@debug
 	}
 	
 }
@@ -113,8 +113,8 @@ bool Play_Screen::Check_Enemy_Trigger()
 					m_player->Attack(enemy);
 					enemy->Attack(m_player);
 					 // DISPLAY REDUCTION IN LIVES IF U GET REKT IN HERE 
-					printf("Player: %d %u %u\n", m_player->get_health(), m_player->get_damage(), m_player->get_defence());
-					printf("Enemy: %d, %u, %u\n", enemy->get_health(), enemy->get_damage(), enemy->get_health());
+					printf("Player: %d %u %u\n", m_player->get_health(), m_player->get_damage(), m_player->get_defence()); //@debug
+					printf("Enemy: %d, %u, %u\n", enemy->get_health(), enemy->get_damage(), enemy->get_health()); //@debug
 
 					if (!enemy->Check_Health())
 					{
@@ -125,8 +125,6 @@ bool Play_Screen::Check_Enemy_Trigger()
 					{
 						m_b_close_splash = true;
 					}
-
-					
 				}
 			}
 			else
@@ -145,9 +143,14 @@ bool Play_Screen::Check_NPC_Trigger()
 	{
 		if (m_player->bb_collision(n))
 		{
-			n->set_npc_hint("You are close to a runestone young one...");
+			n->set_display_box(true);
+			n->Update();
 			n->react();
 			return true;
+		}
+		else
+		{
+			n->set_display_box(false);
 		}
 	}
 	return false;
@@ -159,8 +162,8 @@ bool Play_Screen::Check_Coin_Trigger()
 	{
 		if (m_player->bb_collision(c))
 		{
-			m_player->set_score(m_player->get_score() + 1);
-			printf("Player Score: %d\n", m_player->get_score());
+			m_player->set_score(m_player->get_score() + 1); //@debug
+			printf("Player Score: %d\n", m_player->get_score()); //@debug
 			c->set_visibility(false);
 			return true;
 		}
@@ -176,8 +179,8 @@ bool Play_Screen::Check_Weapon_Trigger()
 		{
 			m_player->set_score(m_player->get_score() + 1);
 			m_player->set_damage(m_player->get_damage() + 10);
-			printf("Player Score: %d\n", m_player->get_score());
-			printf("Player Damage: %d\n", m_player->get_damage());
+			printf("Player Score: %d\n", m_player->get_score()); //@debug
+			printf("Player Damage: %d\n", m_player->get_damage()); //@debug
 			w->set_visibility(false);
 			return true;
 		}

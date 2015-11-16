@@ -72,7 +72,7 @@ bool AW_Sprite_Interface::Lerp_To(Vector2<float, float> *target, double moveSpee
 	int lerp_x = get_x() + (target->x - (int)get_x()) / 1;
 	int lerp_y = get_y() + (target->y - (int)get_y()) / 2;
 
-	printf("%d %d\n", lerp_x, lerp_y);
+	printf("%d %d\n", lerp_x, lerp_y); //@debug
 
 	Move_By(get_x() + lerp_x, get_y() + lerp_y);
 	if (rangeSnap != -1)

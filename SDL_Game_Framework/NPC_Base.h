@@ -13,8 +13,6 @@ public:
 	virtual ~NPC_Base();
 
 	virtual bool Setup(char* imgPath, int rows, int cols, int animationSpeed);
-	virtual void Update();
-	virtual void Render();
 	virtual void Attack(Character* target);
 	virtual void Defend(Character* target);
 	virtual bool Check_Health();

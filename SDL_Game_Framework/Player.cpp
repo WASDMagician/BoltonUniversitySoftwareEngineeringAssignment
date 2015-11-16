@@ -12,7 +12,7 @@ Player::Player()
 }
 
 Player::Player(char* imgPath, int rows, int cols, int animationSpeed)
-: Character(imgPath, rows, cols, animationSpeed)
+: Character(imgPath, rows, cols, animationSpeed, "")
 {
 }
 
@@ -29,11 +29,6 @@ bool Player::Setup(char* imgPath, int rows, int cols, int animationSpeed)
 void Player::Update()
 {
 
-}
-
-void Player::Render()
-{
-	update_everything();
 }
 
 bool Player::set_name(std::string name)
@@ -121,15 +116,6 @@ void Player::Defend(Character* target)
 bool Player::Check_Health()
 {
 	return m_health > 0;
-}
-
-void Player::set_npc_hint(const std::string &hint)
-{
-	m_hint = hint;
-}
-const std::string Player::get_npc_hint()
-{
-	return m_hint;
 }
 
 bool Player::react()

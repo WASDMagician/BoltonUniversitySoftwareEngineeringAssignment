@@ -15,7 +15,6 @@ public:
 
 	bool Setup(char* imgPath, int rows, int cols, int animationSpeed);
 	void Update();
-	void Render();
 
 	void update_player_ui();
 
@@ -44,8 +43,6 @@ public:
 
 	 bool Check_Health();
 
-	 void set_npc_hint(const std::string &hint);
-	 const std::string get_npc_hint();
 	 bool react();
 	 
 private:

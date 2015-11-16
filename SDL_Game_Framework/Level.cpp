@@ -104,32 +104,34 @@ void Level::Render()
 	{
 		if (a != NULL)
 		{
-			a->update_everything();
+			a->Render();
 		}
 	}
+	level_trigger->update_everything();
 	for (size_t i = 0; i < m_enemies.size(); i++)
 	{
 		if (m_enemies[i] != NULL)
 		{
-			m_enemies[i]->update_everything();
+			m_enemies[i]->Render();
 		}
+	}
+	for (auto &p : m_pickables)
+	{
+		p->Render();
+	}
+	for (auto &w : m_weapons)
+	{
+		w->Render();
 	}
 	for (size_t i = 0; i < m_npcs.size(); i++)
 	{
 		if (m_npcs[i] != NULL)
 		{
-			m_npcs[i]->update_everything();
+			m_npcs[i]->Render();
 		}
 	}
-	for (auto &p : m_pickables)
-	{
-		p->update_everything();
-	}
-	for (auto &w : m_weapons)
-	{
-		w->update_everything();
-	}
-	level_trigger->update_everything();
+	
+	
 }
 
 AW_Sprite_Interface* Level::get_trigger()

@@ -6,7 +6,7 @@ Enemy::Enemy()
 }
 
 Enemy::Enemy(char* imgPath, int rows, int cols, int animationSpeed)
-:Character(imgPath, rows, cols, animationSpeed)
+:Character(imgPath, rows, cols, animationSpeed, "")
 {
 }
 
@@ -24,11 +24,6 @@ bool Enemy::Setup(char* imgPath, int rows, int cols, int animationSpeed)
 void Enemy::Update()
 {
 
-}
-
-void Enemy::Render()
-{
-	update_everything();
 }
 
 bool Enemy::Enemy_Movement()
@@ -176,15 +171,6 @@ void Enemy::Defend(Character* target)
 bool Enemy::Check_Health()
 {
 	return m_health > 0;
-}
-
-void Enemy::set_npc_hint(const std::string &hint)
-{
-	m_hint = hint;
-}
-const std::string Enemy::get_npc_hint()
-{
-	return m_hint;
 }
 
 bool Enemy::react()
