@@ -52,6 +52,9 @@ public:
 	virtual void Defend(Character* target);
 
 	virtual bool Check_Health();
+	virtual void set_npc_hint(const std::string &hint);
+	virtual const std::string get_npc_hint();
+	virtual bool react();
 
 protected:
 	ENEMY_STATE enemy_state;

@@ -177,3 +177,17 @@ bool Enemy::Check_Health()
 {
 	return m_health > 0;
 }
+
+void Enemy::set_npc_hint(const std::string &hint)
+{
+	m_hint = hint;
+}
+const std::string Enemy::get_npc_hint()
+{
+	return m_hint;
+}
+
+bool Enemy::react()
+{
+	return false;
+}

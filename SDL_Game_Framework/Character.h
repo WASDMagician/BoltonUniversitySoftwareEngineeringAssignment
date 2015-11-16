@@ -37,11 +37,15 @@ public:
 	virtual void Attack(Character *target) = 0;
 	virtual void Defend(Character *target) = 0;
 
+	virtual void set_npc_hint(const std::string &hint) =0;
+	virtual const std::string get_npc_hint() = 0;
+	virtual bool react() = 0;
 	virtual bool Check_Health() = 0;
 
 protected:
 	std::vector<AWSprite*>images;
 	std::string m_name;
+	std::string m_hint;
 	int m_health;
 	unsigned int m_lives;
 	unsigned int m_damage;

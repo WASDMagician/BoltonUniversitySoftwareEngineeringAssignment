@@ -20,24 +20,28 @@ public:
 	virtual bool Check_Health();
 
 	virtual bool set_name(std::string name);
-	std::string get_name();
+	virtual std::string get_name();
 
 	std::string m_name;
-	bool set_health(unsigned int health);
-	int get_health();
+	virtual bool set_health(unsigned int health);
+	virtual int get_health();
 
-	bool set_lives(unsigned int lives);
-	unsigned int get_lives();
+	virtual bool set_lives(unsigned int lives);
+	virtual unsigned int get_lives();
 
-	bool set_damage(unsigned int damage);
-	unsigned int get_damage();
+	virtual bool set_damage(unsigned int damage);
+	virtual unsigned int get_damage();
 
-	bool set_defence(unsigned int defence);
-	unsigned int get_defence();
+	virtual bool set_defence(unsigned int defence);
+	virtual unsigned int get_defence();
 
-	virtual bool react() = NULL;
+	virtual void set_npc_hint(const std::string &hint);
+	virtual const std::string get_npc_hint();
+	virtual bool react();
 
-	std::string serialize_character();
+	virtual std::string serialize_character();
+protected:
+	std::string m_hint;
 
 };
 

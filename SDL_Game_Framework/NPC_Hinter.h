@@ -11,13 +11,6 @@ public:
 	NPC_Hinter();
 	NPC_Hinter(char* img, int rows, int cols, int animSpeed);
 	~NPC_Hinter();
-
-	void set_npc_hint(const std::string &hint);
-	const std::string get_npc_hint();
-	bool react();
-
-private:
-	std::string m_hint;
 };
 
 #endif //_NPC_HINTER_H_

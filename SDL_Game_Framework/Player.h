@@ -43,6 +43,10 @@ public:
 	 void Defend(Character* target);
 
 	 bool Check_Health();
+
+	 void set_npc_hint(const std::string &hint);
+	 const std::string get_npc_hint();
+	 bool react();
 	 
 private:
 	UI_Play_Screen *player_ui;

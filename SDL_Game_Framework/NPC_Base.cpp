@@ -127,3 +127,19 @@ std::string NPC_Base::serialize_character()
 {
 	return "False";
 }
+
+void NPC_Base::set_npc_hint(const std::string &hint)
+{
+	m_hint = hint;
+}
+
+const std::string NPC_Base::get_npc_hint()
+{
+	return m_hint;
+}
+
+bool NPC_Base::react()
+{
+	std::cout << m_hint << "\n"; //should be with strange magic shit
+	return false;
+}

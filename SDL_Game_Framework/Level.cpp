@@ -2,7 +2,7 @@
 
 
 Level::Level()
-:char_fac(NULL), m_areas(NULL), m_enemies(NULL), level_trigger(NULL), m_level_name("")
+	:char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), level_trigger(NULL), m_level_name("")
 {
 	char_fac = new Character_Factory_Implementation();
 	pickup_fac = new Pick_Objects_Factory_Implementation();
@@ -10,7 +10,7 @@ Level::Level()
 }
 
 Level::Level(std::string name)
-: char_fac(NULL), m_areas(NULL), m_enemies(NULL), level_trigger(NULL), m_level_name(name)
+: char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), level_trigger(NULL), m_level_name(name)
 {
 	char_fac = new Character_Factory_Implementation();
 	pickup_fac = new Pick_Objects_Factory_Implementation();
@@ -40,7 +40,13 @@ Level::~Level()
 		delete e;
 		e = NULL;
 	}
+	for (auto &n : m_npcs)
+	{
+		delete n;
+		n = NULL;
+	}
 	m_enemies.clear();
+	m_npcs.clear();
 
 	delete level_trigger;
 	level_trigger = NULL;
@@ -71,6 +77,16 @@ void Level::Move(int xAmount, int yAmount)
 			//e->Move_Between();
 		}
 	}
+
+	for (auto &n : m_npcs)
+	{
+		if (n != NULL)
+		{
+			n->Move_By(xAmount, yAmount);
+			//e->Move_Between();
+		}
+	}
+
 	for (auto &c : m_pickables)
 	{
 		c->Move_By(xAmount, yAmount);
@@ -96,6 +112,13 @@ void Level::Render()
 		if (m_enemies[i] != NULL)
 		{
 			m_enemies[i]->update_everything();
+		}
+	}
+	for (size_t i = 0; i < m_npcs.size(); i++)
+	{
+		if (m_npcs[i] != NULL)
+		{
+			m_npcs[i]->update_everything();
 		}
 	}
 	for (auto &p : m_pickables)

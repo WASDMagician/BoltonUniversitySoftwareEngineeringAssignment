@@ -122,3 +122,17 @@ bool Player::Check_Health()
 {
 	return m_health > 0;
 }
+
+void Player::set_npc_hint(const std::string &hint)
+{
+	m_hint = hint;
+}
+const std::string Player::get_npc_hint()
+{
+	return m_hint;
+}
+
+bool Player::react()
+{
+	return false;
+}

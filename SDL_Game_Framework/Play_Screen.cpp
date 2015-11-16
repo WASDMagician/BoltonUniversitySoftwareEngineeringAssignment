@@ -54,6 +54,7 @@ void Play_Screen::Logic()
 	Check_Enemy_Trigger();
 	Check_Coin_Trigger();
 	Check_Weapon_Trigger();
+	Check_NPC_Trigger();
 }
 
 void Play_Screen::Handle_Keys()
@@ -144,9 +145,12 @@ bool Play_Screen::Check_NPC_Trigger()
 	{
 		if (m_player->bb_collision(n))
 		{
-			n->react() as npc_base; //pls work kappa
+			n->set_npc_hint("You are close to a runestone young one...");
+			n->react();
+			return true;
 		}
 	}
+	return false;
 }
 
 bool Play_Screen::Check_Coin_Trigger()

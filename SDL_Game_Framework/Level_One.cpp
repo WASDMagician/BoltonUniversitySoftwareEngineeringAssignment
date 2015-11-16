@@ -27,7 +27,15 @@ Level_One::~Level_One()
 		delete e;
 		e = NULL;
 	}
+
+	for (auto &n : m_npcs)
+	{
+		delete n;
+		n = NULL;
+	}
+
 	m_enemies.clear();
+	m_npcs.clear();
 }
 
 void Level_One::Setup()
