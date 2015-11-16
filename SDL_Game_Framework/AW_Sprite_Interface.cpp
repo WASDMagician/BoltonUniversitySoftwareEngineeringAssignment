@@ -21,8 +21,8 @@ AW_Sprite_Interface::~AW_Sprite_Interface()
 
 void AW_Sprite_Interface::Update()
 {
-	m_current_position->x = (int)get_x();
-	m_current_position->y = (int)get_y();
+	m_current_position->x = get_x();
+	m_current_position->y = get_y();
 }
 
 void AW_Sprite_Interface::Render()
@@ -32,15 +32,15 @@ void AW_Sprite_Interface::Render()
 
 int AW_Sprite_Interface::get_angle_between(AW_Sprite_Interface* target)
 {
-	int x_diff = target->get_x() - get_x();
-	int y_diff = target->get_y() - get_y();
+	int x_diff = (int)target->get_x() - (int)get_x();
+	int y_diff = (int)target->get_y() - (int)get_y();
 	return atan2(x_diff, y_diff) * 180 / 3.14;
 }
 
 int AW_Sprite_Interface::get_distance_between(AW_Sprite_Interface* target)
 {
-	int x_dist = target->get_current_position()->x - m_current_position->x;
-	int y_dist = target->get_current_position()->y - m_current_position->y;
+	int x_dist = (int)target->get_current_position()->x - (int)m_current_position->x;
+	int y_dist = (int)target->get_current_position()->y - (int)m_current_position->y;
 	return (x_dist * x_dist + y_dist * y_dist);
 }
 
@@ -69,12 +69,12 @@ bool AW_Sprite_Interface::Move_Increment(float x, float y)
 
 bool AW_Sprite_Interface::Lerp_To(Vector2<float, float> *target, double moveSpeed, int rangeSnap)
 {
-	int lerp_x = get_x() + (target->x - (int)get_x()) / 1;
-	int lerp_y = get_y() + (target->y - (int)get_y()) / 2;
+	int lerp_x = (int)get_x() + ((int)target->x - (int)get_x()) / 1;
+	int lerp_y = (int)get_y() + ((int)target->y - (int)get_y()) / 2;
 
 	printf("%d %d\n", lerp_x, lerp_y); //@debug
 
-	Move_By(get_x() + lerp_x, get_y() + lerp_y);
+	Move_By((int)get_x() + lerp_x, (int)get_y() + lerp_y);
 	if (rangeSnap != -1)
 	{
 		if (In_Range(m_current_position, target, rangeSnap))

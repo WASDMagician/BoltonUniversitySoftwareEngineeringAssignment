@@ -62,7 +62,7 @@ void Text_Box::Setup_Box()
 
 void Text_Box::set_rects()
 {
-	for (int i = 0; i < m_text_rects.size(); i++)
+	for (unsigned int i = 0; i < m_text_rects.size(); i++)
 	{
 		if (m_text_rects[i] != NULL)
 		{
@@ -80,8 +80,8 @@ void Text_Box::set_rects()
 		TTF_SizeText(m_font, m_messages[i].c_str(), &width, &height);
 		new_rect->w = width;
 		new_rect->h = height;
-		new_rect->x = m_box_x + m_text_x_margin;
-		new_rect->y = m_box_y + ((i * m_line_height) + m_text_y_margin);
+		new_rect->x = (Sint16)m_box_x + (Sint16)m_text_x_margin;
+		new_rect->y = (Sint16)m_box_y + (Sint16)((i * m_line_height) + (Sint16)m_text_y_margin);
 		m_text_rects.push_back(new_rect);
 	}
 }
