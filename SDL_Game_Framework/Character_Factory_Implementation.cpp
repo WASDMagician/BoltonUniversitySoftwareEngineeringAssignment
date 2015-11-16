@@ -5,6 +5,7 @@
 #include "Ogre.h"
 #include "Jesus.h"
 #include "Clown.h"
+#include "NPC_Hinter.h"
 
 Character_Factory_Implementation::Character_Factory_Implementation()
 {
@@ -31,7 +32,7 @@ Character* Character_Factory_Implementation::Make_Character(int CharacterType)
 		return new Jesus(IMAGES[CharacterType], 1, 1, 1);
 		break;
 	case CLOWN:
-		return new Clown(IMAGES[CharacterType], 1, 1, 1);
+		return new NPC_Hinter(IMAGES[CharacterType], 1, 1, 1);
 		break;
 	default:
 		return NULL;

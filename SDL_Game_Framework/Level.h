@@ -20,6 +20,7 @@ public:
 	std::string get_level_name();
 	AW_Sprite_Interface* get_trigger();
 	std::vector<Character*>get_enemies();
+	std::vector<Character*>get_npcs();
 	std::vector<Pickup_Objects*>get_pickables();
 	std::vector<Weapon*>get_weapons();
 	void Move(int xAmount, int yAmount);
@@ -31,6 +32,7 @@ protected:
 	Weapon_Factory_Implementation *weapon_fac;
 	std::vector<AW_Sprite_Interface*>m_areas;
 	std::vector<Character*>m_enemies;
+	std::vector<Character*>m_npcs;
 	std::vector<Pickup_Objects*>m_pickables;
 	std::vector<Weapon*> m_weapons;
 	AW_Sprite_Interface* level_trigger; 

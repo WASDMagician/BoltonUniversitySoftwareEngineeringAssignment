@@ -138,6 +138,17 @@ bool Play_Screen::Check_Enemy_Trigger()
 	return true;
 }
 
+bool Play_Screen::Check_NPC_Trigger()
+{
+	for (auto &n : m_level->get_npcs())
+	{
+		if (m_player->bb_collision(n))
+		{
+			n->react() as npc_base; //pls work kappa
+		}
+	}
+}
+
 bool Play_Screen::Check_Coin_Trigger()
 {
 	for (auto &c : m_level->get_pickables())

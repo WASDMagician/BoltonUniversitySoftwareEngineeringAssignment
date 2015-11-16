@@ -16,8 +16,37 @@ NPC_Base::NPC_Base(char* img, int rows, int cols, int animSpeed)
 
 }
 
+bool NPC_Base::Setup(char* imgPath, int rows, int cols, int animationSpeed)
+{
+	setImage(imgPath, rows, cols);
+	return false;
+}
+
 NPC_Base::~NPC_Base()
 {
+}
+
+void NPC_Base::Update()
+{
+
+}
+
+void NPC_Base::Render()
+{
+	update_everything();
+}
+
+void NPC_Base::Attack(Character* target)
+{
+}
+
+void NPC_Base::Defend(Character* target)
+{
+}
+
+bool NPC_Base::Check_Health()
+{
+	return true;
 }
 
 bool NPC_Base::set_name(std::string name)

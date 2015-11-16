@@ -119,6 +119,11 @@ std::vector<Character*> Level::get_enemies()
 	return m_enemies;
 }
 
+std::vector<Character*> Level::get_npcs()
+{
+	return m_npcs;
+}
+
 std::vector<Pickup_Objects*> Level::get_pickables()
 {
 	return m_pickables;
