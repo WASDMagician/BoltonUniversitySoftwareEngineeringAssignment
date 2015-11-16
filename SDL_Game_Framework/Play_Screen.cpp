@@ -58,21 +58,30 @@ void Play_Screen::Logic()
 
 void Play_Screen::Handle_Keys()
 {
-	switch (m_p_game->keyDown)
+	const Uint8 *state = SDL_GetKeyState(NULL);
+
+	int x_move = 0;
+	int y_move = 0;
+
+	if (state[SDLK_LEFT])
 	{
-	case(SDLK_LEFT) :
-		Move(10, 0);
-		break;
-	case(SDLK_RIGHT) :
-		Move(-10, 0);
-		break;
-	case(SDLK_UP) :
-		Move(0, 10);
-		break;
-	case(SDLK_DOWN) :
-		Move(0, -10);
-		break;
+		x_move = 10;
 	}
+	if (state[SDLK_RIGHT])
+	{
+		x_move = -10;
+	}
+	if (state[SDLK_UP])
+	{
+		y_move = 10;
+	}
+	if (state[SDLK_DOWN])
+	{
+		y_move = -10;
+	}
+	
+	Move(x_move, y_move);
+	
 }
 
 void Play_Screen::Move(int xAmount, int yAmount)

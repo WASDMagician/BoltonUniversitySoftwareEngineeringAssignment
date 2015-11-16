@@ -55,10 +55,12 @@ bool AW_Sprite_Interface::Move_Increment(int x, int y)
 
 bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, double moveSpeed, int rangeSnap)
 {
-	double lerp_x = get_x() + (target->x - get_x()) / moveSpeed;
-	double lerp_y = get_y() + (target->y - get_y()) / moveSpeed;
+	int lerp_x = get_x() + (target->x - (int)get_x()) / 1;
+	int lerp_y = get_y() + (target->y - (int)get_y()) / 2;
 
-	Move_By((int)get_x() + (int)lerp_x, (int)get_y() + (int)lerp_y);
+	printf("%d %d\n", lerp_x, lerp_y);
+
+	Move_By(get_x() + lerp_x, get_y() + lerp_y);
 	if (rangeSnap != -1)
 	{
 		if (In_Range(m_current_position, target, rangeSnap))
@@ -72,7 +74,7 @@ bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, double moveSpeed, i
 
 bool AW_Sprite_Interface::Move_Between()
 {
-	Lerp_To(new Vector2<int, int>(2000, 2000), 0.01, 1);
+	Lerp_To(new Vector2<int, int>(500, 500), 0.01, 1);
 	return true;
 	/*if (m_patrol_positions.size() > 0)
 	{

@@ -17,6 +17,7 @@ public:
 
 private:
 	std::vector<char*> IMAGES;
+	
 };
 
 #endif //_CHARACTER_FACTORY_IMPLEMENTATION_H_

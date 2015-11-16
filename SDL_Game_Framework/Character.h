@@ -40,6 +40,7 @@ public:
 	virtual bool Check_Health() = 0;
 
 protected:
+	std::vector<AWSprite*>images;
 	std::string m_name;
 	int m_health;
 	unsigned int m_lives;

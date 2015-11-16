@@ -8,10 +8,7 @@
 
 Character_Factory_Implementation::Character_Factory_Implementation()
 {
-	IMAGES.push_back("images/Fish.bmp");
-	IMAGES.push_back("images/alien.bmp");
-	IMAGES.push_back("images/jesus.bmp");
-	IMAGES.push_back("images/clown.png");
+	IMAGES = std::vector<char*>({ "images/Fish.bmp", "images/alien.bmp", "images/jesus.bmp", "images/clown.png" });
 }
 
 

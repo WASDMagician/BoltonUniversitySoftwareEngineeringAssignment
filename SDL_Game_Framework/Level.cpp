@@ -68,6 +68,7 @@ void Level::Move(int xAmount, int yAmount)
 		if (e != NULL)
 		{
 			e->Move_By(xAmount, yAmount);
+			e->Move_Between();
 		}
 	}
 	for (auto &c : m_pickables)
