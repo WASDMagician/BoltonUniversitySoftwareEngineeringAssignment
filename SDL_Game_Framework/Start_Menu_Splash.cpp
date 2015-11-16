@@ -31,15 +31,13 @@ void Start_Menu_Splash::Setup()
 	instruction_box->Add_Message("Welcome to our game\nPress Enter to start\nFind the exits\nWin the game");
 	instruction_box->Setup_Box();
 	instruction_box->set_rects();
+	instruction_box->set_should_display(true);
 }
 
 void Start_Menu_Splash:: Handle_Keys()
 {
 	switch (m_p_game->keyUp)
 	{
-	case(SDLK_SPACE):
-		printf("Start");
-		break;
 	case(SDLK_RETURN) :
 		m_b_close_splash = true;
 		break;

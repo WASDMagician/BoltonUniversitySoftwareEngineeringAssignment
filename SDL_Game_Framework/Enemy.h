@@ -22,7 +22,6 @@ public:
 
 	virtual bool Setup(char* imgPath, int rows, int cols, int animationSpeed);
 	virtual void Update();
-	virtual void Render();
 
 	virtual bool Enemy_Movement();
 	virtual bool Enemy_Idle();
@@ -52,8 +51,6 @@ public:
 	virtual void Defend(Character* target);
 
 	virtual bool Check_Health();
-	virtual void set_npc_hint(const std::string &hint);
-	virtual const std::string get_npc_hint();
 	virtual bool react();
 
 protected:

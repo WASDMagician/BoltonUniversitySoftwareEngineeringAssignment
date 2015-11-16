@@ -4,17 +4,18 @@
 #include <iostream>
 #include <string>
 #include "AW_Sprite_Interface.h"
+#include "Text_Box.h"
 
 class Character:
 	public AW_Sprite_Interface
 {
 public:
 	Character();
-	Character(char* img, int rows, int cols, int animationSpeed);
+	Character(char* img, int rows, int cols, int animationSpeed, std::string message);
 	virtual ~Character();
 	virtual bool Setup(char* imgPath, int rows, int cols, int animationSpeed) = 0;
-	virtual void Update() = 0;
-	virtual void Render() = 0;
+	virtual void Update();
+	virtual void Render();
 
 	virtual bool set_name(std::string name) = 0;
 	virtual std::string get_name() = 0;
@@ -37,21 +38,27 @@ public:
 	virtual void Attack(Character *target) = 0;
 	virtual void Defend(Character *target) = 0;
 
-	virtual void set_npc_hint(const std::string &hint) =0;
-	virtual const std::string get_npc_hint() = 0;
+	virtual void set_message(std::string hint);
+	virtual const std::string get_message();
 	virtual bool react() = 0;
 	virtual bool Check_Health() = 0;
+	
+	void set_display_box(bool display);
+	bool get_display_box();
 
+	Text_Box *m_message_box;
 protected:
 	std::vector<AWSprite*>images;
 	std::string m_name;
-	std::string m_hint;
 	int m_health;
 	unsigned int m_lives;
 	unsigned int m_damage;
 	unsigned int m_defence;
 
 	int m_score;
+
+	std::string m_message;
+	
 };
 
 #endif _CHARACTER_H_

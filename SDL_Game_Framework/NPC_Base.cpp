@@ -11,7 +11,7 @@ NPC_Base::NPC_Base()
 }
 
 NPC_Base::NPC_Base(char* img, int rows, int cols, int animSpeed)
-: Character(img, rows, cols, animSpeed)
+: Character(img, rows, cols, animSpeed, "")
 {
 
 }
@@ -24,16 +24,6 @@ bool NPC_Base::Setup(char* imgPath, int rows, int cols, int animationSpeed)
 
 NPC_Base::~NPC_Base()
 {
-}
-
-void NPC_Base::Update()
-{
-
-}
-
-void NPC_Base::Render()
-{
-	update_everything();
 }
 
 void NPC_Base::Attack(Character* target)

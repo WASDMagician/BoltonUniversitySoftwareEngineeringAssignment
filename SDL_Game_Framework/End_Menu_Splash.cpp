@@ -27,15 +27,13 @@ void End_Menu_Splash::Setup()
 	gameover_box->Add_Message("Thank you for playing our game\nPress Escape to exit");
 	gameover_box->Setup_Box();
 	gameover_box->set_rects();
+	gameover_box->set_should_display(true);
 }
 
 void End_Menu_Splash::Handle_Keys()
 {
 	switch (m_p_game->keyDown)
 	{
-	case(SDLK_SPACE) :
-		printf("End");
-		break;
 	case(SDLK_ESCAPE) :
 		m_b_game_over = true;
 		m_b_close_splash = true;
