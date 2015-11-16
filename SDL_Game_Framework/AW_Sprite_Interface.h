@@ -16,22 +16,25 @@ public:
 	void Update();
 	void Render();
 
+	int get_angle_between(AW_Sprite_Interface* target);
+	int get_distance_between(AW_Sprite_Interface* target);
+
 	bool Move_By(int xAmount, int yAmount);
 	bool Move_To(float x, float y);
 
-	bool Move_Increment(int x, int y);
+	bool Move_Increment(float x, float y);
 	bool Move_Between();
 
-	bool Lerp_To(Vector2<int, int> *target, double moveSpeed, int rangeSnap);
+	bool Lerp_To(Vector2<float, float> *target, double moveSpeed, int rangeSnap);
 
-	void Add_Patrol_Position(Vector2<int, int> *position);
-	void Add_Patrol_Position(std::vector<Vector2<int, int>*> position);
+	void Add_Patrol_Position(Vector2<float, float> *position);
+	void Add_Patrol_Position(std::vector<Vector2<float, float>*> position);
 
-	bool In_Range(Vector2<int, int> *position, Vector2<int, int> *target, int rangeSnap);
+	bool In_Range(Vector2<float, float> *position, Vector2<float, float> *target, int rangeSnap);
 
 	void Remove_Patrol_Position(int index);
 
-	Vector2<int, int>*get_current_position();
+	Vector2<float, float>*get_current_position();
 
 	void Randomize_Position(int xPos, int width, int yPos, int height);
 
@@ -39,9 +42,9 @@ public:
 	
 
 private:
-	std::vector<Vector2<int, int>*>m_patrol_positions;
-	Vector2<int, int> *m_current_target;
-	Vector2<int, int> *m_current_position;
+	std::vector<Vector2<float, float>*>m_patrol_positions;
+	Vector2<float, float> *m_current_target;
+	Vector2<float, float> *m_current_position;
 	unsigned int m_current_target_index;
 };
 

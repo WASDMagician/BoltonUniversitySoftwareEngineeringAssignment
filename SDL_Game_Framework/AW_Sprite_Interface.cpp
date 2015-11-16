@@ -3,14 +3,14 @@
 AW_Sprite_Interface::AW_Sprite_Interface()
 	:AWSprite(), m_current_target(NULL), m_current_position(NULL), m_current_target_index(0), m_patrol_positions(NULL)
 {
-	m_current_position = new Vector2<int, int>(0, 0);
+	m_current_position = new Vector2<float, float>(0, 0);
 	Update();
 }
 
 AW_Sprite_Interface::AW_Sprite_Interface(char* imgPath, int rows, int cols, int animationSpeed)
 	: AWSprite(imgPath, rows, cols), m_current_target(NULL), m_current_position(NULL), m_current_target_index(0), m_patrol_positions(NULL)
 {
-	m_current_position = new Vector2<int, int>(0, 0);
+	m_current_position = new Vector2<float, float>(0, 0);
 	Update();
 }
 
@@ -30,6 +30,20 @@ void AW_Sprite_Interface::Render()
 	update_everything();
 }
 
+int AW_Sprite_Interface::get_angle_between(AW_Sprite_Interface* target)
+{
+	int x_diff = target->get_x() - get_x();
+	int y_diff = target->get_y() - get_y();
+	return atan2(x_diff, y_diff) * 180 / 3.14;
+}
+
+int AW_Sprite_Interface::get_distance_between(AW_Sprite_Interface* target)
+{
+	int x_dist = target->get_current_position()->x - m_current_position->x;
+	int y_dist = target->get_current_position()->y - m_current_position->y;
+	return (x_dist * x_dist + y_dist * y_dist);
+}
+
 bool AW_Sprite_Interface::Move_By(int xAmount, int yAmount)
 {
 	set_world_position_x(get_x() + xAmount);
@@ -45,7 +59,7 @@ bool AW_Sprite_Interface::Move_To(float x, float y)
 	return false;
 }
 
-bool AW_Sprite_Interface::Move_Increment(int x, int y)
+bool AW_Sprite_Interface::Move_Increment(float x, float y)
 {
 	set_world_position_x(get_x() + x);
 	set_world_position_y(get_y() + y);
@@ -53,7 +67,7 @@ bool AW_Sprite_Interface::Move_Increment(int x, int y)
 	return false;
 }
 
-bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, double moveSpeed, int rangeSnap)
+bool AW_Sprite_Interface::Lerp_To(Vector2<float, float> *target, double moveSpeed, int rangeSnap)
 {
 	int lerp_x = get_x() + (target->x - (int)get_x()) / 1;
 	int lerp_y = get_y() + (target->y - (int)get_y()) / 2;
@@ -74,7 +88,7 @@ bool AW_Sprite_Interface::Lerp_To(Vector2<int, int> *target, double moveSpeed, i
 
 bool AW_Sprite_Interface::Move_Between()
 {
-	Lerp_To(new Vector2<int, int>(500, 500), 0.01, 1);
+	Lerp_To(new Vector2<float, float>(500, 500), 0.01, 1);
 	return true;
 	/*if (m_patrol_positions.size() > 0)
 	{
@@ -105,13 +119,13 @@ bool AW_Sprite_Interface::Move_Between()
 	}*/
 }
 
-void AW_Sprite_Interface::Add_Patrol_Position(Vector2<int, int> *position)
+void AW_Sprite_Interface::Add_Patrol_Position(Vector2<float, float> *position)
 {
 	m_patrol_positions.push_back(position);
 	m_current_target = m_patrol_positions[0];
 }
 
-void AW_Sprite_Interface::Add_Patrol_Position(std::vector<Vector2<int, int>*>position)
+void AW_Sprite_Interface::Add_Patrol_Position(std::vector<Vector2<float, float>*>position)
 {
 	for (auto &p : position)
 	{
@@ -125,7 +139,7 @@ void AW_Sprite_Interface::Remove_Patrol_Position(int index)
 }
 
 
-bool AW_Sprite_Interface::In_Range(Vector2<int, int>*position, Vector2<int, int>*target, int distance)
+bool AW_Sprite_Interface::In_Range(Vector2<float, float>*position, Vector2<float, float>*target, int distance)
 {
 	if (position->x < target->x + distance && position->x > target->x - distance)
 	{
@@ -138,7 +152,7 @@ bool AW_Sprite_Interface::In_Range(Vector2<int, int>*position, Vector2<int, int>
 	return false; // this true, nothing appears, this false, all enemies are in the top right corner, this was previously not here thus creating a warning "not all paths return a value"
 }
 
-Vector2<int, int> *AW_Sprite_Interface::get_current_position()
+Vector2<float, float> *AW_Sprite_Interface::get_current_position()
 {
 	return m_current_position;
 }

@@ -51,21 +51,21 @@ void Level_One::Setup()
 
 	Character *enemy = char_fac->Make_Character(OGRE);
 	enemy->set_world_position(500, 500);
-	enemy->Add_Patrol_Position(new Vector2<int, int>(10, 20));
-	enemy->Add_Patrol_Position(new Vector2<int, int>(100, 100));
+	enemy->Add_Patrol_Position(new Vector2<float, float>(10, 20));
+	enemy->Add_Patrol_Position(new Vector2<float, float>(100, 100));
 	m_enemies.push_back(enemy);
 
 
 	Character *enemy2 = char_fac->Make_Character(JESUS);
 	enemy2->set_world_position(750,750);
-	enemy2->Add_Patrol_Position(new Vector2<int, int>(10, 20));
-	enemy2->Add_Patrol_Position(new Vector2<int, int>(100, 100));
+	enemy2->Add_Patrol_Position(new Vector2<float, float>(10, 20));
+	enemy2->Add_Patrol_Position(new Vector2<float, float>(100, 100));
 	m_enemies.push_back(enemy2);
 
 	Character *enemy3 = char_fac->Make_Character(CLOWN);
 	enemy3->set_world_position(-350, 0);
-	enemy3->Add_Patrol_Position(new Vector2<int, int>(10, 20));
-	enemy3->Add_Patrol_Position(new Vector2<int, int>(100, 100));
+	enemy3->Add_Patrol_Position(new Vector2<float, float>(10, 20));
+	enemy3->Add_Patrol_Position(new Vector2<float, float>(100, 100));
 	m_enemies.push_back(enemy3);
 
 	for (auto &a : m_areas)

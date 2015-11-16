@@ -81,6 +81,10 @@ void Play_Screen::Handle_Keys()
 	}
 	
 	Move(x_move, y_move);
+	for (size_t i = 0; i < m_level->get_enemies().size(); i++)
+	{
+		printf("Angle: %d Distance: %d\n", m_player->get_angle_between(m_level->get_enemies()[i]), m_player->get_distance_between(m_level->get_enemies()[i]));
+	}
 	
 }
 
