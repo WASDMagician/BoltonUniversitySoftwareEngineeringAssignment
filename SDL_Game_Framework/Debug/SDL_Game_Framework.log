@@ -1,7 +1,7 @@
-﻿Build started 16-Nov-15 8:18:53 PM.
-     1>Project "C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 20/11/2015 20:44:06.
+     1>Project "C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt audiomanager.cpp AWSprite.cpp AW_Sprite_Interface.cpp Character.cpp Clown.cpp Crossbow.cpp Empowere_Knuckles.cpp End_Menu_Splash.cpp Enemy.cpp Character_Creator.cpp Character_Factory_Implementation.cpp Game.cpp GameBase.cpp Jesus.cpp Level.cpp Level_One.cpp Level_Three.cpp Level_Two.cpp Pick_Objects_Factory_Implementation.cpp Play_Screen.cpp Projectile.cpp Puzzle_Objects.cpp Splash_Screen.cpp Start_Menu_Splash.cpp Test_Everything.cpp Great_Axe.cpp Inventory.cpp Main.cpp NPC_Base.cpp NPC_Hinter.cpp NPC_Shopkeeper.cpp Object.cpp Ogre.cpp Pickup_Objects.cpp Player.cpp Sniper.cpp Sword.cpp Test_All.cpp Text_Box.cpp UI.cpp UI_Play_Screen.cpp UnitTest++\src\AssertException.cpp UnitTest++\src\Checks.cpp UnitTest++\src\CurrentTest.cpp UnitTest++\src\DeferredTestReporter.cpp UnitTest++\src\DeferredTestResult.cpp UnitTest++\src\MemoryOutStream.cpp UnitTest++\src\ReportAssert.cpp UnitTest++\src\Test.cpp UnitTest++\src\TestDetails.cpp UnitTest++\src\TestList.cpp UnitTest++\src\TestReporter.cpp UnitTest++\src\TestReporterStdout.cpp UnitTest++\src\TestResults.cpp UnitTest++\src\TestRunner.cpp UnitTest++\src\TimeConstraint.cpp UnitTest++\src\TimeHelpers.cpp UnitTest++\src\XmlTestReporter.cpp Weapon.cpp Weapon_Creator.cpp Weapon_Factory_Implementation.cpp
+         E:\VisualStudio\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt audiomanager.cpp AWSprite.cpp AW_Sprite_Interface.cpp Centipede.cpp Character.cpp Clown.cpp Crossbow.cpp Empowere_Knuckles.cpp End_Menu_Splash.cpp Enemy.cpp Character_Creator.cpp Character_Factory_Implementation.cpp Game.cpp GameBase.cpp Jesus.cpp Level.cpp Level_One.cpp Level_Three.cpp Level_Two.cpp NPC_Healer.cpp Pick_Objects_Factory_Implementation.cpp Play_Screen.cpp Projectile.cpp Puzzle_Objects.cpp Splash_Screen.cpp Start_Menu_Splash.cpp Test_Everything.cpp Great_Axe.cpp Inventory.cpp Main.cpp NPC_Base.cpp NPC_Hinter.cpp NPC_Shopkeeper.cpp Object.cpp Ogre.cpp Pickup_Objects.cpp Player.cpp Sniper.cpp Sword.cpp Test_All.cpp Text_Box.cpp UI.cpp UI_Play_Screen.cpp UnitTest++\src\AssertException.cpp UnitTest++\src\Checks.cpp UnitTest++\src\CurrentTest.cpp UnitTest++\src\DeferredTestReporter.cpp UnitTest++\src\DeferredTestResult.cpp UnitTest++\src\MemoryOutStream.cpp UnitTest++\src\ReportAssert.cpp UnitTest++\src\Test.cpp UnitTest++\src\TestDetails.cpp UnitTest++\src\TestList.cpp UnitTest++\src\TestReporter.cpp UnitTest++\src\TestReporterStdout.cpp UnitTest++\src\TestResults.cpp UnitTest++\src\TestRunner.cpp UnitTest++\src\TimeConstraint.cpp UnitTest++\src\TimeHelpers.cpp UnitTest++\src\XmlTestReporter.cpp Weapon.cpp Weapon_Creator.cpp Weapon_Factory_Implementation.cpp
          Weapon_Factory_Implementation.cpp
          Weapon_Creator.cpp
          Weapon.cpp
@@ -27,8 +27,8 @@
          UI_Play_Screen.cpp
          UI.cpp
          Text_Box.cpp
-     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(30): warning C4150: deletion of pointer to incomplete type '_TTF_Font'; no destructor called
-                 c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\sdl_ttf.h(77) : see declaration of '_TTF_Font'
+     1>c:\users\ed\desktop\work\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\text_box.cpp(30): warning C4150: deletion of pointer to incomplete type '_TTF_Font'; no destructor called
+                 c:\users\ed\desktop\work\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\sdl_ttf.h(77) : see declaration of '_TTF_Font'
          Test_All.cpp
          Sword.cpp
          Sniper.cpp
@@ -49,9 +49,10 @@
          Generating Code...
          Compiling...
          Projectile.cpp
-     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\projectile.cpp(49): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\ed\desktop\work\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\projectile.cpp(49): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
          Play_Screen.cpp
          Pick_Objects_Factory_Implementation.cpp
+         NPC_Healer.cpp
          Level_Two.cpp
          Level_Three.cpp
          Level_One.cpp
@@ -67,17 +68,19 @@
          Crossbow.cpp
          Clown.cpp
          Character.cpp
-         AW_Sprite_Interface.cpp
-     1>c:\users\niall\documents\github\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\aw_sprite_interface.cpp(37): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
-         AWSprite.cpp
+         Centipede.cpp
          Generating Code...
          Compiling...
+         AW_Sprite_Interface.cpp
+     1>c:\users\ed\desktop\work\boltonuniversitysoftwareengineeringassignment\sdl_game_framework\aw_sprite_interface.cpp(37): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+         AWSprite.cpp
          audiomanager.cpp
          Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
+         E:\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
          Debug\AWSprite.obj
          Debug\AW_Sprite_Interface.obj
+         Debug\Centipede.obj
          Debug\Character.obj
          Debug\Clown.obj
          Debug\Crossbow.obj
@@ -93,6 +96,7 @@
          Debug\Level_One.obj
          Debug\Level_Three.obj
          Debug\Level_Two.obj
+         Debug\NPC_Healer.obj
          Debug\Pick_Objects_Factory_Implementation.obj
          Debug\Play_Screen.obj
          Debug\Projectile.obj
@@ -137,9 +141,9 @@
          Debug\Weapon_Creator.obj
          Debug\Weapon_Factory_Implementation.obj
      1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
-         SDL_Game_Framework.vcxproj -> C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
-     1>Done Building Project "C:\Users\Niall\Documents\GitHub\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+         SDL_Game_Framework.vcxproj -> C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "C:\Users\Ed\Desktop\Work\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:30.31
+Time Elapsed 00:00:23.35

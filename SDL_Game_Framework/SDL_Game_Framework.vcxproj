@@ -144,6 +144,7 @@
     <ClInclude Include="Level_Three.h" />
     <ClInclude Include="Level_Two.h" />
     <ClInclude Include="NPC_Base.h" />
+    <ClInclude Include="NPC_Healer.h" />
     <ClInclude Include="NPC_Hinter.h" />
     <ClInclude Include="NPC_Shopkeeper.h" />
     <ClInclude Include="Object.h" />
@@ -220,6 +221,7 @@
     <ClCompile Include="Level_One.cpp" />
     <ClCompile Include="Level_Three.cpp" />
     <ClCompile Include="Level_Two.cpp" />
+    <ClCompile Include="NPC_Healer.cpp" />
     <ClCompile Include="Pick_Objects_Factory_Implementation.cpp" />
     <ClCompile Include="Play_Screen.cpp" />
     <ClCompile Include="Projectile.cpp" />

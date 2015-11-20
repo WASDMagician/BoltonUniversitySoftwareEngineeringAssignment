@@ -348,6 +348,9 @@
     <ClInclude Include="Centipede.h">
       <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
     </ClInclude>
+    <ClInclude Include="NPC_Healer.h">
+      <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -535,6 +538,9 @@
     </ClCompile>
     <ClCompile Include="Centipede.cpp">
       <Filter>Source Files\Factories\Characters\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC_Healer.cpp">
+      <Filter>Source Files\Factories\Characters\NPC</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
