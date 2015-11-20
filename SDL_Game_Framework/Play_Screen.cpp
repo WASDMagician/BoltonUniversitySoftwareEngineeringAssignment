@@ -64,19 +64,19 @@ void Play_Screen::Handle_Keys()
 	int x_move = 0;
 	int y_move = 0;
 
-	if (state[SDLK_LEFT])
+	if (state[SDLK_LEFT] || state[SDLK_a])
 	{
 		x_move = 10;
 	}
-	if (state[SDLK_RIGHT])
+	if (state[SDLK_RIGHT] || state[SDLK_d])
 	{
 		x_move = -10;
 	}
-	if (state[SDLK_UP])
+	if (state[SDLK_UP] || state[SDLK_w])
 	{
 		y_move = 10;
 	}
-	if (state[SDLK_DOWN])
+	if (state[SDLK_DOWN] || state[SDLK_s])
 	{
 		y_move = -10;
 	}
