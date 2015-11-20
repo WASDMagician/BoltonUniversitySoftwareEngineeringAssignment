@@ -41,9 +41,9 @@ public:
 	 void Attack(Character* target);
 	 void Defend(Character* target);
 
-	 bool Check_Health();
+	 bool Check_Alive();
 
-	 bool react();
+	 bool react(Character* target);
 	 
 private:
 	UI_Play_Screen *player_ui;

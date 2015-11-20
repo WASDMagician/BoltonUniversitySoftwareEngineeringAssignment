@@ -62,6 +62,7 @@ void Level_One::Setup()
 	enemy->Add_Patrol_Position(new Vector2<float, float>(10, 20));
 	enemy->Add_Patrol_Position(new Vector2<float, float>(100, 100));
 	enemy->set_display_box(false);
+	enemy->set_damage(2);
 	m_enemies.push_back(enemy);
 
 	Character *enemy2 = char_fac->Make_Character(JESUS);
@@ -90,6 +91,14 @@ void Level_One::Setup()
 	npc1->set_display_box(false);
 	npc1->set_message("You are near to a \nsomething or \nother rune type thingy\n");
 	m_npcs.push_back(npc1);
+
+	Character *npc2 = char_fac->Make_Character(HEALER);
+	npc2->set_world_position(420, 420);
+	npc2->Add_Patrol_Position(new Vector2<float, float>(10, 20));
+	npc2->Add_Patrol_Position(new Vector2<float, float>(100, 100));
+	npc2->set_display_box(false);
+	npc2->set_message("You have been healed");
+	m_npcs.push_back(npc2);
 
 	for (auto &a : m_areas)
 	{

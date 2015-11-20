@@ -7,10 +7,11 @@
 #include "Clown.h"
 #include "NPC_Hinter.h"
 #include "Centipede.h"
+#include "NPC_Healer.h"
 
 Character_Factory_Implementation::Character_Factory_Implementation()
 {
-	IMAGES = std::vector<char*>({ "images/Fish.bmp", "images/alien.bmp", "images/jesus.bmp", "images/clown.png", "images/centipede.png" });
+	IMAGES = std::vector<char*>({ "images/Fish.bmp", "images/alien.bmp", "images/jesus.bmp", "images/clown.png", "images/Centipede.png","images/Healer.png"});
 }
 
 
@@ -37,6 +38,9 @@ Character* Character_Factory_Implementation::Make_Character(int CharacterType)
 		break;
 	case CENTIPEDE:
 		return new Centipede(IMAGES[CharacterType], 1, 1, 1);
+		break;
+	case HEALER: 
+		return new NPC_Healer(IMAGES[CharacterType], 1, 1, 1);
 		break;
 	default:
 		return NULL;

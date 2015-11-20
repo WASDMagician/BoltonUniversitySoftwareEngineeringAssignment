@@ -26,6 +26,7 @@ void Play_Screen::Setup()
 	m_b_paused = false;
 	char_factory = new Character_Factory_Implementation();
 	m_player = char_factory->Make_Character(PLAYER);
+	m_player->set_health(10);
 	m_player->Move_To(400, 300);
 	m_level = new Level_One("one");
 }
@@ -85,6 +86,11 @@ void Play_Screen::Handle_Keys()
 	{
 		y_move = -10;
 	}
+
+	if (state[SDLK_h])
+	{
+		std::cout << "Your health is: " << m_player->get_health() << std::endl;
+	}
 	
 	Move(x_move, y_move);
 	for (size_t i = 0; i < m_level->get_enemies().size(); i++)
@@ -121,12 +127,12 @@ bool Play_Screen::Check_Enemy_Trigger()
 					printf("Player: %d %u %u\n", m_player->get_health(), m_player->get_damage(), m_player->get_defence()); //@debug
 					printf("Enemy: %d, %u, %u\n", enemy->get_health(), enemy->get_damage(), enemy->get_health()); //@debug
 
-					if (!enemy->Check_Health())
+					if (!enemy->Check_Alive())
 					{
 						enemy->set_visibility(false);
 					}
 
-					if (!m_player->Check_Health())
+					if (!m_player->Check_Alive())
 					{
 						m_b_close_splash = true;
 					}
@@ -150,7 +156,7 @@ bool Play_Screen::Check_NPC_Trigger()
 		{
 			n->set_display_box(true);
 			n->Update();
-			n->react();
+			n->react(m_player);
 			return true;
 		}
 		else

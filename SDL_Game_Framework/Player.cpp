@@ -113,12 +113,12 @@ void Player::Defend(Character* target)
 	m_health -= target->get_damage() - get_defence();
 }
 
-bool Player::Check_Health()
+bool Player::Check_Alive()
 {
 	return m_health > 0;
 }
 
-bool Player::react()
+bool Player::react(Character* target)
 {
 	return false;
 }

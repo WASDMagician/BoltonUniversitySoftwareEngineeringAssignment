@@ -168,12 +168,12 @@ void Enemy::Defend(Character* target)
 	m_health -= target->get_damage() - get_defence();
 }
 
-bool Enemy::Check_Health()
+bool Enemy::Check_Alive()
 {
 	return m_health > 0;
 }
 
-bool Enemy::react()
+bool Enemy::react(Character* target)
 {
 	return false;
 }

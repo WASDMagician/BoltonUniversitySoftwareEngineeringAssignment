@@ -50,8 +50,8 @@ public:
 	virtual void Attack(Character* target);
 	virtual void Defend(Character* target);
 
-	virtual bool Check_Health();
-	virtual bool react();
+	virtual bool Check_Alive();
+	virtual bool react(Character* target);
 
 protected:
 	ENEMY_STATE enemy_state;

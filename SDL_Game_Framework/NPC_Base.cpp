@@ -34,7 +34,7 @@ void NPC_Base::Defend(Character* target)
 {
 }
 
-bool NPC_Base::Check_Health()
+bool NPC_Base::Check_Alive()
 {
 	return true;
 }
@@ -128,7 +128,7 @@ const std::string NPC_Base::get_npc_hint()
 	return m_hint;
 }
 
-bool NPC_Base::react()
+bool NPC_Base::react(Character* target)
 {
 	std::cout << m_hint << "\n"; //should be with strange magic shit
 	return false;
