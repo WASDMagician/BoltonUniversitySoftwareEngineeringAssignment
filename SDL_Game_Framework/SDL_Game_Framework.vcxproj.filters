@@ -345,6 +345,9 @@
     <ClInclude Include="Pick_Objects_Factory_Implementation.h">
       <Filter>Header Files\Factories\Objects</Filter>
     </ClInclude>
+    <ClInclude Include="Centipede.h">
+      <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -529,6 +532,9 @@
     </ClCompile>
     <ClCompile Include="Pick_Objects_Factory_Implementation.cpp">
       <Filter>Source Files\Factories\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Centipede.cpp">
+      <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

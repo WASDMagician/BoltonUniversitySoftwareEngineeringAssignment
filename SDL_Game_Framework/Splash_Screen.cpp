@@ -40,7 +40,6 @@ void Splash_Screen::Setup()
 
 void Splash_Screen::Logic()
 {
-
 }
 
 void Splash_Screen::Handle_Keys()

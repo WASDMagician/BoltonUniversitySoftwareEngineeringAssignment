@@ -55,6 +55,11 @@ void Play_Screen::Logic()
 	Check_Coin_Trigger();
 	Check_Weapon_Trigger();
 	Check_NPC_Trigger();
+
+	for (auto &m : m_level->get_enemies())
+	{
+		m->Update();
+	}
 }
 
 void Play_Screen::Handle_Keys()
@@ -216,3 +221,4 @@ bool Play_Screen::Run()
 	Start();
 	return is_game_over();
 }
+

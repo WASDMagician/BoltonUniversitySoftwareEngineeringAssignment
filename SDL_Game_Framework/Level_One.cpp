@@ -71,6 +71,18 @@ void Level_One::Setup()
 	enemy2->set_display_box(false);
 	m_enemies.push_back(enemy2);
 
+	Character *enemy3 = char_fac->Make_Character(CENTIPEDE);
+	enemy3->set_world_position(100, 100);
+	enemy3->set_display_box(false);
+	enemy3->set_transparent_colour(255, 0, 255);
+	m_enemies.push_back(enemy3);
+
+	Character *enemy4 = char_fac->Make_Character(CENTIPEDE);
+	enemy4->set_world_position(200, 200);
+	enemy4->set_display_box(false);
+	enemy4->set_transparent_colour(255, 0, 255);
+	m_enemies.push_back(enemy4);
+
 	Character *npc1 = char_fac->Make_Character(CLOWN);
 	npc1->set_world_position(-350, 0);
 	npc1->Add_Patrol_Position(new Vector2<float, float>(10, 20));

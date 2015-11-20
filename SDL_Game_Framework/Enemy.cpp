@@ -23,7 +23,7 @@ bool Enemy::Setup(char* imgPath, int rows, int cols, int animationSpeed)
 
 void Enemy::Update()
 {
-
+	Enemy_Movement();
 }
 
 bool Enemy::Enemy_Movement()
