@@ -15,6 +15,7 @@ public:
 	~Play_Screen();
 
 	void Setup();
+	void Init_Player();
 	void Logic();
 	void Handle_Keys();
 

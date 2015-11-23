@@ -23,12 +23,17 @@ Play_Screen::~Play_Screen(void)
 
 void Play_Screen::Setup()
 {
-	m_b_paused = false;
 	char_factory = new Character_Factory_Implementation();
-	m_player = char_factory->Make_Character(PLAYER);
-	m_player->set_health(10);
-	m_player->Move_To(400, 300);
+	m_b_paused = false;
+	Init_Player();
 	m_level = new Level_One("one");
+}
+
+void Play_Screen::Init_Player()
+{
+	m_player = char_factory->Make_Character(PLAYER);
+	m_player->set_health(100);
+	m_player->Move_To(400, 300);
 }
 
 void Play_Screen::Logic()
@@ -86,21 +91,11 @@ void Play_Screen::Handle_Keys()
 	{
 		y_move = -10;
 	}
-
-	if (state[SDLK_h])
-	{
-		std::cout << "Your health is: " << m_player->get_health() << std::endl;
-	}
 	
 	Move(x_move, y_move);
-	for (size_t i = 0; i < m_level->get_enemies().size(); i++)
-	{
-		//printf("Angle: %d Distance: %d\n", m_player->get_angle_between(m_level->get_enemies()[i]), m_player->get_distance_between(m_level->get_enemies()[i])); //@debug
-	}
-	
 }
 
-void Play_Screen::Move(int xAmount, int yAmount)
+void Play_Screen::Move(int xAmount, int yAmount) //handle all level movement
 {
 	m_level->Move(xAmount, yAmount);
 }
@@ -150,18 +145,18 @@ bool Play_Screen::Check_Enemy_Trigger()
 
 bool Play_Screen::Check_NPC_Trigger()
 {
-	for (auto &n : m_level->get_npcs())
+	for (auto &npc : m_level->get_npcs())
 	{
-		if (m_player->bb_collision(n))
+		if (m_player->bb_collision(npc))
 		{
-			n->set_display_box(true);
-			n->Update();
-			n->react(m_player);
+			npc->set_display_box(true);
+			npc->Update();
+			npc->react(m_player);
 			return true;
 		}
 		else
 		{
-			n->set_display_box(false);
+			npc->set_display_box(false);
 		}
 	}
 	return false;
@@ -169,13 +164,13 @@ bool Play_Screen::Check_NPC_Trigger()
 
 bool Play_Screen::Check_Coin_Trigger()
 {
-	for (auto &c : m_level->get_pickables())
+	for (auto &pick_objects : m_level->get_pickables())
 	{
-		if (m_player->bb_collision(c))
+		if (m_player->bb_collision(pick_objects))
 		{
 			m_player->set_score(m_player->get_score() + 1); //@debug
 			printf("Player Score: %d\n", m_player->get_score()); //@debug
-			c->set_visibility(false);
+			pick_objects->set_visibility(false);
 			return true;
 		}
 	}
@@ -184,15 +179,15 @@ bool Play_Screen::Check_Coin_Trigger()
 
 bool Play_Screen::Check_Weapon_Trigger()
 {
-	for (auto &w : m_level->get_weapons())
+	for (auto &weapon : m_level->get_weapons())
 	{
-		if (m_player->bb_collision(w))
+		if (m_player->bb_collision(weapon))
 		{
 			m_player->set_score(m_player->get_score() + 1);
 			m_player->set_damage(m_player->get_damage() + 10);
 			printf("Player Score: %d\n", m_player->get_score()); //@debug
 			printf("Player Damage: %d\n", m_player->get_damage()); //@debug
-			w->set_visibility(false);
+			weapon->set_visibility(false);
 			return true;
 		}
 	}

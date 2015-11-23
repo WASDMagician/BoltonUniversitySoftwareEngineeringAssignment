@@ -22,8 +22,7 @@ void End_Menu_Splash::Setup()
 {
 	gameover_box->set_font("fonts/game_font.ttf", 20);
 	gameover_box->set_color(200, 0, 0);
-	gameover_box->set_box_color(255, 255, 255);
-	gameover_box->Position_Setting(true, 50, 50, 10, 10);
+	gameover_box->Position_Setting(50, 50, 10, 10);
 	gameover_box->Add_Message("Thank you for playing our game\nPress Escape to exit");
 	gameover_box->Setup_Box();
 	gameover_box->set_rects();

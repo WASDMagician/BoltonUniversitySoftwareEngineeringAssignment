@@ -2,7 +2,7 @@
 #include "Game.h"
 
 Text_Box::Text_Box()
-	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_should_be_drawn(false), m_box_color({ 0, 0, 0 }), m_box_x(0), m_box_y(0), m_text_x_margin(0), m_text_y_margin(0),
+	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_x(0), m_box_y(0), m_text_x_margin(0), m_text_y_margin(0),
 	m_current_line(0), m_total_text_height(0), m_number_of_lines(0), m_line_height(0), m_font_color({ 0, 0, 0 }), m_text_rects(NULL),
 	m_b_should_display(false)
 {
@@ -10,7 +10,7 @@ Text_Box::Text_Box()
 
 
 Text_Box::Text_Box(char* fontPath, int fontSize, std::string message)
-	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_should_be_drawn(false), m_box_color({ 0, 0, 0 }), m_box_x(0), m_box_y(0), m_text_x_margin(0), m_text_y_margin(0),
+	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_x(0), m_box_y(0), m_text_x_margin(0), m_text_y_margin(0),
 	m_current_line(0), m_total_text_height(0), m_number_of_lines(0), m_line_height(0), m_font_color({ 0, 0, 0 }), m_text_rects(NULL),
 	m_b_should_display(false)
 {
@@ -39,10 +39,8 @@ void Text_Box::set_color(int r, int g, int b)
 	m_font_color.b = b;
 }
 
-void Text_Box::Position_Setting(bool boxShouldBeDrawn, float boxX = 0, float boxY = 0, float textXMargin = 0, float textYMargin = 0)
+void Text_Box::Position_Setting(float boxX = 0, float boxY = 0, float textXMargin = 0, float textYMargin = 0)
 {
-	
-	m_box_should_be_drawn = boxShouldBeDrawn;
 	m_box_x = boxX;
 	m_box_y = boxY;
 	m_text_x_margin = textXMargin;
@@ -54,8 +52,6 @@ void Text_Box::Setup_Box()
 	m_box = new AWSprite();
 	if (m_max_line_width > 0) //check that m_max_line_width has been set correctly
 	{
-		
-		m_box->setImage(m_max_line_width + (int)(m_text_x_margin * 2), (int)((m_line_height * m_number_of_lines) + (int)m_text_y_margin * 2), m_box_color.r, m_box_color.g, m_box_color.b);
 		m_box->set_world_position(m_box_x, m_box_y);
 	}
 }
@@ -84,13 +80,6 @@ void Text_Box::set_rects()
 		new_rect->y = (Sint16)m_box_y + (Sint16)((i * m_line_height) + (Sint16)m_text_y_margin);
 		m_text_rects.push_back(new_rect);
 	}
-}
-
-void Text_Box::set_box_color(int r, int g, int b)
-{
-	m_box_color.r = r;
-	m_box_color.g = g;
-	m_box_color.b = b;
 }
 
 void Text_Box::Add_Message(std::string message)
@@ -153,10 +142,6 @@ bool Text_Box::get_should_display()
 
 void Text_Box::Display()
 {
-	if (m_box_should_be_drawn)
-	{
-		m_box->update_everything();
-	}
 	for (unsigned int i = 0; i < m_text_lines.size(); i++)
 	{
 		SDL_BlitSurface(m_text_lines[i], NULL, SDL_GetVideoSurface(), m_text_rects[i]);

@@ -18,7 +18,7 @@ public:
 	void set_font(char* fontPath, int fontSize);
 	void set_color(int r, int g, int b);
 
-	void Position_Setting(bool boxShouldBeDrawn, float boxX, float boxY, float textXMargin, float textYMargin);
+	void Position_Setting(float boxX, float boxY, float textXMargin, float textYMargin);
 	void set_box_color(int r, int g, int b);
 
 	void Setup_Box();
@@ -51,11 +51,10 @@ private:
 	std::vector<std::string>m_messages; //holds all text lines
 
 	AWSprite *m_box; //sits behind text
-	SDL_Color m_box_color; //colour of the box
 
 	//display
 	bool m_b_should_display;
-	bool m_box_should_be_drawn;
+
 	float m_box_x; //left of box
 	float m_box_y; //top of box
 	float m_text_x_margin; //distance between left of box and start of line, right of box and end of line

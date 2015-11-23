@@ -26,8 +26,7 @@ void Start_Menu_Splash::Setup()
 {
 	instruction_box->set_font("fonts/game_font.ttf", 20);
 	instruction_box->set_color(200, 0, 0);
-	instruction_box->set_box_color(255, 255, 255);
-	instruction_box->Position_Setting(true, 50, 50, 10, 10);
+	instruction_box->Position_Setting(50, 50, 10, 10);
 	instruction_box->Add_Message("Welcome to our game\nPress Enter to start\nFind the exits\nWin the game");
 	instruction_box->Setup_Box();
 	instruction_box->set_rects();

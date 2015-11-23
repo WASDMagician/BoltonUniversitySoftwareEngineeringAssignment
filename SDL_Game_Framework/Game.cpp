@@ -25,8 +25,7 @@ void Game::Setup()
 	credit_box = new Text_Box();
 	credit_box->set_font("fonts/game_font.ttf", 30);
 	credit_box->set_color(200, 0, 0);
-	credit_box->set_box_color(255, 255, 255);
-	credit_box->Position_Setting(true, 50, 50, 10, 10);
+	credit_box->Position_Setting(50, 50, 10, 10);
 	credit_box->Add_Message("CREDITS\nJoseph Adams\nNiall Maple\nKyle Thomas\nEdward Hawksowrth");
 	credit_box->Setup_Box();
 	credit_box->set_rects();

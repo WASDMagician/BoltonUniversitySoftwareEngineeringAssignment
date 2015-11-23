@@ -15,23 +15,23 @@ Level_One::Level_One(std::string name)
 
 Level_One::~Level_One()
 {
-	for (auto &c : m_areas)
+	for (auto &area: m_areas)
 	{
-		delete c;
-		c = NULL;
+		delete area;
+		area = NULL;
 	}
 	m_areas.clear();
 
-	for (auto &e : m_enemies)
+	for (auto &enemy : m_enemies)
 	{
-		delete e;
-		e = NULL;
+		delete enemy;
+		enemy = NULL;
 	}
 
-	for (auto &n : m_npcs)
+	for (auto &npc : m_npcs)
 	{
-		delete n;
-		n = NULL;
+		delete npc;
+		npc = NULL;
 	}
 
 	m_enemies.clear();
@@ -40,30 +40,34 @@ Level_One::~Level_One()
 
 void Level_One::Setup()
 {
+	//create areas
 	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/area1.png", 1, 1, 1);
 	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/StartingArea.png", 1, 1, 1);
 	AW_Sprite_Interface *area_three = new AW_Sprite_Interface("images/area3.png", 1, 1, 1);
 	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area4.png", 1, 1, 1);
 	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1, 1);
 	
+	//set area positions
 	area_one->set_world_position_x(-(float)area_one->get_width());
 	area_three->set_world_position_y(-(float)area_three->get_height());
 	area_four->set_world_position_y((float)area_four->get_height());
 	area_five->set_world_position_x((float)area_five->get_width());
 
+	//add areas to area vector
 	m_areas.push_back(area_one);
 	m_areas.push_back(area_two);
 	m_areas.push_back(area_three);
 	m_areas.push_back(area_four);
 	m_areas.push_back(area_five);
 
-	Character *enemy = char_fac->Make_Character(OGRE);
-	enemy->set_world_position(500, 500);
-	enemy->Add_Patrol_Position(new Vector2<float, float>(10, 20));
-	enemy->Add_Patrol_Position(new Vector2<float, float>(100, 100));
-	enemy->set_display_box(false);
-	enemy->set_damage(2);
-	m_enemies.push_back(enemy);
+	//create characters
+	Character *enemy = char_fac->Make_Character(OGRE); //create character
+	enemy->set_world_position(500, 500); //set character position
+	enemy->Add_Patrol_Position(new Vector2<float, float>(10, 20)); //add patrol position
+	enemy->Add_Patrol_Position(new Vector2<float, float>(100, 100)); //add second patrol position
+	enemy->set_display_box(false); //should character text_box be displayed
+	enemy->set_damage(2); //set character damage
+	m_enemies.push_back(enemy); //add character enemy list
 
 	Character *enemy2 = char_fac->Make_Character(JESUS);
 	enemy2->set_world_position(750,750);
@@ -96,21 +100,23 @@ void Level_One::Setup()
 	npc2->set_world_position(420, 420);
 	npc2->Add_Patrol_Position(new Vector2<float, float>(10, 20));
 	npc2->Add_Patrol_Position(new Vector2<float, float>(100, 100));
-	npc2->set_display_box(false);
 	npc2->set_message("You have been healed");
 	m_npcs.push_back(npc2);
 
-	for (auto &a : m_areas)
+	for (auto &area : m_areas)
 	{
 		for (int i = 0; i < 10; i++)
 		{
+			//place coins
 			Pickup_Objects *coin = pickup_fac->Make_Object(COIN);
-			coin->Randomize_Position((int)a->get_x(), (int)a->get_width(), (int)a->get_y(), (int)a->get_height());
+			coin->Randomize_Position((int)area->get_x(), (int)area->get_width(), (int)area->get_y(), (int)area->get_height());
 			m_pickables.push_back(coin);
 		}
+		//place weapons
 		Weapon *pickaxe = weapon_fac->Make_Weapon(GREAT_AXE);
-		pickaxe->Randomize_Position((int)a->get_x(), (int)a->get_width(), (int)a->get_y(), (int)a->get_height());
+		pickaxe->Randomize_Position((int)area->get_x(), (int)area->get_width(), (int)area->get_y(), (int)area->get_height());
 		m_weapons.push_back(pickaxe);
 	}
+
 	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
 }
