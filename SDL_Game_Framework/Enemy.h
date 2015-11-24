@@ -32,17 +32,17 @@ public:
 	virtual bool set_name(std::string name);
 	virtual std::string get_name();
 
-	virtual bool set_health(unsigned int health);
+	virtual bool set_health(int health);
 	virtual int get_health();
 
-	virtual bool set_lives(unsigned int lives);
-	virtual unsigned int get_lives();
+	virtual bool set_lives(int lives);
+	virtual int get_lives();
 
-	virtual bool set_damage(unsigned int damage);
-	virtual unsigned int get_damage();
+	virtual bool set_damage(int damage);
+	virtual int get_damage();
 
-	virtual bool set_defence(unsigned int defence);
-	virtual unsigned int get_defence();
+	virtual bool set_defence(int defence);
+	virtual int get_defence();
 
 	virtual bool set_score(int score);
 	virtual int get_score();

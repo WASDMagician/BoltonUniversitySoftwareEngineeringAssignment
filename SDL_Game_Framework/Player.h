@@ -16,22 +16,20 @@ public:
 	bool Setup(char* imgPath, int rows, int cols, int animationSpeed);
 	void Update();
 
-	void update_player_ui();
-
 	 bool set_name(std::string name);
 	 std::string get_name();
 
-	 bool set_health(unsigned int health);
+	 bool set_health(int health);
 	 int get_health();
 
-	 bool set_lives(unsigned int lives);
-	 unsigned int get_lives();
+	 bool set_lives(int lives);
+	 int get_lives();
 
-	 bool set_damage(unsigned int damage);
-	 unsigned int get_damage();
+	 bool set_damage(int damage);
+	 int get_damage();
 
-	 bool set_defence(unsigned int defence);
-	 unsigned int get_defence();
+	 bool set_defence(int defence);
+	 int get_defence();
 
 	 bool set_score(int score);
 	 int get_score();
@@ -46,9 +44,6 @@ public:
 	 bool react(Character* target);
 	 
 private:
-	UI_Play_Screen *player_ui;
-
-	
 };
 
 #endif

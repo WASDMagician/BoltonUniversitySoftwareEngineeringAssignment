@@ -103,19 +103,19 @@ std::string Enemy::get_name()
 	return m_name;
 }
 
-bool Enemy::set_health(unsigned int health)
+bool Enemy::set_health(int health)
 {
 	m_health = health;
 	return m_health == health;
 }
 
-bool Enemy::set_lives(unsigned int lives)
+bool Enemy::set_lives(int lives)
 {
 	m_lives = lives;
 	return m_lives == lives;
 }
 
-unsigned int Enemy::get_lives()
+int Enemy::get_lives()
 {
 	return m_lives;
 }
@@ -125,24 +125,24 @@ int Enemy::get_health()
 	return m_health;
 }
 
-bool Enemy::set_damage(unsigned int damage)
+bool Enemy::set_damage(int damage)
 {
 	m_damage = damage;
 	return m_damage == damage;
 }
 
-unsigned int Enemy::get_damage()
+int Enemy::get_damage()
 {
 	return m_damage;
 }
 
-bool Enemy::set_defence(unsigned int defence)
+bool Enemy::set_defence(int defence)
 {
 	m_defence = defence;
 	return m_defence == defence;
 }
 
-unsigned int Enemy::get_defence()
+int Enemy::get_defence()
 {
 	return m_defence;
 }

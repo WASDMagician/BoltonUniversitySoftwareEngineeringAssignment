@@ -20,17 +20,17 @@ public:
 	virtual bool set_name(std::string name) = 0;
 	virtual std::string get_name() = 0;
 
-	virtual bool set_health(unsigned int health) = 0;
+	virtual bool set_health(int health) = 0;
 	virtual int get_health() = 0;
 
-	virtual bool set_lives(unsigned int lives) = 0;
-	virtual unsigned int get_lives() = 0;
+	virtual bool set_lives(int lives) = 0;
+	virtual int get_lives() = 0;
 
-	virtual bool set_damage(unsigned int damage) = 0;
-	virtual unsigned int get_damage() = 0;
+	virtual bool set_damage(int damage) = 0;
+	virtual int get_damage() = 0;
 
-	virtual bool set_defence(unsigned int defence) = 0;
-	virtual unsigned int get_defence() = 0;
+	virtual bool set_defence(int defence) = 0;
+	virtual int get_defence() = 0;
 
 	virtual bool set_score(int score);
 	virtual int get_score();
@@ -51,9 +51,9 @@ protected:
 	std::vector<AWSprite*>images;
 	std::string m_name;
 	int m_health;
-	unsigned int m_lives;
-	unsigned int m_damage;
-	unsigned int m_defence;
+	int m_lives;
+	int m_damage;
+	int m_defence;
 
 	int m_score;
 

@@ -50,7 +50,7 @@ std::string NPC_Base::get_name()
 	return m_name;
 }
 
-bool NPC_Base::set_health(unsigned int health)
+bool NPC_Base::set_health(int health)
 {
 	m_health = health;
 	return m_health == health;
@@ -61,35 +61,35 @@ int NPC_Base::get_health()
 	return m_health;
 }
 
-bool NPC_Base::set_lives(unsigned int lives)
+bool NPC_Base::set_lives(int lives)
 {
 	m_lives = lives;
 	return m_lives == lives;
 }
 
-unsigned int NPC_Base::get_lives()
+int NPC_Base::get_lives()
 {
 	return m_lives;
 }
 
-bool NPC_Base::set_damage(unsigned int damage)
+bool NPC_Base::set_damage(int damage)
 {
 	m_damage = damage;
 	return m_damage == damage;
 }
 
-unsigned int NPC_Base::get_damage()
+int NPC_Base::get_damage()
 {
 	return m_damage;
 }
 
-bool NPC_Base::set_defence(unsigned int defence)
+bool NPC_Base::set_defence(int defence)
 {
 	m_defence = defence;
 	return m_defence == defence;
 }
 
-unsigned int NPC_Base::get_defence()
+int NPC_Base::get_defence()
 {
 	return m_defence;
 }

@@ -23,16 +23,25 @@ Play_Screen::~Play_Screen(void)
 
 void Play_Screen::Setup()
 {
+	
 	char_factory = new Character_Factory_Implementation();
 	m_b_paused = false;
 	Init_Player();
+
+	screen_ui = new UI_Play_Screen();
+	screen_ui->set_character(m_player);
+
 	m_level = new Level_One("one");
 }
 
 void Play_Screen::Init_Player()
 {
 	m_player = char_factory->Make_Character(PLAYER);
+	m_player->set_name("Dave");
 	m_player->set_health(100);
+	m_player->set_lives(3);
+	m_player->set_score(0);
+	m_player->set_damage(10);
 	m_player->Move_To(400, 300);
 }
 
@@ -61,6 +70,8 @@ void Play_Screen::Logic()
 	Check_Coin_Trigger();
 	Check_Weapon_Trigger();
 	Check_NPC_Trigger();
+
+	screen_ui->Update();
 
 	for (auto &m : m_level->get_enemies())
 	{
@@ -215,6 +226,7 @@ void Play_Screen:: Render_Mid()
 
 void Play_Screen:: Render_Front()
 {
+	screen_ui->Display();
 }
 
 bool Play_Screen::Run()

@@ -4,7 +4,7 @@
 #include "Character_Factory_Implementation.h"
 #include "Player.h"
 #include "Level.h"
-
+#include "UI_Play_Screen.h"
 #include "Splash_Screen.h"
 class Play_Screen :
 	public Splash_Screen
@@ -39,7 +39,7 @@ private:
 	Level *m_level;
 	Character_Factory_Implementation* char_factory;
 	Character *m_player;
-
+	UI_Play_Screen *screen_ui;
 	bool m_b_paused;
 
 	bool m_b_has_attacked;
