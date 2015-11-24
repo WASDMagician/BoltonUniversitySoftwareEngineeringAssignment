@@ -40,6 +40,7 @@ Level_One::~Level_One()
 
 void Level_One::Setup()
 {
+
 	//create areas
 	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/area1.png", 1, 1, 1);
 	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/StartingArea.png", 1, 1, 1);
@@ -47,9 +48,12 @@ void Level_One::Setup()
 	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area4.png", 1, 1, 1);
 	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1, 1);
 	
-	//set area positions
+	//set area and bound positions
 	area_one->set_world_position_x(-(float)area_one->get_width());
+
+
 	area_three->set_world_position_y(-(float)area_three->get_height());
+
 	area_four->set_world_position_y((float)area_four->get_height());
 	area_five->set_world_position_x((float)area_five->get_width());
 

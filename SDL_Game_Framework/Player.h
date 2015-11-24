@@ -41,7 +41,7 @@ public:
 
 	 bool Check_Alive();
 
-	 bool react(Character* target);
+	 bool React(Character* target);
 	 
 private:
 };

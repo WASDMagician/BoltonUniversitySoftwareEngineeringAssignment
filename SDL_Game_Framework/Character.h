@@ -40,7 +40,7 @@ public:
 
 	virtual void set_message(std::string hint);
 	virtual const std::string get_message();
-	virtual bool react(Character* target) = 0;
+	virtual bool React(Character* target) = 0;
 	virtual bool Check_Alive() = 0;
 	
 	void set_display_box(bool display);

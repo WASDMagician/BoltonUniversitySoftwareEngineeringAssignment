@@ -112,7 +112,7 @@ bool Player::Check_Alive()
 	return m_health > 0;
 }
 
-bool Player::react(Character* target)
+bool Player::React(Character* target)
 {
 	return false;
 }

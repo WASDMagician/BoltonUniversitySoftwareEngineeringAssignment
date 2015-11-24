@@ -19,11 +19,13 @@ public:
 	bool set_level_name(std::string name);
 	std::string get_level_name();
 	AW_Sprite_Interface* get_trigger();
+	std::vector<AW_Sprite_Interface*>get_areas();
 	std::vector<Character*>get_enemies();
 	std::vector<Character*>get_npcs();
 	std::vector<Pickup_Objects*>get_pickables();
 	std::vector<Weapon*>get_weapons();
 	void Move(int xAmount, int yAmount);
+	void Revert();
 	void Render();
 
 protected:

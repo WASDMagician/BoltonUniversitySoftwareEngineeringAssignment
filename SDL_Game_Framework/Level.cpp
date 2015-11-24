@@ -52,6 +52,11 @@ Level::~Level()
 	level_trigger = NULL;
 }
 
+std::vector<AW_Sprite_Interface*>Level::get_areas()
+{
+	return m_areas;
+}
+
 bool Level::set_level_name(std::string name)
 {
 	m_level_name = name;
@@ -74,7 +79,6 @@ void Level::Move(int xAmount, int yAmount)
 		if (e != NULL)
 		{
 			e->Move_By(xAmount, yAmount);
-			//e->Move_Between();
 		}
 	}
 
@@ -83,7 +87,6 @@ void Level::Move(int xAmount, int yAmount)
 		if (n != NULL)
 		{
 			n->Move_By(xAmount, yAmount);
-			//e->Move_Between();
 		}
 	}
 
@@ -96,6 +99,40 @@ void Level::Move(int xAmount, int yAmount)
 		d->Move_By(xAmount, yAmount);
 	}
 	level_trigger->Move_By(xAmount, yAmount);
+}
+
+void Level::Revert()
+{
+	for (auto &a : m_areas)
+	{
+		a->Revert_Position();
+	}
+	for (auto &e : m_enemies)
+	{
+		if (e != NULL)
+		{
+			e->Revert_Position();
+		}
+	}
+
+	for (auto &n : m_npcs)
+	{
+		if (n != NULL)
+		{
+			n->Revert_Position();
+		}
+	}
+
+	for (auto &c : m_pickables)
+	{
+		c->Revert_Position();
+	}
+	for (auto &d : m_weapons)
+	{
+		d->Revert_Position();
+	}
+
+	level_trigger->Revert_Position();
 }
 
 void Level::Render()
@@ -130,8 +167,6 @@ void Level::Render()
 			m_npcs[i]->Render();
 		}
 	}
-	
-	
 }
 
 AW_Sprite_Interface* Level::get_trigger()

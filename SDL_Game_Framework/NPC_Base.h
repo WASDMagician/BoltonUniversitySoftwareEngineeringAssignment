@@ -35,9 +35,8 @@ public:
 
 	virtual void set_npc_hint(const std::string &hint);
 	virtual const std::string get_npc_hint();
-	virtual bool react(Character* target);
+	virtual bool React(Character* target);
 
-	virtual std::string serialize_character();
 protected:
 	std::string m_hint;
 

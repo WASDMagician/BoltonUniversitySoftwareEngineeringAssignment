@@ -51,7 +51,7 @@ public:
 	virtual void Defend(Character* target);
 
 	virtual bool Check_Alive();
-	virtual bool react(Character* target);
+	virtual bool React(Character* target);
 
 protected:
 	ENEMY_STATE enemy_state;

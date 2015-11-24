@@ -16,19 +16,20 @@ public:
 	void Update();
 	void Render();
 
+	bool set_target(AW_Sprite_Interface *target);
+
 	int get_angle_between(AW_Sprite_Interface* target);
 	int get_distance_between(AW_Sprite_Interface* target);
-
-	bool Move_By(int xAmount, int yAmount);
+	
+	void Move_By(int xAmount, int yAmount);
 	bool Move_To(float x, float y);
 
 	bool Move_Increment(float x, float y);
 	bool Move_Between();
 
-	bool Lerp_To(Vector2<float, float> *target, double moveSpeed, int rangeSnap);
+	void Move_Toward_Target();
 
 	void Add_Patrol_Position(Vector2<float, float> *position);
-	void Add_Patrol_Position(std::vector<Vector2<float, float>*> position);
 
 	bool In_Range(Vector2<float, float> *position, Vector2<float, float> *target, int rangeSnap);
 
@@ -38,7 +39,7 @@ public:
 
 	void Randomize_Position(int xPos, int width, int yPos, int height);
 
-	void Debug();
+	void Revert_Position();
 	
 
 private:
@@ -46,6 +47,8 @@ private:
 	Vector2<float, float> *m_current_target;
 	Vector2<float, float> *m_current_position;
 	unsigned int m_current_target_index;
+	float last_move_x;
+	float last_move_y;
 };
 
 #endif //_AW_SPRITE_INTERFACE_

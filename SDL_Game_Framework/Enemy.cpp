@@ -63,7 +63,6 @@ bool Enemy::Enemy_Roam()
 {
 	if (enemy_state == ROAMING)
 	{
-		Move_Between();
 		return true;
 	}
 
@@ -173,7 +172,7 @@ bool Enemy::Check_Alive()
 	return m_health > 0;
 }
 
-bool Enemy::react(Character* target)
+bool Enemy::React(Character* target)
 {
 	return false;
 }
