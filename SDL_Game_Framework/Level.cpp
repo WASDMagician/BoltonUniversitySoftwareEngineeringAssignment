@@ -166,6 +166,36 @@ void Level::Render()
 	}
 }
 
+void Level::Reset_Positions()
+{
+	for (size_t a = 0; a < m_areas.size(); a++)
+	{
+		m_areas[a]->Move_To_Spawn();
+	}
+
+	level_trigger->Move_To_Spawn();
+
+	for (size_t e = 0; e < m_enemies.size(); e++)
+	{
+		m_enemies[e]->Move_To_Spawn();
+	}
+
+	for (size_t p = 0; p < m_pickables.size(); p++)
+	{
+		m_pickables[p]->Move_To_Spawn();
+	}
+
+	for (size_t w = 0; w < m_weapons.size(); w++)
+	{
+		m_weapons[w]->Move_To_Spawn();
+	}
+
+	for (size_t n = 0; n < m_npcs.size(); n++)
+	{
+		m_npcs[n]->Move_To_Spawn();
+	}
+}
+
 AW_Sprite_Interface* Level::get_trigger()
 {
 	return level_trigger;

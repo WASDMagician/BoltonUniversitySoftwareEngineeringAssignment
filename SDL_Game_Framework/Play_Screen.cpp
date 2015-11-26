@@ -26,7 +26,6 @@ void Play_Screen::Setup()
 	char_factory = new Character_Factory_Implementation();
 	m_b_paused = false;
 	Init_Player();
-
 	screen_ui = new UI_Play_Screen();
 	screen_ui->set_character(m_player);
 
@@ -154,7 +153,15 @@ bool Play_Screen::Check_Enemy_Trigger()
 
 					if (!m_player->Check_Alive())
 					{
-						m_b_close_splash = true;
+						if (m_player->get_lives() > 1)
+						{
+							m_level->Reset_Positions();
+							m_player->set_lives(m_player->get_lives() - 1);
+						}
+						else
+						{
+							m_b_close_splash = true;
+						}
 					}
 				}
 			}

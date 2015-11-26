@@ -1,13 +1,13 @@
 #include "AW_Sprite_Interface.h"
 
 AW_Sprite_Interface::AW_Sprite_Interface()
-:AWSprite(), last_move_x(0), last_move_y(0), target_position_x(NULL), target_position_y(NULL), has_target(false)
+:AWSprite(), last_move_x(0), last_move_y(0), target_position_x(NULL), target_position_y(NULL), has_target(false), spawn_x(NULL), spawn_y(NULL)
 {
 	set_transparent_colour(255, 0, 255);
 }
 
 AW_Sprite_Interface::AW_Sprite_Interface(char* imgPath, int rows, int cols, int animationSpeed)
-: AWSprite(imgPath, rows, cols), last_move_x(0), last_move_y(0), target_position_x(NULL), target_position_y(NULL), has_target(false)
+: AWSprite(imgPath, rows, cols), last_move_x(0), last_move_y(0), target_position_x(NULL), target_position_y(NULL), has_target(false), spawn_x(NULL), spawn_y(NULL)
 {
 	set_transparent_colour(255, 0, 255);
 }
@@ -21,7 +21,7 @@ void AW_Sprite_Interface::Update()
 {
 }
 
-void AW_Sprite_Interface::Move_By(int xAmount, int yAmount)
+void AW_Sprite_Interface::Move_By(float xAmount, float yAmount)
 {
 	float currentX = get_x();
 	float currentY = get_y();
@@ -39,7 +39,7 @@ void AW_Sprite_Interface::Move_By(int xAmount, int yAmount)
 	last_move_y = yAmount;
 }
 
-void AW_Sprite_Interface::Move_By_Without_Record(int xAmount, int yAmount)
+void AW_Sprite_Interface::Move_By_Without_Record(float xAmount, float yAmount)
 {
 	float currentX = get_x();
 	float currentY = get_y();
@@ -54,7 +54,7 @@ void AW_Sprite_Interface::Move_By_Without_Record(int xAmount, int yAmount)
 	set_world_position_y(newY);
 }
 
-void AW_Sprite_Interface::Move_To(int x, int y)
+void AW_Sprite_Interface::Move_To(float x, float y)
 {
 	set_world_position(x, y);
 }
@@ -77,14 +77,14 @@ bool AW_Sprite_Interface::In_Range(float range)
 
 
 
-void AW_Sprite_Interface::Set_Target_Position(int x, int y) 
+void AW_Sprite_Interface::Set_Target_Position(float x, float y) 
 {
 	target_position_x = x;
 	target_position_y = y;
 	has_target = true;
 }
 
-void AW_Sprite_Interface::Update_Target_Position(int x, int y)
+void AW_Sprite_Interface::Update_Target_Position(float x, float y)
 {
 	target_position_x += x;
 	target_position_y += y;
@@ -95,11 +95,23 @@ bool AW_Sprite_Interface::Has_Target()
 	return has_target;
 }
 
-void AW_Sprite_Interface::Randomize_Position(int xPos, int width, int yPos, int height)
+void AW_Sprite_Interface::set_spawn(float x, float y)
 {
-	int rand_x = rand() % width;
-	int rand_y = rand() % height;
-	set_world_position((float)xPos + (float)rand_x, (float)yPos + (float)rand_y);
+	spawn_x = x;
+	spawn_y = y;
+}
+
+void AW_Sprite_Interface::Move_To_Spawn()
+{
+	set_world_position_x(spawn_x);
+	set_world_position_y(spawn_y);
+}
+
+void AW_Sprite_Interface::Randomize_Position(float xPos, float width, float yPos, float height)
+{
+	float rand_x = rand() % (int)width;
+	float rand_y = rand() % (int)height;
+	set_world_position(xPos + rand_x, yPos + rand_y);
 }
 
 void AW_Sprite_Interface::Revert_Position()

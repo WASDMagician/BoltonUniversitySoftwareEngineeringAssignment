@@ -15,19 +15,22 @@ public:
 
 	void Update();
 	
-	void Move_By(int xAmount, int yAmount);
-	void Move_By_Without_Record(int x, int y);
+	void Move_By(float xAmount, float yAmount);
+	void Move_By_Without_Record(float x, float y);
 
-	void Move_To(int x, int y);
+	void Move_To(float x, float y);
 	void Move_Toward();
 
 	bool In_Range(float range);
 
-	void Set_Target_Position(int x, int y);
-	void Update_Target_Position(int x, int y);
+	void Set_Target_Position(float x, float y);
+	void Update_Target_Position(float x, float y);
 	bool Has_Target();
 
-	void Randomize_Position(int xPos, int width, int yPos, int height);
+	void set_spawn(float x, float y);
+	void Move_To_Spawn();
+
+	void Randomize_Position(float xPos, float width, float yPos, float height);
 
 	void Revert_Position();
 
@@ -41,6 +44,9 @@ private:
 
 	float target_position_x;
 	float target_position_y;
+
+	float spawn_x;
+	float spawn_y;
 };
 
 #endif //_AW_SPRITE_INTERFACE_

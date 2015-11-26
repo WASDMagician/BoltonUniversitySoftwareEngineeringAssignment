@@ -26,6 +26,7 @@ public:
 	std::vector<Weapon*>get_weapons();
 	void Move(int xAmount, int yAmount);
 	void Revert();
+	void Reset_Positions();
 	void Render();
 
 protected:
