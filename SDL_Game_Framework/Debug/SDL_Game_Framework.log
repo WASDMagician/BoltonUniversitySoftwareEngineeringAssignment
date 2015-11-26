@@ -1,20 +1,8 @@
-﻿Build started 24/11/2015 18:10:03.
+﻿Build started 26/11/2015 14:38:14.
      1>Project "E:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Centipede.cpp Character_Factory_Implementation.cpp Clown.cpp Enemy.cpp Game.cpp Jesus.cpp Ogre.cpp Play_Screen.cpp Player.cpp Test_Everything.cpp
-         Test_Everything.cpp
-         Player.cpp
-         Enemy.cpp
-         Character_Factory_Implementation.cpp
-         Generating Code...
-         Compiling...
-         Play_Screen.cpp
-         Ogre.cpp
-         Jesus.cpp
-         Game.cpp
-         Clown.cpp
-         Centipede.cpp
-         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Weapon_Factory_Implementation.cpp
+         Weapon_Factory_Implementation.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
          Debug\AWSprite.obj
@@ -38,24 +26,21 @@
          Debug\NPC_Healer.obj
          Debug\Pick_Objects_Factory_Implementation.obj
          Debug\Play_Screen.obj
-         Debug\Projectile.obj
-         Debug\Puzzle_Objects.obj
          Debug\Splash_Screen.obj
          Debug\Start_Menu_Splash.obj
          Debug\Test_Everything.obj
          Debug\Great_Axe.obj
-         Debug\Inventory.obj
          Debug\Main.obj
          Debug\NPC_Base.obj
          Debug\NPC_Hinter.obj
          Debug\NPC_Shopkeeper.obj
-         Debug\Object.obj
          Debug\Ogre.obj
          Debug\Pickup_Objects.obj
          Debug\Player.obj
          Debug\Sniper.obj
          Debug\Sword.obj
          Debug\Test_All.obj
+         Debug\Test_File.obj
          Debug\Text_Box.obj
          Debug\UI.obj
          Debug\UI_Play_Screen.obj
@@ -79,10 +64,12 @@
          Debug\Weapon.obj
          Debug\Weapon_Creator.obj
          Debug\Weapon_Factory_Implementation.obj
+         LINK : E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe not found or not built by the last incremental link; performing full link
      1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>Centipede.obj : warning LNK4099: PDB 'vc120.pdb' was not found with 'Centipede.obj' or at 'E:\bolton university software engineering assignment\Debug\vc120.pdb'; linking object as if no debug info
          SDL_Game_Framework.vcxproj -> E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe
      1>Done Building Project "E:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.81
+Time Elapsed 00:00:04.59

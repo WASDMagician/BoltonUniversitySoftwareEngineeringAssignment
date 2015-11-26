@@ -4,7 +4,7 @@
 #include "Weapon.h"
 #include <vector>
 
-enum WEAPON_TYPES { CROSSBOW, EMPOWERED_KNUCKLES, GREAT_AXE, SNIPER, SWORD };
+enum WEAPON_TYPES {GREAT_AXE, SWORD };
 
 class Weapon_Factory_Implementation :
 	public Weapon_Factory

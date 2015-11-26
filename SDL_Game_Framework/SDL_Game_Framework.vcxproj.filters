@@ -213,16 +213,10 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Great_Axe.h">
-      <Filter>Header Files\Factories\Weapons\weapons</Filter>
-    </ClInclude>
-    <ClInclude Include="Sniper.h">
       <Filter>Header Files\Factories\Weapons\weapons</Filter>
     </ClInclude>
     <ClInclude Include="Sword.h">
@@ -234,20 +228,11 @@
     <ClInclude Include="AW_Sprite_Interface.h">
       <Filter>Header Files\utility</Filter>
     </ClInclude>
-    <ClInclude Include="Inventory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Consts.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="UI_Play_Screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Header Files\Factories\Character\Characters\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Crossbow.h">
-      <Filter>Header Files\Factories\Weapons\weapons</Filter>
     </ClInclude>
     <ClInclude Include="Game_Constants.h">
       <Filter>Header Files</Filter>
@@ -269,9 +254,6 @@
     </ClInclude>
     <ClInclude Include="NPC_Base.h">
       <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
-    </ClInclude>
-    <ClInclude Include="Puzzle_Objects.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="End_Menu_Splash.h">
       <Filter>Header Files\screens</Filter>
@@ -309,17 +291,11 @@
     <ClInclude Include="Weapon_Factory_Implementation.h">
       <Filter>Header Files\Factories\Weapons</Filter>
     </ClInclude>
-    <ClInclude Include="Empowered_Knuckles.h">
-      <Filter>Header Files\Factories\Weapons\weapons</Filter>
-    </ClInclude>
     <ClInclude Include="Play_Screen.h">
       <Filter>Header Files\screens</Filter>
     </ClInclude>
     <ClInclude Include="Text_Box.h">
       <Filter>Header Files\text box</Filter>
-    </ClInclude>
-    <ClInclude Include="Projectile.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Level_One.h">
       <Filter>Header Files\levels</Filter>
@@ -419,9 +395,6 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="UI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -442,9 +415,6 @@
     </ClCompile>
     <ClCompile Include="AW_Sprite_Interface.cpp">
       <Filter>Source Files\utility</Filter>
-    </ClCompile>
-    <ClCompile Include="Inventory.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UI_Play_Screen.cpp">
       <Filter>Source Files</Filter>
@@ -479,9 +449,6 @@
     <ClCompile Include="NPC_Shopkeeper.cpp">
       <Filter>Source Files\Factories\Characters\NPC</Filter>
     </ClCompile>
-    <ClCompile Include="Puzzle_Objects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="End_Menu_Splash.cpp">
       <Filter>Source Files\screens</Filter>
     </ClCompile>
@@ -515,9 +482,6 @@
     <ClCompile Include="Text_Box.cpp">
       <Filter>Source Files\text box</Filter>
     </ClCompile>
-    <ClCompile Include="Projectile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Level_One.cpp">
       <Filter>Source Files\levels</Filter>
     </ClCompile>
@@ -541,6 +505,9 @@
     </ClCompile>
     <ClCompile Include="NPC_Healer.cpp">
       <Filter>Source Files\Factories\Characters\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_File.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
