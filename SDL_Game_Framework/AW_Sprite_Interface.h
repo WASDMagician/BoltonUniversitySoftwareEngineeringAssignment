@@ -16,8 +16,14 @@ public:
 	void Update();
 	
 	void Move_By(int xAmount, int yAmount);
-	void Move_To(int x, int y);
 	void Move_By_Without_Record(int x, int y);
+
+	void Move_To(int x, int y);
+	void Move_Toward();
+
+	void Set_Target_Position(int x, int y);
+	void Update_Target_Position(int x, int y);
+	bool Has_Target();
 
 	void Randomize_Position(int xPos, int width, int yPos, int height);
 
@@ -26,8 +32,13 @@ public:
 	void Render();
 
 private:
+	bool has_target;
+
 	float last_move_x;
 	float last_move_y;
+
+	float target_position_x;
+	float target_position_y;
 };
 
 #endif //_AW_SPRITE_INTERFACE_

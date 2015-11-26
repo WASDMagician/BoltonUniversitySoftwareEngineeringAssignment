@@ -1,51 +1,6 @@
-﻿Build started 26/11/2015 16:25:25.
+﻿Build started 26/11/2015 18:03:04.
      1>Project "E:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AW_Sprite_Interface.cpp Centipede.cpp Character.cpp Character_Factory_Implementation.cpp Clown.cpp Crossbow.cpp Empowere_Knuckles.cpp Enemy.cpp Game.cpp Great_Axe.cpp Jesus.cpp Level.cpp Level_One.cpp Level_Three.cpp Level_Two.cpp NPC_Base.cpp NPC_Healer.cpp NPC_Hinter.cpp NPC_Shopkeeper.cpp Ogre.cpp Pick_Objects_Factory_Implementation.cpp Pickup_Objects.cpp Play_Screen.cpp Player.cpp Sniper.cpp Sword.cpp Test_Everything.cpp Test_File.cpp UI.cpp UI_Play_Screen.cpp Weapon.cpp Weapon_Creator.cpp Weapon_Factory_Implementation.cpp
-         Centipede.cpp
-         AW_Sprite_Interface.cpp
-     1>e:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(38): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(39): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(59): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(71): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-         Generating Code...
-     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
-         Compiling...
-         Character.cpp
-         Character_Factory_Implementation.cpp
-         Clown.cpp
-         Crossbow.cpp
-         Empowere_Knuckles.cpp
-         Enemy.cpp
-         Game.cpp
-         Great_Axe.cpp
-         Jesus.cpp
-         Level.cpp
-         Level_One.cpp
-         Level_Three.cpp
-         Level_Two.cpp
-         NPC_Base.cpp
-         NPC_Healer.cpp
-         NPC_Hinter.cpp
-         NPC_Shopkeeper.cpp
-         Ogre.cpp
-         Pick_Objects_Factory_Implementation.cpp
-         Pickup_Objects.cpp
-         Generating Code...
-         Compiling...
-         Play_Screen.cpp
-         Player.cpp
-         Sniper.cpp
-         Sword.cpp
-         Test_Everything.cpp
-         Test_File.cpp
-         UI.cpp
-         UI_Play_Screen.cpp
-         Weapon.cpp
-         Weapon_Creator.cpp
-         Weapon_Factory_Implementation.cpp
-         Generating Code...
-       Link:
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
          Debug\AWSprite.obj
          Debug\AW_Sprite_Interface.obj
@@ -106,9 +61,10 @@
          Debug\Weapon.obj
          Debug\Weapon_Creator.obj
          Debug\Weapon_Factory_Implementation.obj
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
          SDL_Game_Framework.vcxproj -> E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe
      1>Done Building Project "E:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:16.60
+Time Elapsed 00:00:00.81

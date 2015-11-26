@@ -67,7 +67,7 @@ void Level_One::Setup()
 	//create characters
 	Character *enemy = char_fac->Make_Character(OGRE); //create character
 	enemy->Move_To(500, 500); //set character position
-	
+	enemy->Set_Target_Position(20, 20);
 	enemy->set_display_box(false); //should character text_box be displayed
 	enemy->set_damage(2); //set character damage
 	m_enemies.push_back(enemy); //add character enemy list

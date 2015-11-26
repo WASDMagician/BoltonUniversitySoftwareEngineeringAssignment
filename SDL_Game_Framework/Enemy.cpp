@@ -61,10 +61,7 @@ bool Enemy::Enemy_Idle()
 
 bool Enemy::Enemy_Roam()
 {
-	if (enemy_state == ROAMING)
-	{
-		return true;
-	}
+	Move_Toward();
 
 	return false;
 }

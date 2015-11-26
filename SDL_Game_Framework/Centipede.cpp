@@ -11,6 +11,7 @@ Centipede::Centipede(char* imgPath, int rows, int cols, int animationSpeed)
 	: Enemy(imgPath, rows, cols, animationSpeed)
 {
 	enemy_state = ROAMING;
+	set_name("Centipede");
 }
 
 Centipede::~Centipede()

@@ -70,61 +70,64 @@ std::string Level::get_level_name()
 
 void Level::Move(int xAmount, int yAmount)
 {
-	for (auto &a : m_areas)
+	for (size_t a = 0; a < m_areas.size(); a++)
 	{
-		a->Move_By(xAmount, yAmount);
+		m_areas[a]->Move_By(xAmount, yAmount);
 	}
-	for (auto &e : m_enemies)
+
+	for (size_t e = 0; e < m_enemies.size(); e++)
 	{
-		if (e != NULL)
+		m_enemies[e]->Move_By(xAmount, yAmount);
+		if (m_enemies[e]->Has_Target())
 		{
-			e->Move_By(xAmount, yAmount);
+			std::cout << m_enemies[e]->get_name() << std::endl;
+			m_enemies[e]->Move_Toward();
 		}
 	}
 
-	for (auto &n : m_npcs)
+	for (size_t p = 0; p < m_pickables.size(); p++)
 	{
-		if (n != NULL)
-		{
-			n->Move_By(xAmount, yAmount);
-		}
+		m_pickables[p]->Move_By(xAmount, yAmount);
 	}
 
-	for (auto &c : m_pickables)
+	for (size_t w = 0; w < m_weapons.size(); w++)
 	{
-		c->Move_By(xAmount, yAmount);
+		m_weapons[w]->Move_By(xAmount, yAmount);
 	}
 
-	for (auto &d : m_weapons)
+	for (size_t n = 0; n < m_npcs.size(); n++)
 	{
-		d->Move_By(xAmount, yAmount);
+		m_npcs[n]->Move_By(xAmount, yAmount);
 	}
+
 	level_trigger->Move_By(xAmount, yAmount);
 }
 
 void Level::Revert()
 {
-	for (auto &a : m_areas)
+	for (size_t a = 0; a < m_areas.size(); a++)
 	{
-		a->Revert_Position();
-	}
-	for (auto &e : m_enemies)
-	{
-		e->Revert_Position();
+		m_areas[a]->Revert_Position();	
 	}
 
-	for (auto &n : m_npcs)
+	for (size_t e = 0; e < m_enemies.size(); e++)
 	{
-		n->Revert_Position();
+		m_enemies[e]->Revert_Position();
 	}
 
-	for (auto &c : m_pickables)
+	for (size_t p = 0; p < m_pickables.size(); p++)
 	{
-		c->Revert_Position();
+		m_pickables[p]->Revert_Position();
 	}
-	for (auto &d : m_weapons)
+
+	for (size_t w = 0; w < m_weapons.size(); w++)
 	{
-		d->Revert_Position();
+		m_weapons[w]->Revert_Position();
+	}
+
+	for (size_t n = 0; n < m_npcs.size(); n++)
+	{
+		m_npcs[n]->Revert_Position();
 	}
 
 	level_trigger->Revert_Position();
@@ -132,32 +135,31 @@ void Level::Revert()
 
 void Level::Render()
 {
-	for (auto &a : m_areas)
+	for (size_t a = 0; a < m_areas.size(); a++)
 	{
-		if (a != NULL)
-		{
-			a->Render();
-		}
+		m_areas[a]->Render();
 	}
+
 	level_trigger->update_everything();
-	for (size_t i = 0; i < m_enemies.size(); i++)
+
+	for (size_t e = 0; e < m_enemies.size(); e++)
 	{
-		m_enemies[i]->Render();
+		m_enemies[e]->Render();
 	}
-	for (auto &p : m_pickables)
+	
+	for (size_t p = 0; p < m_pickables.size(); p++)
 	{
-		p->Render();
+		m_pickables[p]->Render();
 	}
-	for (auto &w : m_weapons)
+
+	for (size_t w = 0; w < m_weapons.size(); w++)
 	{
-		w->Render();
+		m_weapons[w]->Render();
 	}
-	for (size_t i = 0; i < m_npcs.size(); i++)
+
+	for (size_t n= 0; n < m_npcs.size(); n++)
 	{
-		if (m_npcs[i] != NULL)
-		{
-			m_npcs[i]->Render();
-		}
+		m_npcs[n]->Render();
 	}
 }
 

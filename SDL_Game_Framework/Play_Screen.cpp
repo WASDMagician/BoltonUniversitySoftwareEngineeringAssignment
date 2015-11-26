@@ -82,30 +82,29 @@ void Play_Screen::Handle_Keys()
 {
 	const Uint8 *state = SDL_GetKeyState(NULL);
 
+	int speed = 5;
+
 	int x_move = 0;
 	int y_move = 0;
 
 	if (state[SDLK_LEFT] || state[SDLK_a])
 	{
-		x_move = 10;
+		x_move = speed;
 	}
 	if (state[SDLK_RIGHT] || state[SDLK_d])
 	{
-		x_move = -10;
+		x_move = -speed;
 	}
 	if (state[SDLK_UP] || state[SDLK_w])
 	{
-		y_move = 10;
+		y_move = speed;
 	}
 	if (state[SDLK_DOWN] || state[SDLK_s])
 	{
-		y_move = -10;
+		y_move = -speed;
 	}
 	
-	if (x_move != 0 || y_move != 0)
-	{
-		Move(x_move, y_move);
-	}
+	Move(x_move, y_move);
 }
 
 void Play_Screen::Move(int xAmount, int yAmount) //handle all level movement
