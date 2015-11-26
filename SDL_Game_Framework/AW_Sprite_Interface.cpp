@@ -37,8 +37,6 @@ void AW_Sprite_Interface::Move_By(int xAmount, int yAmount)
 
 	last_move_x = xAmount;
 	last_move_y = yAmount;
-
-	Update_Target_Position(xAmount, yAmount);
 }
 
 void AW_Sprite_Interface::Move_By_Without_Record(int xAmount, int yAmount)
@@ -69,6 +67,12 @@ void AW_Sprite_Interface::Move_Toward()
 	float angle = atan2(yDiff, xDiff);
 	
 	Move_By((5 * (cos(angle))), (5 * (sin(angle))));
+}
+
+bool AW_Sprite_Interface::In_Range(float range)
+{
+	printf("%f\n", target_position_x - range);
+	return(get_x() > target_position_x - range && get_x() < target_position_x + range && get_y() > target_position_y - range && get_y() < target_position_y + range);
 }
 
 

@@ -78,10 +78,13 @@ void Level::Move(int xAmount, int yAmount)
 	for (size_t e = 0; e < m_enemies.size(); e++)
 	{
 		m_enemies[e]->Move_By(xAmount, yAmount);
+		m_enemies[e]->Update_Target_Position(xAmount, yAmount);
 		if (m_enemies[e]->Has_Target())
 		{
-			std::cout << m_enemies[e]->get_name() << std::endl;
-			m_enemies[e]->Move_Toward();
+			if (!m_enemies[e]->In_Range(10))
+			{
+				m_enemies[e]->Move_Toward();
+			}
 		}
 	}
 

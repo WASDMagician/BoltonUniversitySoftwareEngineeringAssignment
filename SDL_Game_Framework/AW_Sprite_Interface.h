@@ -21,6 +21,8 @@ public:
 	void Move_To(int x, int y);
 	void Move_Toward();
 
+	bool In_Range(float range);
+
 	void Set_Target_Position(int x, int y);
 	void Update_Target_Position(int x, int y);
 	bool Has_Target();
