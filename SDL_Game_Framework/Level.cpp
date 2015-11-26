@@ -94,6 +94,7 @@ void Level::Move(int xAmount, int yAmount)
 	{
 		c->Move_By(xAmount, yAmount);
 	}
+
 	for (auto &d : m_weapons)
 	{
 		d->Move_By(xAmount, yAmount);
@@ -109,18 +110,12 @@ void Level::Revert()
 	}
 	for (auto &e : m_enemies)
 	{
-		if (e != NULL)
-		{
-			e->Revert_Position();
-		}
+		e->Revert_Position();
 	}
 
 	for (auto &n : m_npcs)
 	{
-		if (n != NULL)
-		{
-			n->Revert_Position();
-		}
+		n->Revert_Position();
 	}
 
 	for (auto &c : m_pickables)
@@ -147,10 +142,7 @@ void Level::Render()
 	level_trigger->update_everything();
 	for (size_t i = 0; i < m_enemies.size(); i++)
 	{
-		if (m_enemies[i] != NULL)
-		{
-			m_enemies[i]->Render();
-		}
+		m_enemies[i]->Render();
 	}
 	for (auto &p : m_pickables)
 	{

@@ -309,9 +309,6 @@
     <ClInclude Include="Level_Three.h">
       <Filter>Header Files\levels</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Header Files\utility</Filter>
-    </ClInclude>
     <ClInclude Include="Pickup_Objects.h">
       <Filter>Header Files\Factories\Objects</Filter>
     </ClInclude>

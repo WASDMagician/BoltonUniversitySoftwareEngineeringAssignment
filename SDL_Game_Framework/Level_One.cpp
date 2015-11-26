@@ -66,44 +66,37 @@ void Level_One::Setup()
 
 	//create characters
 	Character *enemy = char_fac->Make_Character(OGRE); //create character
-	enemy->set_world_position(500, 500); //set character position
-	enemy->Add_Patrol_Position(new Vector2<float, float>(10, 20)); //add patrol position
-	enemy->Add_Patrol_Position(new Vector2<float, float>(100, 100)); //add second patrol position
+	enemy->Move_To(500, 500); //set character position
+	
 	enemy->set_display_box(false); //should character text_box be displayed
 	enemy->set_damage(2); //set character damage
 	m_enemies.push_back(enemy); //add character enemy list
 
 	Character *enemy2 = char_fac->Make_Character(JESUS);
-	enemy2->set_world_position(750,750);
-	enemy2->Add_Patrol_Position(new Vector2<float, float>(10, 20));
-	enemy2->Add_Patrol_Position(new Vector2<float, float>(100, 100));
+	enemy2->Move_To(750, 750);
 	enemy2->set_display_box(false);
 	m_enemies.push_back(enemy2);
 
 	Character *enemy3 = char_fac->Make_Character(CENTIPEDE);
-	enemy3->set_world_position(100, 100);
+	enemy3->Move_To(100, 100);
 	enemy3->set_display_box(false);
 	enemy3->set_transparent_colour(255, 0, 255);
 	m_enemies.push_back(enemy3);
 
 	Character *enemy4 = char_fac->Make_Character(CENTIPEDE);
-	enemy4->set_world_position(200, 200);
+	enemy4->Move_To(200, 200);
 	enemy4->set_display_box(false);
 	enemy4->set_transparent_colour(255, 0, 255);
 	m_enemies.push_back(enemy4);
 
 	Character *npc1 = char_fac->Make_Character(CLOWN);
-	npc1->set_world_position(-350, 0);
-	npc1->Add_Patrol_Position(new Vector2<float, float>(10, 20));
-	npc1->Add_Patrol_Position(new Vector2<float, float>(100, 100));
+	npc1->Move_To(-350, 0);
 	npc1->set_display_box(false);
 	npc1->set_message("You are near to a \nsomething or \nother rune type thingy\n");
 	m_npcs.push_back(npc1);
 
 	Character *npc2 = char_fac->Make_Character(HEALER);
-	npc2->set_world_position(420, 420);
-	npc2->Add_Patrol_Position(new Vector2<float, float>(10, 20));
-	npc2->Add_Patrol_Position(new Vector2<float, float>(100, 100));
+	npc2->Move_To(420, 420);
 	npc2->set_message("You have been healed");
 	m_npcs.push_back(npc2);
 

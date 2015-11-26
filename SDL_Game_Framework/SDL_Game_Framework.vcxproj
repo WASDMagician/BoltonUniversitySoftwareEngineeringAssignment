@@ -187,7 +187,6 @@
     <ClInclude Include="UnitTest++\src\TimeHelpers.h" />
     <ClInclude Include="UnitTest++\src\UnitTest++.h" />
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h" />
-    <ClInclude Include="Vector2.h" />
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="Weapon_Creator.h" />
     <ClInclude Include="Weapon_Factory.h" />

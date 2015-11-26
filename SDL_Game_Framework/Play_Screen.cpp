@@ -110,16 +110,22 @@ void Play_Screen::Handle_Keys()
 
 void Play_Screen::Move(int xAmount, int yAmount) //handle all level movement
 {
+	bool has_collided = false;
 	for (size_t i = 0; i < m_level->get_areas().size(); i++)
 	{
 		if (m_level->get_areas()[i]->bb_collision(m_player))
 		{
-			m_level->Move(xAmount, yAmount);
+			has_collided = true;
+			break;
 		}
-		else
-		{
-			m_level->Revert();
-		}
+	}
+	if (has_collided == true)
+	{
+		m_level->Move(xAmount, yAmount);
+	}
+	else
+	{
+		m_level->Revert();
 	}
 }
 
@@ -171,7 +177,6 @@ bool Play_Screen::Check_NPC_Trigger()
 		{
 			npc->set_display_box(true);
 			npc->Update();
-			printf("Printy print");
 			npc->React(m_player);
 			return true;
 		}

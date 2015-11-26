@@ -18,7 +18,6 @@ NPC_Healer::~NPC_Healer()
 
 bool NPC_Healer::React(Character* target)
 {
-	printf("FUCKING HEAL ME SCRUB\n");
 	if (target->get_health() < 100)
 	{
 		
