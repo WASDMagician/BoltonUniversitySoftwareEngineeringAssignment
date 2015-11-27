@@ -68,13 +68,15 @@ void Play_Screen::Logic()
 			m_b_close_splash = true;
 		}
 	}
+	
 	Perform_Enemy_Encounter();
+	
 	Check_Coin_Trigger();
 	Check_Weapon_Trigger();
 	Check_NPC_Trigger();
-
+	
 	screen_ui->Update();
-
+	
 	for (auto &m : m_level->get_enemies())
 	{
 		m->Update();
@@ -112,22 +114,12 @@ void Play_Screen::Handle_Keys()
 
 void Play_Screen::Move(int xAmount, int yAmount) //handle all level movement
 {
-	bool has_collided = false;
-	for (size_t i = 0; i < m_level->get_areas().size(); i++)
+	if (m_player->Is_Contained(m_level->get_areas(), { xAmount, yAmount }))
 	{
-		if (m_level->get_areas()[i]->bb_collision(m_player))
+		for (size_t i = 0; i < m_level->get_areas().size(); i++)
 		{
-			has_collided = true;
-			break;
+			m_level->Move_All(xAmount, yAmount);
 		}
-	}
-	if (has_collided == true)
-	{
-		m_level->Move_All(xAmount, yAmount);
-	}
-	else
-	{
-		m_level->Revert_All();
 	}
 }
 

@@ -21,6 +21,29 @@ Text_Box::Text_Box(char* fontPath, int fontSize, std::string message)
 
 Text_Box::~Text_Box()
 {
+	if (m_font != NULL)
+	{
+		//delete m_font; //<- this causes a crash @bug
+	}
+
+	for (size_t i = 0; i < m_text_lines.size(); i++)
+	{
+		SDL_FreeSurface(m_text_lines[i]);
+		m_text_lines[i] = NULL;
+	}
+	m_text_lines.clear();
+	
+	for (size_t i = 0; i < m_text_rects.size(); i++)
+	{
+		delete m_text_rects[i];
+		m_text_rects[i] = NULL;
+	}
+	m_text_rects.clear();
+
+	if (m_box != NULL)
+	{
+		delete m_box;
+	}
 }
 
 

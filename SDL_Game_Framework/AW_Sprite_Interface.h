@@ -24,6 +24,9 @@ public:
 	void Add_Position(position);
 	void Add_Positions(std::vector<position>positions);
 	void Clear_Positions();
+
+	//template<typename T>
+	bool Is_Contained(std::vector<AW_Sprite_Interface*>vectorInput, position testPos);
 	
 	void Move_By(float xAmount, float yAmount);
 	void Move_By_Without_Record(float x, float y);
@@ -37,7 +40,7 @@ public:
 
 	void set_target_position(int targetIndex);
 	void set_target_position(position target);
-	void Update_Target_Position(position newTarget);
+	void Update_Target_Position(int xAmount, int yAmount);
 	bool Has_Target();
 
 	void set_spawn(float x, float y);

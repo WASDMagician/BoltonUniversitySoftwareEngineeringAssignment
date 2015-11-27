@@ -39,6 +39,33 @@ void AW_Sprite_Interface::Clear_Positions()
 	positions.clear();
 }
 
+//template<typename T>
+bool AW_Sprite_Interface::Is_Contained(std::vector<AW_Sprite_Interface*>vectorInput, position testPos)
+{
+	bool is_contained = false;
+
+	float player_left = get_x();
+	float player_right = get_x() + get_width();
+	float player_top = get_y();
+	float player_bottom = get_y() + get_height();
+
+	for (size_t i = 0; i < vectorInput.size(); i++)
+	{
+		float input_left = vectorInput[i]->get_x() + testPos.x;
+		float input_right = vectorInput[i]->get_x() + testPos.x + vectorInput[i]->get_width();
+		float input_top = vectorInput[i]->get_y() + testPos.y;
+		float input_bottom = vectorInput[i]->get_y() + testPos.y + vectorInput[i]->get_height();
+		
+		if (input_left <= player_left && input_right >= player_right && input_top <= player_top && input_bottom >= player_bottom)
+		{
+			is_contained = true;
+			break;
+		}
+	}
+	
+	return is_contained;
+}
+
 void AW_Sprite_Interface::Move_By(float xAmount, float yAmount)
 {
 	float currentX = get_x();
@@ -121,14 +148,14 @@ void AW_Sprite_Interface::set_target_position(position targ)
 	has_target = true;
 }
 
-void AW_Sprite_Interface::Update_Target_Position(position newTarg)
+void AW_Sprite_Interface::Update_Target_Position(int xAmount, int yAmount)
 {
-	target.x += newTarg.x;
-	target.y += newTarg.y;
+	target.x += xAmount;
+	target.y += yAmount;
 	for (size_t i = 0; i < positions.size(); i++)
 	{
-		positions[i].x += newTarg.x;
-		positions[i].y += newTarg.y;
+		positions[i].x += xAmount;
+		positions[i].y += yAmount;
 	}
 }
 
@@ -159,6 +186,7 @@ void AW_Sprite_Interface::Randomize_Position(float xPos, float width, float yPos
 void AW_Sprite_Interface::Revert_Position()
 {
 	Move_By(-last_move_x, -last_move_y);
+	Update_Target_Position(-last_move_x, -last_move_y);
 }
 
 void AW_Sprite_Interface::Render()

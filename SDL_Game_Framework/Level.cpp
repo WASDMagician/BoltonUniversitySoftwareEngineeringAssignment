@@ -84,6 +84,12 @@ void Level::Move(int xAmount, int yAmount, std::vector<T>inputVector)
 	for (int i = 0; i < inputVector.size(); i++)
 	{
 		inputVector[i]->Move_By(xAmount, yAmount);
+		if (inputVector[i]->Has_Target())
+		{
+			inputVector[i]->Move_Toward();
+			inputVector[i]->Increment_Target();
+			inputVector[i]->Update_Target_Position(xAmount, yAmount);
+		}
 	}
 }
 

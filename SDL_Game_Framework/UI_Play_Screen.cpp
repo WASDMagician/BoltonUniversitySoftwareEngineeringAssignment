@@ -47,7 +47,9 @@ bool UI_Play_Screen::Setup()
 
 bool UI_Play_Screen::Update()
 {
+	//memory leak in here somewhere //@BUG
 	delete UI_Details;
+	UI_Details = NULL;
 	UI_Details = new Text_Box();
 	std::string name = "Name " + m_display_character->get_name();
 	std::string health = "Health " + to_string(m_display_character->get_health());
@@ -55,7 +57,7 @@ bool UI_Play_Screen::Update()
 	std::string damage = "Damage " + to_string(m_display_character->get_damage());
 	std::string score = "Score " + to_string(m_display_character->get_score());
 	std::string output = name + " " + health + " " + lives + " " + damage + " " + score;
-
+	
 	UI_Details->set_font("fonts/game_font.ttf", 15);
 	UI_Details->set_color(200, 0, 0);
 	UI_Details->Position_Setting(0, 0, 0, 0);
