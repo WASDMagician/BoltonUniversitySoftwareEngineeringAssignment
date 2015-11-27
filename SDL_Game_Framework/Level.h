@@ -24,10 +24,22 @@ public:
 	std::vector<Character*>get_npcs();
 	std::vector<Pickup_Objects*>get_pickables();
 	std::vector<Weapon*>get_weapons();
-	void Move(int xAmount, int yAmount);
-	void Revert();
-	void Reset_Positions();
-	void Render();
+
+	void Move_All(int xAmount, int yAmount);
+	template<typename T>
+	void Move(int xAmount, int yAmount, std::vector<T>inputVector);
+
+	void Revert_All();
+	template<typename T>
+	void Revert(std::vector<T>inputVector);
+
+	void Reset_All_Positions();
+	template<typename T>
+	void Reset_Positions(std::vector<T>inputVector);
+
+	void Render_All();
+	template<typename T>
+	void Render(std::vector<T>inputVector);
 
 protected:
 	Character_Factory_Implementation *char_fac;

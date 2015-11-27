@@ -43,6 +43,7 @@ void Play_Screen::Init_Player()
 	m_player->set_score(0);
 	m_player->set_damage(20);
 	m_player->Move_To(400, 300);
+
 }
 
 void Play_Screen::Logic()
@@ -122,11 +123,11 @@ void Play_Screen::Move(int xAmount, int yAmount) //handle all level movement
 	}
 	if (has_collided == true)
 	{
-		m_level->Move(xAmount, yAmount);
+		m_level->Move_All(xAmount, yAmount);
 	}
 	else
 	{
-		m_level->Revert();
+		m_level->Revert_All();
 	}
 }
 
@@ -144,7 +145,6 @@ bool Play_Screen::Perform_Enemy_Encounter()
 		{
 			if (m_play_time / 1000 > m_last_encounter / 1000 + m_encounter_gap / 1000)
 			{
-				printf("%d %d ", enemies[e]->get_health(), enemies[e]->get_damage());
 				m_player->Attack(enemies[e]);
 				enemies[e]->Attack(m_player);
 
@@ -157,7 +157,7 @@ bool Play_Screen::Perform_Enemy_Encounter()
 				{
 					if (m_player->get_lives() > 1)
 					{
-						m_level->Reset_Positions();
+						m_level->Reset_All_Positions();
 						m_player->set_lives(m_player->get_lives() - 1);
 					}
 					else
@@ -231,7 +231,7 @@ void Play_Screen:: Render_Back()
 {
 
 	SDL_FillRect(m_p_game->screen, NULL, 0x000000); //bleh, not sure about this, stops tearing
-	m_level->Render();
+	m_level->Render_All();
 }
 
 void Play_Screen:: Render_Mid()
