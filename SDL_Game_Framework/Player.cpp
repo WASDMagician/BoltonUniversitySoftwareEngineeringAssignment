@@ -75,17 +75,6 @@ int Player::get_damage()
 	return m_damage;
 }
 
-bool Player::set_defence(int defence)
-{
-	m_defence = defence;
-	return m_defence == defence;
-}
-
-int Player::get_defence()
-{
-	return m_defence;
-}
-
 bool Player::set_score(int score)
 {
 	m_score = score;
@@ -95,16 +84,6 @@ bool Player::set_score(int score)
 int Player::get_score()
 {
 	return m_score;
-}
-
-void Player::Attack(Character* target)
-{
-	target->Defend(target);
-}
-
-void Player::Defend(Character* target)
-{
-	m_health -= target->get_damage() - get_defence();
 }
 
 bool Player::Check_Alive()

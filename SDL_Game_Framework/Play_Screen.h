@@ -1,6 +1,8 @@
 #ifndef _PLAY_SPLASH_H_
 #define _PLAY_SPLASH_H_
 
+#include <cstdio>
+#include <ctime>
 #include "Character_Factory_Implementation.h"
 #include "Player.h"
 #include "Level.h"
@@ -21,7 +23,7 @@ public:
 
 	void Move(int xAmount, int yAmount);
 	bool Check_Level_Trigger();
-	bool Check_Enemy_Trigger();
+	bool Perform_Enemy_Encounter();
 	bool Check_Coin_Trigger();
 	bool Check_Weapon_Trigger();
 	bool Check_NPC_Trigger();
@@ -35,14 +37,14 @@ public:
 
 
 private:
-	
+	std::clock_t m_play_time;
+	std::clock_t m_encounter_gap;
+	std::clock_t m_last_encounter;
+
 	Level *m_level;
 	Character_Factory_Implementation* char_factory;
 	Character *m_player;
 	UI_Play_Screen *screen_ui;
-	bool m_b_paused;
-
-	bool m_b_has_attacked;
 };
 
 #endif // _PLAY_SPLASH_H_

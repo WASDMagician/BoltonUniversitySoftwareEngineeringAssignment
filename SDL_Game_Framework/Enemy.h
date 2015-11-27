@@ -41,14 +41,8 @@ public:
 	virtual bool set_damage(int damage);
 	virtual int get_damage();
 
-	virtual bool set_defence(int defence);
-	virtual int get_defence();
-
 	virtual bool set_score(int score);
 	virtual int get_score();
-
-	virtual void Attack(Character* target);
-	virtual void Defend(Character* target);
 
 	virtual bool Check_Alive();
 	virtual bool React(Character* target);

@@ -132,17 +132,6 @@ int Enemy::get_damage()
 	return m_damage;
 }
 
-bool Enemy::set_defence(int defence)
-{
-	m_defence = defence;
-	return m_defence == defence;
-}
-
-int Enemy::get_defence()
-{
-	return m_defence;
-}
-
 bool Enemy::set_score(int score)
 {
 	m_score = score;
@@ -152,16 +141,6 @@ bool Enemy::set_score(int score)
 int Enemy::get_score()
 {
 	return m_score;
-}
-
-void Enemy::Attack(Character* target)
-{
-	target->Defend(target);
-}
-
-void Enemy::Defend(Character* target)
-{
-	m_health -= target->get_damage() - get_defence();
 }
 
 bool Enemy::Check_Alive()

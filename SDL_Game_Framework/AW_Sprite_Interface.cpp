@@ -71,7 +71,6 @@ void AW_Sprite_Interface::Move_Toward()
 
 bool AW_Sprite_Interface::In_Range(float range)
 {
-	printf("%f\n", target_position_x - range);
 	return(get_x() > target_position_x - range && get_x() < target_position_x + range && get_y() > target_position_y - range && get_y() < target_position_y + range);
 }
 

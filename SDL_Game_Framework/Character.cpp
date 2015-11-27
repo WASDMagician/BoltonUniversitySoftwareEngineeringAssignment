@@ -1,13 +1,13 @@
 #include "Character.h"
 
 Character::Character()
-	:AW_Sprite_Interface(), m_health(0), m_damage(0), m_defence(0), m_score(0), m_message(""), m_message_box(NULL)
+	:AW_Sprite_Interface(), m_health(0), m_damage(0), m_score(0), m_message(""), m_message_box(NULL)
 {
 
 }
 
 Character::Character(char* imgPath, int rows, int cols, int animationSpeed, std::string message)
-	: AW_Sprite_Interface(imgPath, rows, cols, animationSpeed), m_health(0), m_damage(0), m_defence(0), m_score(0), m_message(message), 
+	: AW_Sprite_Interface(imgPath, rows, cols, animationSpeed), m_health(0), m_damage(0), m_score(0), m_message(message), 
 	m_message_box(NULL)
 {
 	set_message(message);
@@ -17,6 +17,12 @@ Character::~Character()
 {
 }
 
+
+void Character::set_variables(int health, int damage)
+{
+	m_health = health;
+	m_damage = damage;
+}
 bool Character::set_score(int score)
 {
 	m_score = score;
@@ -59,6 +65,11 @@ void Character::Update()
 {
 	m_message_box->Position_Setting(get_x(), get_y(), 0, 0);
 	m_message_box->set_rects();
+}
+
+void Character::Attack(Character* target)
+{
+	target->set_health(target->get_health() - (m_damage));
 }
 
 void Character::Render()

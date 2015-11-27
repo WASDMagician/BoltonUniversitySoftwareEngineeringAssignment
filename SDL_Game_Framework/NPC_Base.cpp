@@ -83,36 +83,6 @@ int NPC_Base::get_damage()
 	return m_damage;
 }
 
-bool NPC_Base::set_defence(int defence)
-{
-	m_defence = defence;
-	return m_defence == defence;
-}
-
-int NPC_Base::get_defence()
-{
-	return m_defence;
-}
-
-//this is unecessary, use void Add_Patrol_Position(std::vector<Vector2<float, float>*> position); with a vector of positions, that will have the NPC
-//move between those positions.
-
-/*void NPC_Base::move()
-{
-	this->Move_To(m_PointA.x, m_PointB.y);
-	if (this->get_current_position() == m_PointA && m_Direction == true)
-	{
-		m_Direction = !m_Direction;
-		this->Lerp_To(&m_PointB, 10.0f, 1.0f);
-	}
-
-	if (this->get_current_position() == m_PointB && m_Direction == false)
-	{
-		m_Direction = !m_Direction;
-		this->Lerp_To(&m_PointA, 10.0f, 1.0f);
-	}
-}*/
-
 void NPC_Base::set_npc_hint(const std::string &hint)
 {
 	m_hint = hint;

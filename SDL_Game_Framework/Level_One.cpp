@@ -70,20 +70,23 @@ void Level_One::Setup()
 
 	//create characters
 	Character *enemy = char_fac->Make_Character(OGRE); //create character
+	enemy->set_variables(50, 10);
 	enemy->Move_To(500, 500); //set character position
 	enemy->set_spawn(500, 500);
 	enemy->Set_Target_Position(20, 20);
 	enemy->set_display_box(false); //should character text_box be displayed
-	enemy->set_damage(2); //set character damage
+	enemy->set_damage(10); //set character damage
 	m_enemies.push_back(enemy); //add character enemy list
 
 	Character *enemy2 = char_fac->Make_Character(JESUS);
+	enemy2->set_variables(100, 20);
 	enemy2->Move_To(750, 750);
 	enemy2->set_spawn(750, 750);
 	enemy2->set_display_box(false);
 	m_enemies.push_back(enemy2);
 
 	Character *enemy3 = char_fac->Make_Character(CENTIPEDE);
+	enemy3->set_variables(20, 2);
 	enemy3->Move_To(100, 100);
 	enemy3->set_spawn(100, 100);
 	enemy3->set_display_box(false);
@@ -91,6 +94,7 @@ void Level_One::Setup()
 	m_enemies.push_back(enemy3);
 
 	Character *enemy4 = char_fac->Make_Character(CENTIPEDE);
+	enemy3->set_variables(20, 2);
 	enemy4->Move_To(200, 200);
 	enemy4->set_spawn(200, 200);
 	enemy4->set_display_box(false);

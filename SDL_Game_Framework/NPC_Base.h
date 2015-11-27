@@ -30,9 +30,6 @@ public:
 	virtual bool set_damage(int damage);
 	virtual int get_damage();
 
-	virtual bool set_defence(int defence);
-	virtual int get_defence();
-
 	virtual void set_npc_hint(const std::string &hint);
 	virtual const std::string get_npc_hint();
 	virtual bool React(Character* target);

@@ -28,16 +28,10 @@ public:
 	 bool set_damage(int damage);
 	 int get_damage();
 
-	 bool set_defence(int defence);
-	 int get_defence();
-
 	 bool set_score(int score);
 	 int get_score();
 
 	 bool is_blocking = false;
-
-	 void Attack(Character* target);
-	 void Defend(Character* target);
 
 	 bool Check_Alive();
 

@@ -5,13 +5,15 @@
 #include "Game.h"
 
 Play_Screen::Play_Screen()
-:Splash_Screen(NULL, NULL, "Play_Screen"), m_b_has_attacked(false)
+	:Splash_Screen(NULL, NULL, "Play_Screen"), m_play_time(NULL), m_level(NULL), char_factory(NULL), m_player(NULL),
+	screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2)
 {
 
 }
 
 Play_Screen::Play_Screen(Game *pGame, char* bgImg)
-: Splash_Screen(pGame, bgImg, "Play_Screen"), m_b_has_attacked(false)
+	: Splash_Screen(pGame, bgImg, "Play_Screen"), m_play_time(NULL), m_level(NULL), char_factory(NULL), m_player(NULL),
+	screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2)
 {
 	m_p_game->SetBackground(bgImg);
 }
@@ -23,8 +25,8 @@ Play_Screen::~Play_Screen(void)
 
 void Play_Screen::Setup()
 {
+	m_play_time = std::clock();
 	char_factory = new Character_Factory_Implementation();
-	m_b_paused = false;
 	Init_Player();
 	screen_ui = new UI_Play_Screen();
 	screen_ui->set_character(m_player);
@@ -39,12 +41,13 @@ void Play_Screen::Init_Player()
 	m_player->set_health(100);
 	m_player->set_lives(3);
 	m_player->set_score(0);
-	m_player->set_damage(10);
+	m_player->set_damage(20);
 	m_player->Move_To(400, 300);
 }
 
 void Play_Screen::Logic()
 {
+	m_play_time = clock();
 	if (Check_Level_Trigger())
 	{
 		if (m_level->get_level_name() == "one")
@@ -64,7 +67,7 @@ void Play_Screen::Logic()
 			m_b_close_splash = true;
 		}
 	}
-	Check_Enemy_Trigger();
+	Perform_Enemy_Encounter();
 	Check_Coin_Trigger();
 	Check_Weapon_Trigger();
 	Check_NPC_Trigger();
@@ -132,45 +135,40 @@ bool Play_Screen::Check_Level_Trigger()
 	return (m_level->get_trigger()->bb_collision(m_player));
 }
 
-bool Play_Screen::Check_Enemy_Trigger()
+bool Play_Screen::Perform_Enemy_Encounter()
 {
-	for (auto &enemy : m_level->get_enemies())
+	std::vector<Character*>enemies = m_level->get_enemies();
+	for (size_t e = 0; e < enemies.size(); e++)
 	{
-		if (enemy != NULL)
+		if (enemies[e]->bb_collision(m_player))
 		{
-			if (enemy->bb_collision(m_player))
+			if (m_play_time / 1000 > m_last_encounter / 1000 + m_encounter_gap / 1000)
 			{
-				if (!m_b_has_attacked)
+				printf("%d %d ", enemies[e]->get_health(), enemies[e]->get_damage());
+				m_player->Attack(enemies[e]);
+				enemies[e]->Attack(m_player);
+
+				if (!enemies[e]->Check_Alive())
 				{
-					m_b_has_attacked = false; //should be true
-					m_player->Attack(enemy);
-					enemy->Attack(m_player);
+					enemies[e]->set_visibility(false);
+				}
 
-					if (!enemy->Check_Alive())
+				if (!m_player->Check_Alive())
+				{
+					if (m_player->get_lives() > 1)
 					{
-						enemy->set_visibility(false);
+						m_level->Reset_Positions();
+						m_player->set_lives(m_player->get_lives() - 1);
 					}
-
-					if (!m_player->Check_Alive())
+					else
 					{
-						if (m_player->get_lives() > 1)
-						{
-							m_level->Reset_Positions();
-							m_player->set_lives(m_player->get_lives() - 1);
-						}
-						else
-						{
-							m_b_close_splash = true;
-						}
+						m_b_close_splash = true;
 					}
 				}
-			}
-			else
-			{
-				m_b_has_attacked = false;
+
+				m_last_encounter = m_play_time;
 			}
 		}
-		
 	}
 	return true;
 }
@@ -214,7 +212,6 @@ bool Play_Screen::Check_Weapon_Trigger()
 	{
 		if (m_player->bb_collision(weapon))
 		{
-			m_player->set_score(m_player->get_score() + 1);
 			m_player->set_damage(m_player->get_damage() + 10);
 			weapon->set_visibility(false);
 			return true;

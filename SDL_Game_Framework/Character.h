@@ -14,6 +14,8 @@ public:
 	Character(char* img, int rows, int cols, int animationSpeed, std::string message);
 	virtual ~Character();
 	virtual bool Setup(char* imgPath, int rows, int cols, int animationSpeed) = 0;
+	virtual void set_variables(int health, int damage);
+
 	virtual void Update();
 	virtual void Render();
 
@@ -29,14 +31,10 @@ public:
 	virtual bool set_damage(int damage) = 0;
 	virtual int get_damage() = 0;
 
-	virtual bool set_defence(int defence) = 0;
-	virtual int get_defence() = 0;
-
 	virtual bool set_score(int score);
 	virtual int get_score();
 
-	virtual void Attack(Character *target) = 0;
-	virtual void Defend(Character *target) = 0;
+	virtual void Attack(Character *target);
 
 	virtual void set_message(std::string hint);
 	virtual const std::string get_message();
@@ -53,7 +51,6 @@ protected:
 	int m_health;
 	int m_lives;
 	int m_damage;
-	int m_defence;
 
 	int m_score;
 

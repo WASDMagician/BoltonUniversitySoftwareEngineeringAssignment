@@ -28,7 +28,5 @@ void NPC_Shopkeeper::add_to_shop(int newWeapon, int price)
 
 bool NPC_Shopkeeper::react()
 {
-	// @WUT m_hint is part of NPC_Hinter, not base, should they both have it?
-	//std::cout << m_hint << "\n"; //should be with strange magic shit
 	return false;
 }

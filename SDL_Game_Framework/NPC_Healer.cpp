@@ -21,7 +21,7 @@ bool NPC_Healer::React(Character* target)
 	if (target->get_health() < 100)
 	{
 		
-		target->set_health(target->get_health() + 10);
+		target->set_health(100);
 	}
 	return true;
 }
