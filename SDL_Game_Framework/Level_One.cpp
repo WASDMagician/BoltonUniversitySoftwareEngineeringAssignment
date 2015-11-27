@@ -69,50 +69,52 @@ void Level_One::Setup()
 	m_areas.push_back(area_five);
 
 	//create characters
-	Character *enemy = char_fac->Make_Character(OGRE); //create character
-	enemy->set_variables(50, 10);
-	enemy->Move_To(500, 500); //set character position
-	enemy->set_spawn(500, 500);
-	enemy->Set_Target_Position(20, 20);
-	enemy->set_display_box(false); //should character text_box be displayed
-	enemy->set_damage(10); //set character damage
-	m_enemies.push_back(enemy); //add character enemy list
+	Character *ogre = char_fac->Make_Character(OGRE); //create character
+	ogre->set_variables(50, 10);
+	ogre->Move_To(500, 500); //set character position
+	ogre->set_spawn(500, 500);
+	ogre->Add_Positions({ { 20, 20 }, { 100, 150 }, { 200, 400 }, { 500, 500 } });
+	ogre->set_target_position(0);
+	ogre->set_display_box(false); //should character text_box be displayed
+	ogre->set_damage(10); //set character damage
+	m_enemies.push_back(ogre); //add character ogre list
 
-	Character *enemy2 = char_fac->Make_Character(JESUS);
-	enemy2->set_variables(100, 20);
-	enemy2->Move_To(750, 750);
-	enemy2->set_spawn(750, 750);
-	enemy2->set_display_box(false);
-	m_enemies.push_back(enemy2);
+	Character *jesus = char_fac->Make_Character(JESUS);
+	jesus->set_variables(100, 20);
+	jesus->Move_To(750, 750);
+	jesus->set_spawn(750, 750);
+	jesus->set_display_box(false);
+	m_enemies.push_back(jesus);
 
-	Character *enemy3 = char_fac->Make_Character(CENTIPEDE);
-	enemy3->set_variables(20, 2);
-	enemy3->Move_To(100, 100);
-	enemy3->set_spawn(100, 100);
-	enemy3->set_display_box(false);
-	enemy3->set_transparent_colour(255, 0, 255);
-	m_enemies.push_back(enemy3);
+	Character *centipede_one = char_fac->Make_Character(CENTIPEDE);
+	centipede_one->set_variables(20, 2);
+	centipede_one->Move_To(100, 100);
+	centipede_one->set_spawn(100, 100);
+	centipede_one->set_display_box(false);
+	centipede_one->set_transparent_colour(255, 0, 255);
+	m_enemies.push_back(centipede_one);
 
-	Character *enemy4 = char_fac->Make_Character(CENTIPEDE);
-	enemy3->set_variables(20, 2);
-	enemy4->Move_To(200, 200);
-	enemy4->set_spawn(200, 200);
-	enemy4->set_display_box(false);
-	enemy4->set_transparent_colour(255, 0, 255);
-	m_enemies.push_back(enemy4);
+	Character *centipede_two = char_fac->Make_Character(CENTIPEDE);
+	centipede_two->set_variables(20, 2);
+	centipede_two->Add_Position({ 10, 20 });
+	centipede_two->Move_To(200, 200);
+	centipede_two->set_spawn(200, 200);
+	centipede_two->set_display_box(false);
+	centipede_two->set_transparent_colour(255, 0, 255);
+	m_enemies.push_back(centipede_two);
 
-	Character *npc1 = char_fac->Make_Character(CLOWN);
-	npc1->Move_To(-350, 0);
-	npc1->set_spawn(-350, 0);
-	npc1->set_display_box(false);
-	npc1->set_message("You are near to a \nsomething or \nother rune type thingy\n");
-	m_npcs.push_back(npc1);
+	Character *hinter = char_fac->Make_Character(CLOWN);
+	hinter->Move_To(-350, 0);
+	hinter->set_spawn(-350, 0);
+	hinter->set_display_box(false);
+	hinter->set_message("Collect all the coins\nand your way forward\nwill appear");
+	m_npcs.push_back(hinter);
 
-	Character *npc2 = char_fac->Make_Character(HEALER);
-	npc2->Move_To(420, 420);
-	npc2->set_spawn(420, 420);
-	npc2->set_message("You have been healed");
-	m_npcs.push_back(npc2);
+	Character *healer = char_fac->Make_Character(HEALER);
+	healer->Move_To(420, 420);
+	healer->set_spawn(420, 420);
+	healer->set_message("You have been healed");
+	m_npcs.push_back(healer);
 
 	for (auto &area : m_areas)
 	{

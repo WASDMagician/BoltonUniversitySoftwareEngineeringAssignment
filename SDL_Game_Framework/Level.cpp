@@ -78,7 +78,7 @@ void Level::Move(int xAmount, int yAmount)
 	for (size_t e = 0; e < m_enemies.size(); e++)
 	{
 		m_enemies[e]->Move_By(xAmount, yAmount);
-		m_enemies[e]->Update_Target_Position(xAmount, yAmount);
+		m_enemies[e]->Update_Target_Position({xAmount, yAmount});
 		if (m_enemies[e]->Has_Target())
 		{
 			if (!m_enemies[e]->In_Range(10))
@@ -86,6 +86,7 @@ void Level::Move(int xAmount, int yAmount)
 				m_enemies[e]->Move_Toward();
 			}
 		}
+		m_enemies[e]->Increment_Target();
 	}
 
 	for (size_t p = 0; p < m_pickables.size(); p++)

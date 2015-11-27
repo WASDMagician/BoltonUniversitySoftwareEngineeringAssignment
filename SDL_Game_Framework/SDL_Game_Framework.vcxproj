@@ -142,7 +142,6 @@
     <ClInclude Include="NPC_Base.h" />
     <ClInclude Include="NPC_Healer.h" />
     <ClInclude Include="NPC_Hinter.h" />
-    <ClInclude Include="NPC_Shopkeeper.h" />
     <ClInclude Include="Ogre.h" />
     <ClInclude Include="Pickup_Objects.h" />
     <ClInclude Include="Pick_Objects_Factory.h" />
@@ -222,7 +221,6 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NPC_Base.cpp" />
     <ClCompile Include="NPC_Hinter.cpp" />
-    <ClCompile Include="NPC_Shopkeeper.cpp" />
     <ClCompile Include="Ogre.cpp" />
     <ClCompile Include="Pickup_Objects.cpp" />
     <ClCompile Include="Player.cpp" />
