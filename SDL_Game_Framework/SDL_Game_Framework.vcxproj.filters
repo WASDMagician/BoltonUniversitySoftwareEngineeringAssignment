@@ -95,10 +95,10 @@
       <UniqueIdentifier>{0a277521-676c-4f57-a56f-4c9def773a0e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Factories\Objects">
-      <UniqueIdentifier>{17d55d49-cc6e-4de1-9ff5-2ac853863028}</UniqueIdentifier>
+      <UniqueIdentifier>{951879b5-421e-4454-b833-312f37d94ee8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Factories\Objects">
-      <UniqueIdentifier>{9aba51d4-a933-4624-8345-d432d9267c6a}</UniqueIdentifier>
+      <UniqueIdentifier>{23ddb7b0-1bbd-4937-9692-97354f718dd6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -213,9 +213,6 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Great_Axe.h">
       <Filter>Header Files\Factories\Weapons\weapons</Filter>
     </ClInclude>
@@ -247,9 +244,6 @@
       <Filter>Header Files\levels</Filter>
     </ClInclude>
     <ClInclude Include="NPC_Hinter.h">
-      <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
-    </ClInclude>
-    <ClInclude Include="NPC_Base.h">
       <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
     </ClInclude>
     <ClInclude Include="End_Menu_Splash.h">
@@ -306,8 +300,11 @@
     <ClInclude Include="Level_Three.h">
       <Filter>Header Files\levels</Filter>
     </ClInclude>
-    <ClInclude Include="Pickup_Objects.h">
-      <Filter>Header Files\Factories\Objects</Filter>
+    <ClInclude Include="Centipede.h">
+      <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC_Healer.h">
+      <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
     </ClInclude>
     <ClInclude Include="Pick_Objects_Factory.h">
       <Filter>Header Files\Factories\Objects</Filter>
@@ -315,11 +312,8 @@
     <ClInclude Include="Pick_Objects_Factory_Implementation.h">
       <Filter>Header Files\Factories\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Centipede.h">
-      <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
-    </ClInclude>
-    <ClInclude Include="NPC_Healer.h">
-      <Filter>Header Files\Factories\Character\Characters\NPC</Filter>
+    <ClInclude Include="Pickup_Objects.h">
+      <Filter>Header Files\Factories\Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -389,22 +383,10 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UI.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Sword.cpp">
       <Filter>Source Files\Factories\Weapons\weapons</Filter>
     </ClCompile>
-    <ClCompile Include="Sniper.cpp">
-      <Filter>Source Files\Factories\Weapons\weapons</Filter>
-    </ClCompile>
-    <ClCompile Include="Empowere_Knuckles.cpp">
-      <Filter>Source Files\Factories\Weapons\weapons</Filter>
-    </ClCompile>
     <ClCompile Include="Great_Axe.cpp">
-      <Filter>Source Files\Factories\Weapons\weapons</Filter>
-    </ClCompile>
-    <ClCompile Include="Crossbow.cpp">
       <Filter>Source Files\Factories\Weapons\weapons</Filter>
     </ClCompile>
     <ClCompile Include="AW_Sprite_Interface.cpp">
@@ -433,9 +415,6 @@
     </ClCompile>
     <ClCompile Include="Level.cpp">
       <Filter>Source Files\levels</Filter>
-    </ClCompile>
-    <ClCompile Include="NPC_Base.cpp">
-      <Filter>Source Files\Factories\Characters\NPC</Filter>
     </ClCompile>
     <ClCompile Include="NPC_Hinter.cpp">
       <Filter>Source Files\Factories\Characters\NPC</Filter>
@@ -485,12 +464,6 @@
     <ClCompile Include="Level_Three.cpp">
       <Filter>Source Files\levels</Filter>
     </ClCompile>
-    <ClCompile Include="Pickup_Objects.cpp">
-      <Filter>Source Files\Factories\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Pick_Objects_Factory_Implementation.cpp">
-      <Filter>Source Files\Factories\Objects</Filter>
-    </ClCompile>
     <ClCompile Include="Centipede.cpp">
       <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
@@ -499,6 +472,12 @@
     </ClCompile>
     <ClCompile Include="Test_File.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pick_Objects_Factory_Implementation.cpp">
+      <Filter>Source Files\Factories\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Pickup_Objects.cpp">
+      <Filter>Source Files\Factories\Objects</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,31 +2,31 @@
 
 
 Level::Level()
-	:char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), level_trigger(NULL), m_level_name("")
+	:m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_level_name("")
 {
-	char_fac = new Character_Factory_Implementation();
-	pickup_fac = new Pick_Objects_Factory_Implementation();
-	weapon_fac = new Weapon_Factory_Implementation();
+	m_char_fac = new Character_Factory_Implementation();
+	m_pickup_fac = new Pick_Objects_Factory_Implementation();
+	m_weapon_fac = new Weapon_Factory_Implementation();
 }
 
 Level::Level(std::string name)
-: char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), level_trigger(NULL), m_level_name(name)
+: m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_level_name(name)
 {
-	char_fac = new Character_Factory_Implementation();
-	pickup_fac = new Pick_Objects_Factory_Implementation();
-	weapon_fac = new Weapon_Factory_Implementation();
+	m_char_fac = new Character_Factory_Implementation();
+	m_pickup_fac = new Pick_Objects_Factory_Implementation();
+	m_weapon_fac = new Weapon_Factory_Implementation();
 }
 
 Level::~Level()
 {
-	delete char_fac;
-	char_fac = NULL;
+	delete m_char_fac;
+	m_char_fac = NULL;
 
-	delete pickup_fac;
-	pickup_fac = NULL;
+	delete m_pickup_fac;
+	m_pickup_fac = NULL;
 
-	delete weapon_fac;
-	weapon_fac = NULL;
+	delete m_weapon_fac;
+	m_weapon_fac = NULL;
 
 	for (auto &a : m_areas)
 	{
@@ -48,8 +48,8 @@ Level::~Level()
 	m_enemies.clear();
 	m_npcs.clear();
 
-	delete level_trigger;
-	level_trigger = NULL;
+	delete m_level_trigger;
+	m_level_trigger = NULL;
 }
 
 std::vector<AW_Sprite_Interface*>Level::get_areas()
@@ -75,7 +75,7 @@ void Level::Move_All(int xAmount, int yAmount)
 	Move(xAmount, yAmount, m_weapons);
 	Move(xAmount, yAmount, m_npcs);
 	Move(xAmount, yAmount, m_pickables);
-	level_trigger->Move_By(xAmount, yAmount);
+	m_level_trigger->Move_By(xAmount, yAmount);
 }
 
 template<typename T>
@@ -100,7 +100,7 @@ void Level::Revert_All()
 	Revert(m_weapons);
 	Revert(m_npcs);
 	Revert(m_pickables);
-	level_trigger->Revert_Position();
+	m_level_trigger->Revert_Position();
 }
 
 template<typename T>
@@ -111,7 +111,7 @@ void Level::Revert(std::vector<T>inputVector)
 		inputVector[i]->Revert_Position();
 	}
 
-	level_trigger->Revert_Position();
+	m_level_trigger->Revert_Position();
 }
 
 void Level::Render_All()
@@ -121,7 +121,7 @@ void Level::Render_All()
 	Render(m_weapons);
 	Render(m_npcs);
 	Render(m_pickables);
-	level_trigger->Render();
+	m_level_trigger->Render();
 }
 
 template<typename T>
@@ -132,7 +132,7 @@ void Level::Render(std::vector<T>inputVector)
 		inputVector[i]->Render();
 	}
 
-	level_trigger->Render();
+	m_level_trigger->Render();
 }
 
 void Level::Reset_All_Positions()
@@ -142,7 +142,7 @@ void Level::Reset_All_Positions()
 	Reset_Positions(m_weapons);
 	Reset_Positions(m_npcs);
 	Reset_Positions(m_pickables);
-	level_trigger->Move_To_Spawn();
+	m_level_trigger->Move_To_Spawn();
 }
 
 template<typename T>
@@ -153,13 +153,13 @@ void Level::Reset_Positions(std::vector<T>inputVector)
 		inputVector[i]->Move_To_Spawn();
 	}
 
-	level_trigger->Move_To_Spawn();
+	m_level_trigger->Move_To_Spawn();
 }
 
 
 AW_Sprite_Interface* Level::get_trigger()
 {
-	return level_trigger;
+	return m_level_trigger;
 }
 
 std::vector<Character*> Level::get_enemies()

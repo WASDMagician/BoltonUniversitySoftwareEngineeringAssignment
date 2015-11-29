@@ -5,17 +5,16 @@
 #include "Game.h"
 
 Play_Screen::Play_Screen()
-	:Splash_Screen(NULL, NULL, "Play_Screen"), m_play_time(NULL), m_level(NULL), char_factory(NULL), m_player(NULL),
-	screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2)
+	:Splash_Screen(NULL), m_play_time(NULL), m_level(NULL), m_char_factory(NULL), m_player(NULL),
+	m_screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2)
 {
 
 }
 
-Play_Screen::Play_Screen(Game *pGame, char* bgImg)
-	: Splash_Screen(pGame, bgImg, "Play_Screen"), m_play_time(NULL), m_level(NULL), char_factory(NULL), m_player(NULL),
-	screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2)
+Play_Screen::Play_Screen(Game *pGame)
+	: Splash_Screen(pGame), m_play_time(NULL), m_level(NULL), m_char_factory(NULL), m_player(NULL),
+	m_screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2)
 {
-	m_p_game->SetBackground(bgImg);
 }
 
 Play_Screen::~Play_Screen(void)
@@ -26,18 +25,17 @@ Play_Screen::~Play_Screen(void)
 void Play_Screen::Setup()
 {
 	m_play_time = std::clock();
-	char_factory = new Character_Factory_Implementation();
+	m_char_factory = new Character_Factory_Implementation();
 	Init_Player();
-	screen_ui = new UI_Play_Screen();
-	screen_ui->set_character(m_player);
+	m_screen_ui = new UI_Play_Screen();
+	m_screen_ui->set_character(m_player);
 
 	m_level = new Level_One("one");
 }
 
 void Play_Screen::Init_Player()
 {
-	m_player = char_factory->Make_Character(PLAYER);
-	m_player->set_name("Dave");
+	m_player = m_char_factory->Make_Character(PLAYER);
 	m_player->set_health(100);
 	m_player->set_lives(3);
 	m_player->set_score(0);
@@ -49,7 +47,7 @@ void Play_Screen::Init_Player()
 void Play_Screen::Logic()
 {
 	m_play_time = clock();
-	if (Check_Level_Trigger())
+	if (Check_Level_Collision())
 	{
 		if (m_level->get_level_name() == "one")
 		{
@@ -65,17 +63,17 @@ void Play_Screen::Logic()
 		}
 		else if (m_level->get_level_name() == "three")
 		{
-			m_b_close_splash = true;
+			m_close_splash = true;
 		}
 	}
 	
 	Perform_Enemy_Encounter();
 	
-	Check_Coin_Trigger();
-	Check_Weapon_Trigger();
-	Check_NPC_Trigger();
+	Perform_Coin_Collision();
+	Perform_Weapon_Collision();
+	Perform_NPC_Encounter();
 	
-	screen_ui->Update();
+	m_screen_ui->Update();
 	
 	for (auto &m : m_level->get_enemies())
 	{
@@ -123,12 +121,12 @@ void Play_Screen::Move(int xAmount, int yAmount) //handle all level movement
 	}
 }
 
-bool Play_Screen::Check_Level_Trigger()
+bool Play_Screen::Check_Level_Collision()
 {
 	return (m_level->get_trigger()->bb_collision(m_player));
 }
 
-bool Play_Screen::Perform_Enemy_Encounter()
+void Play_Screen::Perform_Enemy_Encounter()
 {
 	std::vector<Character*>enemies = m_level->get_enemies();
 	for (size_t e = 0; e < enemies.size(); e++)
@@ -154,7 +152,7 @@ bool Play_Screen::Perform_Enemy_Encounter()
 					}
 					else
 					{
-						m_b_close_splash = true;
+						m_close_splash = true;
 					}
 				}
 
@@ -162,10 +160,9 @@ bool Play_Screen::Perform_Enemy_Encounter()
 			}
 		}
 	}
-	return true;
 }
 
-bool Play_Screen::Check_NPC_Trigger()
+void Play_Screen::Perform_NPC_Encounter()
 {
 	for (auto &npc : m_level->get_npcs())
 	{
@@ -174,55 +171,45 @@ bool Play_Screen::Check_NPC_Trigger()
 			npc->set_display_box(true);
 			npc->Update();
 			npc->React(m_player);
-			return true;
+			break;
 		}
 		else
 		{
 			npc->set_display_box(false);
 		}
 	}
-	return false;
 }
 
-bool Play_Screen::Check_Coin_Trigger()
+void Play_Screen::Perform_Coin_Collision()
 {
 	for (auto &pick_objects : m_level->get_pickables())
 	{
 		if (m_player->bb_collision(pick_objects))
 		{
-			m_player->set_score(m_player->get_score() + 1); //@debug
+			m_player->set_score(m_player->get_score() + pick_objects->get_value()); //@debug
 			pick_objects->set_visibility(false);
-			return true;
+			break;
 		}
 	}
-	return false;
 }
 
-bool Play_Screen::Check_Weapon_Trigger()
+void Play_Screen::Perform_Weapon_Collision()
 {
 	for (auto &weapon : m_level->get_weapons())
 	{
 		if (m_player->bb_collision(weapon))
 		{
-			m_player->set_damage(m_player->get_damage() + 10);
+			m_player->set_damage(m_player->get_damage() + weapon->get_value());
 			weapon->set_visibility(false);
-			return true;
+			break;
 		}
 	}
-	return false;
-}
-
-void Play_Screen::Render()
-{
-	Render_Back();
-	Render_Mid();
-	Render_Front();
 }
 
 void Play_Screen:: Render_Back()
 {
 
-	SDL_FillRect(m_p_game->screen, NULL, 0x000000); //bleh, not sure about this, stops tearing
+	SDL_FillRect(m_game->screen, NULL, 0x000000); //bleh, not sure about this, stops tearing
 	m_level->Render_All();
 }
 
@@ -233,7 +220,7 @@ void Play_Screen:: Render_Mid()
 
 void Play_Screen:: Render_Front()
 {
-	screen_ui->Display();
+	m_screen_ui->Display();
 }
 
 bool Play_Screen::Run()

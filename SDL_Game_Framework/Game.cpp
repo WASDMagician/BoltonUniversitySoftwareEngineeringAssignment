@@ -34,11 +34,11 @@ void Game::Setup()
 
 void Game::Run()
 {
-	splash = new Start_Menu_Splash(this, "images/splash1.png");
+	splash = new Start_Menu_Splash(this);
 	splash->Run();
-	splash = new Play_Screen(this, "images/splash2.png");
+	splash = new Play_Screen(this);
 	splash->Run();
-	splash = new End_Menu_Splash(this, "images/splash1.png");
+	splash = new End_Menu_Splash(this);
 	splash->Run();	
 }
 

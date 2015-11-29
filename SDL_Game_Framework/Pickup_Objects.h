@@ -8,21 +8,14 @@ class Pickup_Objects :
 {
 public:
 	Pickup_Objects();
-	Pickup_Objects(char* imgPath, int rows, int cols, int animationSpeed);
+	Pickup_Objects(char* imgPath, int rows, int cols, int animationSpeed, int value);
 	~Pickup_Objects();
 
-	bool set_name(std::string name);
-	std::string get_name();
+	void set_value(int value);
+	int get_value();
 
-	bool set_can_be_picked(bool pickable); //do we want it to be picked up or not?
-	bool get_can_be_picked();
-
-	void Render();
-	
-
-private:
-	std::string m_name;
-	bool m_b_can_be_picked_up;
+protected:
+	int m_value;
 };
 
 #endif

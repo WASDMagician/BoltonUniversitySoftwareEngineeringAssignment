@@ -17,21 +17,64 @@ Character::~Character()
 {
 }
 
+void Character::Setup(char* imgPath, int rows, int cols, int animationSpeed)
+{
+	setImage(imgPath, rows, cols);
+}
 
 void Character::set_variables(int health, int damage)
 {
 	m_health = health;
 	m_damage = damage;
 }
-bool Character::set_score(int score)
+
+void Character::set_health(int health)
+{
+	m_health = health;
+}
+
+void Character::set_lives(int lives)
+{
+	m_lives = lives;
+}
+
+int Character::get_lives()
+{
+	return m_lives;
+}
+
+int Character::get_health()
+{
+	return m_health;
+}
+
+void Character::set_damage(int damage)
+{
+	m_damage = damage;
+}
+
+int Character::get_damage()
+{
+	return m_damage;
+}
+
+void Character::set_score(int score)
 {
 	m_score = score;
-	return m_score == score;
 }
 
 int Character::get_score()
 {
 	return m_score;
+}
+
+bool Character::Check_Alive()
+{
+	return m_health > 0;
+}
+
+void Character::React(Character* target)
+{
 }
 
 void Character::set_message(std::string hint)
@@ -46,7 +89,7 @@ void Character::set_message(std::string hint)
 	m_message_box->set_should_display(true);
 }
 
-const std::string Character::get_message()
+std::string Character::get_message()
 {
 	return m_message;
 }

@@ -34,13 +34,13 @@ Character* Character_Factory_Implementation::Make_Character(int CharacterType)
 		return new Jesus(IMAGES[CharacterType], 1, 1, 1);
 		break;
 	case CLOWN:
-		return new NPC_Hinter(IMAGES[CharacterType], 1, 1, 1);
+		return new NPC_Hinter(IMAGES[CharacterType], 1, 1, 1, "");
 		break;
 	case CENTIPEDE:
 		return new Centipede(IMAGES[CharacterType], 1, 1, 1);
 		break;
 	case HEALER: 
-		return new NPC_Healer(IMAGES[CharacterType], 1, 1, 1);
+		return new NPC_Healer(IMAGES[CharacterType], 1, 1, 1, "");
 		break;
 	default:
 		return NULL;

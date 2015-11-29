@@ -18,7 +18,6 @@
 
 #include "Vector2.h"
 
-#include "UI.h"
 #include "UI_Play_Screen.h"
 
 SUITE(FACTORY)

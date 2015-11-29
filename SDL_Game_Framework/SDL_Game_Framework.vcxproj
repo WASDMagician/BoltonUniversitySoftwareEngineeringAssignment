@@ -139,7 +139,6 @@
     <ClInclude Include="Level_One.h" />
     <ClInclude Include="Level_Three.h" />
     <ClInclude Include="Level_Two.h" />
-    <ClInclude Include="NPC_Base.h" />
     <ClInclude Include="NPC_Healer.h" />
     <ClInclude Include="NPC_Hinter.h" />
     <ClInclude Include="Ogre.h" />
@@ -161,7 +160,6 @@
     <ClInclude Include="Test_All.h" />
     <ClInclude Include="Text_Box.h" />
     <ClInclude Include="timer.h" />
-    <ClInclude Include="UI.h" />
     <ClInclude Include="UI_Play_Screen.h" />
     <ClInclude Include="UnitTest++\src\AssertException.h" />
     <ClInclude Include="UnitTest++\src\CheckMacros.h" />
@@ -198,8 +196,6 @@
     <ClCompile Include="Centipede.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Clown.cpp" />
-    <ClCompile Include="Crossbow.cpp" />
-    <ClCompile Include="Empowere_Knuckles.cpp" />
     <ClCompile Include="End_Menu_Splash.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Character_Creator.cpp" />
@@ -212,6 +208,7 @@
     <ClCompile Include="Level_Three.cpp" />
     <ClCompile Include="Level_Two.cpp" />
     <ClCompile Include="NPC_Healer.cpp" />
+    <ClCompile Include="Pickup_Objects.cpp" />
     <ClCompile Include="Pick_Objects_Factory_Implementation.cpp" />
     <ClCompile Include="Play_Screen.cpp" />
     <ClCompile Include="Splash_Screen.cpp" />
@@ -219,17 +216,13 @@
     <ClCompile Include="Test_Everything.cpp" />
     <ClCompile Include="Great_Axe.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="NPC_Base.cpp" />
     <ClCompile Include="NPC_Hinter.cpp" />
     <ClCompile Include="Ogre.cpp" />
-    <ClCompile Include="Pickup_Objects.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Sniper.cpp" />
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Test_All.cpp" />
     <ClCompile Include="Test_File.cpp" />
     <ClCompile Include="Text_Box.cpp" />
-    <ClCompile Include="UI.cpp" />
     <ClCompile Include="UI_Play_Screen.cpp" />
     <ClCompile Include="UnitTest++\src\AssertException.cpp" />
     <ClCompile Include="UnitTest++\src\Checks.cpp" />

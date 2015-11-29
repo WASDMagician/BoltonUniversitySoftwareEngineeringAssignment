@@ -49,5 +49,5 @@ void Level_Two::Setup()
 	m_areas.push_back(area_four);
 	m_areas.push_back(area_five);
 
-	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
+	m_level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
 }

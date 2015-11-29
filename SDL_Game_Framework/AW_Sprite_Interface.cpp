@@ -1,13 +1,15 @@
 #include "AW_Sprite_Interface.h"
 
 AW_Sprite_Interface::AW_Sprite_Interface()
-	:AWSprite(), last_move_x(0), last_move_y(0), target({NULL, NULL}), has_target(false), spawn_x(NULL), spawn_y(NULL)
+	:AWSprite(), m_last_move_x(0), m_last_move_y(0), m_target({NULL, NULL}), m_has_target(false), 
+	m_spawn_x(NULL), m_spawn_y(NULL), m_current_target_index(0), m_positions(NULL)
 {
 	set_transparent_colour(255, 0, 255);
 }
 
 AW_Sprite_Interface::AW_Sprite_Interface(char* imgPath, int rows, int cols, int animationSpeed)
-	: AWSprite(imgPath, rows, cols), last_move_x(0), last_move_y(0), target({NULL, NULL}), has_target(false), spawn_x(NULL), spawn_y(NULL)
+	: AWSprite(imgPath, rows, cols), m_last_move_x(0), m_last_move_y(0), m_target({NULL, NULL}), 
+	m_has_target(false), m_spawn_x(NULL), m_spawn_y(NULL), m_current_target_index(0), m_positions(NULL)
 {
 	set_transparent_colour(255, 0, 255);
 }
@@ -23,20 +25,20 @@ void AW_Sprite_Interface::Update()
 
 void AW_Sprite_Interface::Add_Position(position pos)
 {
-	positions.push_back(pos);
+	m_positions.push_back(pos);
 }
 
 void AW_Sprite_Interface::Add_Positions(std::vector<position> newPositions)
 {
 	for (size_t i = 0; i < newPositions.size(); i++)
 	{
-		positions.push_back(newPositions[i]);
+		m_positions.push_back(newPositions[i]);
 	}
 }
 
 void AW_Sprite_Interface::Clear_Positions()
 {
-	positions.clear();
+	m_positions.clear();
 }
 
 //template<typename T>
@@ -80,8 +82,8 @@ void AW_Sprite_Interface::Move_By(float xAmount, float yAmount)
 	set_world_position_x(newX);
 	set_world_position_y(newY);
 
-	last_move_x = xAmount;
-	last_move_y = yAmount;
+	m_last_move_x = xAmount;
+	m_last_move_y = yAmount;
 }
 
 void AW_Sprite_Interface::Move_By_Without_Record(float xAmount, float yAmount)
@@ -106,8 +108,8 @@ void AW_Sprite_Interface::Move_To(float x, float y)
 
 void AW_Sprite_Interface::Move_Toward()
 {
-	float xDiff = target.x - get_x();
-	float yDiff = target.y - get_y();
+	float xDiff = m_target.x - get_x();
+	float yDiff = m_target.y - get_y();
 
 	float angle = atan2(yDiff, xDiff);
 	
@@ -116,64 +118,64 @@ void AW_Sprite_Interface::Move_Toward()
 
 bool AW_Sprite_Interface::In_Range(float range)
 {
-	return(get_x() > target.x - range && get_x() < target.x + range && get_y() > target.y - range && get_y() < target.y + range);
+	return(get_x() > m_target.x - range && get_x() < m_target.x + range && get_y() > m_target.y - range && get_y() < m_target.y + range);
 }
 
 void AW_Sprite_Interface::Increment_Target()
 {
 	if (In_Range(50))
 	{
-		set_target_position(current_target_index + 1);
+		set_target_position(m_current_target_index + 1);
 	}
 }
 
 void AW_Sprite_Interface::set_target_position(int targetIndex)
 {
-	if (targetIndex < positions.size())
+	if (targetIndex < m_positions.size())
 	{
-		target = positions[targetIndex];
-		current_target_index = targetIndex;
+		m_target = m_positions[targetIndex];
+		m_current_target_index = targetIndex;
 	}
 	else
 	{
-		target = positions[0];
-		current_target_index = 0;
+		m_target = m_positions[0];
+		m_current_target_index = 0;
 	}
-	has_target = true;
+	m_has_target = true;
 }
 
 void AW_Sprite_Interface::set_target_position(position targ) 
 {
-	target = targ;
-	has_target = true;
+	m_target = targ;
+	m_has_target = true;
 }
 
 void AW_Sprite_Interface::Update_Target_Position(int xAmount, int yAmount)
 {
-	target.x += xAmount;
-	target.y += yAmount;
-	for (size_t i = 0; i < positions.size(); i++)
+	m_target.x += xAmount;
+	m_target.y += yAmount;
+	for (size_t i = 0; i < m_positions.size(); i++)
 	{
-		positions[i].x += xAmount;
-		positions[i].y += yAmount;
+		m_positions[i].x += xAmount;
+		m_positions[i].y += yAmount;
 	}
 }
 
 bool AW_Sprite_Interface::Has_Target()
 {
-	return has_target;
+	return m_has_target;
 }
 
 void AW_Sprite_Interface::set_spawn(float x, float y)
 {
-	spawn_x = x;
-	spawn_y = y;
+	m_spawn_x = x;
+	m_spawn_y = y;
 }
 
 void AW_Sprite_Interface::Move_To_Spawn()
 {
-	set_world_position_x(spawn_x);
-	set_world_position_y(spawn_y);
+	set_world_position_x(m_spawn_x);
+	set_world_position_y(m_spawn_y);
 }
 
 void AW_Sprite_Interface::Randomize_Position(float xPos, float width, float yPos, float height)
@@ -185,8 +187,8 @@ void AW_Sprite_Interface::Randomize_Position(float xPos, float width, float yPos
 
 void AW_Sprite_Interface::Revert_Position()
 {
-	Move_By(-last_move_x, -last_move_y);
-	Update_Target_Position(-last_move_x, -last_move_y);
+	Move_By(-m_last_move_x, -m_last_move_y);
+	Update_Target_Position(-m_last_move_x, -m_last_move_y);
 }
 
 void AW_Sprite_Interface::Render()

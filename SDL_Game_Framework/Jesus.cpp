@@ -10,7 +10,6 @@ Jesus::Jesus()
 Jesus::Jesus(char* imgPath, int rows, int cols, int animationSpeed)
 	: Enemy(imgPath, rows, cols, animationSpeed)
 {
-	set_name("Jesus");
 }
 
 Jesus::~Jesus()

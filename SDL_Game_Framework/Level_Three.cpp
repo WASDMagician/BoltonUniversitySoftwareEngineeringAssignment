@@ -49,7 +49,7 @@ void Level_Three::Setup()
 	m_areas.push_back(area_four);
 	m_areas.push_back(area_five);
 
-	level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
-	level_trigger->set_world_position(500, 500);
+	m_level_trigger = new AW_Sprite_Interface("images/m_level_trigger.png", 1, 1, 1);
+	m_level_trigger->set_world_position(500, 500);
 }
 

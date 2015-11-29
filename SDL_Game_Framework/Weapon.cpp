@@ -6,8 +6,8 @@ Weapon::Weapon()
 }
 
 
-Weapon::Weapon(char* img, int rows, int cols, int animationSpeed)
-	:AW_Sprite_Interface(img, rows, cols, animationSpeed)
+Weapon::Weapon(char* img, int rows, int cols, int animationSpeed, int value)
+	:Pickup_Objects(img, rows, cols, animationSpeed, value)
 {
 }
 

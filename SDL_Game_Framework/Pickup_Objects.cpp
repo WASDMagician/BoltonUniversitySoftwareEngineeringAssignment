@@ -2,11 +2,12 @@
 
 
 Pickup_Objects::Pickup_Objects()
+	:m_value(0)
 {
 }
 
-Pickup_Objects::Pickup_Objects(char* imgPath, int rows, int cols, int animationSpeed)
-:AW_Sprite_Interface(imgPath, rows, cols, animationSpeed)
+Pickup_Objects::Pickup_Objects(char* imgPath, int rows, int cols, int animationSpeed, int value)
+	: AW_Sprite_Interface(imgPath, rows, cols, animationSpeed), m_value(0)
 {
 
 }
@@ -15,29 +16,12 @@ Pickup_Objects::~Pickup_Objects()
 {
 }
 
-bool Pickup_Objects::set_name(std::string name)
-{ 
-	m_name = name;
-	return m_name == name;
+void Pickup_Objects::set_value(int value)
+{
+	m_value = value;
 }
 
-std::string Pickup_Objects::get_name()
+int Pickup_Objects::get_value()
 {
-	return m_name;
-}
-
-bool Pickup_Objects::set_can_be_picked(bool pickable)
-{
-	m_b_can_be_picked_up = pickable;
-	return m_b_can_be_picked_up == pickable;
-}
-
-bool Pickup_Objects::get_can_be_picked()
-{
-	return m_b_can_be_picked_up;
-}
-
-void Pickup_Objects::Render()
-{
-	update_everything();
+	return m_value;
 }

@@ -4,7 +4,7 @@
 Text_Box::Text_Box()
 	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_x(0), m_box_y(0), m_text_x_margin(0), m_text_y_margin(0),
 	m_current_line(0), m_total_text_height(0), m_number_of_lines(0), m_line_height(0), m_font_color({ 0, 0, 0 }), m_text_rects(NULL),
-	m_b_should_display(false)
+	m_should_display(false)
 {
 }
 
@@ -12,7 +12,7 @@ Text_Box::Text_Box()
 Text_Box::Text_Box(char* fontPath, int fontSize, std::string message)
 	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_x(0), m_box_y(0), m_text_x_margin(0), m_text_y_margin(0),
 	m_current_line(0), m_total_text_height(0), m_number_of_lines(0), m_line_height(0), m_font_color({ 0, 0, 0 }), m_text_rects(NULL),
-	m_b_should_display(false)
+	m_should_display(false)
 {
 	set_font(fontPath, fontSize);
 	Add_Message(message);
@@ -49,8 +49,9 @@ Text_Box::~Text_Box()
 
 
 void Text_Box::set_font(char* fontPath, int fontSize)
-{
+{	
 	delete m_font;
+	
 	m_font = TTF_OpenFont(fontPath, fontSize);
 	TTF_SizeText(m_font, "A", NULL, &m_line_height); //get the height of the text (A chosen randomly)
 }
@@ -114,7 +115,7 @@ void Text_Box::Add_Message(std::string message)
 	}
 }
 
-std::string Text_Box::get_message(unsigned int i)
+std::string Text_Box::get_message(int i)
 {
 	return (i < m_messages.size()) ? (m_messages[i]) : ("!!Index out of range, that messages does not exist!!");
 }
@@ -155,12 +156,12 @@ SDL_Surface* Text_Box::Create_Text_Line(std::string message)
 
 void Text_Box::set_should_display(bool display)
 {
-	m_b_should_display = display;
+	m_should_display = display;
 }
 
 bool Text_Box::get_should_display()
 {
-	return m_b_should_display;
+	return m_should_display;
 }
 
 void Text_Box::Display()

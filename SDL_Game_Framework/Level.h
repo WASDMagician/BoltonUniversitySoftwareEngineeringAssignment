@@ -8,7 +8,6 @@
 #include "AW_Sprite_Interface.h"
 #include "Character.h"
 #include "Pickup_Objects.h"
-#include "Vector2.h"
 
 class Level
 {
@@ -42,15 +41,15 @@ public:
 	void Render(std::vector<T>inputVector);
 
 protected:
-	Character_Factory_Implementation *char_fac;
-	Pick_Objects_Factory_Implementation *pickup_fac;
-	Weapon_Factory_Implementation *weapon_fac;
+	Character_Factory_Implementation *m_char_fac;
+	Pick_Objects_Factory_Implementation *m_pickup_fac;
+	Weapon_Factory_Implementation *m_weapon_fac;
 	std::vector<AW_Sprite_Interface*>m_areas;
 	std::vector<Character*>m_enemies;
 	std::vector<Character*>m_npcs;
 	std::vector<Pickup_Objects*>m_pickables;
 	std::vector<Weapon*> m_weapons;
-	AW_Sprite_Interface* level_trigger; 
+	AW_Sprite_Interface* m_level_trigger; 
 
 	std::string m_level_name;
 

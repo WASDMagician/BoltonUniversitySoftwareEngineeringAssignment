@@ -3,7 +3,6 @@
 
 #include <vector>
 #include "AWSprite.h"
-#include "Vector2.h"
 
 struct position
 {
@@ -53,18 +52,18 @@ public:
 	void Render();
 
 private:
-	std::vector<position>positions;
+	std::vector<position>m_positions; //vector of target positions
 
-	bool has_target;
+	bool m_has_target; //whethere the current element has a target within the position vector
 
-	float last_move_x;
-	float last_move_y;
+	float m_last_move_x; //amount moved on x last
+	float m_last_move_y; //amount moved on y last
 
-	int current_target_index;
-	position target;
+	int m_current_target_index; //position of target in vector of target positions
+	position m_target; //current target
 
-	float spawn_x;
-	float spawn_y;
+	float m_spawn_x; //spawn position on x
+	float m_spawn_y; //spawn position on y
 };
 
 #endif //_AW_SPRITE_INTERFACE_

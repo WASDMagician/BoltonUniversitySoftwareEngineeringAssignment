@@ -10,7 +10,7 @@ class Splash_Screen
 {
 public:
 	Splash_Screen();
-	Splash_Screen(Game* game, char* bgImg, std::string screen);
+	Splash_Screen(Game* m_game);
 	~Splash_Screen();
 
 	virtual void Start();
@@ -20,18 +20,18 @@ public:
 	virtual void Handle_Keys();
 	
 	virtual void Render();
-	virtual void Render_Back();
-	virtual void Render_Mid();
-	virtual void Render_Front();
 
 	virtual bool Run();
 	bool is_game_over();
 
 protected:
-	Game* m_p_game; // game pointer to game object
-	bool m_b_close_splash;
-	bool m_b_game_over;
-	std::string m_screen;
+	virtual void Render_Back();
+	virtual void Render_Mid();
+	virtual void Render_Front();
+
+	Game* m_game; // game pointer to game object
+	bool m_close_splash;
+	bool m_game_over;
 };
 
 #endif
