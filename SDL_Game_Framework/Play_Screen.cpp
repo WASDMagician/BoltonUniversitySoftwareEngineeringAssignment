@@ -24,7 +24,6 @@ Play_Screen::~Play_Screen(void)
 
 void Play_Screen::Setup()
 {
-	m_play_time = std::clock();
 	m_char_factory = new Character_Factory_Implementation();
 	Init_Player();
 	m_screen_ui = new UI_Play_Screen();
@@ -41,12 +40,13 @@ void Play_Screen::Init_Player()
 	m_player->set_score(0);
 	m_player->set_damage(20);
 	m_player->Move_To(400, 300);
-
 }
 
 void Play_Screen::Logic()
 {
-	m_play_time = clock();
+	m_play_time = m_game->m_timer->Seconds_Since_Start();
+	printf("%f\n", m_play_time);
+	std::cout << m_play_time << std::endl;
 	if (Check_Level_Collision())
 	{
 		if (m_level->get_level_name() == "one")
@@ -85,10 +85,10 @@ void Play_Screen::Handle_Keys()
 {
 	const Uint8 *state = SDL_GetKeyState(NULL);
 
-	int speed = 5;
+	float speed = 5;
 
-	int x_move = 0;
-	int y_move = 0;
+	float x_move = 0;
+	float y_move = 0;
 
 	if (state[SDLK_LEFT] || state[SDLK_a])
 	{
@@ -106,7 +106,7 @@ void Play_Screen::Handle_Keys()
 	{
 		y_move = -speed;
 	}
-	
+
 	Move(x_move, y_move);
 }
 
@@ -133,7 +133,7 @@ void Play_Screen::Perform_Enemy_Encounter()
 	{
 		if (enemies[e]->bb_collision(m_player))
 		{
-			if (m_play_time / 1000 > m_last_encounter / 1000 + m_encounter_gap / 1000)
+			if (m_play_time > m_last_encounter + m_encounter_gap)
 			{
 				m_player->Attack(enemies[e]);
 				enemies[e]->Attack(m_player);

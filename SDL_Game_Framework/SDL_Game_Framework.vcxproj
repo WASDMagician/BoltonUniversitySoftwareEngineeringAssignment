@@ -133,6 +133,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameBase.h" />
     <ClInclude Include="Game_Constants.h" />
+    <ClInclude Include="Game_Time.h" />
     <ClInclude Include="Great_Axe.h" />
     <ClInclude Include="Jesus.h" />
     <ClInclude Include="Level.h" />
@@ -202,6 +203,7 @@
     <ClCompile Include="Character_Factory_Implementation.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameBase.cpp" />
+    <ClCompile Include="Game_Time.cpp" />
     <ClCompile Include="Jesus.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Level_One.cpp" />

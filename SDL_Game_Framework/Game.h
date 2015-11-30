@@ -4,8 +4,13 @@
 #include "GameBase.h"
 #include "SDL_ttf.h"
 #include "Text_Box.h"
-#include "Splash_Screen.h"
 
+#include "Splash_Screen.h"
+#include "Start_Menu_Splash.h"
+#include "Play_Screen.h"
+#include "End_Menu_Splash.h"
+
+#include "Game_Time.h"
 
 class Game :
 	public GameBase
@@ -18,9 +23,12 @@ public:
 	void Run();
 	void Draw();
 
+	Game_Time *m_timer;
+
 private:
-	Splash_Screen *splash;
-	Text_Box *credit_box;
+	Splash_Screen *m_splash;
+	Text_Box *m_credit_box;
+	
 };
 #endif // _GAME_H_
 

@@ -315,6 +315,9 @@
     <ClInclude Include="Pickup_Objects.h">
       <Filter>Header Files\Factories\Objects</Filter>
     </ClInclude>
+    <ClInclude Include="Game_Time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -478,6 +481,9 @@
     </ClCompile>
     <ClCompile Include="Pickup_Objects.cpp">
       <Filter>Source Files\Factories\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Time.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

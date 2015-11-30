@@ -1,8 +1,6 @@
 #ifndef _PLAY_SPLASH_H_
 #define _PLAY_SPLASH_H_
 
-#include <cstdio>
-#include <ctime>
 #include "Character_Factory_Implementation.h"
 #include "Player.h"
 #include "Level.h"
@@ -37,9 +35,9 @@ private:
 	void Render_Mid();
 	void Render_Front();
 
-	std::clock_t m_play_time;
-	std::clock_t m_encounter_gap;
-	std::clock_t m_last_encounter;
+	double m_play_time;
+	double m_encounter_gap;
+	double m_last_encounter;
 
 	Level *m_level;
 	Character_Factory_Implementation* m_char_factory;

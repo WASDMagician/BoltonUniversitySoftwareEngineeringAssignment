@@ -39,7 +39,7 @@ public:
 
 	void set_target_position(int targetIndex);
 	void set_target_position(position target);
-	void Update_Target_Position(int xAmount, int yAmount);
+	void Update_Target_Position(float xAmount, float yAmount);
 	bool Has_Target();
 
 	void set_spawn(float x, float y);

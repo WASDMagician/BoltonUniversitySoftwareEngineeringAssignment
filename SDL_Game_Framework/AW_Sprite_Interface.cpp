@@ -150,7 +150,7 @@ void AW_Sprite_Interface::set_target_position(position targ)
 	m_has_target = true;
 }
 
-void AW_Sprite_Interface::Update_Target_Position(int xAmount, int yAmount)
+void AW_Sprite_Interface::Update_Target_Position(float xAmount, float yAmount)
 {
 	m_target.x += xAmount;
 	m_target.y += yAmount;
