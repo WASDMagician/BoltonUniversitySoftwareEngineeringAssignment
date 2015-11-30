@@ -2,16 +2,19 @@
 
 AW_Sprite_Interface::AW_Sprite_Interface()
 	:AWSprite(), m_last_move_x(0), m_last_move_y(0), m_target({NULL, NULL}), m_has_target(false), 
-	m_spawn_x(NULL), m_spawn_y(NULL), m_current_target_index(0), m_positions(NULL)
+	m_spawn_x(NULL), m_spawn_y(NULL), m_current_target_index(0), m_positions(NULL), m_player_timer(NULL)
 {
 	set_transparent_colour(255, 0, 255);
+	m_player_timer = new Game_Time();
 }
 
 AW_Sprite_Interface::AW_Sprite_Interface(char* imgPath, int rows, int cols, int animationSpeed)
 	: AWSprite(imgPath, rows, cols), m_last_move_x(0), m_last_move_y(0), m_target({NULL, NULL}), 
-	m_has_target(false), m_spawn_x(NULL), m_spawn_y(NULL), m_current_target_index(0), m_positions(NULL)
+	m_has_target(false), m_spawn_x(NULL), m_spawn_y(NULL), m_current_target_index(0), m_positions(NULL),
+	m_player_timer(NULL)
 {
 	set_transparent_colour(255, 0, 255);
+	m_player_timer = new Game_Time();
 }
 
 AW_Sprite_Interface::~AW_Sprite_Interface()
@@ -70,17 +73,13 @@ bool AW_Sprite_Interface::Is_Contained(std::vector<AW_Sprite_Interface*>vectorIn
 
 void AW_Sprite_Interface::Move_By(float xAmount, float yAmount)
 {
-	float currentX = get_x();
-	float currentY = get_y();
+	float time = m_player_timer->Seconds_Since_Last_Call();
 
-	float moveX = (float)xAmount;
-	float moveY = (float)yAmount;
+	float moveX = get_x() + (xAmount * time);
+	float moveY = get_y() + (yAmount * time);
 
-	float newX = currentX + moveX;
-	float newY = currentY + moveY;
-
-	set_world_position_x(newX);
-	set_world_position_y(newY);
+	set_world_position_x(moveX);
+	set_world_position_y(moveY);
 
 	m_last_move_x = xAmount;
 	m_last_move_y = yAmount;
@@ -112,8 +111,8 @@ void AW_Sprite_Interface::Move_Toward()
 	float yDiff = m_target.y - get_y();
 
 	float angle = atan2(yDiff, xDiff);
-	
-	Move_By((5 * (cos(angle))), (5 * (sin(angle))));
+	SDL_Delay(1);
+	Move_By((500 * (cos(angle))), (500 * (sin(angle))));
 }
 
 bool AW_Sprite_Interface::In_Range(float range)

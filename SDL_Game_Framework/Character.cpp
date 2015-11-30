@@ -89,6 +89,8 @@ void Character::set_message(std::string hint)
 	m_message_box->set_should_display(true);
 }
 
+
+
 std::string Character::get_message()
 {
 	return m_message;
@@ -122,6 +124,5 @@ void Character::Render()
 	if (m_message_box->get_should_display())
 	{
 		m_message_box->Display();
-	}
-	
+	}	
 }

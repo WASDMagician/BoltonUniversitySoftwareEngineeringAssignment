@@ -23,8 +23,6 @@ public:
 	void Run();
 	void Draw();
 
-	Game_Time *m_timer;
-
 private:
 	Splash_Screen *m_splash;
 	Text_Box *m_credit_box;

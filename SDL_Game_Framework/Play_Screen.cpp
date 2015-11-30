@@ -6,14 +6,14 @@
 
 Play_Screen::Play_Screen()
 	:Splash_Screen(NULL), m_play_time(NULL), m_level(NULL), m_char_factory(NULL), m_player(NULL),
-	m_screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2)
+	m_screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2), m_timer(new Game_Time())
 {
 
 }
 
 Play_Screen::Play_Screen(Game *pGame)
 	: Splash_Screen(pGame), m_play_time(NULL), m_level(NULL), m_char_factory(NULL), m_player(NULL),
-	m_screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2)
+	m_screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2), m_timer(new Game_Time())
 {
 }
 
@@ -44,9 +44,7 @@ void Play_Screen::Init_Player()
 
 void Play_Screen::Logic()
 {
-	m_play_time = m_game->m_timer->Seconds_Since_Start();
-	printf("%f\n", m_play_time);
-	std::cout << m_play_time << std::endl;
+	m_play_time = m_timer->Seconds_Since_Start();
 	if (Check_Level_Collision())
 	{
 		if (m_level->get_level_name() == "one")
@@ -84,8 +82,7 @@ void Play_Screen::Logic()
 void Play_Screen::Handle_Keys()
 {
 	const Uint8 *state = SDL_GetKeyState(NULL);
-
-	float speed = 5;
+	float speed = 25;
 
 	float x_move = 0;
 	float y_move = 0;
@@ -112,11 +109,12 @@ void Play_Screen::Handle_Keys()
 
 void Play_Screen::Move(int xAmount, int yAmount) //handle all level movement
 {
+	m_current_time = m_timer->Seconds_Since_Last_Call() * 1000;
 	if (m_player->Is_Contained(m_level->get_areas(), { xAmount, yAmount }))
 	{
 		for (size_t i = 0; i < m_level->get_areas().size(); i++)
 		{
-			m_level->Move_All(xAmount, yAmount);
+			m_level->Move_All(xAmount * m_current_time, yAmount * m_current_time);
 		}
 	}
 }

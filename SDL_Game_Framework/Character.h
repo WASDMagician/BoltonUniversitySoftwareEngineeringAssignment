@@ -35,6 +35,7 @@ public:
 
 	virtual void set_message(std::string);
 	virtual std::string get_message();
+
 	virtual void React(Character* target);
 	virtual bool Check_Alive();
 	

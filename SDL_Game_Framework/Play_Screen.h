@@ -6,6 +6,7 @@
 #include "Level.h"
 #include "UI_Play_Screen.h"
 #include "Splash_Screen.h"
+#include "Game_Time.h"
 class Play_Screen :
 	public Splash_Screen
 {
@@ -35,6 +36,9 @@ private:
 	void Render_Mid();
 	void Render_Front();
 
+	//@update_uml
+	Game_Time *m_timer;
+	double m_current_time;
 	double m_play_time;
 	double m_encounter_gap;
 	double m_last_encounter;

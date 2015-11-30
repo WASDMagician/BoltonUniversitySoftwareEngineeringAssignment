@@ -93,26 +93,6 @@ void Level::Move(int xAmount, int yAmount, std::vector<T>inputVector)
 	}
 }
 
-void Level::Revert_All()
-{
-	Revert(m_areas);
-	Revert(m_enemies);
-	Revert(m_weapons);
-	Revert(m_npcs);
-	Revert(m_pickables);
-	m_level_trigger->Revert_Position();
-}
-
-template<typename T>
-void Level::Revert(std::vector<T>inputVector)
-{
-	for (int i = 0; i < inputVector.size(); i++)
-	{
-		inputVector[i]->Revert_Position();
-	}
-
-	m_level_trigger->Revert_Position();
-}
 
 void Level::Render_All()
 {

@@ -4,7 +4,6 @@
 Game::Game()
 	:m_splash(NULL), m_credit_box(NULL)
 {
-	m_timer = new Game_Time();
 	TTF_Init();
 }
 
@@ -15,8 +14,6 @@ Game::~Game()
 	m_splash = NULL;
 	delete m_credit_box;
 	m_credit_box = NULL;
-	delete m_timer;
-	m_timer = NULL;
 }
 
 void Game::Setup()

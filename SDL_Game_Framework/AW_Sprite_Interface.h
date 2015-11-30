@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "AWSprite.h"
+#include "Game_Time.h"
 
 struct position
 {
@@ -51,6 +52,8 @@ public:
 
 	void Render();
 
+	Game_Time *m_player_timer;
+
 private:
 	std::vector<position>m_positions; //vector of target positions
 
@@ -64,6 +67,8 @@ private:
 
 	float m_spawn_x; //spawn position on x
 	float m_spawn_y; //spawn position on y
+
+	
 };
 
 #endif //_AW_SPRITE_INTERFACE_

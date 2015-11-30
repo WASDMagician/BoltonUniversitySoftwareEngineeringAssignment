@@ -21,7 +21,6 @@ Splash_Screen::~Splash_Screen()
 void Splash_Screen::Start()
 {
 	Setup();
-	std::cout << m_game << std::endl;
 	while (!m_close_splash)
 	{
 		SDL_Flip(m_game->screen);

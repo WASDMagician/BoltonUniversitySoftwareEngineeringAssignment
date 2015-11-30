@@ -28,9 +28,8 @@ public:
 	template<typename T>
 	void Move(int xAmount, int yAmount, std::vector<T>inputVector);
 
-	void Revert_All();
-	template<typename T>
-	void Revert(std::vector<T>inputVector);
+
+	//@update_uml
 
 	void Reset_All_Positions();
 	template<typename T>
