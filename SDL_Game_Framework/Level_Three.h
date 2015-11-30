@@ -5,7 +5,7 @@ class Level_Three :
 {
 public:
 	Level_Three();
-	Level_Three(std::string name);
+	Level_Three(std::string name, Character* player);
 	~Level_Three();
 	void Setup();
 };

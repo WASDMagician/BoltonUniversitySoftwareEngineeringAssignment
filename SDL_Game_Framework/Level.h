@@ -13,7 +13,8 @@ class Level
 {
 public:
 	Level();
-	Level(std::string name);
+	//@update_UML
+	Level(std::string name, Character* player);
 	virtual ~Level();
 	bool set_level_name(std::string name);
 	std::string get_level_name();
@@ -24,13 +25,19 @@ public:
 	std::vector<Pickup_Objects*>get_pickables();
 	std::vector<Weapon*>get_weapons();
 
+	//@update_uml
+	bool Run_Level_Logic(float xAmount, float yAmount);
+
 	void Move_All(int xAmount, int yAmount);
 	template<typename T>
 	void Move(int xAmount, int yAmount, std::vector<T>inputVector);
 
+	bool Perform_Enemy_Encounter();
+	void Perform_Coin_Collision();
+	void Perform_Weapon_Collision();
+	void Perform_NPC_Encounter();
 
 	//@update_uml
-
 	void Reset_All_Positions();
 	template<typename T>
 	void Reset_Positions(std::vector<T>inputVector);
@@ -40,6 +47,8 @@ public:
 	void Render(std::vector<T>inputVector);
 
 protected:
+	Character *m_player;
+
 	Character_Factory_Implementation *m_char_fac;
 	Pick_Objects_Factory_Implementation *m_pickup_fac;
 	Weapon_Factory_Implementation *m_weapon_fac;
@@ -51,6 +60,12 @@ protected:
 	AW_Sprite_Interface* m_level_trigger; 
 
 	std::string m_level_name;
+
+	Game_Time *m_timer;
+	double m_current_time;
+	double m_play_time;
+	double m_encounter_gap;
+	double m_last_encounter;
 
 
 };

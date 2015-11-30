@@ -5,15 +5,15 @@
 #include "Game.h"
 
 Play_Screen::Play_Screen()
-	:Splash_Screen(NULL), m_play_time(NULL), m_level(NULL), m_char_factory(NULL), m_player(NULL),
-	m_screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2), m_timer(new Game_Time())
+	:Splash_Screen(NULL), m_level(NULL), m_char_factory(NULL), m_player(NULL),
+	m_screen_ui(NULL)
 {
 
 }
 
 Play_Screen::Play_Screen(Game *pGame)
-	: Splash_Screen(pGame), m_play_time(NULL), m_level(NULL), m_char_factory(NULL), m_player(NULL),
-	m_screen_ui(NULL), m_last_encounter(0), m_encounter_gap(2), m_timer(new Game_Time())
+	: Splash_Screen(pGame), m_level(NULL), m_char_factory(NULL), m_player(NULL),
+	m_screen_ui(NULL)
 {
 }
 
@@ -29,7 +29,7 @@ void Play_Screen::Setup()
 	m_screen_ui = new UI_Play_Screen();
 	m_screen_ui->set_character(m_player);
 
-	m_level = new Level_One("one");
+	m_level = new Level_One("one", m_player);
 }
 
 void Play_Screen::Init_Player()
@@ -42,166 +42,64 @@ void Play_Screen::Init_Player()
 	m_player->Move_To(400, 300);
 }
 
+void Play_Screen::Handle_Keys()
+{
+	const Uint8 *state = SDL_GetKeyState(NULL);
+	float speed = 25;
+
+	m_xAmount = 0;
+	m_yAmount = 0;
+
+	if (state[SDLK_LEFT] || state[SDLK_a])
+	{
+		m_xAmount = speed;
+	}
+	if (state[SDLK_RIGHT] || state[SDLK_d])
+	{
+		m_xAmount = -speed;
+	}
+	if (state[SDLK_UP] || state[SDLK_w])
+	{
+		m_yAmount = speed;
+	}
+	if (state[SDLK_DOWN] || state[SDLK_s])
+	{
+		m_yAmount = -speed;
+	}
+}
+
 void Play_Screen::Logic()
 {
-	m_play_time = m_timer->Seconds_Since_Start();
+	m_close_splash = m_level->Run_Level_Logic(m_xAmount, m_yAmount);
+
 	if (Check_Level_Collision())
 	{
-		if (m_level->get_level_name() == "one")
+		if (m_level->get_level_name() == "one", m_player)
 		{
 			delete m_level;
 			m_level = NULL;
-			m_level = new Level_Two("two");
+			m_level = new Level_Two("two", m_player);
 		}
 		else if (m_level->get_level_name() == "two")
 		{
 			delete m_level;
 			m_level = NULL;
-			m_level = new Level_Three("three");
+			m_level = new Level_Three("three", m_player);
 		}
 		else if (m_level->get_level_name() == "three")
 		{
 			m_close_splash = true;
 		}
 	}
-	
-	Perform_Enemy_Encounter();
-	
-	Perform_Coin_Collision();
-	Perform_Weapon_Collision();
-	Perform_NPC_Encounter();
-	
+
 	m_screen_ui->Update();
-	
-	for (auto &m : m_level->get_enemies())
-	{
-		m->Update();
-	}
 }
 
-void Play_Screen::Handle_Keys()
-{
-	const Uint8 *state = SDL_GetKeyState(NULL);
-	float speed = 25;
 
-	float x_move = 0;
-	float y_move = 0;
-
-	if (state[SDLK_LEFT] || state[SDLK_a])
-	{
-		x_move = speed;
-	}
-	if (state[SDLK_RIGHT] || state[SDLK_d])
-	{
-		x_move = -speed;
-	}
-	if (state[SDLK_UP] || state[SDLK_w])
-	{
-		y_move = speed;
-	}
-	if (state[SDLK_DOWN] || state[SDLK_s])
-	{
-		y_move = -speed;
-	}
-
-	Move(x_move, y_move);
-}
-
-void Play_Screen::Move(int xAmount, int yAmount) //handle all level movement
-{
-	m_current_time = m_timer->Seconds_Since_Last_Call() * 1000;
-	if (m_player->Is_Contained(m_level->get_areas(), { xAmount, yAmount }))
-	{
-		for (size_t i = 0; i < m_level->get_areas().size(); i++)
-		{
-			m_level->Move_All(xAmount * m_current_time, yAmount * m_current_time);
-		}
-	}
-}
 
 bool Play_Screen::Check_Level_Collision()
 {
 	return (m_level->get_trigger()->bb_collision(m_player));
-}
-
-void Play_Screen::Perform_Enemy_Encounter()
-{
-	std::vector<Character*>enemies = m_level->get_enemies();
-	for (size_t e = 0; e < enemies.size(); e++)
-	{
-		if (enemies[e]->bb_collision(m_player))
-		{
-			if (m_play_time > m_last_encounter + m_encounter_gap)
-			{
-				m_player->Attack(enemies[e]);
-				enemies[e]->Attack(m_player);
-
-				if (!enemies[e]->Check_Alive())
-				{
-					enemies[e]->set_visibility(false);
-				}
-
-				if (!m_player->Check_Alive())
-				{
-					if (m_player->get_lives() > 1)
-					{
-						m_level->Reset_All_Positions();
-						m_player->set_lives(m_player->get_lives() - 1);
-					}
-					else
-					{
-						m_close_splash = true;
-					}
-				}
-
-				m_last_encounter = m_play_time;
-			}
-		}
-	}
-}
-
-void Play_Screen::Perform_NPC_Encounter()
-{
-	for (auto &npc : m_level->get_npcs())
-	{
-		if (m_player->bb_collision(npc))
-		{
-			npc->set_display_box(true);
-			npc->Update();
-			npc->React(m_player);
-			break;
-		}
-		else
-		{
-			npc->set_display_box(false);
-		}
-	}
-}
-
-void Play_Screen::Perform_Coin_Collision()
-{
-	for (auto &pick_objects : m_level->get_pickables())
-	{
-		if (m_player->bb_collision(pick_objects))
-		{
-			m_player->set_score(m_player->get_score() + pick_objects->get_value()); //@debug
-			pick_objects->set_visibility(false);
-			break;
-		}
-	}
-}
-
-void Play_Screen::Perform_Weapon_Collision()
-{
-	for (auto &weapon : m_level->get_weapons())
-	{
-		if (m_player->bb_collision(weapon))
-		{
-			m_player->set_damage(m_player->get_damage() + weapon->get_value());
-			weapon->set_visibility(false);
-			break;
-		}
-	}
 }
 
 void Play_Screen:: Render_Back()

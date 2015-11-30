@@ -21,12 +21,8 @@ public:
 	void Logic();
 	void Handle_Keys();
 
-	void Move(int xAmount, int yAmount);
 	bool Check_Level_Collision();
-	void Perform_Enemy_Encounter();
-	void Perform_Coin_Collision();
-	void Perform_Weapon_Collision();
-	void Perform_NPC_Encounter();
+	//@update_uml
 
 	bool Run();
 
@@ -36,12 +32,12 @@ private:
 	void Render_Mid();
 	void Render_Front();
 
+	//@update_Uml
+	float m_xAmount;
+	float m_yAmount;
+
 	//@update_uml
-	Game_Time *m_timer;
-	double m_current_time;
-	double m_play_time;
-	double m_encounter_gap;
-	double m_last_encounter;
+	
 
 	Level *m_level;
 	Character_Factory_Implementation* m_char_factory;

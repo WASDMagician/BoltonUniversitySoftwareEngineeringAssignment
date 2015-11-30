@@ -7,8 +7,8 @@ Level_Three::Level_Three()
 	Setup();
 }
 
-Level_Three::Level_Three(std::string name)
-: Level(name)
+Level_Three::Level_Three(std::string name, Character* player)
+: Level(name, player)
 {
 	Setup();
 }

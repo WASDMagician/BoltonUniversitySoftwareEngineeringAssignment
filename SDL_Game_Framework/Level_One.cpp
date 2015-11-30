@@ -7,8 +7,8 @@ Level_One::Level_One()
 	Setup();
 }
 
-Level_One::Level_One(std::string name)
-:Level(name)
+Level_One::Level_One(std::string name, Character* player)
+:Level(name, player)
 {
 	Setup();
 }

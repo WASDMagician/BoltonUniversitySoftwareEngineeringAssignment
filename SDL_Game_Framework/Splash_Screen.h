@@ -30,6 +30,7 @@ protected:
 	virtual void Render_Front();
 
 	Game* m_game; // game pointer to game object
+
 	bool m_close_splash;
 	bool m_game_over;
 };
