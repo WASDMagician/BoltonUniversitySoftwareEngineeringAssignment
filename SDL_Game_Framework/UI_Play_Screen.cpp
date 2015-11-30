@@ -41,7 +41,7 @@ void UI_Play_Screen::Update()
 	std::string score = "Score " + to_string(m_display_character->get_score());
 	std::string output = health + " " + lives + " " + damage + " " + score;
 	
-	m_ui_details->set_font("fonts/game_font.ttf", 15);
+	m_ui_details->set_font("fonts/game_font.ttf", 20);
 	m_ui_details->set_color(200, 0, 0);
 	m_ui_details->Position_Setting(0, 0, 0, 0);
 	m_ui_details->Add_Message(output);
