@@ -1,50 +1,11 @@
-﻿Build started 11/30/2015 4:46:56 PM.
+﻿Build started 11/30/2015 5:36:12 PM.
      1>Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt End_Menu_Splash.cpp Game.cpp Level.cpp Level_One.cpp Level_Three.cpp Level_Two.cpp Main.cpp Play_Screen.cpp Splash_Screen.cpp Start_Menu_Splash.cpp Test_File.cpp Text_Box.cpp
-         Level.cpp
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(73): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(171): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(173): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(174): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(176): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(177): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(178): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(179): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(180): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(188): warning C4018: '<' : signed/unsigned mismatch
-                 f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(176) : see reference to function template instantiation 'void Level::Move<AW_Sprite_Interface*>(int,int,std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(192): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(197): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(217): warning C4018: '<' : signed/unsigned mismatch
-                 f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(206) : see reference to function template instantiation 'void Level::Render<AW_Sprite_Interface*>(std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-     1>f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(241): warning C4018: '<' : signed/unsigned mismatch
-                 f:\bolton university software engineering assignment\sdl_game_framework\level.cpp(230) : see reference to function template instantiation 'void Level::Reset_Positions<AW_Sprite_Interface*>(std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         Text_Box.cpp
-         Test_File.cpp
-         Start_Menu_Splash.cpp
-         Splash_Screen.cpp
-         Play_Screen.cpp
-         Main.cpp
-         Level_Two.cpp
-         Level_Three.cpp
-         Level_One.cpp
-         Game.cpp
-         End_Menu_Splash.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AW_Sprite_Interface.cpp
+         AW_Sprite_Interface.cpp
+     1>f:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(133): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(182): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>f:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(183): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
          Debug\AWSprite.obj
@@ -106,4 +67,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.52
+Time Elapsed 00:00:01.34

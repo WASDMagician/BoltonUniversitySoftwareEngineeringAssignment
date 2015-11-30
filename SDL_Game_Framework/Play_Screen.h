@@ -6,7 +6,6 @@
 #include "Level.h"
 #include "UI_Play_Screen.h"
 #include "Splash_Screen.h"
-#include "Game_Time.h"
 class Play_Screen :
 	public Splash_Screen
 {

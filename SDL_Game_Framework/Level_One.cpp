@@ -117,6 +117,9 @@ void Level_One::Setup()
 	healer->set_message("You have been healed");
 	m_npcs.push_back(healer);
 
+	float area_margin_x = 100;
+	float area_margin_y = 100;
+
 	for (auto &area : m_areas)
 	{
 		for (int i = 0; i < 10; i++)
@@ -130,7 +133,8 @@ void Level_One::Setup()
 		}
 		//place weapons
 		Weapon *pickaxe = m_weapon_fac->Make_Weapon(GREAT_AXE);
-		pickaxe->Randomize_Position((int)area->get_x(), (int)area->get_width(), (int)area->get_y(), (int)area->get_height());
+		pickaxe->Randomize_Position((int)area->get_x() + area_margin_x, (int)area->get_width() - area_margin_x, 
+			(int)area->get_y() + area_margin_y, (int)area->get_height() - area_margin_y);
 		pickaxe->set_spawn(pickaxe->get_x(), pickaxe->get_y());
 		pickaxe->set_value(5);
 		m_weapons.push_back(pickaxe);
