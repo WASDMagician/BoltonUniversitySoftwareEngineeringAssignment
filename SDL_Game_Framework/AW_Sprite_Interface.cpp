@@ -179,8 +179,8 @@ void AW_Sprite_Interface::Move_To_Spawn()
 
 void AW_Sprite_Interface::Randomize_Position(float xPos, float width, float yPos, float height)
 {
-	float rand_x = rand() % (int)width;
-	float rand_y = rand() % (int)height;
+	float rand_x = rand() % (int)(width);
+	float rand_y = rand() % (int)(height);
 	set_world_position(xPos + rand_x, yPos + rand_y);
 }
 
