@@ -75,25 +75,24 @@ void Play_Screen::Logic()
 
 	if (Check_Level_Collision())
 	{
-		if (m_level->get_level_number() == 1, m_player)
+		if (m_level->get_level_number() == 3)
 		{
-			printf("IT THINK THIS IS LEVEL ONE\n");
-			delete m_level;
-			m_level = NULL;
-			m_level = new Level_Two(m_player);
+			m_close_splash = true;
 		}
-		else if (m_level->get_level_number() == 2)
+		if (m_level->get_level_number() == 2)
 		{
-			printf("WE ARE ON LEVEL 2 THREE SHOULD BE NEXT\n");
 			delete m_level;
 			m_level = NULL;
 			m_level = new Level_Three(m_player);
 		}
-		else if (m_level->get_level_number() == 3)
+		else if (m_level->get_level_number() == 1, m_player)
 		{
-			printf("WE ARE ON THREE\n");
-			m_close_splash = true;
+			delete m_level;
+			m_level = NULL;
+			m_level = new Level_Two(m_player);
 		}
+		
+		
 	}
 
 	m_screen_ui->Update();
