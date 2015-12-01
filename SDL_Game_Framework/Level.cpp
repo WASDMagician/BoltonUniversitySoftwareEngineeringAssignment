@@ -71,6 +71,11 @@ bool Level::Run_Level_Logic(float xAmount, float yAmount)
 	Perform_Weapon_Collision();
 	Perform_NPC_Encounter();
 
+	if (m_pickables.size() == 0)
+	{
+		m_level_trigger->set_visibility(true);
+	}
+
 	return should_close;
 }
 
@@ -117,12 +122,14 @@ bool Level::Perform_Enemy_Encounter()
 
 void Level::Perform_Coin_Collision()
 {
-	for (auto &pick_objects : m_pickables)
+	for (size_t p = 0; p < m_pickables.size(); p++)
 	{
-		if (m_player->bb_collision(pick_objects))
+		if (m_pickables[p] != NULL && m_player->bb_collision(m_pickables[p]))
 		{
-			m_player->set_score(m_player->get_score() + pick_objects->get_value()); //@debug
-			pick_objects->set_visibility(false);
+			m_player->set_score(m_player->get_score() + m_pickables[p]->get_value());
+			delete m_pickables[p];
+			m_pickables[p] = NULL;
+			m_pickables.erase(m_pickables.begin() + p);
 			break;
 		}
 	}

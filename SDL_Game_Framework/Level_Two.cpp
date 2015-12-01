@@ -142,4 +142,5 @@ void Level_Two::Setup()
 
 	m_level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
 	m_level_trigger->set_spawn(m_level_trigger->get_x(), m_level_trigger->get_y());
+	m_level_trigger->set_visibility(false);
 }

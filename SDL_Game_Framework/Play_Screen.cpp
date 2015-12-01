@@ -70,7 +70,6 @@ void Play_Screen::Handle_Keys()
 
 void Play_Screen::Logic()
 {
-	printf("%d\n", m_level->get_level_number());
 	m_close_splash = m_level->Run_Level_Logic(m_xAmount, m_yAmount);
 
 	if (Check_Level_Collision())
@@ -91,10 +90,7 @@ void Play_Screen::Logic()
 			m_level = NULL;
 			m_level = new Level_Two(m_player);
 		}
-		
-		
 	}
-
 	m_screen_ui->Update();
 }
 
