@@ -5,7 +5,7 @@ class Level_One :
 {
 public:
 	Level_One();
-	Level_One(std::string name, Character* player);
+	Level_One(Character* player);
 	~Level_One();
 	void Setup();
 

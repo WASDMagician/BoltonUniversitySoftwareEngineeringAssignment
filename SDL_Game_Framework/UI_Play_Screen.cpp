@@ -48,6 +48,7 @@ void UI_Play_Screen::Update()
 	m_ui_details->Setup_Box();
 	m_ui_details->set_rects();
 	m_ui_details->set_should_display(false);
+	
 }
 
 void UI_Play_Screen:: Display()

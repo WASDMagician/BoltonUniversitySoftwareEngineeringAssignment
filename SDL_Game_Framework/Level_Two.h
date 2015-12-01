@@ -5,8 +5,10 @@ class Level_Two :
 {
 public:
 	Level_Two();
-	Level_Two(std::string name, Character* player);
+	Level_Two(Character* player);
 	~Level_Two();
 	void Setup();
+
+	void Move_Enemies();
 };
 

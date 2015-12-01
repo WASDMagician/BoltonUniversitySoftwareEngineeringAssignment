@@ -7,8 +7,8 @@ Level_One::Level_One()
 	Setup();
 }
 
-Level_One::Level_One(std::string name, Character* player)
-:Level(name, player)
+Level_One::Level_One(Character* player)
+:Level(player)
 {
 	Setup();
 }
@@ -40,7 +40,7 @@ Level_One::~Level_One()
 
 void Level_One::Setup()
 {
-
+	m_level_number = 1;
 	//create areas
 	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/area1.png", 1, 1, 1);
 	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/StartingArea.png", 1, 1, 1);

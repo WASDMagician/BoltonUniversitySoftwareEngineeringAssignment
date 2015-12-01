@@ -14,10 +14,11 @@ class Level
 public:
 	Level();
 	//@update_UML
-	Level(std::string name, Character* player);
+	Level(Character* player);
 	virtual ~Level();
 	bool set_level_name(std::string name);
-	std::string get_level_name();
+	//@update_uml
+	int get_level_number();
 	AW_Sprite_Interface* get_trigger();
 	std::vector<AW_Sprite_Interface*>get_areas();
 	std::vector<Character*>get_enemies();
@@ -59,7 +60,8 @@ protected:
 	std::vector<Weapon*> m_weapons;
 	AW_Sprite_Interface* m_level_trigger; 
 
-	std::string m_level_name;
+	//@update_uml
+	int m_level_number;
 
 	Game_Time *m_timer;
 	double m_current_time;

@@ -294,12 +294,6 @@
     <ClInclude Include="Clown.h">
       <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
     </ClInclude>
-    <ClInclude Include="Level_Two.h">
-      <Filter>Header Files\levels</Filter>
-    </ClInclude>
-    <ClInclude Include="Level_Three.h">
-      <Filter>Header Files\levels</Filter>
-    </ClInclude>
     <ClInclude Include="Centipede.h">
       <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
     </ClInclude>
@@ -317,6 +311,12 @@
     </ClInclude>
     <ClInclude Include="Game_Time.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level_Two.h">
+      <Filter>Header Files\levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Level_Three.h">
+      <Filter>Header Files\levels</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -461,12 +461,6 @@
     <ClCompile Include="Clown.cpp">
       <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
-    <ClCompile Include="Level_Two.cpp">
-      <Filter>Source Files\levels</Filter>
-    </ClCompile>
-    <ClCompile Include="Level_Three.cpp">
-      <Filter>Source Files\levels</Filter>
-    </ClCompile>
     <ClCompile Include="Centipede.cpp">
       <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
@@ -484,6 +478,12 @@
     </ClCompile>
     <ClCompile Include="Game_Time.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Level_Two.cpp">
+      <Filter>Source Files\levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Level_Three.cpp">
+      <Filter>Source Files\levels</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

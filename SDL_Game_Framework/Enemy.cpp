@@ -28,6 +28,8 @@ void Enemy::Update()
 
 void Enemy::set_health_message()
 {
+	delete m_health_box;
+	m_health_box = NULL;
 	m_health_box = new Text_Box();
 	m_health_box->set_font("fonts/game_font.ttf", 18);
 	m_health_box->set_color(255, 0, 0);

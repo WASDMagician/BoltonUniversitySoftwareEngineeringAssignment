@@ -2,17 +2,17 @@
 
 
 Level::Level()
-	:m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_level_name(""), m_player(NULL),
-	m_timer(new Game_Time()), m_current_time(0), m_play_time(0), m_encounter_gap(2), m_last_encounter(0)
+	:m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_player(NULL),
+	m_timer(new Game_Time()), m_current_time(0), m_play_time(0), m_encounter_gap(2), m_last_encounter(0), m_level_number(-1)
 {
 	m_char_fac = new Character_Factory_Implementation();
 	m_pickup_fac = new Pick_Objects_Factory_Implementation();
 	m_weapon_fac = new Weapon_Factory_Implementation();
 }
 
-Level::Level(std::string name, Character *player)
-	: m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_level_name(name), m_player(player),
-	m_timer(new Game_Time()), m_current_time(0), m_play_time(0), m_encounter_gap(2), m_last_encounter(0)
+Level::Level(Character *player)
+	: m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_player(player),
+	m_timer(new Game_Time()), m_current_time(0), m_play_time(0), m_encounter_gap(2), m_last_encounter(0), m_level_number(-1)
 {
 	m_char_fac = new Character_Factory_Implementation();
 	m_pickup_fac = new Pick_Objects_Factory_Implementation();
@@ -54,15 +54,9 @@ Level::~Level()
 	m_level_trigger = NULL;
 }
 
-bool Level::set_level_name(std::string name)
+int Level::get_level_number()
 {
-	m_level_name = name;
-	return m_level_name == name;
-}
-
-std::string Level::get_level_name()
-{
-	return m_level_name;
+	return m_level_number;
 }
 
 bool Level::Run_Level_Logic(float xAmount, float yAmount)

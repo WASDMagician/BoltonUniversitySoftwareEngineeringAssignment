@@ -23,7 +23,7 @@ Text_Box::~Text_Box()
 {
 	if (m_font != NULL)
 	{
-		//delete m_font; //<- this causes a crash @bug
+		TTF_CloseFont(m_font);
 	}
 
 	for (size_t i = 0; i < m_text_lines.size(); i++)
@@ -50,8 +50,10 @@ Text_Box::~Text_Box()
 
 void Text_Box::set_font(char* fontPath, int fontSize)
 {	
+	TTF_CloseFont(m_font);
 	delete m_font;
-	
+	m_font = NULL;
+
 	m_font = TTF_OpenFont(fontPath, fontSize);
 	TTF_SizeText(m_font, "A", NULL, &m_line_height); //get the height of the text (A chosen randomly)
 }
@@ -73,6 +75,8 @@ void Text_Box::Position_Setting(float boxX = 0, float boxY = 0, float textXMargi
 
 void Text_Box::Setup_Box()
 {
+	delete m_box;
+	m_box = NULL;
 	m_box = new AWSprite();
 	if (m_max_line_width > 0) //check that m_max_line_width has been set correctly
 	{
@@ -109,9 +113,15 @@ void Text_Box::set_rects()
 void Text_Box::Add_Message(std::string message)
 {
 	Parse_Text(message);
-	for (auto &c : m_messages)
+	for (size_t i = 0; i < m_text_lines.size(); i++)
 	{
-		m_text_lines.push_back(Create_Text_Line(c));
+		SDL_FreeSurface(m_text_lines[i]);
+		delete m_text_lines[i];
+		m_text_lines[i] = NULL;
+	}
+	for (size_t m = 0; m < m_messages.size(); m++)
+	{
+		m_text_lines.push_back(Create_Text_Line(m_messages[m]));
 	}
 }
 
@@ -150,7 +160,6 @@ SDL_Surface* Text_Box::Create_Text_Line(std::string message)
 	int width = 0;
 	TTF_SizeText(m_font, message.c_str(), &width, &height);
 	m_max_line_width = (width > m_max_line_width) ? (width) : (m_max_line_width); //if width > current max width then max width = width, else stays the same
-
 	return text_line;
 }
 

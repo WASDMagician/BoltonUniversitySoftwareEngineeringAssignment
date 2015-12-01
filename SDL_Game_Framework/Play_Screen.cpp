@@ -29,7 +29,7 @@ void Play_Screen::Setup()
 	m_screen_ui = new UI_Play_Screen();
 	m_screen_ui->set_character(m_player);
 
-	m_level = new Level_One("one", m_player);
+	m_level = new Level_One(m_player);
 }
 
 void Play_Screen::Init_Player()
@@ -70,24 +70,28 @@ void Play_Screen::Handle_Keys()
 
 void Play_Screen::Logic()
 {
+	printf("%d\n", m_level->get_level_number());
 	m_close_splash = m_level->Run_Level_Logic(m_xAmount, m_yAmount);
 
 	if (Check_Level_Collision())
 	{
-		if (m_level->get_level_name() == "one", m_player)
+		if (m_level->get_level_number() == 1, m_player)
 		{
+			printf("IT THINK THIS IS LEVEL ONE\n");
 			delete m_level;
 			m_level = NULL;
-			m_level = new Level_Two("two", m_player);
+			m_level = new Level_Two(m_player);
 		}
-		else if (m_level->get_level_name() == "two")
+		else if (m_level->get_level_number() == 2)
 		{
+			printf("WE ARE ON LEVEL 2 THREE SHOULD BE NEXT\n");
 			delete m_level;
 			m_level = NULL;
-			m_level = new Level_Three("three", m_player);
+			m_level = new Level_Three(m_player);
 		}
-		else if (m_level->get_level_name() == "three")
+		else if (m_level->get_level_number() == 3)
 		{
+			printf("WE ARE ON THREE\n");
 			m_close_splash = true;
 		}
 	}
