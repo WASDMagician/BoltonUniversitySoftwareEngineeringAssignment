@@ -19,11 +19,7 @@ public:
 	//@update_uml
 	int get_level_number();
 	AW_Sprite_Interface* get_trigger();
-	std::vector<AW_Sprite_Interface*>get_areas();
-	std::vector<Character*>get_enemies();
-	std::vector<Character*>get_npcs();
-	std::vector<Pickup_Objects*>get_pickables();
-	std::vector<Weapon*>get_weapons();
+	//@update_uml
 
 	//@update_uml
 	bool Run_Level_Logic(float xAmount, float yAmount);
@@ -31,8 +27,8 @@ public:
 	void Move_All(int xAmount, int yAmount);
 	template<typename T>
 	void Move(int xAmount, int yAmount, std::vector<T>inputVector);
-
-	void Move(int xAmount, int yAmount, AW_Sprite_Interface* sprite);
+	template<typename T>
+	void Move(int xAmount, int yAmount, T* sprite);
 
 	bool Perform_Enemy_Encounter();
 	void Perform_Coin_Collision();

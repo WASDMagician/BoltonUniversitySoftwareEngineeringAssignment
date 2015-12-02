@@ -118,6 +118,8 @@ void Level::Perform_Coin_Collision()
 			m_player->set_score(m_player->get_score() + m_pickables[p]->get_value()); //increment score by pickables value
 			delete m_pickables[p]; //delete the pickable
 			m_pickables[p] = NULL;
+			m_pickables.erase(m_pickables.begin() + p); //we erase this vector element because we use the m_pickables size to determine visibility
+			//of the level trigger
 			break;
 		}
 	}
@@ -127,74 +129,83 @@ void Level::Perform_Weapon_Collision()
 {
 	for (size_t w = 0; w < m_weapons.size(); w++) //iterate through all of the weapon objects
 	{
-		if (m_player->bb_collision(m_weapons[w])) //if the weapon object collides
+		if (m_weapons[w] != NULL)
 		{
-			m_player->set_damage(m_player->get_damage() + m_weapons[w]->get_value()); //increase player damage by weapon value
-			delete m_weapons[w]; //delete the weapon
-			m_weapons[w] = NULL;
-			break;
+			if (m_player->bb_collision(m_weapons[w])) //if the weapon object collides
+			{
+				m_player->set_damage(m_player->get_damage() + m_weapons[w]->get_value()); //increase player damage by weapon value
+				delete m_weapons[w]; //delete the weapon
+				m_weapons[w] = NULL;
+				break;
+			}
 		}
 	}
 }
 
 void Level::Perform_NPC_Encounter()
 {
-	for (auto &npc : m_npcs)
+	for (size_t n = 0; n < m_npcs.size(); n++) //iterate through all of the NPC objects
 	{
-		if (m_player->bb_collision(npc))
+		if (m_npcs[n] != NULL)
 		{
-			npc->set_display_box(true);
-			npc->Update();
-			npc->React(m_player);
-			break;
-		}
-		else
-		{
-			npc->set_display_box(false);
+			if (m_player->bb_collision(m_npcs[n])) //if there is a collision between an NPC and the player
+			{
+				m_npcs[n]->set_display_box(true); //make NPC text visible
+				m_npcs[n]->Update(); //update the NPC text box
+				m_npcs[n]->React(m_player); //have the NPC react to the player
+				break;
+			}
+			else //if there isn't a collision between an NPC and the player
+			{
+				m_npcs[n]->set_display_box(false); //make the text box invisible
+			}
 		}
 	}
 }
 
 void Level::Move_All(int xAmount, int yAmount)
 {
-	m_current_time = m_timer->Milliseconds_Since_Last_Call() * 10;
+	m_current_time = m_timer->Milliseconds_Since_Last_Call() * 10; //time since last call
 
-	float movementX = xAmount * m_current_time;
-	float movementY = yAmount * m_current_time;
+	float movementX = xAmount * m_current_time; //x movement * time since last call
+	float movementY = yAmount * m_current_time; //y movement * time since last call
 
-	if (m_player->Is_Contained(m_areas, { movementX, movementY }))
+	if (m_player->Is_Contained(m_areas, { movementX, movementY })) //if player moved by movementX and movementY is within level bounds
 	{
 
-		Move(movementX, movementY, m_areas);
-		Move(movementX, movementY, m_enemies);
-		Move(movementX, movementY, m_weapons);
-		Move(movementX, movementY, m_npcs);
-		Move(movementX, movementY, m_pickables);
-		//m_level_trigger->Move(x, y);
-		Move(movementX, movementY, m_level_trigger);
+		Move(movementX, movementY, m_areas); //move each area element
+		Move(movementX, movementY, m_enemies); //move each enemy
+		Move(movementX, movementY, m_weapons); //move each weapon
+		Move(movementX, movementY, m_npcs); //move each NPC
+		Move(movementX, movementY, m_pickables); //move each pickable
+		Move(movementX, movementY, m_level_trigger); //move the level trigger
 	}
 
 }
 
+//this function is a template so that it can handle different types that inherit from the same base class
+//each vector given to this has a base class of AW_Sprite_Interface but are different inherited classes
 template<typename T>
 void Level::Move(int xAmount, int yAmount, std::vector<T>inputVector)
 {
-	for (int i = 0; i < inputVector.size(); i++)
+	for (int i = 0; i < inputVector.size(); i++) //iterate through vector
 	{
-		if (inputVector[i] != NULL)
+		if (inputVector[i] != NULL) //if vector element exists
 		{
-			inputVector[i]->Move_By(xAmount, yAmount);
-			if (inputVector[i]->Has_Target())
+			inputVector[i]->Move_By(xAmount, yAmount); //move it by the amount the player needs to move
+			if (inputVector[i]->Has_Target()) //if the vector element has a target
 			{
-				inputVector[i]->Move_Toward();
-				inputVector[i]->Increment_Target();
-				inputVector[i]->Update_Target_Position(xAmount, yAmount);
+				inputVector[i]->Move_Toward(); //move the element toward the target
+				inputVector[i]->Increment_Target(); //check if the current target needs to be incremented
+				inputVector[i]->Update_Target_Position(xAmount, yAmount); //update all target positions with new level positions
 			}
 		}
 	}
 }
 
-void Level::Move(int xAmount, int yAmount, AW_Sprite_Interface* sprite)
+//this function is the same as the above but takes a single element instead of a vector
+template <typename T>
+void Level::Move(int xAmount, int yAmount, T* sprite)
 {
 	if (sprite != NULL)
 	{
@@ -208,76 +219,63 @@ void Level::Move(int xAmount, int yAmount, AW_Sprite_Interface* sprite)
 	}
 }
 
-void Level::Render_All()
+
+void Level::Render_All()//render all elements of level in reverse order of appearance 
 {
-	Render(m_areas);
+	Render(m_areas); 
 	Render(m_enemies);
 	Render(m_weapons);
 	Render(m_npcs);
 	Render(m_pickables);
-	m_level_trigger->Render();
+	if (m_level_trigger != NULL) //if level trigger exists
+	{
+		m_level_trigger->Render(); //as level trigger is a single element we just call it's own render function
+	}
 }
 
+//this function is a template so that it can handle different types that inherit from the same base class
+//each vector given to this has a base class of AW_Sprite_Interface but are different inherited classes
 template<typename T>
 void Level::Render(std::vector<T>inputVector)
 {
-	for (int i = 0; i < inputVector.size(); i++)
+	for (int i = 0; i < inputVector.size(); i++) //iterate through inputVector
 	{
-		if (inputVector[i] != NULL)
+		if (inputVector[i] != NULL) //if vector element exists
 		{
-			inputVector[i]->Render();
+			inputVector[i]->Render(); //call vector elements own render function
 		}
 	}
-
-	m_level_trigger->Render();
 }
 
 void Level::Reset_All_Positions()
 {
+	//if the player dies we reset all level element positions
 	Reset_Positions(m_areas);
 	Reset_Positions(m_enemies);
 	Reset_Positions(m_weapons);
 	Reset_Positions(m_npcs);
 	Reset_Positions(m_pickables);
-	m_level_trigger->Move_To_Spawn();
+	if (m_level_trigger != NULL)
+	{
+		m_level_trigger->Move_To_Spawn();
+	}
 }
 
 template<typename T>
 void Level::Reset_Positions(std::vector<T>inputVector)
 {
-	for (int i = 0; i < inputVector.size(); i++)
+	for (int i = 0; i < inputVector.size(); i++) //iterate through inputVector
 	{
-		if (inputVector[i] != NULL)
+		if (inputVector[i] != NULL) //if vector element exists
 		{
-			inputVector[i]->Move_To_Spawn();
+			inputVector[i]->Move_To_Spawn(); //set vector element position to spawn position which was stored when the element was created
 		}
 	}
-
-	m_level_trigger->Move_To_Spawn();
 }
 
 
-AW_Sprite_Interface* Level::get_trigger()
+AW_Sprite_Interface* Level::get_trigger() //we allow the getting of the level trigger because we use it to determine the next level to load
 {
 	return m_level_trigger;
 }
 
-std::vector<Character*> Level::get_enemies()
-{
-	return m_enemies;
-}
-
-std::vector<Character*> Level::get_npcs()
-{
-	return m_npcs;
-}
-
-std::vector<Pickup_Objects*> Level::get_pickables()
-{
-	return m_pickables;
-}
-
-std::vector<Weapon*> Level::get_weapons()
-{
-	return m_weapons;
-}
