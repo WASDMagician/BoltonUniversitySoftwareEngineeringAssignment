@@ -12,7 +12,6 @@
 class Level
 {
 public:
-	Level();
 	//@update_UML
 	Level(Character* player);
 	virtual ~Level();

@@ -6,7 +6,6 @@ class End_Menu_Splash :
 	public Splash_Screen
 {
 public:
-	End_Menu_Splash();
 	End_Menu_Splash(Game *game);
 	~End_Menu_Splash();
 
@@ -15,7 +14,6 @@ public:
 	bool Run();
 
 private:
-	void Render_Back();
 	void Render_Mid();
 	Text_Box* m_gameover_box;
 };

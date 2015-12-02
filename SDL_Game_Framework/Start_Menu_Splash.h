@@ -6,7 +6,6 @@ class Start_Menu_Splash :
 	public Splash_Screen
 {
 public:
-	Start_Menu_Splash();
 	Start_Menu_Splash(Game *game);
 	~Start_Menu_Splash();
 

@@ -1,12 +1,5 @@
 #include "Level_Three.h"
 
-
-Level_Three::Level_Three()
-:Level()
-{
-	Setup();
-}
-
 Level_Three::Level_Three(Character* player)
 :Level(player)
 {

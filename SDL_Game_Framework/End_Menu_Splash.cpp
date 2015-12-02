@@ -1,25 +1,23 @@
 #include "End_Menu_Splash.h"
 #include "Game.h"
 
-End_Menu_Splash::End_Menu_Splash()
-:Splash_Screen(NULL), m_gameover_box(NULL)
-{
-	m_gameover_box = new Text_Box();
-}
-
 End_Menu_Splash::End_Menu_Splash(Game *pGame)
 : Splash_Screen(pGame), m_gameover_box(NULL)
 {
-	m_gameover_box = new Text_Box();
+	m_gameover_box = new Text_Box(); //initialise gameover box
 }
 
 End_Menu_Splash::~End_Menu_Splash(void)
 {
+	//free memory
+	delete m_gameover_box;
+	m_gameover_box = NULL;
 
 }
 
 void End_Menu_Splash::Setup()
 {
+	//setup gameover box
 	m_gameover_box->set_font("fonts/game_font.ttf", 20);
 	m_gameover_box->set_color(200, 0, 0);
 	m_gameover_box->Position_Setting(50, 50, 10, 10);
@@ -31,24 +29,15 @@ void End_Menu_Splash::Setup()
 
 void End_Menu_Splash::Handle_Keys()
 {
-	switch (m_game->keyDown)
+	if (m_game->keyUp == SDLK_ESCAPE) //use if statement to deal with single key press
 	{
-	case(SDLK_ESCAPE) :
 		m_game_over = true;
-		m_close_splash = true;
-		break;
 	}
-}
-
-
-void End_Menu_Splash::Render_Back()
-{
-	SDL_BlitSurface(m_game->bg, NULL, m_game->screen, NULL);
 }
 
 void End_Menu_Splash::Render_Mid()
 {
-	m_gameover_box->Display();
+	m_gameover_box->Display(); //display gamebox
 }
 
 bool End_Menu_Splash::Run()

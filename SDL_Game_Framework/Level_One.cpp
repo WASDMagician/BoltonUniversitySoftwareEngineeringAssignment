@@ -1,12 +1,5 @@
 #include "Level_One.h"
 
-
-Level_One::Level_One()
-:Level()
-{
-	Setup();
-}
-
 Level_One::Level_One(Character* player)
 :Level(player)
 {

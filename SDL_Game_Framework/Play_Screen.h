@@ -10,7 +10,6 @@ class Play_Screen :
 	public Splash_Screen
 {
 public:
-	Play_Screen();
 	Play_Screen(Game *game);
 	~Play_Screen();
 

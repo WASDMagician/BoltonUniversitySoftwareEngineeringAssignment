@@ -1,15 +1,5 @@
 #include "Level.h"
 
-
-Level::Level()
-	:m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_player(NULL),
-	m_timer(new Game_Time()), m_current_time(0), m_play_time(0), m_encounter_gap(2), m_last_encounter(0), m_level_number(-1)
-{
-	m_char_fac = new Character_Factory_Implementation();
-	m_pickup_fac = new Pick_Objects_Factory_Implementation();
-	m_weapon_fac = new Weapon_Factory_Implementation();
-}
-
 Level::Level(Character *player)
 	: m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_player(player),
 	m_timer(new Game_Time()), m_current_time(0), m_play_time(0), m_encounter_gap(2), m_last_encounter(0), m_level_number(-1)
@@ -54,24 +44,24 @@ Level::~Level()
 	m_level_trigger = NULL;
 }
 
-int Level::get_level_number()
+int Level::get_level_number() //return the number of the current level
 {
 	return m_level_number;
 }
 
-bool Level::Run_Level_Logic(float xAmount, float yAmount)
+bool Level::Run_Level_Logic(float xAmount, float yAmount) //run through the level logic using currently loaded level values
 {
-	bool should_close = false;
-	m_play_time = m_timer->Seconds_Since_Start();
+	bool should_close = false; //has player lost all their lives and should close the game
+	m_play_time = m_timer->Seconds_Since_Start(); //update the current play time, this is used to place a gap between attacks
 
-	Move_All(xAmount, yAmount);
+	Move_All(xAmount, yAmount); //move level using movement decided in play_splash
 
-	should_close = Perform_Enemy_Encounter();
-	Perform_Coin_Collision();
-	Perform_Weapon_Collision();
-	Perform_NPC_Encounter();
+	should_close = Perform_Enemy_Encounter(); //interact with any collided enemies
+	Perform_Coin_Collision(); //pick up any collided coins
+	Perform_Weapon_Collision(); //pick up any collided weapons
+	Perform_NPC_Encounter(); //interact with any collided npcs
 
-	if (m_pickables.size() == 0)
+	if (m_pickables.size() == 0) //if all coins have been collected make the level trigger visible
 	{
 		m_level_trigger->set_visibility(true);
 	}
@@ -81,55 +71,53 @@ bool Level::Run_Level_Logic(float xAmount, float yAmount)
 
 bool Level::Perform_Enemy_Encounter()
 {
-	for (size_t e = 0; e < m_enemies.size(); e++)
+	for (size_t e = 0; e < m_enemies.size(); e++) //iterate through level enemies
 	{
-		if (m_enemies[e] != NULL)
+		if (m_enemies[e] != NULL) //if the enemy exists
 		{
-			m_enemies[e]->Update();
-			if (m_enemies[e]->bb_collision(m_player))
+			if (m_enemies[e]->bb_collision(m_player)) //if enemy has collided with player
 			{
-				if (m_play_time > m_last_encounter + m_encounter_gap)
+				if (m_play_time > m_last_encounter + m_encounter_gap) //if there has been enough time since the last collision
 				{
-					m_player->Attack(m_enemies[e]);
-					m_enemies[e]->Attack(m_player);
+					m_player->Attack(m_enemies[e]); //have the player deal damage to the enemy
+					m_enemies[e]->Attack(m_player); //have the enemy deal damage to the player
 
-					if (!m_enemies[e]->Check_Alive())
+					if (!m_enemies[e]->Check_Alive()) //check if the enemies health is greater than 0, if it isn't:
 					{
-						delete m_enemies[e];
-						m_enemies[e] = NULL;
+						delete m_enemies[e]; //delete the enemy
+						m_enemies[e] = NULL; //set enemy memory position to NULL
 					}
 
-					if (!m_player->Check_Alive())
+					if (!m_player->Check_Alive()) //check if the player health is greater than 0, if it isn't:
 					{
-						if (m_player->get_lives() > 1)
+						if (m_player->get_lives() > 1) //check if the player has any lives left if it does
 						{
-							Reset_All_Positions();
-							m_player->set_lives(m_player->get_lives() - 1);
+							Reset_All_Positions(); //reset the position of all level elements (respawn)
+							m_player->set_lives(m_player->get_lives() - 1); //decrement the number of lives the player has
 						}
-						else
+						else //if the player has no lives left
 						{
-							return true;
+							return true; //return that the game should be over
 						}
 					}
 
-					m_last_encounter = m_play_time;
+					m_last_encounter = m_play_time; //set the time of the last encounter for checking during the next encounter
 				}
 			}
 		}
 	}
-	return false;
+	return false; //return that the game should not be over
 }
 
 void Level::Perform_Coin_Collision()
 {
-	for (size_t p = 0; p < m_pickables.size(); p++)
+	for (size_t p = 0; p < m_pickables.size(); p++) //iterate through the all the pickable (non-weapon) objects
 	{
-		if (m_pickables[p] != NULL && m_player->bb_collision(m_pickables[p]))
+		if (m_pickables[p] != NULL && m_player->bb_collision(m_pickables[p])) //if the pickable collides
 		{
-			m_player->set_score(m_player->get_score() + m_pickables[p]->get_value());
-			delete m_pickables[p];
+			m_player->set_score(m_player->get_score() + m_pickables[p]->get_value()); //increment score by pickables value
+			delete m_pickables[p]; //delete the pickable
 			m_pickables[p] = NULL;
-			m_pickables.erase(m_pickables.begin() + p);
 			break;
 		}
 	}
@@ -137,12 +125,13 @@ void Level::Perform_Coin_Collision()
 
 void Level::Perform_Weapon_Collision()
 {
-	for (auto &weapon : m_weapons)
+	for (size_t w = 0; w < m_weapons.size(); w++) //iterate through all of the weapon objects
 	{
-		if (m_player->bb_collision(weapon))
+		if (m_player->bb_collision(m_weapons[w])) //if the weapon object collides
 		{
-			m_player->set_damage(m_player->get_damage() + weapon->get_value());
-			weapon->set_visibility(false);
+			m_player->set_damage(m_player->get_damage() + m_weapons[w]->get_value()); //increase player damage by weapon value
+			delete m_weapons[w]; //delete the weapon
+			m_weapons[w] = NULL;
 			break;
 		}
 	}

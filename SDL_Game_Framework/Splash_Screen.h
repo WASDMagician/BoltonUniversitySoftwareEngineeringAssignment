@@ -9,7 +9,6 @@ class Game; // forward declaration
 class Splash_Screen
 {
 public:
-	Splash_Screen();
 	Splash_Screen(Game* m_game);
 	~Splash_Screen();
 
@@ -21,7 +20,7 @@ public:
 	
 	virtual void Render();
 
-	virtual bool Run();
+	virtual bool Run() = 0;
 	bool is_game_over();
 
 protected:
@@ -29,7 +28,7 @@ protected:
 	virtual void Render_Mid();
 	virtual void Render_Front();
 
-	Game* m_game; // game pointer to game object
+	Game* m_game; //pointer to game object
 
 	bool m_close_splash;
 	bool m_game_over;
