@@ -67,16 +67,13 @@ bool AW_Sprite_Interface::Is_Contained(std::vector<AW_Sprite_Interface*>vectorIn
 			break;
 		}
 	}
-	
 	return is_contained;
 }
 
 void AW_Sprite_Interface::Move_By(float xAmount, float yAmount)
 {
-	float time = m_player_timer->Seconds_Since_Last_Call();
-
-	float moveX = get_x() + (xAmount * time);
-	float moveY = get_y() + (yAmount * time);
+	float moveX = get_x() + (xAmount);
+	float moveY = get_y() + (yAmount);
 
 	set_world_position_x(moveX);
 	set_world_position_y(moveY);
@@ -112,7 +109,7 @@ void AW_Sprite_Interface::Move_Toward()
 
 	float angle = atan2(yDiff, xDiff);
 	SDL_Delay(1);
-	Move_By((500 * (cos(angle))), (500 * (sin(angle))));
+	Move_By((10 * (cos(angle))), (10 * (sin(angle))));
 }
 
 bool AW_Sprite_Interface::In_Range(float range)
