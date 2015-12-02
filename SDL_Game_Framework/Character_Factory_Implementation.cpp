@@ -11,7 +11,7 @@
 
 Character_Factory_Implementation::Character_Factory_Implementation()
 {
-	IMAGES = std::vector<char*>({ "images/Fish.bmp", "images/alien.bmp", "images/jesus.bmp", "images/clown.png", "images/Centipede.png","images/Healer.png"});
+	IMAGES = std::vector<char*>({ "images/Player.png", "images/alien.bmp", "images/jesus.bmp", "images/hinter1.png", "images/Centipede.png","images/Healer.png"});
 }
 
 
@@ -25,7 +25,7 @@ Character* Character_Factory_Implementation::Make_Character(int CharacterType)
 	switch (CharacterType)
 	{
 	case PLAYER:
-		return new Player(IMAGES[CharacterType], 8, 1, 1);
+		return new Player(IMAGES[CharacterType], 1, 1, 1);
 		break;
 	case OGRE:
 		return new Ogre(IMAGES[CharacterType], 3, 2, 1);
