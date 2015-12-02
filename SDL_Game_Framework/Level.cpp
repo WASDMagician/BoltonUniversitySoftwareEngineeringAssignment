@@ -179,7 +179,8 @@ void Level::Move_All(int xAmount, int yAmount)
 		Move(x, y, m_weapons);
 		Move(x, y, m_npcs);
 		Move(x, y, m_pickables);
-		m_level_trigger->Move_By(x, y);
+		//m_level_trigger->Move(x, y);
+		Move(x, y, m_level_trigger);
 	}
 }
 
@@ -197,6 +198,20 @@ void Level::Move(int xAmount, int yAmount, std::vector<T>inputVector)
 				inputVector[i]->Increment_Target();
 				inputVector[i]->Update_Target_Position(xAmount, yAmount);
 			}
+		}
+	}
+}
+
+void Level::Move(int xAmount, int yAmount, AW_Sprite_Interface* sprite)
+{
+	if (sprite != NULL)
+	{
+		sprite->Move_By(xAmount, yAmount);
+		if (sprite->Has_Target())
+		{
+			sprite->Move_Toward();
+			sprite->Increment_Target();
+			sprite->Update_Target_Position(xAmount, yAmount);
 		}
 	}
 }

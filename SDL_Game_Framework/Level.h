@@ -33,6 +33,8 @@ public:
 	template<typename T>
 	void Move(int xAmount, int yAmount, std::vector<T>inputVector);
 
+	void Move(int xAmount, int yAmount, AW_Sprite_Interface* sprite);
+
 	bool Perform_Enemy_Encounter();
 	void Perform_Coin_Collision();
 	void Perform_Weapon_Collision();
