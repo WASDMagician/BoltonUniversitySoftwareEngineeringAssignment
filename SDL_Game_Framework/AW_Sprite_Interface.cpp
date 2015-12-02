@@ -29,6 +29,7 @@ void AW_Sprite_Interface::Update()
 void AW_Sprite_Interface::Add_Position(position pos)
 {
 	m_positions.push_back(pos);
+	m_spawn_positions = m_positions;
 }
 
 void AW_Sprite_Interface::Add_Positions(std::vector<position> newPositions)
@@ -37,6 +38,7 @@ void AW_Sprite_Interface::Add_Positions(std::vector<position> newPositions)
 	{
 		m_positions.push_back(newPositions[i]);
 	}
+	m_spawn_positions = m_positions;
 }
 
 void AW_Sprite_Interface::Clear_Positions()
@@ -172,6 +174,7 @@ void AW_Sprite_Interface::Move_To_Spawn()
 {
 	set_world_position_x(m_spawn_x);
 	set_world_position_y(m_spawn_y);
+	m_positions = m_spawn_positions;
 }
 
 void AW_Sprite_Interface::Randomize_Position(float xPos, float width, float yPos, float height)

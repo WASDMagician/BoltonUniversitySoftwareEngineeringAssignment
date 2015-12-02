@@ -169,19 +169,22 @@ void Level::Perform_NPC_Encounter()
 void Level::Move_All(int xAmount, int yAmount)
 {
 	m_current_time = m_timer->Milliseconds_Since_Last_Call() * 10;
-	if (m_player->Is_Contained(m_areas, { xAmount, yAmount }))
-	{
-		float x = xAmount * m_current_time;
-		float y = yAmount * m_current_time;
 
-		Move(x, y, m_areas);
-		Move(x, y, m_enemies);
-		Move(x, y, m_weapons);
-		Move(x, y, m_npcs);
-		Move(x, y, m_pickables);
+	float movementX = xAmount * m_current_time;
+	float movementY = yAmount * m_current_time;
+
+	if (m_player->Is_Contained(m_areas, { movementX, movementY }))
+	{
+
+		Move(movementX, movementY, m_areas);
+		Move(movementX, movementY, m_enemies);
+		Move(movementX, movementY, m_weapons);
+		Move(movementX, movementY, m_npcs);
+		Move(movementX, movementY, m_pickables);
 		//m_level_trigger->Move(x, y);
-		Move(x, y, m_level_trigger);
+		Move(movementX, movementY, m_level_trigger);
 	}
+
 }
 
 template<typename T>

@@ -45,7 +45,7 @@ void Play_Screen::Init_Player()
 void Play_Screen::Handle_Keys()
 {
 	const Uint8 *state = SDL_GetKeyState(NULL);
-	float speed = 25;
+	float speed = 30;
 
 	m_xAmount = 0;
 	m_yAmount = 0;

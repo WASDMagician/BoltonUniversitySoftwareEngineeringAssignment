@@ -56,6 +56,8 @@ public:
 
 private:
 	std::vector<position>m_positions; //vector of target positions
+	//@update_uml
+	std::vector<position>m_spawn_positions; //vector of target positions at spawn (not to be updated)
 
 	bool m_has_target; //whethere the current element has a target within the position vector
 
