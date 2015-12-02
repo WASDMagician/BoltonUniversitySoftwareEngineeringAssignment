@@ -168,7 +168,7 @@ void Level::Perform_NPC_Encounter()
 
 void Level::Move_All(int xAmount, int yAmount)
 {
-	m_current_time = m_timer->Seconds_Since_Last_Call() * 1000;
+	m_current_time = m_timer->Milliseconds_Since_Last_Call() * 10;
 	if (m_player->Is_Contained(m_areas, { xAmount, yAmount }))
 	{
 		float x = xAmount * m_current_time;
