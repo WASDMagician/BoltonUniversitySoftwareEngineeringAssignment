@@ -43,19 +43,18 @@ void Level_One::Setup()
 	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1, 1);
 	
 	//set area and bound positions
-	int area_offset = 30; //amount needed to overlap between areas, this is to allow our collision code to function
 
-	area_one->set_world_position_x(-(float)area_one->get_width() + area_offset); //set position of area
-	area_one->set_spawn(-(float)area_one->get_width() + area_offset, 0); //set spawn equal to starting position
+	area_one->set_world_position_x(-(float)area_one->get_width() + m_area_offset); //set position of area
+	area_one->set_spawn(-(float)area_one->get_width() + m_area_offset, 0); //set spawn equal to starting position
 
-	area_three->set_world_position_y(-(float)area_three->get_height() + area_offset);
-	area_three->set_spawn(0, -(float)area_three->get_height() + area_offset);
+	area_three->set_world_position_y(-(float)area_three->get_height() + m_area_offset);
+	area_three->set_spawn(0, -(float)area_three->get_height() + m_area_offset);
 
-	area_four->set_world_position_y((float)area_four->get_height() - area_offset);
-	area_four->set_spawn(0, (float)area_four->get_height() - area_offset);
+	area_four->set_world_position_y((float)area_four->get_height() - m_area_offset);
+	area_four->set_spawn(0, (float)area_four->get_height() - m_area_offset);
 
-	area_five->set_world_position_x((float)area_five->get_width() - area_offset);
-	area_five->set_spawn((float)area_five->get_width() - area_offset, 0);
+	area_five->set_world_position_x((float)area_five->get_width() - m_area_offset);
+	area_five->set_spawn((float)area_five->get_width() - m_area_offset, 0);
 
 	//add areas to area vector
 	m_areas.push_back(area_one);

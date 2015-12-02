@@ -58,6 +58,9 @@ protected:
 	AW_Sprite_Interface* m_level_trigger; 
 
 	//@update_uml
+	int m_area_offset;
+
+	//@update_uml
 	int m_level_number;
 
 	Game_Time *m_timer;

@@ -2,7 +2,8 @@
 
 Level::Level(Character *player)
 	: m_char_fac(NULL), m_areas(NULL), m_enemies(NULL), m_npcs(NULL), m_level_trigger(NULL), m_player(player),
-	m_timer(new Game_Time()), m_current_time(0), m_play_time(0), m_encounter_gap(2), m_last_encounter(0), m_level_number(-1)
+	m_timer(new Game_Time()), m_current_time(0), m_play_time(0), m_encounter_gap(0.5), m_last_encounter(0), m_level_number(-1),
+	m_area_offset(55)
 {
 	m_char_fac = new Character_Factory_Implementation();
 	m_pickup_fac = new Pick_Objects_Factory_Implementation();

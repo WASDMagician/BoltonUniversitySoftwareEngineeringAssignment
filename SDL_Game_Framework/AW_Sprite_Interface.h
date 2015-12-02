@@ -19,8 +19,6 @@ public:
 	AW_Sprite_Interface(char* imgPath, int rows, int cols, int animationSpeed);
 	~AW_Sprite_Interface();
 
-	void Update();
-
 	void Add_Position(position);
 	void Add_Positions(std::vector<position>positions);
 	void Clear_Positions();
@@ -29,7 +27,6 @@ public:
 	bool Is_Contained(std::vector<AW_Sprite_Interface*>vectorInput, position testPos);
 	
 	void Move_By(float xAmount, float yAmount);
-	void Move_By_Without_Record(float x, float y);
 
 	void Move_To(float x, float y);
 	void Move_Toward();
@@ -48,11 +45,9 @@ public:
 
 	void Randomize_Position(float xPos, float width, float yPos, float height);
 
-	void Revert_Position();
+	//@update_uml
 
 	void Render();
-
-	Game_Time *m_player_timer;
 
 private:
 	std::vector<position>m_positions; //vector of target positions
@@ -61,8 +56,7 @@ private:
 
 	bool m_has_target; //whethere the current element has a target within the position vector
 
-	float m_last_move_x; //amount moved on x last
-	float m_last_move_y; //amount moved on y last
+	//@update_uml
 
 	int m_current_target_index; //position of target in vector of target positions
 	position m_target; //current target
