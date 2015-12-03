@@ -92,7 +92,7 @@ void AW_Sprite_Interface::Move_Toward()
 	float yDiff = m_target.y - get_y();
 
 	float angle = atan2(yDiff, xDiff);
-	Move_By((10 * (cos(angle))), (10 * (sin(angle)))); //move along angle
+	Move_By((5 * (cos(angle))), (5 * (sin(angle)))); //move along angle
 }
 
 bool AW_Sprite_Interface::In_Range(float range)
