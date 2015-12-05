@@ -7,7 +7,7 @@ class Weapon :
 {
 public:
 	Weapon();
-	Weapon(char* img, int rows, int cols, int animationSpeed, int m_value);
+	Weapon(char* img, int rows, int cols, int m_value);
 	~Weapon();
 };
 

@@ -7,10 +7,9 @@ Centipede::Centipede()
 
 }
 
-Centipede::Centipede(char* imgPath, int rows, int cols, int animationSpeed)
-	: Enemy(imgPath, rows, cols, animationSpeed)
+Centipede::Centipede(char* imgPath, int rows, int cols)
+	: Enemy(imgPath, rows, cols)
 {
-	enemy_state = ROAMING;
 }
 
 Centipede::~Centipede()
@@ -18,7 +17,7 @@ Centipede::~Centipede()
 
 }
 
-void Centipede::Enemy_Roam()
+void Centipede::Enemy_Movement()
 {
 	Move_By(rand() % 5 -2, rand() % 5 -2);	
 }

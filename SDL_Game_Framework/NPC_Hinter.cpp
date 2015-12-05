@@ -8,8 +8,8 @@ NPC_Hinter::NPC_Hinter()
 
 }
 
-NPC_Hinter::NPC_Hinter(char* img, int rows, int cols, int animSpeed, std::string message)
-	: Character(img, rows, cols, animSpeed, message)
+NPC_Hinter::NPC_Hinter(char* img, int rows, int cols, std::string message)
+	: Character(img, rows, cols, message)
 {
 
 }

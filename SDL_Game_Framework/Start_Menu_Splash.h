@@ -13,12 +13,13 @@ public:
 
 	void Handle_Keys();
 
-	void Render_Back();
-	void Render_Mid();
+	
 
 	bool Run();
 
 private:
+	void Render_Back();
+	void Render_Mid();
 	Text_Box* m_instruction_box;
 };
 

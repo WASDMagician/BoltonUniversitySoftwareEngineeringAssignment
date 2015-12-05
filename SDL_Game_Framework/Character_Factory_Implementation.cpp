@@ -25,22 +25,22 @@ Character* Character_Factory_Implementation::Make_Character(int CharacterType)
 	switch (CharacterType)
 	{
 	case PLAYER:
-		return new Player(IMAGES[CharacterType], 1, 1, 1);
+		return new Player(IMAGES[CharacterType], 1, 1);
 		break;
 	case OGRE:
-		return new Ogre(IMAGES[CharacterType], 3, 2, 1);
+		return new Ogre(IMAGES[CharacterType], 3, 2);
 		break;
 	case JESUS:
-		return new Jesus(IMAGES[CharacterType], 1, 1, 1);
+		return new Jesus(IMAGES[CharacterType], 1, 1);
 		break;
 	case CLOWN:
-		return new NPC_Hinter(IMAGES[CharacterType], 1, 1, 1, "");
+		return new NPC_Hinter(IMAGES[CharacterType], 1, 1, "");
 		break;
 	case CENTIPEDE:
-		return new Centipede(IMAGES[CharacterType], 1, 1, 1);
+		return new Centipede(IMAGES[CharacterType], 1, 1);
 		break;
 	case HEALER: 
-		return new NPC_Healer(IMAGES[CharacterType], 1, 1, 1, "");
+		return new NPC_Healer(IMAGES[CharacterType], 1, 1, "");
 		break;
 	default:
 		return NULL;

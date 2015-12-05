@@ -11,8 +11,8 @@ Player::Player()
 {
 }
 
-Player::Player(char* imgPath, int rows, int cols, int animationSpeed)
-: Character(imgPath, rows, cols, animationSpeed, "")
+Player::Player(char* imgPath, int rows, int cols)
+: Character(imgPath, rows, cols, "")
 {
 }
 

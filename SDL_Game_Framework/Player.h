@@ -8,7 +8,7 @@ class Player :
 {
 public:
 	Player();
-	Player(char* imgPath, int rows, int cols, int animationSpeed);
+	Player(char* imgPath, int rows, int cols);
 	~Player();
 	 
 private:

@@ -7,7 +7,7 @@ AW_Sprite_Interface::AW_Sprite_Interface()
 	set_transparent_colour(255, 0, 255); //set transparent colour of sprite (assuming it is always the same)
 }
 
-AW_Sprite_Interface::AW_Sprite_Interface(char* imgPath, int rows, int cols, int animationSpeed)
+AW_Sprite_Interface::AW_Sprite_Interface(char* imgPath, int rows, int cols)
 	: AWSprite(imgPath, rows, cols), m_target({NULL, NULL}), 
 	m_has_target(false), m_spawn_x(NULL), m_spawn_y(NULL), m_current_target_index(0), m_positions(NULL)
 {

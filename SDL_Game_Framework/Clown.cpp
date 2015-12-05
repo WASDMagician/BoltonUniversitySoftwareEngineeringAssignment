@@ -6,8 +6,8 @@ Clown::Clown()
 
 }
 
-Clown::Clown(char* imgPath, int rows, int cols, int animationSpeed)
-	: Enemy(imgPath, rows, cols, animationSpeed)
+Clown::Clown(char* imgPath, int rows, int cols)
+	: Enemy(imgPath, rows, cols)
 {
 }
 

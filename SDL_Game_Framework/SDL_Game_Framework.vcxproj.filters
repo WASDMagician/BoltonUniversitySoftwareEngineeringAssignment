@@ -258,9 +258,6 @@
     <ClInclude Include="Enemy.h">
       <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
     </ClInclude>
-    <ClInclude Include="Character_Creator.h">
-      <Filter>Header Files\Factories\Character</Filter>
-    </ClInclude>
     <ClInclude Include="Character_Factory.h">
       <Filter>Header Files\Factories\Character</Filter>
     </ClInclude>
@@ -272,9 +269,6 @@
     </ClInclude>
     <ClInclude Include="Jesus.h">
       <Filter>Header Files\Factories\Character\Characters\Enemies</Filter>
-    </ClInclude>
-    <ClInclude Include="Weapon_Creator.h">
-      <Filter>Header Files\Factories\Weapons</Filter>
     </ClInclude>
     <ClInclude Include="Weapon_Factory.h">
       <Filter>Header Files\Factories\Weapons</Filter>
@@ -436,12 +430,6 @@
     </ClCompile>
     <ClCompile Include="Character_Factory_Implementation.cpp">
       <Filter>Source Files\Factories\Characters</Filter>
-    </ClCompile>
-    <ClCompile Include="Character_Creator.cpp">
-      <Filter>Source Files\Factories\Characters</Filter>
-    </ClCompile>
-    <ClCompile Include="Weapon_Creator.cpp">
-      <Filter>Source Files\Factories\Weapons</Filter>
     </ClCompile>
     <ClCompile Include="Weapon_Factory_Implementation.cpp">
       <Filter>Source Files\Factories\Weapons</Filter>

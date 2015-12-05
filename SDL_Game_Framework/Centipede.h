@@ -8,8 +8,8 @@ class Centipede :
 {
 public:
 	Centipede();
-	Centipede(char* imgPath, int rows, int cols, int animationSpeed);
+	Centipede(char* imgPath, int rows, int cols);
 	~Centipede();
-	virtual void Enemy_Roam();
+	virtual void Enemy_Movement();
 };
 #endif

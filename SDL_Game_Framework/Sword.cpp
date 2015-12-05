@@ -5,8 +5,8 @@ Sword::Sword()
 {
 }
 
-Sword::Sword(char* img, int rows, int cols, int animationSpeed, int value)
-:Weapon(img, rows, cols, animationSpeed, value)
+Sword::Sword(char* img, int rows, int cols, int value)
+:Weapon(img, rows, cols, value)
 {
 }
 

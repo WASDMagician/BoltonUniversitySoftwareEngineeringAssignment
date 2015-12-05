@@ -8,7 +8,7 @@ class Sword :
 {
 public:
 	Sword();
-	Sword(char* img, int x, int y, int animationSpeed, int value);
+	Sword(char* img, int cols, int rows, int value);
 	~Sword();
 };
 #endif

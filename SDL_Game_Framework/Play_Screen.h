@@ -31,8 +31,8 @@ private:
 	void Render_Front();
 
 	//@update_Uml
-	float m_xAmount;
-	float m_yAmount;
+	float m_x_amount;
+	float m_y_amount;
 
 	//@update_uml
 	

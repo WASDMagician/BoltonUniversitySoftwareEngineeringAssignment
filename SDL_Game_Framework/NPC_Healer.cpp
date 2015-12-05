@@ -6,8 +6,8 @@ NPC_Healer::NPC_Healer()
 
 }
 
-NPC_Healer::NPC_Healer(char* img, int rows, int cols, int animSpeed, std::string message)
-	: Character(img, rows, cols, animSpeed, message)
+NPC_Healer::NPC_Healer(char* img, int rows, int cols, std::string message)
+	: Character(img, rows, cols, message)
 {
 
 }

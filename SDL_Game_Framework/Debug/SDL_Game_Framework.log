@@ -1,52 +1,12 @@
-﻿Build started 03/12/2015 12:43:32.
-     1>Project "E:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/5/2015 1:13:27 PM.
+     1>Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AW_Sprite_Interface.cpp Level.cpp
-         Level.cpp
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(58): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(171): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(172): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(177): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(178): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(179): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(180): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(181): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(182): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(192): warning C4018: '<' : signed/unsigned mismatch
-                 e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(177) : see reference to function template instantiation 'void Level::Move<AW_Sprite_Interface*>(int,int,std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(196): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(201): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(213): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-                 e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(182) : see reference to function template instantiation 'void Level::Move<AW_Sprite_Interface>(int,int,T *)' being compiled
-                 with
-                 [
-                     T=AW_Sprite_Interface
-                 ]
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(218): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(242): warning C4018: '<' : signed/unsigned mismatch
-                 e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(226) : see reference to function template instantiation 'void Level::Render<AW_Sprite_Interface*>(std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-     1>e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(268): warning C4018: '<' : signed/unsigned mismatch
-                 e:\bolton university software engineering assignment\sdl_game_framework\level.cpp(254) : see reference to function template instantiation 'void Level::Reset_Positions<AW_Sprite_Interface*>(std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-         AW_Sprite_Interface.cpp
-     1>e:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(106): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(114): warning C4018: '<' : signed/unsigned mismatch
-     1>e:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(161): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>e:\bolton university software engineering assignment\sdl_game_framework\aw_sprite_interface.cpp(162): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Play_Screen.cpp UI_Play_Screen.cpp
+         UI_Play_Screen.cpp
+         Play_Screen.cpp
          Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
          Debug\AWSprite.obj
          Debug\AW_Sprite_Interface.obj
          Debug\Centipede.obj
@@ -54,7 +14,6 @@
          Debug\Clown.obj
          Debug\End_Menu_Splash.obj
          Debug\Enemy.obj
-         Debug\Character_Creator.obj
          Debug\Character_Factory_Implementation.obj
          Debug\Game.obj
          Debug\GameBase.obj
@@ -99,11 +58,10 @@
          Debug\TimeHelpers.obj
          Debug\XmlTestReporter.obj
          Debug\Weapon.obj
-         Debug\Weapon_Creator.obj
          Debug\Weapon_Factory_Implementation.obj
-         SDL_Game_Framework.vcxproj -> E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe
-     1>Done Building Project "E:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+         SDL_Game_Framework.vcxproj -> F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.43
+Time Elapsed 00:00:03.36

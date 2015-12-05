@@ -24,7 +24,7 @@ void Game::Setup()
 	m_credit_box->set_font("fonts/game_font.ttf", 30); //set box font and size
 	m_credit_box->set_color(200, 0, 0); //set font colour
 	m_credit_box->Position_Setting(50, 50, 10, 10); //position the box (left position, top position, x margin, y margin)
-	m_credit_box->Add_Message("CREDITS\nJoseph Adams\nNiall Maple\nKyle Thomas\nEdward Hawksowrth"); //add text to box
+	m_credit_box->Add_Message("CREDITS\nJoseph Adams\nNiall Maple\nKyle Thomas\nEdward Hawksworth"); //add text to box
 	m_credit_box->Setup_Box(); //create (non-visible) aw_sprite to act as positioning agent
 	m_credit_box->set_rects(); //set up the rects for each line of text
 

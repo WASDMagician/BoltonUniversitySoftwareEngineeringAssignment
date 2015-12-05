@@ -16,7 +16,7 @@ class AW_Sprite_Interface :
 {
 public:
 	AW_Sprite_Interface();
-	AW_Sprite_Interface(char* imgPath, int rows, int cols, int animationSpeed);
+	AW_Sprite_Interface(char* imgPath, int rows, int cols);
 	~AW_Sprite_Interface();
 
 	void Add_Position(position);

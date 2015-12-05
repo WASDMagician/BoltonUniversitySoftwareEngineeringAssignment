@@ -11,9 +11,9 @@ class Character:
 {
 public:
 	Character();
-	Character(char* img, int rows, int cols, int animationSpeed, std::string message);
+	Character(char* img, int rows, int cols, std::string message);
 	virtual ~Character();
-	virtual void Setup(char* imgPath, int rows, int cols, int animationSpeed);
+	virtual void Setup(char* imgPath, int rows, int cols);
 	virtual void set_variables(int health, int damage);
 
 	virtual void Update();

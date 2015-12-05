@@ -7,7 +7,7 @@ class NPC_Healer :
 {
 public:
 	NPC_Healer();
-	NPC_Healer(char* img, int rows, int cols, int animSpeed, std::string message);
+	NPC_Healer(char* img, int rows, int cols, std::string message);
 	~NPC_Healer();
 	virtual void React(Character* target);
 };

@@ -13,9 +13,9 @@
 class UI_Play_Screen
 {
 public:
-	UI_Play_Screen();
-	UI_Play_Screen(Character* character);
+	
 	~UI_Play_Screen();
+	static UI_Play_Screen* get_instance();
 
 	void set_character(Character* character);
 	
@@ -25,6 +25,11 @@ public:
 	
 
 private:
+	UI_Play_Screen();
+	UI_Play_Screen(Character* character);
+
+	static UI_Play_Screen* m_instance;
+
 	Character *m_display_character; //the character who's details we will display
 	Text_Box *m_ui_details; //the text box on which we will display them
 

@@ -16,7 +16,7 @@ Pickup_Objects* Pick_Objects_Factory_Implementation::Make_Object(int type)
 	switch (type)
 	{
 	case(COIN) :
-		return new Pickup_Objects("images/coin.png", 1, 1, 1, 10);
+		return new Pickup_Objects("images/coin.png", 1, 1, 10);
 		break;
 	default:
 		return NULL;

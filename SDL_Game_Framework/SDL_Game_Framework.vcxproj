@@ -127,7 +127,6 @@
     <ClInclude Include="console.h" />
     <ClInclude Include="End_Menu_Splash.h" />
     <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Character_Creator.h" />
     <ClInclude Include="Character_Factory.h" />
     <ClInclude Include="Character_Factory_Implementation.h" />
     <ClInclude Include="Game.h" />
@@ -186,7 +185,6 @@
     <ClInclude Include="UnitTest++\src\UnitTest++.h" />
     <ClInclude Include="UnitTest++\src\XmlTestReporter.h" />
     <ClInclude Include="Weapon.h" />
-    <ClInclude Include="Weapon_Creator.h" />
     <ClInclude Include="Weapon_Factory.h" />
     <ClInclude Include="Weapon_Factory_Implementation.h" />
   </ItemGroup>
@@ -199,7 +197,6 @@
     <ClCompile Include="Clown.cpp" />
     <ClCompile Include="End_Menu_Splash.cpp" />
     <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="Character_Creator.cpp" />
     <ClCompile Include="Character_Factory_Implementation.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameBase.cpp" />
@@ -244,7 +241,6 @@
     <ClCompile Include="UnitTest++\src\TimeHelpers.cpp" />
     <ClCompile Include="UnitTest++\src\XmlTestReporter.cpp" />
     <ClCompile Include="Weapon.cpp" />
-    <ClCompile Include="Weapon_Creator.cpp" />
     <ClCompile Include="Weapon_Factory_Implementation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

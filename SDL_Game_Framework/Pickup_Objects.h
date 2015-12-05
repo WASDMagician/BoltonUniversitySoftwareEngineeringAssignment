@@ -8,7 +8,7 @@ class Pickup_Objects :
 {
 public:
 	Pickup_Objects();
-	Pickup_Objects(char* imgPath, int rows, int cols, int animationSpeed, int value);
+	Pickup_Objects(char* imgPath, int rows, int cols, int value);
 	~Pickup_Objects();
 
 	void set_value(int value);

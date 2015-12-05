@@ -1,9 +1,11 @@
 #include "UI_Play_Screen.h"
 
+UI_Play_Screen* UI_Play_Screen::m_instance = NULL;
 
 UI_Play_Screen::UI_Play_Screen()
 	:m_display_character(NULL)
 {
+	UI_Play_Screen::m_instance = NULL;
 	m_ui_details = new Text_Box(); //defined here to prevent crash
 }
 
@@ -14,6 +16,16 @@ UI_Play_Screen::UI_Play_Screen(Character* character)
 	Update();
 }
 
+
+UI_Play_Screen* UI_Play_Screen::get_instance()
+{
+	if (m_instance == NULL)
+	{
+		m_instance = new UI_Play_Screen();
+	}
+
+	return m_instance;
+}
 
 UI_Play_Screen::~UI_Play_Screen()
 {

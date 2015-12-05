@@ -36,11 +36,11 @@ void Level_One::Setup()
 {
 	m_level_number = 1; //set level number
 	//create areas
-	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/area1.png", 1, 1, 1);
-	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/StartingArea.png", 1, 1, 1);
-	AW_Sprite_Interface *area_three = new AW_Sprite_Interface("images/area3.png", 1, 1, 1);
-	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area4.png", 1, 1, 1);
-	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1, 1);
+	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/area1.png", 1, 1);
+	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/StartingArea.png", 1, 1);
+	AW_Sprite_Interface *area_three = new AW_Sprite_Interface("images/area3.png", 1, 1);
+	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area4.png", 1, 1);
+	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1);
 	
 	//set area and bound positions
 
@@ -133,7 +133,7 @@ void Level_One::Setup()
 		m_weapons.push_back(pickaxe);
 	}
 
-	m_level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
+	m_level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1);
 	m_level_trigger->set_spawn(m_level_trigger->get_x(), m_level_trigger->get_y());
 	m_level_trigger->set_visibility(false); //level trigger invisible so it can be made visible once all coins are collected
 }

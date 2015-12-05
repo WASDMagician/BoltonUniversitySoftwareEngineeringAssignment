@@ -8,7 +8,7 @@ class Ogre :
 {
 public:
 	Ogre();
-	Ogre(char* imgPath, int rows, int cols, int animationSpeed);
+	Ogre(char* imgPath, int rows, int cols);
 	~Ogre();
 };
 #endif //_OGRE_H_

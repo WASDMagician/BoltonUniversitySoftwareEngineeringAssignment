@@ -6,8 +6,8 @@ Character::Character()
 
 }
 
-Character::Character(char* imgPath, int rows, int cols, int animationSpeed, std::string message)
-	: AW_Sprite_Interface(imgPath, rows, cols, animationSpeed), m_health(0), m_damage(0), m_score(0), m_message(message), 
+Character::Character(char* imgPath, int rows, int cols, std::string message)
+	: AW_Sprite_Interface(imgPath, rows, cols), m_health(0), m_damage(0), m_score(0), m_message(message), 
 	m_message_box(NULL)
 {
 	set_message(message);
@@ -17,7 +17,7 @@ Character::~Character()
 {
 }
 
-void Character::Setup(char* imgPath, int rows, int cols, int animationSpeed)
+void Character::Setup(char* imgPath, int rows, int cols)
 {
 	setImage(imgPath, rows, cols);
 }

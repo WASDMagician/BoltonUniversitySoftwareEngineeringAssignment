@@ -8,7 +8,7 @@ class Jesus :
 {
 public:
 	Jesus();
-	Jesus(char* imgPath, int rows, int cols, int animationSpeed);
+	Jesus(char* imgPath, int rows, int cols);
 	~Jesus();
 };
 #endif // _JESUS_H_

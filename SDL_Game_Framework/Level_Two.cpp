@@ -35,11 +35,11 @@ void Level_Two::Setup()
 {
 	m_level_number = 2;
 	//create areas
-	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/StartingArea.png", 1, 1, 1);
-	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/area1.png", 1, 1, 1);
-	AW_Sprite_Interface *area_three = new AW_Sprite_Interface("images/area4.png", 1, 1, 1);
-	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area3.png", 1, 1, 1);
-	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1, 1);
+	AW_Sprite_Interface *area_one = new AW_Sprite_Interface("images/StartingArea.png", 1, 1);
+	AW_Sprite_Interface *area_two = new AW_Sprite_Interface("images/area1.png", 1, 1);
+	AW_Sprite_Interface *area_three = new AW_Sprite_Interface("images/area4.png", 1, 1);
+	AW_Sprite_Interface *area_four = new AW_Sprite_Interface("images/area3.png", 1, 1);
+	AW_Sprite_Interface *area_five = new AW_Sprite_Interface("images/area5.png", 1, 1);
 
 	area_one->set_world_position_x(-(float)area_one->get_width() + m_area_offset);
 	area_one->set_spawn(-(float)area_one->get_width() + m_area_offset, 0);
@@ -129,7 +129,7 @@ void Level_Two::Setup()
 		m_weapons.push_back(pickaxe);
 	}
 
-	m_level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1, 1);
+	m_level_trigger = new AW_Sprite_Interface("images/level_trigger.png", 1, 1);
 	m_level_trigger->set_spawn(m_level_trigger->get_x(), m_level_trigger->get_y());
 	m_level_trigger->set_visibility(false);
 }

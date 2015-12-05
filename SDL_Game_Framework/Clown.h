@@ -9,7 +9,7 @@ class Clown :
 public:
 
 	Clown();
-	Clown(char* imgPath, int rows, int cols, int animationSpeed);
+	Clown(char* imgPath, int rows, int cols);
 	~Clown();
 };
 #endif

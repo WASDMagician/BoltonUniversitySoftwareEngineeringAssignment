@@ -6,7 +6,7 @@
 
 Play_Screen::Play_Screen(Game *pGame)
 	: Splash_Screen(pGame), m_level(NULL), m_char_factory(NULL), m_player(NULL),
-	m_screen_ui(NULL)
+	m_screen_ui(NULL), m_x_amount(0), m_y_amount(0)
 {
 }
 
@@ -29,7 +29,7 @@ void Play_Screen::Setup()
 {
 	m_char_factory = new Character_Factory_Implementation(); //instantiate character factory
 	Init_Player(); //create player
-	m_screen_ui = new UI_Play_Screen(); //instatiate UI
+	m_screen_ui = m_screen_ui->get_instance(); //create ui singleton
 	m_screen_ui->set_character(m_player); //set character for UI to display
 
 	m_level = new Level_One(m_player); //load in the first level
@@ -55,31 +55,31 @@ void Play_Screen::Handle_Keys()
 	const Uint8 *state = SDL_GetKeyState(NULL); //use keystates to allow for multiple key presses at the same time
 	float speed = 50; //speed at which the player moves
 
-	m_xAmount = 0; //reset x move amount
-	m_yAmount = 0; //reset y move amount
+	m_x_amount = 0; //reset x move amount
+	m_y_amount = 0; //reset y move amount
 
 	//set x move amount and y move amount to be passed to Levels Move function
 	if (state[SDLK_a])
 	{
-		m_xAmount = speed; //left
+		m_x_amount = speed; //left
 	}
 	if (state[SDLK_d])
 	{
-		m_xAmount = -speed; //right
+		m_x_amount = -speed; //right
 	}
 	if (state[SDLK_w])
 	{
-		m_yAmount = speed; //up
+		m_y_amount = speed; //up
 	}
 	if (state[SDLK_s])
 	{
-		m_yAmount = -speed; //down
+		m_y_amount = -speed; //down
 	}
 }
 
 void Play_Screen::Logic()
 {
-	m_close_splash = m_level->Run_Level_Logic(m_xAmount, m_yAmount); //run through the logic of the currently loaded level
+	m_close_splash = m_level->Run_Level_Logic(m_x_amount, m_y_amount); //run through the logic of the currently loaded level
 
 	if (Check_Level_Collision()) //check for a collision with the current levels trigger, if one is found:
 	{

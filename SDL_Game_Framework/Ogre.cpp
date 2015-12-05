@@ -5,8 +5,8 @@ Ogre::Ogre()
 {
 }
 
-Ogre::Ogre(char* imgPath, int rows, int cols, int animationSpeed)
-: Enemy(imgPath, rows, cols, animationSpeed)
+Ogre::Ogre(char* imgPath, int rows, int cols)
+: Enemy(imgPath, rows, cols)
 {
 }
 
