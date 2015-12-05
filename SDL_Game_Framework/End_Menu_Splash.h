@@ -14,6 +14,7 @@ public:
 	bool Run();
 
 private:
+	void Render_Back();
 	void Render_Mid();
 	Text_Box* m_gameover_box;
 };

@@ -35,6 +35,11 @@ void End_Menu_Splash::Handle_Keys()
 	}
 }
 
+void End_Menu_Splash::Render_Back()
+{
+	SDL_FillRect(m_game->screen, NULL, 0x000000); //bleh, not sure about this, stops tearing
+}
+
 void End_Menu_Splash::Render_Mid()
 {
 	m_gameover_box->Display(); //display gamebox

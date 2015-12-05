@@ -20,7 +20,6 @@ public:
 	void Handle_Keys();
 
 	bool Check_Level_Collision();
-	//@update_uml
 
 	bool Run();
 
@@ -30,12 +29,8 @@ private:
 	void Render_Mid();
 	void Render_Front();
 
-	//@update_Uml
 	float m_x_amount;
 	float m_y_amount;
-
-	//@update_uml
-	
 
 	Level *m_level;
 	Character_Factory_Implementation* m_char_factory;

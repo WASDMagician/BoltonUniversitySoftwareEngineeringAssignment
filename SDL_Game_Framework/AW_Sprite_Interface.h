@@ -19,7 +19,7 @@ public:
 	AW_Sprite_Interface(char* imgPath, int rows, int cols);
 	~AW_Sprite_Interface();
 
-	void Add_Position(position);
+	void Add_Position(position pos);
 	void Add_Positions(std::vector<position>positions);
 	void Clear_Positions();
 
@@ -29,11 +29,11 @@ public:
 	void Move_By(float xAmount, float yAmount);
 
 	void Move_To(float x, float y);
-	void Move_Toward();
+	void Move_Toward(); //move toward target
 
 	bool In_Range(float range);
 
-	void Increment_Target();
+	void Increment_Target(); //set current target to next target in vector
 
 	void set_target_position(int targetIndex);
 	void set_target_position(position target);
@@ -45,18 +45,13 @@ public:
 
 	void Randomize_Position(float xPos, float width, float yPos, float height);
 
-	//@update_uml
-
 	void Render();
 
 private:
 	std::vector<position>m_positions; //vector of target positions
-	//@update_uml
 	std::vector<position>m_spawn_positions; //vector of target positions at spawn (not to be updated)
 
 	bool m_has_target; //whethere the current element has a target within the position vector
-
-	//@update_uml
 
 	int m_current_target_index; //position of target in vector of target positions
 	position m_target; //current target

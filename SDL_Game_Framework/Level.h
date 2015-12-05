@@ -12,16 +12,11 @@
 class Level
 {
 public:
-	//@update_UML
 	Level(Character* player);
 	virtual ~Level();
 	bool set_level_name(std::string name);
-	//@update_uml
 	int get_level_number();
 	AW_Sprite_Interface* get_trigger();
-	//@update_uml
-
-	//@update_uml
 	bool Run_Level_Logic(float xAmount, float yAmount);
 
 	void Move_All(int xAmount, int yAmount);
@@ -35,7 +30,6 @@ public:
 	void Perform_Weapon_Collision();
 	void Perform_NPC_Encounter();
 
-	//@update_uml
 	void Reset_All_Positions();
 	template<typename T>
 	void Reset_Positions(std::vector<T>inputVector);
@@ -57,10 +51,8 @@ protected:
 	std::vector<Weapon*> m_weapons;
 	AW_Sprite_Interface* m_level_trigger; 
 
-	//@update_uml
 	int m_area_offset;
 
-	//@update_uml
 	int m_level_number;
 
 	Game_Time *m_timer;

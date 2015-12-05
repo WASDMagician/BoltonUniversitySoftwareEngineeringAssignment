@@ -14,19 +14,19 @@ Game_Time::~Game_Time()
 
 float Game_Time::Seconds_Since_Start()
 {
-	return std::clock() / (float)CLOCKS_PER_SEC;
+	return std::clock();
 
 }
 
 float Game_Time::Milliseconds_Since_Start()
 {
-	return std::clock();
+	return std::clock() / 1000;
 }
 
 float Game_Time::Seconds_Since_Last_Call()
 {
 	
-	float elapsed = (std::clock() - m_last_call_time) / (float)CLOCKS_PER_SEC;
+	float elapsed = (std::clock() - m_last_call_time);
 	m_last_call_time = std::clock();
 	return elapsed;
 }

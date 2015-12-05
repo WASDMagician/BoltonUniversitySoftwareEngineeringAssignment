@@ -15,16 +15,13 @@ public:
 	virtual void Setup(char* imgPath, int rows, int cols);
 	virtual void Update();
 
-	//@update_UML
 	virtual void set_health_message();
 
 	virtual void Enemy_Movement();
 
-	//@update_UML
 	virtual void Render();
 
 protected:
-	//@update_UML
 	Text_Box *m_health_box;
 };
 
