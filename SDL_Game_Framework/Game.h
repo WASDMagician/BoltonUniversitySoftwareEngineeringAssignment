@@ -2,7 +2,6 @@
 #define _GAME_H_
 
 #include "GameBase.h"
-#include "SDL_ttf.h"
 #include "Text_Box.h"
 
 #include "Splash_Screen.h"

@@ -1,5 +1,7 @@
-#pragma once
+#ifndef _LEVEL_ONE_H_
+#define _LEVEL_ONE_H_
 #include "Level.h"
+
 class Level_One :
 	public Level
 {
@@ -12,3 +14,4 @@ public:
 	void Move_Enemies();
 };
 
+#endif //_LEVEL_ONE_H_

@@ -4,7 +4,7 @@
 Game::Game()
 	:m_splash(NULL), m_credit_box(NULL)
 {
-	TTF_Init(); //initialise SDL_TTF library (third party library to deal with fonts and displaying text)
+	
 }
 
 

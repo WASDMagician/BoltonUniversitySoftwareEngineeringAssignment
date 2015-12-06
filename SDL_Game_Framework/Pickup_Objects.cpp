@@ -7,7 +7,7 @@ Pickup_Objects::Pickup_Objects()
 }
 
 Pickup_Objects::Pickup_Objects(char* imgPath, int rows, int cols, int value)
-	: AW_Sprite_Interface(imgPath, rows, cols), m_value(0)
+	: AW_Sprite_Interface(imgPath, rows, cols), m_value(value)
 {
 
 }

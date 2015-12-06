@@ -14,7 +14,6 @@ class Level
 public:
 	Level(Character* player);
 	virtual ~Level();
-	bool set_level_name(std::string name);
 	int get_level_number();
 	AW_Sprite_Interface* get_trigger();
 	bool Run_Level_Logic(float xAmount, float yAmount);
@@ -38,6 +37,20 @@ public:
 	template<typename T>
 	void Render(std::vector<T>inputVector);
 
+	//testing functions
+	std::vector<AW_Sprite_Interface*> get_areas();
+	std::vector<Character*>get_enemies();
+	std::vector<Character*>get_npcs();
+	std::vector<Pickup_Objects*>get_objects();
+	std::vector<Weapon*>get_weapons();
+
+	//these functions are declared separately because using a template function that will deal with each
+	//causes an unresolved external symbol error when calling from Test_File.cpp
+	void Move_All_Sprites(std::vector<AW_Sprite_Interface*>sprites, int x, int y);
+	void Move_All_Characters(std::vector<Character*>characters, int x, int y);
+	void Move_All_Objects(std::vector<Pickup_Objects*>objects, int x, int y);
+	void Move_All_Weapons(std::vector<Weapon*>weapons, int x, int y);
+
 protected:
 	Character *m_player;
 
@@ -60,8 +73,6 @@ protected:
 	double m_play_time;
 	double m_encounter_gap;
 	double m_last_encounter;
-
-
 };
 
 #endif //_LEVEL_H_

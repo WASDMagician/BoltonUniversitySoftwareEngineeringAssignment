@@ -5,8 +5,6 @@
 #include "SDL_ttf.h"
 #include <vector>
 
-class Game;
-
 class Text_Box
 {
 public:
@@ -33,6 +31,10 @@ public:
 	bool get_should_display();
 
 	void Display(); //display text box
+
+	//testing functions
+
+
 
 private:
 	//setup

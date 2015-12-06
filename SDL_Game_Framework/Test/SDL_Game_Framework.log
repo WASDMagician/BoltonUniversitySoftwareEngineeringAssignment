@@ -1,67 +1,42 @@
-﻿Build started 23/10/2015 00:40:29.
-     1>Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/6/2015 3:16:05 AM.
+     1>Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D RUN_TESTS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Test\\" /Fd"Test\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Character.cpp Crossbow.cpp Empowere_Knuckles.cpp Enemy.cpp Game.cpp Game_Object.cpp Great_Axe.cpp Inventory.cpp Main.cpp NPC_Base.cpp NPC_Hinter.cpp NPC_Shopkeeper.cpp Object.cpp Ogre.cpp PickupObjects.cpp Player.cpp Sniper.cpp Sword.cpp Test_Everything.cpp Transform.cpp UI.cpp UI_Play_Screen.cpp Weapon.cpp
-         Character.cpp
-         Generating Code...
-         Compiling...
-         Weapon.cpp
-         UI_Play_Screen.cpp
-         UI.cpp
-         Transform.cpp
-         Test_Everything.cpp
-         Sword.cpp
-         Sniper.cpp
-         Player.cpp
-         PickupObjects.cpp
-         Ogre.cpp
-         Object.cpp
-         NPC_Shopkeeper.cpp
-         NPC_Hinter.cpp
-         NPC_Base.cpp
-         Main.cpp
-         Inventory.cpp
-         Great_Axe.cpp
-         Game_Object.cpp
-         Game.cpp
-         Enemy.cpp
-         Generating Code...
-         Compiling...
-         Empowere_Knuckles.cpp
-         Crossbow.cpp
-         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D RUN_TESTS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Test\\" /Fd"Test\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Test_File.cpp
+         Test_File.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Test\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Test\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Test\SDL_Game_Framework.lib" /MACHINE:X86 Test\Audio.obj
-         Test\audiomanager.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\bolton university software engineering assignment\Test\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\bolton university software engineering assignment\Test\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\bolton university software engineering assignment\Test\SDL_Game_Framework.lib" /MACHINE:X86 Test\audiomanager.obj
          Test\AWSprite.obj
          Test\AW_Sprite_Interface.obj
+         Test\Centipede.obj
          Test\Character.obj
-         Test\Crossbow.obj
-         Test\Empowere_Knuckles.obj
+         Test\Clown.obj
+         Test\End_Menu_Splash.obj
          Test\Enemy.obj
+         Test\Character_Factory_Implementation.obj
          Test\Game.obj
          Test\GameBase.obj
-         Test\Game_Object.obj
+         Test\Game_Time.obj
+         Test\Jesus.obj
          Test\Level.obj
-         Test\Map.obj
+         Test\Level_One.obj
+         Test\Level_Three.obj
+         Test\Level_Two.obj
+         Test\NPC_Healer.obj
+         Test\Pickup_Objects.obj
+         Test\Pick_Objects_Factory_Implementation.obj
+         Test\Play_Screen.obj
+         Test\Splash_Screen.obj
+         Test\Start_Menu_Splash.obj
          Test\Test_Everything.obj
          Test\Great_Axe.obj
-         Test\Inventory.obj
-         Test\Load_Game.obj
          Test\Main.obj
-         Test\NPC_Base.obj
          Test\NPC_Hinter.obj
-         Test\NPC_Shopkeeper.obj
-         Test\Object.obj
          Test\Ogre.obj
-         Test\PickupObjects.obj
          Test\Player.obj
-         Test\Save_Game.obj
-         Test\Sniper.obj
          Test\Sword.obj
          Test\Test_All.obj
-         Test\Transform.obj
-         Test\UI.obj
+         Test\Test_File.obj
+         Test\Text_Box.obj
          Test\UI_Play_Screen.obj
          Test\AssertException.obj
          Test\Checks.obj
@@ -81,9 +56,10 @@
          Test\TimeHelpers.obj
          Test\XmlTestReporter.obj
          Test\Weapon.obj
-         SDL_Game_Framework.vcxproj -> F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\Test\SDL_Game_Framework.exe
-     1>Done Building Project "F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\BoltonUniversitySoftwareEngineeringAssignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+         Test\Weapon_Factory_Implementation.obj
+         SDL_Game_Framework.vcxproj -> F:\bolton university software engineering assignment\Test\SDL_Game_Framework.exe
+     1>Done Building Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:10.32
+Time Elapsed 00:00:01.83

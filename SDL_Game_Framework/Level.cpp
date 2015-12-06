@@ -280,3 +280,63 @@ AW_Sprite_Interface* Level::get_trigger() //we allow the getting of the level tr
 	return m_level_trigger;
 }
 
+//testing functions
+//do not use these for game logic, they exist purely for testing purposes
+
+std::vector<AW_Sprite_Interface*> Level::get_areas()
+{
+	return m_areas;
+}
+
+std::vector<Character*> Level::get_enemies()
+{
+	return m_enemies;
+}
+
+std::vector<Character*> Level::get_npcs()
+{
+	return m_npcs;
+}
+
+std::vector<Pickup_Objects*> Level::get_objects()
+{
+	return m_pickables;
+}
+
+std::vector<Weapon*> Level::get_weapons()
+{
+	return m_weapons;
+}
+
+void Level:: Move_All_Sprites(std::vector<AW_Sprite_Interface*>sprites, int x, int y)
+{
+	for (size_t s = 0; s < sprites.size(); s++)
+	{
+		sprites[s]->Move_To(x, y);
+	}
+}
+
+void Level:: Move_All_Characters(std::vector<Character*>characters, int x, int y)
+{
+	for (size_t c = 0; c < characters.size(); c++)
+	{
+		characters[c]->Move_To(x, y);
+	}
+}
+
+void Level:: Move_All_Objects(std::vector<Pickup_Objects*>objects, int x, int y)
+{
+	for (size_t o = 0; o < objects.size(); o++)
+	{
+		objects[o]->Move_To(x, y);
+	}
+}
+
+void Level:: Move_All_Weapons(std::vector<Weapon*>weapons, int x, int y)
+{
+	for (size_t w = 0; w < weapons.size(); w++)
+	{
+		weapons[w]->Move_To(x, y);
+	}
+}
+
