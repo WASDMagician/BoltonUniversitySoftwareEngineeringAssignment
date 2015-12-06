@@ -9,8 +9,6 @@ public:
 	Level_Three(Character* player);
 	~Level_Three();
 	void Setup();
-
-	void Move_Enemies();
 };
 
 #endif //_LEVEL_THREE_H_

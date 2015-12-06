@@ -1,77 +1,14 @@
-﻿Build started 12/6/2015 1:56:20 AM.
+﻿Build started 12/6/2015 9:26:51 PM.
      1>Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Centipede.cpp Character.cpp Character_Factory_Implementation.cpp Clown.cpp End_Menu_Splash.cpp Enemy.cpp Game.cpp Jesus.cpp Level.cpp Level_One.cpp Level_Three.cpp Level_Two.cpp Main.cpp NPC_Healer.cpp NPC_Hinter.cpp Ogre.cpp Pickup_Objects.cpp Play_Screen.cpp Player.cpp Splash_Screen.cpp Start_Menu_Splash.cpp Test_Everything.cpp Test_File.cpp Text_Box.cpp UI_Play_Screen.cpp
-         Centipede.cpp
-     1>Centipede.cpp(22): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         Character.cpp
-         Character_Factory_Implementation.cpp
-         Clown.cpp
-         End_Menu_Splash.cpp
-         Enemy.cpp
-         Game.cpp
-         Jesus.cpp
-         Level.cpp
-     1>Level.cpp(58): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>Level.cpp(171): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>Level.cpp(172): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>Level.cpp(177): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>Level.cpp(178): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>Level.cpp(179): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>Level.cpp(180): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>Level.cpp(181): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>Level.cpp(182): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>Level.cpp(192): warning C4018: '<' : signed/unsigned mismatch
-                 Level.cpp(177) : see reference to function template instantiation 'void Level::Move<AW_Sprite_Interface*>(int,int,std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-     1>Level.cpp(196): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>Level.cpp(201): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>Level.cpp(213): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-                 Level.cpp(182) : see reference to function template instantiation 'void Level::Move<AW_Sprite_Interface>(int,int,T *)' being compiled
-                 with
-                 [
-                     T=AW_Sprite_Interface
-                 ]
-     1>Level.cpp(218): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>Level.cpp(242): warning C4018: '<' : signed/unsigned mismatch
-                 Level.cpp(226) : see reference to function template instantiation 'void Level::Render<AW_Sprite_Interface*>(std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-     1>Level.cpp(268): warning C4018: '<' : signed/unsigned mismatch
-                 Level.cpp(254) : see reference to function template instantiation 'void Level::Reset_Positions<AW_Sprite_Interface*>(std::vector<AW_Sprite_Interface *,std::allocator<_Ty>>)' being compiled
-                 with
-                 [
-                     _Ty=AW_Sprite_Interface *
-                 ]
-         Level_One.cpp
-     1>Level_One.cpp(121): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>Level_One.cpp(130): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Level_Three.cpp Level_Two.cpp Play_Screen.cpp Test_File.cpp Test_Level_Two.cpp
          Level_Three.cpp
      1>Level_Three.cpp(118): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
          Level_Two.cpp
      1>Level_Two.cpp(118): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         Main.cpp
-         NPC_Healer.cpp
-         NPC_Hinter.cpp
-         Ogre.cpp
-         Pickup_Objects.cpp
          Play_Screen.cpp
-         Player.cpp
-         Splash_Screen.cpp
-         Compiling...
-         Start_Menu_Splash.cpp
-         Test_Everything.cpp
          Test_File.cpp
-         Text_Box.cpp
-     1>Text_Box.cpp(54): warning C4150: deletion of pointer to incomplete type '_TTF_Font'; no destructor called
-                 f:\bolton university software engineering assignment\sdl_game_framework\SDL_ttf.h(77) : see declaration of '_TTF_Font'
-     1>Text_Box.cpp(133): warning C4018: '<' : signed/unsigned mismatch
-         UI_Play_Screen.cpp
+         Test_Level_Two.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\bolton university software engineering assignment\Release\SDL_Game_Framework.exe" /INCREMENTAL:NO /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\bolton university software engineering assignment\Release\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\bolton university software engineering assignment\Release\SDL_Game_Framework.lib" /MACHINE:X86 /SAFESEH Release\audiomanager.obj
          Release\AWSprite.obj
@@ -105,6 +42,8 @@
          Release\Sword.obj
          Release\Test_All.obj
          Release\Test_File.obj
+         Release\Test_Level_One.obj
+         Release\Test_Level_Two.obj
          Release\Text_Box.obj
          Release\UI_Play_Screen.obj
          Release\AssertException.obj
@@ -133,4 +72,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:15.35
+Time Elapsed 00:00:05.51

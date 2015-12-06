@@ -44,6 +44,7 @@ void Level_One::Setup()
 	
 	//set area and bound positions
 
+
 	area_one->set_world_position_x(-(float)area_one->get_width() + m_area_offset); //set position of area
 	area_one->set_spawn(-(float)area_one->get_width() + m_area_offset, 0); //set spawn equal to starting position
 
@@ -107,9 +108,6 @@ void Level_One::Setup()
 	healer->set_spawn(420, 420);
 	healer->set_message("You have been healed");
 	m_npcs.push_back(healer);
-
-	float area_margin_x = 100;
-	float area_margin_y = 100;
 
 	for (size_t a = 0; a < m_areas.size(); a++)
 	{

@@ -8,7 +8,5 @@ public:
 	Level_Two(Character* player);
 	~Level_Two();
 	void Setup();
-
-	void Move_Enemies();
 };
 

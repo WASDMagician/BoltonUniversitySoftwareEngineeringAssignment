@@ -1,5 +1,23 @@
-#include "Test_File.h"
+#include "UnitTest++\src\UnitTest++.h"
+#include "Character_Factory_Implementation.h"
+#include "Pick_Objects_Factory_Implementation.h"
+#include "Weapon_Factory_Implementation.h"
+#include "Weapon.h"
+#include "Sword.h"
+#include "Great_Axe.h"
 
+#include "Test_Level_One.h"
+#include "Test_Level_Two.h"
+#include "Test_Level_Three.h"
+
+#include "Splash_Screen.h"
+#include "Start_Menu_Splash.h"
+#include "Play_Screen.h"
+#include "End_Menu_Splash.h"
+
+#include "Text_Box.h"
+
+#include "UI_Play_Screen.h"
 
 SUITE(FACTORY_TEST)
 {
@@ -40,6 +58,34 @@ SUITE(FACTORY_TEST)
 		test_weapon = NULL;
 		delete weapon_fac;
 		weapon_fac = NULL;
+	}
+}
+
+SUITE(CHARACTER_TEST)
+{
+	TEST(AW_SPRITE_INTERFACE)
+	{
+
+	}
+
+	TEST(CHARACTER)
+	{
+
+	}
+
+	TEST(PLAYER)
+	{
+
+	}
+
+	TEST(ENEMY)
+	{
+
+	}
+
+	TEST(NPC)
+	{
+
 	}
 }
 
@@ -88,72 +134,91 @@ SUITE(LEVEL_TEST)
 {
 	TEST(LEVEL)
 	{
-		//we cannot directly test the Level base class as it acts as a backend for the inheriting Level classes and requires
-		//information stored within those levels, therefore we will test the functionality made available in Level by using Level_One,
-		//Level_One's additional functionality will be tested separately
-		Character* test_char = new Player("images/player.png", 1, 1); //create a character to passed to level
-		Level_One *test_level = new Level_One(test_char); //create level
+		Character* test_character = new Character("images/player.png", 1, 1, "");
+		Test_Level_One* test_level = new Test_Level_One(test_character);
 
-		CHECK(test_level != NULL); //check that test_level has been created
-		CHECK(test_level->get_level_number() == 1); //check that get_level returns the correct number
-		CHECK(test_level->get_trigger() != NULL); //check that get_trigger returns something
-		CHECK(test_level->get_enemies().size() != 0); //check that the Enemy vector contains enemies
-		CHECK(test_level->get_npcs().size() != 0); //check that the NPC vector contains npcs
-		CHECK(test_level->get_weapons().size() != 0); //check that the Weapon vector contains weapons
-		CHECK(test_level->get_objects().size() != 0); //check that the Pickables vector contains objects
+		//carry out level logic
+		test_level->Run_Level_Logic(0, 0);
 
-		std::vector<Character*> enemies = test_level->get_enemies();
-		std::vector<Character*> npcs = test_level->get_npcs();
-		std::vector<Weapon*> weapons = test_level->get_weapons();
-		std::vector<Pickup_Objects*> objects = test_level->get_objects();
+		//test character and level creation
+		CHECK(test_character != NULL);
+		CHECK(test_level != NULL);
 
-		test_level->Move_All_Characters(enemies, 0, 0);
-		for (size_t e = 0; e < enemies.size(); e++)
-		{
-			CHECK_EQUAL(enemies[e]->get_x(), 0);
-			CHECK_EQUAL(enemies[e]->get_y(), 0);
-		}
+		//check that all items in level have been created
 
-		test_level->Move_All_Characters(npcs, 200, 200);
-		for (size_t n = 0; n < npcs.size(); n++)
-		{
-			CHECK_EQUAL(npcs[n]->get_x(), 200);
-			CHECK_EQUAL(npcs[n]->get_y(), 200);
-		}
+		//check vectors
+		CHECK(test_level->get_areas().size() != 0);
+		CHECK(test_level->get_npcs().size() != 0);
+		CHECK(test_level->get_enemies().size() != 0);
+		CHECK(test_level->get_objects().size() != 0);
+		CHECK(test_level->get_weapons().size() != 0);
 
-		test_level->Move_All_Objects(objects, 400, 400);
-		for (size_t o = 0; o < objects.size(); o++)
-		{
-			CHECK_EQUAL(objects[o]->get_x(), 400);
-			CHECK_EQUAL(objects[o]->get_y(), 400);
-		}
+		//check factories
+		CHECK(test_level->get_character_factory() != NULL);
+		CHECK(test_level->get_object_factory() != NULL);
+		CHECK(test_level->get_weapon_factory() != NULL);
 
-		test_level->Move_All_Weapons(weapons, 600, 600);
-		for (size_t w = 0; w < weapons.size(); w++)
-		{
-			CHECK_EQUAL(weapons[w]->get_x(), 600);
-			CHECK_EQUAL(weapons[w]->get_y(), 600);
-		}
+		//check variables
+		CHECK(test_level->get_area_offset() == 55);
+		CHECK(test_level->get_level_numbe() == 1);
 
-		//free used memory
-		delete test_char;
-		test_char = NULL;
+		CHECK(test_level->get_time() != 0);
+		CHECK(test_level->get_current_time() != 0);
+		CHECK(test_level->get_play_time() != 0);
+
+
+		delete test_character;
+		test_character = NULL;
 		delete test_level;
 		test_level = NULL;
 	}
 
 	TEST(LEVEL_ONE)
 	{
-		Character* test_char = new Player("images/player.png", 1, 1);
-		Level_One *test_level = new Level_One(test_char);
+		Character* test_character = new Character("images/player.png", 1, 1, "");
+		Test_Level_One* test_level = new Test_Level_One(test_character);
+
+		//test character and level creation
+		CHECK(test_character != NULL);
+		CHECK(test_level != NULL);
+
+
+		delete test_character;
+		test_character = NULL;
+		delete test_level;
+		test_level = NULL;
 	}
 
 	TEST(LEVEL_TWO)
 	{
+		Character* test_character = new Character("images/player.png", 1, 1, "");
+		Test_Level_Two* test_level = new Test_Level_Two(test_character);
+
+		//test character and level creation
+		CHECK(test_character != NULL);
+		CHECK(test_level != NULL);
+
+
+		delete test_character;
+		test_character = NULL;
+		delete test_level;
+		test_level = NULL;
 	}
 
 	TEST(LEVEL_THREE)
 	{
+		Character* test_character = new Character("images/player.png", 1, 1, "");
+		Test_Level_Three* test_level = new Test_Level_Three(test_character);
+
+		//test character and level creation
+		CHECK(test_character != NULL);
+		CHECK(test_level != NULL);
+
+
+		delete test_character;
+		test_character = NULL;
+		delete test_level;
+		test_level = NULL;
 	}
 }
 

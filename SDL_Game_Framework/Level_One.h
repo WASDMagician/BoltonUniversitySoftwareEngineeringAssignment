@@ -10,8 +10,6 @@ public:
 	Level_One(Character* player);
 	~Level_One();
 	void Setup();
-
-	void Move_Enemies();
 };
 
 #endif //_LEVEL_ONE_H_

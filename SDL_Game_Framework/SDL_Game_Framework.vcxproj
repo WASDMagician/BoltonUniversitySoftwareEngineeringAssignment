@@ -158,7 +158,9 @@
     <ClInclude Include="Start_Menu_Splash.h" />
     <ClInclude Include="Sword.h" />
     <ClInclude Include="Test_All.h" />
-    <ClInclude Include="Test_File.h" />
+    <ClInclude Include="Test_Level_One.h" />
+    <ClInclude Include="Test_Level_Three.h" />
+    <ClInclude Include="Test_Level_Two.h" />
     <ClInclude Include="Text_Box.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="UI_Play_Screen.h" />
@@ -222,6 +224,9 @@
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Test_All.cpp" />
     <ClCompile Include="Test_File.cpp" />
+    <ClCompile Include="Test_Level_One.cpp" />
+    <ClCompile Include="Test_Level_Three.cpp" />
+    <ClCompile Include="Test_Level_Two.cpp" />
     <ClCompile Include="Text_Box.cpp" />
     <ClCompile Include="UI_Play_Screen.cpp" />
     <ClCompile Include="UnitTest++\src\AssertException.cpp" />
