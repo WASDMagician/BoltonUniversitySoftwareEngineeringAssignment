@@ -387,8 +387,6 @@ SUITE(MISC_TEST)
 		//free used memory
 		delete test_aw_sprite_interface;
 		test_aw_sprite_interface = NULL;
-
-
 	}
 
 	TEST(TEXT_BOX)
