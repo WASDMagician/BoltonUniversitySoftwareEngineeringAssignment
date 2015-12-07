@@ -18,6 +18,7 @@ public:
 	static UI_Play_Screen* get_instance();
 
 	void set_character(Character* character);
+	Character* get_character();
 	
 	void Update();
 

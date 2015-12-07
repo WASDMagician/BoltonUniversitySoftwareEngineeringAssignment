@@ -37,6 +37,11 @@ void UI_Play_Screen::set_character(Character *character)
 	Update();
 }
 
+Character* UI_Play_Screen::get_character()
+{
+	return m_display_character;
+}
+
 void UI_Play_Screen::Update()
 {
 	//memory leak in here somewhere //@BUG

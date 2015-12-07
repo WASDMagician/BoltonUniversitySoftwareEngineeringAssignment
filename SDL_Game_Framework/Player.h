@@ -10,8 +10,6 @@ public:
 	Player();
 	Player(char* imgPath, int rows, int cols);
 	~Player();
-	 
-private:
 };
 
 #endif

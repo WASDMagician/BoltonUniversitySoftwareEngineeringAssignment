@@ -28,9 +28,6 @@
     <Filter Include="UnitTest++">
       <UniqueIdentifier>{049fe604-87dd-47b3-8473-7621ac78f60c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\tests">
-      <UniqueIdentifier>{b69a1cff-c890-4846-b0bf-19bb35b740e3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\screens">
       <UniqueIdentifier>{5a9417b5-84b7-48eb-a630-e787abb85c95}</UniqueIdentifier>
     </Filter>
@@ -327,6 +324,9 @@
     <ClInclude Include="Test_Level_Three.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Test_AW_Sprite_Interface.h">
+      <Filter>Header Files\testing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameBase.cpp">
@@ -419,9 +419,6 @@
     <ClCompile Include="Ogre.cpp">
       <Filter>Source Files\Factories\Characters\Enemies</Filter>
     </ClCompile>
-    <ClCompile Include="Test_Everything.cpp">
-      <Filter>Source Files\tests</Filter>
-    </ClCompile>
     <ClCompile Include="Level.cpp">
       <Filter>Source Files\levels</Filter>
     </ClCompile>
@@ -495,6 +492,9 @@
       <Filter>Source Files\testing</Filter>
     </ClCompile>
     <ClCompile Include="Test_Level_Three.cpp">
+      <Filter>Source Files\testing</Filter>
+    </ClCompile>
+    <ClCompile Include="Test_AW_Sprite_Interface.cpp">
       <Filter>Source Files\testing</Filter>
     </ClCompile>
   </ItemGroup>

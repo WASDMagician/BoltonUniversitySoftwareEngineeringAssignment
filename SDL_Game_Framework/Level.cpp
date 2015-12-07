@@ -78,6 +78,7 @@ bool Level::Perform_Enemy_Encounter()
 		{
 			if (m_enemies[e]->bb_collision(m_player)) //if enemy has collided with player
 			{
+				
 				if (m_play_time > m_last_encounter + m_encounter_gap) //if there has been enough time since the last collision
 				{
 					m_player->Attack(m_enemies[e]); //have the player deal damage to the enemy
@@ -94,6 +95,7 @@ bool Level::Perform_Enemy_Encounter()
 						if (m_player->get_lives() > 1) //check if the player has any lives left if it does
 						{
 							Reset_All_Positions(); //reset the position of all level elements (respawn)
+							m_player->set_health(100); //restore player health
 							m_player->set_lives(m_player->get_lives() - 1); //decrement the number of lives the player has
 						}
 						else //if the player has no lives left
@@ -166,7 +168,7 @@ void Level::Perform_NPC_Encounter()
 
 void Level::Move_All(int xAmount, int yAmount)
 {
-	m_current_time = m_timer->Milliseconds_Since_Last_Call() * 10; //time since last call
+	m_current_time = m_timer->Seconds_Since_Last_Call() * 10; //time since last call
 
 	float movementX = xAmount * m_current_time; //x movement * time since last call
 	float movementY = yAmount * m_current_time; //y movement * time since last call
@@ -193,13 +195,13 @@ void Level::Move(int xAmount, int yAmount, std::vector<T>inputVector)
 	{
 		if (inputVector[i] != NULL) //if vector element exists
 		{
-			inputVector[i]->Move_By(xAmount, yAmount); //move it by the amount the player needs to move
 			if (inputVector[i]->Has_Target()) //if the vector element has a target
 			{
 				inputVector[i]->Move_Toward(); //move the element toward the target
 				inputVector[i]->Increment_Target(); //check if the current target needs to be incremented
 				inputVector[i]->Update_Target_Position(xAmount, yAmount); //update all target positions with new level positions
 			}
+			inputVector[i]->Move_By(xAmount, yAmount); //move it by the amount the player needs to move
 		}
 	}
 }

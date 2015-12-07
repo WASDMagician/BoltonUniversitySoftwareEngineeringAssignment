@@ -1,14 +1,8 @@
-﻿Build started 12/6/2015 9:26:51 PM.
+﻿Build started 12/7/2015 2:41:05 AM.
      1>Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Level_Three.cpp Level_Two.cpp Play_Screen.cpp Test_File.cpp Test_Level_Two.cpp
-         Level_Three.cpp
-     1>Level_Three.cpp(118): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         Level_Two.cpp
-     1>Level_Two.cpp(118): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         Play_Screen.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Uni\Year 2\semester 1\software engineering\Assignment\sdl_game_framework\SDL_Game_Framework\UnitTest++\src" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Test_File.cpp
          Test_File.cpp
-         Test_Level_Two.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\bolton university software engineering assignment\Release\SDL_Game_Framework.exe" /INCREMENTAL:NO /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\bolton university software engineering assignment\Release\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\bolton university software engineering assignment\Release\SDL_Game_Framework.lib" /MACHINE:X86 /SAFESEH Release\audiomanager.obj
          Release\AWSprite.obj
@@ -33,7 +27,7 @@
          Release\Play_Screen.obj
          Release\Splash_Screen.obj
          Release\Start_Menu_Splash.obj
-         Release\Test_Everything.obj
+         Release\Test_AW_Sprite_Interface.obj
          Release\Great_Axe.obj
          Release\Main.obj
          Release\NPC_Hinter.obj
@@ -43,6 +37,7 @@
          Release\Test_All.obj
          Release\Test_File.obj
          Release\Test_Level_One.obj
+         Release\Test_Level_Three.obj
          Release\Test_Level_Two.obj
          Release\Text_Box.obj
          Release\UI_Play_Screen.obj
@@ -72,4 +67,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.51
+Time Elapsed 00:00:03.34

@@ -10,11 +10,7 @@ public:
 	~Start_Menu_Splash();
 
 	void Setup();
-
 	void Handle_Keys();
-
-	
-
 	bool Run();
 
 private:

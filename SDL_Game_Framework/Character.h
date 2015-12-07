@@ -44,8 +44,6 @@ public:
 
 	Text_Box *m_message_box;
 protected:
-	std::vector<AWSprite*>images;
-	std::string m_name;
 	int m_health;
 	int m_lives;
 	int m_damage;

@@ -47,7 +47,7 @@ public:
 
 	void Render();
 
-private:
+protected:
 	std::vector<position>m_positions; //vector of target positions
 	std::vector<position>m_spawn_positions; //vector of target positions at spawn (not to be updated)
 
