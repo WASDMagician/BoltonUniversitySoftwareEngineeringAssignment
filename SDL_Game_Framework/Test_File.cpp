@@ -361,12 +361,33 @@ SUITE(MISC_TEST)
 {
 	TEST(AW_SPRITE_INTERFACE)
 	{
-		Test_AW_Sprite_Interface *test_aw_sprite_interface = new Test_AW_Sprite_Interface("images/player.png", 1, 1);
-		CHECK(test_aw_sprite_interface != NULL);
-		test_aw_sprite_interface->Add_Positions({ { 0, 0 }, { 10, 10 } });
-		CHECK(test_aw_sprite_interface->get_positions().size() == 2);
-		test_aw_sprite_interface->Add_Position({ 500, 500 });
-		CHECK(test_aw_sprite_interface->get_positions().size() == 3);
+		Test_AW_Sprite_Interface *test_aw_sprite_interface = new Test_AW_Sprite_Interface("images/player.png", 1, 1); //create sprite
+		CHECK(test_aw_sprite_interface != NULL); //check sprite has been created
+
+		test_aw_sprite_interface->Add_Positions({ { 0, 0 }, { 10, 10 } }); //add position vector to sprite
+		CHECK(test_aw_sprite_interface->get_positions().size() == 2); //check that positions have been added
+		test_aw_sprite_interface->Add_Position({ 500, 500 }); //add single position to sprite
+		CHECK(test_aw_sprite_interface->get_positions().size() == 3) //check that positions have been updated
+			;
+		CHECK(test_aw_sprite_interface->get_x() == 0); //check that initial value is as it should be
+		CHECK(test_aw_sprite_interface->get_y() == 0); 
+		test_aw_sprite_interface->Move_By(10, 10); //move by 10
+		CHECK(test_aw_sprite_interface->get_x() == 10); //check that move has taken place
+		CHECK(test_aw_sprite_interface->get_y() == 10);
+
+		test_aw_sprite_interface->set_target_position(0); //set target position from list
+		test_aw_sprite_interface->Move_Toward(); //move toward target position
+		CHECK(test_aw_sprite_interface->get_x() != 10); //check that position has changed
+		CHECK(test_aw_sprite_interface->get_y() != 10);
+
+		test_aw_sprite_interface->set_spawn(0, 0); //set the spawn position
+		test_aw_sprite_interface->Move_To_Spawn(); //move to spawn
+		CHECK(test_aw_sprite_interface->get_x() == 0 && test_aw_sprite_interface->get_y() == 0); // that move took place
+
+		//free used memory
+		delete test_aw_sprite_interface;
+		test_aw_sprite_interface = NULL;
+
 
 	}
 
