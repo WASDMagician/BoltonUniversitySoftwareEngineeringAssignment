@@ -15,7 +15,7 @@ public:
 	void set_font(char* fontPath, int fontSize);
 	void set_color(int r, int g, int b);
 
-	void Position_Setting(float boxX, float boxY, float textXMargin, float textYMargin);
+	void Position_Setting(float boxX, float boxY);
 
 	void Setup_Box();
 	void set_rects();
@@ -36,7 +36,7 @@ public:
 
 
 
-private:
+protected:
 	//setup
 	TTF_Font *m_font;
 	int m_font_size;
@@ -57,8 +57,6 @@ private:
 
 	float m_box_x; //left of box
 	float m_box_y; //top of box
-	float m_text_x_margin; //distance between left of box and start of line, right of box and end of line
-	float m_text_y_margin; //distance between top of box and first line, bottom of box and last line
 
 	int m_line_height; //character height cannot be float due to TTF_SizeText requirements
 	float m_max_line_width; //widest line of text

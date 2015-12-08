@@ -60,7 +60,7 @@ void UI_Play_Screen::Update()
 	
 	m_ui_details->set_font("fonts/game_font.ttf", 20);
 	m_ui_details->set_color(200, 0, 0);
-	m_ui_details->Position_Setting(0, 0, 0, 0);
+	m_ui_details->Position_Setting(0, 0);
 	m_ui_details->Add_Message(output);
 	m_ui_details->Setup_Box();
 	m_ui_details->set_rects();

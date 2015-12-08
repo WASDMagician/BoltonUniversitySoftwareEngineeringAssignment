@@ -24,6 +24,12 @@ public:
 	template<typename T>
 	void Move(int xAmount, int yAmount, T* sprite);
 
+	void Move_All_To(int x, int y);
+	template<typename T>
+	void Move_To(int x, int y, std::vector<T>inputVector);
+	template<typename T>
+	void Move_To(int x, int y, T sprite);
+
 	bool Perform_Enemy_Encounter();
 	void Perform_Coin_Collision();
 	void Perform_Weapon_Collision();

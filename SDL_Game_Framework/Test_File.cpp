@@ -1,5 +1,7 @@
 #include "UnitTest++\src\UnitTest++.h"
+
 #include "Character_Factory_Implementation.h"
+
 #include "Player.h"
 
 #include "Enemy.h"
@@ -14,6 +16,7 @@
 #include "Pick_Objects_Factory_Implementation.h"
 
 #include "Weapon_Factory_Implementation.h"
+
 #include "Weapon.h"
 #include "Sword.h"
 #include "Great_Axe.h"
@@ -26,7 +29,7 @@
 
 #include "Test_AW_Sprite_Interface.h"
 
-#include "Text_Box.h"
+#include "Test_Text_Box.h"
 
 #include "UI_Play_Screen.h"
 
@@ -38,6 +41,7 @@ SUITE(FACTORY_TEST)
 		Character_Factory_Implementation *char_fac = new Character_Factory_Implementation(); //character_factory_implementation to test
 		test_character = char_fac->Make_Character(PLAYER); //create player
 		CHECK(test_character != NULL); //test player has been created
+
 		//free used memory
 		delete test_character;
 		test_character = NULL;
@@ -64,6 +68,7 @@ SUITE(FACTORY_TEST)
 		Weapon_Factory_Implementation *weapon_fac = new Weapon_Factory_Implementation(); //weapon_factory_implementation to test
 		test_weapon = weapon_fac->Make_Weapon(SWORD); //weapon_factory_implementation to test
 		CHECK(test_weapon != NULL); //create weapon
+
 		//free used memory
 		delete test_weapon;
 		test_weapon = NULL;
@@ -274,10 +279,30 @@ SUITE(LEVEL_TEST)
 		CHECK(test_level->get_play_time() != 0);
 
 		//add movement test here
+		test_level->Move_All_To(50, 50);
+		CHECK(test_level->get_enemies()[0]->get_y() == 50 && test_level->get_enemies()[0]->get_x() == 50);
+		CHECK(test_level->get_npcs()[0]->get_y() == 50 && test_level->get_npcs()[0]->get_x() == 50);
+		CHECK(test_level->get_weapons()[0]->get_y() == 50 && test_level->get_weapons()[0]->get_x() == 50);
+		CHECK(test_level->get_objects()[0]->get_y() == 50 && test_level->get_objects()[0]->get_x() == 50);
+
+		//premove variables
+		int character_score = test_character->get_score();
+		int character_damage = test_character->get_damage();
+		int character_health = test_character->get_health();
+
+		test_character->Move_To(50, 50);
 
 		//collect coin test
+		test_level->Perform_Coin_Collision();
+		CHECK(test_character->get_score() != character_score);
 
 		//collect weapon test
+		test_level->Perform_Weapon_Collision();
+		CHECK(test_character->get_damage() != character_damage);
+
+		//enemy collision test
+		test_level->Perform_Enemy_Encounter();
+		CHECK(test_character->get_health() != character_health);
 
 		delete test_character;
 		test_character = NULL;
@@ -391,6 +416,17 @@ SUITE(MISC_TEST)
 
 	TEST(TEXT_BOX)
 	{
-			
+		Test_Text_Box *test_box = new Test_Text_Box("fonts/game_font.ttf", 22, "line one\nline two\nline three"); //create text box
+		CHECK(test_box != NULL); //check that test box has been created
+		CHECK(test_box->get_messages().size() == 3); //check that messages have been parsed and added
+		CHECK(test_box->get_message(0) == "line one");
+		CHECK(test_box->get_message(1) == "line two");
+		CHECK(test_box->get_message(2) == "line three");
+
+		test_box->Position_Setting(50, 50);
+		CHECK(test_box->get_box_x() == 50 && test_box->get_box_y() == 50);
+
+		CHECK(test_box->get_line_height() != 0);
+		CHECK(test_box->get_max_line_width() != 0);
 	}
 }

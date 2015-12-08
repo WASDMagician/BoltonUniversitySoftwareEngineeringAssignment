@@ -19,7 +19,7 @@ void Start_Menu_Splash::Setup()
 	//setup instruction box
 	m_instruction_box->set_font("fonts/game_font.ttf", 20);
 	m_instruction_box->set_color(200, 0, 0);
-	m_instruction_box->Position_Setting(50, 50, 10, 10);
+	m_instruction_box->Position_Setting(50, 50);
 	m_instruction_box->Add_Message("Welcome to our game\nUse WASD to move\nCollect all the coins to reveal \nthe exits\nWin the game");
 	m_instruction_box->Setup_Box();
 	m_instruction_box->set_rects();

@@ -223,6 +223,37 @@ void Level::Move(int xAmount, int yAmount, T* sprite)
 }
 
 
+void Level::Move_All_To(int x, int y)
+{
+	Move_To(x, y, m_areas); //move each area element
+	Move_To(x, y, m_enemies); //move each enemy
+	Move_To(x, y, m_weapons); //move each weapon
+	Move_To(x, y, m_npcs); //move each NPC
+	Move_To(x, y, m_pickables); //move each pickable
+	Move_To(x, y, m_level_trigger); //move the level trigger
+}
+
+template <typename T>
+void Level::Move_To(int x, int y, std::vector<T>inputVector)
+{
+	for (size_t i = 0; i < inputVector.size(); i++)
+	{
+		if (inputVector[i] != NULL)
+		{
+			inputVector[i]->Move_To(x, y);
+		}
+	}
+}
+
+template <typename T>
+void Level::Move_To(int x, int y, T sprite)
+{
+	if (sprite != NULL)
+	{
+		sprite->Move_To(x, y);
+	}
+}
+
 void Level::Render_All()//render all elements of level in reverse order of appearance 
 {
 	Render(m_areas); 

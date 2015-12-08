@@ -2,16 +2,16 @@
 #include "Game.h"
 
 Text_Box::Text_Box()
-	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_x(0), m_box_y(0), m_text_x_margin(0), m_text_y_margin(0),
-	m_current_line(0), m_total_text_height(0), m_number_of_lines(0), m_line_height(0), m_font_color({ 0, 0, 0 }), m_text_rects(NULL),
+	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_x(0), m_box_y(0), m_current_line(0), m_total_text_height(0), 
+	m_number_of_lines(0), m_line_height(0), m_font_color({ 0, 0, 0 }), m_text_rects(NULL),
 	m_should_display(false)
 {
 }
 
 
 Text_Box::Text_Box(char* fontPath, int fontSize, std::string message)
-	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_x(0), m_box_y(0), m_text_x_margin(0), m_text_y_margin(0),
-	m_current_line(0), m_total_text_height(0), m_number_of_lines(0), m_line_height(0), m_font_color({ 0, 0, 0 }), m_text_rects(NULL),
+	:m_font(NULL), m_text_lines(NULL), m_messages(NULL), m_box(NULL), m_box_x(0), m_box_y(0), m_current_line(0), m_total_text_height(0), 
+	m_number_of_lines(0), m_line_height(0), m_font_color({ 0, 0, 0 }), m_text_rects(NULL),
 	m_should_display(false)
 {
 	set_font(fontPath, fontSize);
@@ -49,10 +49,13 @@ Text_Box::~Text_Box()
 
 
 void Text_Box::set_font(char* fontPath, int fontSize)
-{	
-	TTF_CloseFont(m_font);
-	delete m_font;
-	m_font = NULL;
+{
+	if (m_font != NULL)
+	{
+		TTF_CloseFont(m_font);
+		delete m_font;
+		m_font = NULL;
+	}
 
 	m_font = TTF_OpenFont(fontPath, fontSize);
 	TTF_SizeText(m_font, "A", NULL, &m_line_height); //get the height of the text (A chosen randomly)
@@ -65,20 +68,20 @@ void Text_Box::set_color(int r, int g, int b)
 	m_font_color.b = b;
 }
 
-void Text_Box::Position_Setting(float boxX = 0, float boxY = 0, float textXMargin = 0, float textYMargin = 0)
+void Text_Box::Position_Setting(float boxX = 0, float boxY = 0)
 {
 	//set the position of the invisible awsprite box, this will be used for positioning
 	m_box_x = boxX;
 	m_box_y = boxY;
-	//add any x and y margin wanted for the actual text (left-over code, not strictly necesarry)
-	m_text_x_margin = textXMargin;
-	m_text_y_margin = textYMargin;
 }
 
 void Text_Box::Setup_Box()
 {
-	delete m_box;
-	m_box = NULL;
+	if (m_box != NULL)
+	{
+		delete m_box;
+		m_box = NULL;
+	}
 	m_box = new AWSprite(); //create inivisible awsprite box for positioning
 	if (m_max_line_width > 0) //if there are lines of text
 	{
@@ -106,8 +109,8 @@ void Text_Box::set_rects()
 		TTF_SizeText(m_font, m_messages[i].c_str(), &width, &height); //get size of string
 		new_rect->w = width; //set rect width
 		new_rect->h = height; //set rect height
-		new_rect->x = (Sint16)m_box_x + (Sint16)m_text_x_margin; //rect position is box position + margin
-		new_rect->y = (Sint16)m_box_y + (Sint16)((i * m_line_height) + (Sint16)m_text_y_margin);
+		new_rect->x = (Sint16)m_box_x; //rect position is box position + margin
+		new_rect->y = (Sint16)m_box_y + (Sint16)((i * m_line_height));
 		m_text_rects.push_back(new_rect);
 	}
 }

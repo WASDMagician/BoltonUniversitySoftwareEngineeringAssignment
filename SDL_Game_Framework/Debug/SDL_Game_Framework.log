@@ -1,10 +1,10 @@
-﻿Build started 12/6/2015 1:56:06 AM.
-     1>Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 08/12/2015 12:34:02.
+     1>Project "E:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IUnitTest++\src /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Test_File.cpp
          Test_File.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe" /INCREMENTAL /NOLOGO sdl.lib sdlmain.lib sdl_image.lib sdl_mixer.lib sdl_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.lib" /MACHINE:X86 Debug\audiomanager.obj
          Debug\AWSprite.obj
          Debug\AW_Sprite_Interface.obj
          Debug\Centipede.obj
@@ -27,7 +27,7 @@
          Debug\Play_Screen.obj
          Debug\Splash_Screen.obj
          Debug\Start_Menu_Splash.obj
-         Debug\Test_Everything.obj
+         Debug\Test_AW_Sprite_Interface.obj
          Debug\Great_Axe.obj
          Debug\Main.obj
          Debug\NPC_Hinter.obj
@@ -36,6 +36,10 @@
          Debug\Sword.obj
          Debug\Test_All.obj
          Debug\Test_File.obj
+         Debug\Test_Level_One.obj
+         Debug\Test_Level_Three.obj
+         Debug\Test_Level_Two.obj
+         Debug\Test_Text_Box.obj
          Debug\Text_Box.obj
          Debug\UI_Play_Screen.obj
          Debug\AssertException.obj
@@ -57,9 +61,10 @@
          Debug\XmlTestReporter.obj
          Debug\Weapon.obj
          Debug\Weapon_Factory_Implementation.obj
-         SDL_Game_Framework.vcxproj -> F:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe
-     1>Done Building Project "F:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+         SDL_Game_Framework.vcxproj -> E:\bolton university software engineering assignment\Debug\SDL_Game_Framework.exe
+     1>Done Building Project "E:\bolton university software engineering assignment\SDL_Game_Framework\SDL_Game_Framework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.71
+Time Elapsed 00:00:01.86

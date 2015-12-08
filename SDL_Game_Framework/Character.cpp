@@ -83,7 +83,7 @@ void Character::set_message(std::string hint)
 	m_message_box->set_font("fonts/game_font.ttf", 18);
 	m_message_box->set_color(255, 255, 255);
 	m_message_box->Add_Message(hint);
-	m_message_box->Position_Setting(get_x(), get_y(), 0, 0);
+	m_message_box->Position_Setting(get_x(), get_y());
 	m_message_box->Setup_Box();
 	m_message_box->set_rects();
 	m_message_box->set_should_display(true);
@@ -108,7 +108,7 @@ bool Character::get_display_box()
 
 void Character::Update()
 {
-	m_message_box->Position_Setting(get_x(), get_y(), 0, 0);
+	m_message_box->Position_Setting(get_x(), get_y());
 	m_message_box->set_rects();
 }
 
